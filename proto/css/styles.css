@@ -223,7 +223,7 @@ img.margin-link-active {
     color: rgba(0, 0, 0, 0);
 }
 .abridged .margin-txt {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
 }
 .unabridged {
     color: rgba(140, 138, 141, 1);
@@ -359,23 +359,21 @@ img.margin-link-active {
     -webkit-transition: all .2s;
     -moz-transition: all .2s;
 }
-
 .timeline-txt {
     position: absolute;
     top: -1.9em;
-    font-family: 'Georgia', serif;
+    font-family:'Georgia', serif;
     font-style: italic;
     font-size: 1.2em;
     color: #fff;
     display: inline-block;
     opacity: 0;
-    margin-left: -8%;
+    margin-left: -6%;
     text-align: center;
     height: 1.8em;
 }
-
-.timeline-txt:last-of-type {
-    margin-left: -6%;
+.timeline-list a:last-child > li > div.timeline-txt {
+    margin-left: -3%;
 }
 #timeline-first {
     margin-left:0px;
@@ -437,23 +435,18 @@ li.timeline-list-active {
     width: 100px;
     height: 100px;
 }
-
 .ghost.console {
     content: url(../images/sprites/ghost.png);
 }
-
 .ghost.arcade {
     content: url(../images/sprites/ghost-arcade.png);
 }
-
 .ghost.arcade.run {
     content: url(../images/sprites/ghost-arcade-run.png);
 }
-
 .ghost.console.run {
     content: url(../images/sprites/ghost-run.png)
 }
-
 .waypoint {
     position: absolute;
     width: 10px;
@@ -516,7 +509,7 @@ span.pacman-span {
     margin-left: -1%;
     margin-top: 90px;
     text-align: center;
-    font-family: 'Press Start 2P', sans-serif;
+    font-family:'Press Start 2P', sans-serif;
 }
 .button-container {
     margin: 0 25%;
