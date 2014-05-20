@@ -1,6 +1,26 @@
 (function ($, ScrollMagic, ScrollScene, TweenMax, TimelineMax, _) {
     'use strict';
 
+    function preload(arrayOfImages) {
+        $(arrayOfImages).each(function () {
+            $('<img/>')[0].src = this;
+        });
+    }
+
+    preload([
+            "images/close.png",
+            "images/info.png",
+            "images/quote-bubble1-active.png",
+            "images/quote-bubble1.png",
+            "images/info-active.png",
+            "images/sprites/ghost.png",
+            "images/sprites/ghost-run.png",
+            "images/sprites/ghost-arcade.png",
+            "images/sprites/ghost-arcade-run.png",
+            "images/sprites/pacman.png",
+            "images/sprites/pacman-arcade.png",
+        ]);
+
     var $lastNoteByID,
         $lastMarginLink,
         scenes = [],
@@ -318,7 +338,7 @@
     });
 
         function adjustActive(_this){
-            console.log("fired");
+            // console.log("fired");
             var targetID = $(_this) .attr('id');
             var $timelineItem = $("." + targetID);
             $($('.timeline-list-item').children()).removeClass('timeline-active');
@@ -343,7 +363,5 @@
                         }
                     }
                 });
-
-    //lint
 
 })(window.jQuery, window.ScrollMagic, window.ScrollScene, window.TweenMax, window.TimelineMax, window._);

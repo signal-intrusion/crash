@@ -329,7 +329,7 @@ img.margin-link-active {
     background-color: #f24537;
     background-color: rgba(242, 69, 55, .95);
     z-index: 1000;
-    height: 3.5em;
+    height: 3.2em;
 }
 .timeline-list {
     font-family:'Press Start 2P', sans-serif;
@@ -365,7 +365,7 @@ img.margin-link-active {
     top: -1.9em;
     font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #fff;
     display: inline-block;
     opacity: 0;
