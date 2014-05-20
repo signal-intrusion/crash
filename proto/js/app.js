@@ -344,4 +344,6 @@
                     }
                 });
 
+    //lint
+
 })(window.jQuery, window.ScrollMagic, window.ScrollScene, window.TweenMax, window.TimelineMax, window._);
