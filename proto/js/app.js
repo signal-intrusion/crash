@@ -337,18 +337,21 @@
 
     });
 
-        function adjustActive(_this){
-            // console.log("fired");
-            var targetID = $(_this) .attr('id');
-            var $timelineItem = $("." + targetID);
-            $($('.timeline-list-item').children()).removeClass('timeline-active');
-            $('.timeline-list-item').removeClass('timeline-list-active');
+    function adjustActive(_this){
+        console.log('fired');
+        console.log(_this);
+        var targetID = $(_this) .attr('id');
+        console.log(targetID);
+        var $timelineItem = $("." + targetID);
+        console.log($timelineItem);
+        $($('.timeline-list-item').children()).removeClass('timeline-active');
+        $('.timeline-list-item').removeClass('timeline-list-active');
 
-            $timelineItem.toggleClass('timeline-list-active');
-
-            $($timelineItem.children()[0])
-                .toggleClass('timeline-active');
-        }
+        $timelineItem.addClass('timeline-list-active');
+        console.log($timelineItem.attr('class'));
+        $($timelineItem.children()[0]).addClass('timeline-active');
+        console.log($($timelineItem.children()[0]).attr('class'));
+    }
 
 
     $("#timeline").on("click", "a[href^=#]", function (e) {
@@ -356,10 +359,17 @@
                         $elem = $(id);
                     if ($elem.length > 0) {
                         e.preventDefault();
-                        TweenMax.to(window, 1, {scrollTo: {y: $elem.offset().top - 50 }, onComplete: function(e){adjustActive($(id))}});
+                        controller.enabled(false);
+                        TweenMax.to(window, 1, {scrollTo: {y: $elem.offset().top - 50, autoKill: false}, onComplete: function(e){
+                                console.log(id);
+                                controller.enabled(true);
+                                _.delay(adjustActive, 2, id);
+                            }
+                        });
                         if (window.history && window.history.pushState) {
                             // if supported by the browser we can even update the URL.
                             history.pushState("", document.title, id);
+
                         }
                     }
                 });
