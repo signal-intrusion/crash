@@ -1,0 +1,34 @@
+{
+  "name": "1984_proto",
+  "version": "0.0.1",
+  "authors": [
+    "Christopher Plummer <plumcakes@mac.com>"
+  ],
+  "description": "prototype for thesis",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "homepage": "signalintrusion.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skrollr": "~0.6.23",
+    "ScrollMagic": "~1.0.7",
+    "underscore": "~1.6.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
+  }
+}
