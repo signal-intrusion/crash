@@ -59,7 +59,6 @@
             .addTo(controller)
             .on("enter", function(e) {
                 var _$this = $(this.triggerElement());
-                //console.log(_$this.attr('id'));
                 var targetID = _$this.attr('id');
                 var $timelineItem = $("." + targetID);
                 $($('.timeline-list-item').children()).removeClass('timeline-active');
@@ -70,15 +69,14 @@
                 $($timelineItem.children()[0])
                     .toggleClass('timeline-active');
             });
-        //scene.addIndicators();
         scenes.push(scene);
     }
 
-    var wp1pos = $('#pacman-waypoint-1').position();
-    var wp2pos = $('#pacman-waypoint-2').position();
-    var wp3pos = $('#pacman-waypoint-3').position();
-    var wp4pos = $('#pacman-waypoint-4').position();
-    var wp5pos = $('#pacman-waypoint-5').position();
+    var wp1pos = $('#pacman-waypoint-1').position(),
+        wp2pos = $('#pacman-waypoint-2').position(),
+        wp3pos = $('#pacman-waypoint-3').position(),
+        wp4pos = $('#pacman-waypoint-4').position(),
+        wp5pos = $('#pacman-waypoint-5').position();
 
     TweenMax.set('#pacman-sprite');
 
@@ -225,12 +223,8 @@
     $('.nav-item').on('click', function(e) {
 
         $('body').removeClass('secondary-sources primary-sources article-content home');
-
         var id = e.target.id;
-        //console.log(id);
-
         $('body').addClass(id);
-
     });
 
 
@@ -338,40 +332,34 @@
     });
 
     function adjustActive(_this){
-        console.log('fired');
-        console.log(_this);
         var targetID = $(_this) .attr('id');
-        console.log(targetID);
         var $timelineItem = $("." + targetID);
-        console.log($timelineItem);
         $($('.timeline-list-item').children()).removeClass('timeline-active');
         $('.timeline-list-item').removeClass('timeline-list-active');
 
         $timelineItem.addClass('timeline-list-active');
-        console.log($timelineItem.attr('class'));
         $($timelineItem.children()[0]).addClass('timeline-active');
-        console.log($($timelineItem.children()[0]).attr('class'));
     }
 
 
     $("#timeline").on("click", "a[href^=#]", function (e) {
-                    var id = $(this).attr("href"),
-                        $elem = $(id);
-                    if ($elem.length > 0) {
-                        e.preventDefault();
-                        controller.enabled(false);
-                        TweenMax.to(window, 1, {scrollTo: {y: $elem.offset().top - 50, autoKill: false}, onComplete: function(e){
-                                console.log(id);
-                                controller.enabled(true);
-                                _.delay(adjustActive, 2, id);
-                            }
-                        });
-                        if (window.history && window.history.pushState) {
-                            // if supported by the browser we can even update the URL.
-                            history.pushState("", document.title, id);
+        var id = $(this).attr("href"),
+            $elem = $(id);
+        if ($elem.length > 0) {
+            e.preventDefault();
+            controller.enabled(false);
+            TweenMax.to(window, 1, {scrollTo: {y: $elem.offset().top - 50, autoKill: false}, onComplete: function(e){
+                    console.log(id);
+                    controller.enabled(true);
+                    _.delay(adjustActive, 2, id);
+                }
+            });
+            if (window.history && window.history.pushState) {
+                // if supported by the browser we can even update the URL.
+                history.pushState("", document.title, id);
 
-                        }
-                    }
-                });
+            }
+        }
+    });
 
 })(window.jQuery, window.ScrollMagic, window.ScrollScene, window.TweenMax, window.TimelineMax, window._);
