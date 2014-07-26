@@ -266,7 +266,7 @@ By 1984 there was no one left in America to help Nintendo sell their Famicom in 
 
 
 Level 6
-ROB:
+You can make it anywhere:
 
 All the headlines said, "Video games are dead," and here was this little upstart company that no one had ever heard of called Nintendo that said they were going to bring video games back again. Everybody seemed to think that it was a joke. "oh yeah, they say they can bring video games back again. " -Herb Weisbaum, consumer affairs correspondent, CBS News (Kent 277)
 
@@ -351,27 +351,118 @@ Kent 287
 
 Everyone agreed the games were the best the had seen on a home console. No one agreed the AVS would sell. Disguising the console as a home computer didn't fool anyone either. Yamauchi blamed Arakawa for poor salesmanship. Arakawa tried to explain to his father-in-law that the industry in America was uninterested in video game consoles, but Yamauchi wouldn't hear it – he was sitting on 90% market share in Japan. Arakawa was to start again, again.
 
+Arakawa decided to strip down the AVS, get the system true to its core as a gaming console. Kids still wanted to play video games. The games themselves were the sales leader for home computers. Flipping through the computer magazines and newsletters from 1985 one sees articles about and ads for games outnumbering productivity software four-to-one. "It seemed like all the print media wanted to keep writing about was the death of video games. I mean, they just loved to write that story," Herb Weisbaum said. "'Video game sales are dead, video games are gone, video games are history.'
+Then I'd go to CES [the Consumer Electronics Show] and see all this stuff, and think, 'Where are these people coming from? It isn't dead.' It was very interesting." (Kent 280) Nintendo's Vs. Arcade cabinets, which were little more than upright famicom games, were quite successful in American Arcades (Vending Times August 1985). Nintendo just had to convince consumers that they could bring that experience home.
+
+Arakawa redesigned the system to be pure gaming console, with two controls and a light gun and a robot sidekick, ROB. No keyboard or disk drive. He redubbed the new console the Nintendo Entertainment System, NES for short.
+
+Consumers still needed reassurance that this wasn't going to be another Atari with its copycat, buggy, bargain-bin, smutty games. Atari had try to stop third parties with lawsuits, but failed. At first the third party games were real draws for the 2600, but then there were so many producing such cheap games that consumers lost faith in the system.
+
+*--->
+
+"The key video game manufacturers always thought the requirement for success was third-party software," said Judy. "Interestingly enough it was the key to their demise. But this type of thinking was true among retailers also. They told us that if we didn't have third-party software our system would never be successful. But I think we're making headway in showing them why we're going in the direction we are. It's taking a lot of effort."
+
+Arakawa said that while there have been between 15 and 20 third-party software vendors in Japan, their offerings have been tightly controlled by Nintendo.
+
+"In the United States," he said, "we have no third-party vendors of software and have not decided yet whether to license any. We don't want to lose control." As a result, there is no possibility that the market will be flooded by software that can be used on Nintendo machines. The widespread disaffection that occurred in video games because of poor performance and poor quality of third-party material will not be allowed to affect Nintendo's business. (HFD Nov 1985)
+
+<---*
+
+Arakawa included a lock-out chip in the NES that prevented third parties from making games without a license. There would be no Custer's Revenge on the NES. All games would get an official "Nintendo Seal of Approval" the reassured coonsumers the game met Nintendo's standards. Nintendo turned their licensing system into a marketting gimmick. Ask the Angry Video Game Nerd how much the "Nintendo Seal of Approval" mattered. Or just look at the LJN catalog of games to see if it worked(LJN was Sid Sheinberg's video game company).
+
+At Summer CES Arakawa showed off his NES. Again, retailers weren't interested. Arakawa hired a focus group to test the system on kids. "Arakawa observed sessions as they took place. From behind a one-way mirror, he watched a random sampling of young boys play the NES and heard them say how much they hated it. Typical was the comment ofan eight-year- old who said, 'This is shit!'" (Kent 289). He suggested to his father-in-law that they give up. Yamauchi wouldn't hear it. "No," he said. Nintendo was going to have to sell this thing themselves. The picked New York City for their test market. If you can make it there, you can make it anywhere, they thought.
+
+Arakawa made the cross country trip again. He brought his Nintendo family across the country: Ron Judy, Howard Philips, Bruce Lowry, and thirty other Nintendo employees. They rented their own delivery trucks and went door-to-door to retailers. FAO Swartz, Toy's R' Us, Child's World, Sears, Circuit City, Macy's (Sheff 165). Everyone declined.
+
+"Retailers took a tremendous financial beating because of the way the Atari business had fallen apart. I mean, with the demise of the old 2600 business, you wouldn't even try bringing up the words video game with some of these buyers. It was like they were going to pull you out to the parking lot and shoot you if you said the words video game." -Jim Whims, former vice president, Worlds of Wonder (Kent 280)
+
+"I have to sympathize with the retailers who saw a profitable business disappear right before their eyes" Ron Judy told Home Furnishings Digest. "Video games had become so big that even the top management of large chains became aware of it. I've talked to some of them, and they asked me how a multi-million-dollr-a-year category could suddenly turn into something they couldn't get rid of quickly enough."
+
+"We're years ahead of the competition."
+"No."
+"We only publish the highest quality games."
+"No."
+"We'll spend $5 million marketing it."
+"No."
+"We'll set up and man the displays."
+"Video games attract the wrong sort of crowd.""
+"Once the kids play, they'll be convinced."
+"The only reason I'm sitting in this chair is because the guy before me was fired because of video games."
+
+The sales teams were beaten. They couldn't even get the NES through the doors. Arakawa had a last resort. Give away everything. Assume all the risk. Arakawa offered retailers money back guarantees. Whatever didn't sell, Nintendo would just take back. It was a better deal than they offered for Game & Watch. And the retailers accepted it.
+
+Home Furnishings Digest announced: "The fact that Nintendo has demonstrated its willingness to create a market for them, retailers in New York have stepped forward with a substantial investment of their own. Major department stores have allocated windows--and considering the value of floor space--sizable special areas for in-store display and demonstration.
+But probably the thing that has sold the product to retailers is the product itself and the value that it represents. The package consists of a base module, two controllers, a light gun, the robot and two software packages. The robot is the clincher. (HFD)
 
 
 
-They trimmed the system down to bare essentials creating the NES.  It looked less like a computer of vg console and more like a VCR with it's slot loading. NCL R&D2 invented ROB as a way of proving that the system was more than a vg console.
-
-At CES Summer 1985 they showed off NES with Rob. The reaction was lukewarm. They were going to have to sell this thing themselves.
-
-Arakawa decided to try to sell in NYC. Stores refused to carry the NES. They offered to set up their own displays and sales teams. They offered money-back, which they had tried to avoid, but would implement again later on.
-
-Howard Phillips gave presentations on the NES, demoing ROB. This was the killer app for sales that christmas. They also use turn the licensing system into a marketing tool by calling it the Nintendo Seal of Approval, which would assure customers that the games were of high quality, not like the junk that Atari was releasing. (It was still no real guarantee of quality; see: Sid Sheinberg's LJN).
-
-Scene: Howard Philips ROB demonstration.
-
-The NES does well in NYC and it is slowly brought into stores across the country. Having learned a lesson from the early Atari VCS days, the manufacture of systems is deliberately kept slow to create a sense of greeter demand and supply shortages. IT also prevented large discounting that helped destroy Atari. Donovan 168
-
-Arakawa and Lincoln have passed on NOA to other non-family people. Yamauchi handed NCL to Iwata, one of his designers in 2002. He passed away in 2013.
-
-Nintendo is in a tough spot. It continues to innovate, but has trouble competing in America with Sony and MS who have more resources. They haven't embraced mobile phono games yet, and don't license their properties to other game companies. They are the most beloved game company in the world, but they face some challenges. Some predict the next vg crash is coming and nintendo's collapse will be the start of it.
+***********
 
 
 
+Level 7:
+R.O.B.: The Robot
+
+A circle of children in the back of Toy's R Us on Saturday morning. Their parents hands rest on their the kids' shoulders forming another circle. Some teenagers in denim jackets push their way to the front.
+
+"Let me introduce you to R.O.B The world's first video robot. Let me show you R.O.B. in action."
+
+The kids are transfixed. Mom and Dad get nervous. Is this going to be another expensive dead-end toy like that intellivision they bought, but never gets played?
+
+Howard Philips, who was up all night setting up this display. He's been giving this presentation everyday, twenty times a day, for a month. It's only November, so he has at least another month of the R.O.B. show to perform. IS this guy going to start playing a video game with a robot? How is that possible? He continues:
+
+"I get one controller, Rob gets one controller. R.O.B doesn't have fingers like you or I, so we give him this special cartridge which allows him to use his controller. As you can see when he pushes down his red or blue button he operates his controller. When we start playing the video game together, I'll be giving R.O.B. commands on the video game screen."
+
+A college student stops on his way to the Amiga Computer aisle long enough to watch the fragile plastic machine clank and crunch and stack disks like a frail, shaky, arthritic chiaua. The student rolls his eyes at the "robot" and continues on his way. But the kids are enthralled. They aren't paying attention to the words, just the robot. And the parents think it's educational. Their kids will learn how to program a robot!
+
+"With the intoduction of R.O.B and the Nintendo Entertainment System, we have a totally new concept in video games where the game play is no longeron just the video screen. The action is also out in the real world. This adds a whole new physical dimension to the video game, making it much more lively and exciting."
+
+Howard was good at this. He must have sold 10,000 NES's himself with his show. "Howard Phillips turned out to be one of the team's best spokesmen; he had a knack for communicating his own enthusiasm, punctuating his sentences with words like cool and neat. He grabbed kids, old ladies—anyone—and before his victims realized what had hit them, he had them playing." (Sheff 166) He repeated this scene all over New York City for three months. R.O.B. was NOA's trojan horse. It got the foot in the door, and the games did the rest.
+
+"When we first got the robot, it did not look like anything that you could associate with the fun and excitement of our arcade games. When you put the batteries in, he made this horrible grinding sound and his arms slowly closed and slowly opened. It was scary," Howard said. "At the same time, he did this really cool thing. He did this technology thing where he would look at the screen. It was new technology; he could somehow read what was going on on the screen. That allowed the consumer retailers to think about it as a new toy." (Kent 288). "We were selling a robot game, not a video game" Howard Lincoln said (Kent 288).
+
+Meanwhile Nintendo was soaking the market with explosive, mysterious TV ads featuring the little robot blasting through television, tearing it in two surrounded by smoke and beams of strobe lights. "Now you're playing with power!" "With just one small ad we had a problem with crowd control, people were lined up past the front door and down the street," Bruce Lowry said (HFD). There were even ads in the New Yorker. The team worked around the clock seven days a week setting up displays and selling the NES.
+
+Howard Phillips had a rather unexhilarating experience late one night while setting up a display at a Toys "R" Us in New Jersey. A security guard on the graveyard shift came over and struck up a conversation. When he saw the video-game system, he asked, "Are you from Atari?" Phillips explained that he was from Nintendo with a new and better system. The guard said, "You're working for the Japs? I hope you fall flat on your ass." (Sheff 168-169)
+
+At the end of the christmas season they had sold half of their NES stock 50,000 total. Not a blowout success, but enough to move the operation to other cities. Arakawa hired Worlds of Wonder, the company that had created Teddy Ruxpin and Lazer Tag, to help them market and sell the NES. Jeff whims recalls telling his employees about the job:
+
+*---->
+
+I will always remember the first sales meeting we had where we introduced the Nintendo a-bit to the sales force. Arakawa came down, and we had the Nintendo people presenting the product, and we said, "This is a product we're going to be supporting on a nationwide basis."
+
+Everyone was sitting in the bar after dinner that night, and these guys who had been Atari's three biggest reps grabbed me and said, "Can we talk to you?" They pulled me aside and said, "We want to let you know that we think you're making an enormous strategic mistake by getting involved in the video game business again." Now these are three Atari reps who made millions of dollars in the video game business already. They said, "Listen. WOW is the hottest company in the world right now. You've got the hottest toy company in the world right now. The video game business is a black smear and it's just gonna drag you down into the abyss."
+
+And I'II always remember that discussion.
+
+The obvious answer was, "Well, listen, I'm glad you feel that way, but I have to tell you, if you want to sell Teddy Ruxpin and you want to sell Laser Tag, you're gonna sell Nintendo as well. And if you feel that strongly about it, then you ought to just resign the line now."
+
+-Jim Whims
+(Kent 302-3)
+
+<----*
+
+
+Tom Zito, founder of Digital Pictures remmembers it being a bigger hit than it was: "It's a home run . . . a hit! It's a sell-out. So I'm saying, "Who's gonna be interested in this?" And I said, "Well, I'll bet the toy companies are gonna be very interested in something like this because ... Nintendo is gonna clean your clock next year. I mean, Nintendo is going to launch nationally and they're gonna be represented by Worlds of Wonder."
+
+The Vindicator newspaper colorfully reported: "When last sighted on these shores the video game monster was drowing in its own wretched excesses, seemingly close to extinction. Like lots of other mythical monsters, however, this creature actually floated off to Japan, where it mutated into a new and mightier species. Video games are rising from the ashes." (Vindicator June 20, 1986. "Video games gain in Japan are due for assault on U.S.")
+
+Nintendo kept the supply of systems small and demand stayed high creating an artificial shortage, which spawned it's own publicity. It also prevented mass discounting of unsold systems that helped destroy Atari. (Donovan 168). The Nintendo craze cought on across America.
+
+Within a few months the headlines had changed. Games were back. Nintendo had cleared the path. Sega and Atari followed. The Atari 7800, which Jack Tramiel killed in 1984 finally got a release in 1986, but it was too late. Nintendo was king. Eventually Arakawa would sell 34,000,000 NES's. The NES had a market share of 85%, close to Famicom numbers. Hiroshi Yamauchi must have been relieved that his son-in-law had finally cracked the US market.
+
+Level 8:
+Epilogue
+
+Nintendo's reasons for their success as easy to name as the reasons for Atari's demise. They simply did everything opposite from Atari. Nintendo was lean. It fostered creativity and rewarded good design. Nintendo innvated and never gave up on its products. It kept tight control over its partners. They created a family when Atari tore its own apart.
+
+On January 7th 2002 Minoru Arakawa stepped down from Nintendo of America, even before his father-in-law retired. It was so sudden. Yamauchi had been grooming Arakawa to take over Nintendo for the last twenty years to pass the campany in the family, but now he left without fanfare. Rumors circulated. Maybe Arakawa was blamed by Yamauchi for the GameCube running in last place against the Xbox and Playstation in America. Stephen Kent suggests Yamauchi was consolidating power by removing family members from the business as he had done when he took over in 1949 (Japan Times, January 17, 2002). Hank Rogers, a friend of Arakawa and licensee told a BBC documentary: "[Yamauchi] wanted to see Arakawa become more like him, become tougher and take over the company and be Mister Yamauchi, which is basically impossible. I think they had a difference of opinion about which direction the company should go. I don't know the details…" (BBC). Perhaps Yamauchi gave up trying to mold the good natured, loyal, and smiling Arakawa into a model of himself. It's no secret that in the time between 1986 and 2002 the two men fought and Yoko was often stuck in the middle (Business, May 25 1993). Had Yamauchi reached the end of his patience?
+
+Arakawa gave his own reason: "I think the game business is very difficult business and I worked more than 20 years and I think I'm ready to retire." And Arakawa retired in style, to a beach house he built in Hawaii. Yamauchi passed Nintendo outside the family, for the first time in it's 120 year history, to designer Satoro Iwata.
+
+Arakawa invited his father-in-law to Hawaii to visit, but he never went. Arakawa said, "Mr. Yamauchi's life is all business and if it's not business he won't come here… We invited him many times to Hawaii. If it's business he doesn't mind coming here, but if it's not business 'Why should I come?' He will continue to think about Nintendo until he dies." (BBC)
+
+Yamauchi passed away in 2013.
 
 
 
