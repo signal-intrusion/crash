@@ -1,0 +1,31 @@
+# osx noise
+.DS_Store
+profile
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# svn & cvs
+.svn
+CVS
+bower_components/*
+node_modules/*
+.sass-cache/*
+src/images/resp/*
+
+# Craft
+
+craft/storage/backups/*
+craft/storage/runtime/*
+craft/storage/userphotos/*
+craft/storage/runtime/*
+craft/storage/runtime/*
+craft/storage/runtime/logs/*

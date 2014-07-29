@@ -1,0 +1,110 @@
+aside.biography {
+    z-index: 9050;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 30%;
+    right: -30%;
+    height: 100%;
+    background-color: rgba(255,255,255,1);
+    color: #fffcf4;
+    font-size: .85em;
+    -moz-box-shadow:    2px  2px 10px #333;
+    -webkit-box-shadow: 2px  2px 10px #333;
+    box-shadow:         2px  2px 10px #333;
+    overflow: scroll;
+}
+
+.biography header {
+    text-align: left;
+    padding: 1.5em;
+    line-height: 1.8em;
+}
+
+.biography header h2 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #89c0af;
+}
+
+.bio.crop {
+    height: 20em;
+    overflow: hidden;
+}
+
+.biography img {
+    position: relative;
+    top: -20px;
+    width: 100%;
+}
+
+.biography article {
+    padding: 1.5em;
+    line-height: 1.7em;
+    color:#3e322f;
+}
+
+.biography blockquote {
+    margin-bottom:  1em;
+    font-style: italic;
+    color: #89c0af;
+
+}
+
+.biography footer {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.biography a:link {
+    color: #f24537;
+}
+
+.biography a:visited {
+    color: #dc652b;
+}
+
+.biography a:hover {
+    color: #89c0af;
+}
+
+.biography .close {
+    right: 6%;
+    top: 3%;
+    display: block;
+    content: url(../images/close.png);
+    height: 1.3em;
+    width: 1.3em;
+    position: absolute;
+    z-index: 10000;
+    cursor:pointer;
+}
+
+img.bio-link {
+    content: url(../images/info.png);
+    /*background: url(../images/quote-bubble.png);*/
+    width: .9em;
+    height: .9em;
+}
+img.bio-link.active {
+    content: url(../images/info-active.png);
+    /*background: url(../images/quote-bubble.png);*/
+}
+
+.close-after {
+    padding-top:25px;
+    padding-bottom: 25px;
+    cursor:pointer;
+
+}
+
+.related-pages{
+    border-bottom: 1px dashed #a2a09c;
+}
+
+.related-pages li{
+    line-height: 2.5em;
+    border-top: 1px dashed #a2a09c;
+
+
+}

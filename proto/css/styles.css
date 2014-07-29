@@ -1,5 +1,4 @@
 /* ///////////////// */
-
 /* CSS Reset
 /* ///////////////// */
 
@@ -12,9 +11,7 @@
     overflow-x: hidden;
     width: 100%;
 }
-/*  TODO remove settings on BODY since we can't namespace it.*/
 
-/*  TODO test putting a class on HEAD.      - Fails on FF. */
  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
     margin:0;
     padding:0;
@@ -26,7 +23,6 @@ table {
 fieldset, img {
     border:0;
 }
-/*  TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...*/
  address, caption, cite, code, dfn, em, strong, th, var {
     font-style:normal;
     font-weight:normal;
@@ -75,6 +71,7 @@ a {
  #yui3-css-stamp.cssreset {
     display: none;
 }
+
 /*
 Google fonts:
 font-family: 'Press Start 2P', cursive;
@@ -83,7 +80,6 @@ font-family: 'Roboto', sans-serif;
 */
 
 /* ///////////////// */
-
 /* Content
 /* ///////////////// */
  body {

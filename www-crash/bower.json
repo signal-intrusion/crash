@@ -1,0 +1,28 @@
+{
+  "name": "www-crash",
+  "version": "0.1.0",
+  "homepage": "https://github.com/signal-intrusion/crash",
+  "authors": [
+    "Christopher Plummer <plumcakes@mac.com>"
+  ],
+  "description": "components for histary of video game crash site",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.1",
+    "underscore": "~1.6.0",
+    "ScrollMagic": "~1.0.8"
+  }
+}
