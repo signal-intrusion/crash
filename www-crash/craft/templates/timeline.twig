@@ -1,0 +1,24 @@
+
+<div class="timeline-bg"></div>
+<section id="timeline">
+    <ul class="timeline-list">
+        {% for block in category.storyTimeline.first().years %}
+            {% if block.type == 'year' %}
+            <a href="#year-{{ block.date }}"><li class="timeline-list-item timeline-list-active year-{{ block.date }}">
+                <div class="timeline-txt timeline-active" id="timeline-first">{{ block.description }}</div>
+                {{ block.date }}
+            </li></a>
+            {% else %}
+                <a href="#year-today"><li class="timeline-list-item timeline-list-active year-today">
+                <div class="timeline-txt timeline-active" id="timeline-first">{{ block.description }}</div>
+                Today
+            </li></a>
+            {% endif %}
+        {% endfor %}
+{#
+        <a href="#year-1985"><li class="timeline-list-item year-1985">
+            <div class="timeline-txt">Selling Nostalgia</div>
+            Today
+        </li></a> #}
+    </ul>
+</section>

@@ -74,7 +74,7 @@ A `chapter` is a part of the `story`. Chapters will be `entries` of type `chapte
 
 - `number` integer representing level/chapter number [req]
 - `title` [req]
-- `body` the content of the story. written in Craft's GUI. Includes blockquotes and shortcodes[req]
+- `chapterBody` Matrix field for the content of the story. Field for images and blockquotes. Shortcodes go in text.
 - `sidenotes` One or more things that appear in the sidebar as user scrolls through. References to `aside` entries [req]
 - `banner` large image to break up flow. reference to an image `asset`
 - `sprite` if this chapter earns the reader a sprite. reference to `sprite` entry
@@ -93,10 +93,8 @@ An `aside` is an entry that refers to and is referenced by one or more chapters.
 - `quote` a pithy quote about the thing in the aside
 - `body` the content of the aside. A brief paragraph written in Craft's GUI. [req]
 - `chapter` chapters that this aside appears in [req]
-- `sidenotes` Things that appear in the sidebar as user scrolls through. References to `aside` entries [req]
-- `link1` Links/refernces to other entries for further reading. these links can be bookmarked
-- `link2`
-- `link3`
+- `sidenotes` What what this supposed to be??? Things that appear in the sidebar as user scrolls through. References to `aside` entries [req]
+- `links` Links/references to other entries for further reading. these links can be bookmarked
 - `sprite` if this aside earns the reader a sprite. reference to `sprite` entry
 - `tags` Craft CMS tag field for semantics
 

@@ -1,0 +1,77 @@
+{# {% set title = category.title %} #}
+{# {% set entries =  craft.entries({
+    relatedTo: category,
+    order: 'chapterLevel'
+    })
+%} #}
+{% set pageClass = 'chapter' %}
+{% set path = craft.request.getUrl() %}
+
+{% extends '_layout' %}
+
+{% block content %}
+
+{#  <pre>
+    {% for entry in entries %}
+        {{ dump(entry.title) }}
+        {{ dump(entry.chapterLevel) }}
+    {% endfor %}
+ </pre> #}
+
+<article class="article">
+
+{# {% for entry in entries %} #}
+    <section class="article-item">
+
+    <header class="article-hdr">
+
+        <h2>LEVEL {{ entry.chapterLevel }}</h2>
+        <h1>{{ entry.title }}</h1>
+
+    </header>
+
+    <div class="article-txt">
+
+
+        {% for block in entry.chapterBody %}
+
+            {% switch block.type %}
+
+                {% case 'text' %}
+
+                    {{ block.text }}
+
+                {% case 'quote' %}
+                    <blockquote class="quote {{ block.align }}-quote">
+                        {{ block.quote }}
+                    </blockquote>
+
+                {% case 'image' %}
+
+                {# {% set image = block.image.first() %}
+                <figure class="{{ block.align }}-image">
+                    <img src="{{ image.getUrl() }}" alt="{{ image.title }}">
+                    <figcaption>{{ block.caption }}</figcaption>
+                </figure> #}
+
+            {% endswitch %}
+
+        {% endfor %}
+        </div>
+        {# end article-txt #}
+    </section>
+    {# end section article-item #}
+{# {% endfor %} #}
+
+</article>
+
+
+{% endblock %}
+
+{% block timeline %}
+
+    {% include 'timeline.twig' %}
+
+{% endblock %}
+
+
