@@ -1,5 +1,6 @@
-// $visual-grid: true;
+$visual-grid: true;
 $max-width: em(100%);
+$grid-columns: 12;
 
 $pressStart: 'Press Start 2P', sans-serif;
 $robotoSlab: 'Roboto Slab', serif;
@@ -7,4 +8,13 @@ $roboto: 'Roboto', sans-serif;
 $georgia: 'Georgia', serif;
 
 $black: #000;
-
+$dark: #111;
+$white: #FFF;
+$beige: #fffcf4;
+$red: #f24537;
+$redTrans: rgba(242, 69, 55, 0.95);
+// $green:
+$greenTrans: rgba(126, 187, 169, 0.95);
+$lightGreen: #93d9c4;
+$darkGreen: #629082;
+$brown: #421a12;

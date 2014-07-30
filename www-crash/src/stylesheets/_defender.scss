@@ -1,0 +1,161 @@
+#defender-up {
+    margin-bottom: 4em;
+    height: 400px;
+}
+.defender.sales {
+    background-image: url(../images/defender/defender-sales.png);
+    height: 100%;
+    background-size: 104% 100%;
+}
+.defender.profits {
+    background-image: url(../images/defender/defender-profits.png);
+    height: 100%;
+    background-size: 104% 100%;
+}
+.chart-index-year {
+    width: 105%;
+    margin-left: -1%;
+    margin-top: 90px;
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
+}
+.button-container {
+    margin: 0 25%;
+    left: 0;
+    width: 50%;
+}
+button.chart {
+    -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+    box-shadow: inset 0px 1px 0px 0px #f5978e;
+    background-color: $red;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-bottom-left-radius: 0px;
+    text-indent: 0;
+    border: 1px solid #d02718;
+    display: inline-block;
+    color: #ffffff;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: .6em;
+    height: 40px;
+    width: 110px;
+    text-align: center;
+}
+button.chart:hover {
+    background-color: #FF3829;
+    cursor: pointer;
+}
+button.chart:active {
+    position: relative;
+    top: 1px;
+}
+button.button-active {
+    background-color: #c62d1f;
+}
+
+.defender-sprite {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.defender-ship {
+    background: url(../images/defender/ship1.png);
+    background-size: 50px 50px;
+    left: 8%;
+    top: 37%;
+}
+.defender-ship.profits-sprite {
+    left: 25%;
+    top: 50%;
+}
+.defender-hostage {
+    background: url(../images/defender/hostage.png);
+    background-size: 50px 50px;
+}
+.hostage-1.sales-sprite {
+    left: 30%;
+    top: 85%;
+}
+.hostage-2.sales-sprite {
+    left: 70%;
+    top: 60%;
+}
+.hostage-3.sales-sprite {
+    left: 90%;
+    top: 0%;
+}
+.hostage-1.profits-sprite {
+    left: 30%;
+    top: 88%;
+}
+.hostage-2.profits-sprite {
+    left: 62%;
+    top: 77%;
+}
+.hostage-3.profits-sprite {
+    left: 83%;
+    top: 60%;
+}
+.defender-alien {
+    background: url(../images/defender/alien1.png);
+    background-size: 50px 50px;
+}
+.alien-1.sales-sprite {
+    left: 37%;
+    top: -17%;
+}
+.alien-2.sales-sprite {
+    left: 60%;
+    top: -15%;
+}
+.alien-3.sales-sprite {
+    left: 80%;
+    top: -65%;
+}
+.alien-1.profits-sprite {
+    left: 48%;
+    top: -5%;
+}
+.alien-2.profits-sprite {
+    left: 60%;
+    top: -52%;
+}
+.alien-3.profits-sprite {
+    left: 90%;
+    top: -58%;
+}
+.defender-txt {
+    opacity: 0;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: .8em;
+    vertical-align: middle;
+    color: #651e14;
+    position: relative;
+    top: -40px;
+    left: -70px;
+    z-index: 1000;
+    text-align: center;
+    width: 250px;
+}
+.defender-sprite:hover > .defender-txt {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    opacity: 1;
+}
+.sales-sprite {
+    display: block;
+}
+.profits-sprite {
+    display: none
+}

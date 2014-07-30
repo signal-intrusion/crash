@@ -1,6 +1,10 @@
 @import'_variables';
 @import'_mixins';
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import'_defender';
 @import'_aside';
+@import'_media-query';
 
 /* /////////////////
 /* CSS Reset
@@ -74,11 +78,6 @@ legend {
 a {
     text-decoration: none;
 }
-/* YUI CSS Detection Stamp */
-
-#yui3-css-stamp.cssreset {
-    display: none;
-}
 
 /* /////////////////
 /* Content
@@ -87,7 +86,10 @@ a {
 body {
     font-family: $georgia;
     font-size: 18px;
-    color: #111;
+    color: $dark;
+    @include media($pad) {
+        font-size: 16px;
+    }
 }
 div.bottom-spacer {
     width: 100%;
@@ -97,87 +99,103 @@ div.bottom-spacer {
 /* Articles
 /* ///////////////// */
 
-.article-mod {} .article-hdr {
-    position: relative;
-    margin: 1em auto 1em auto;
-    width: 60%;
+article.story {
+
+    section {
+        @include clearfix;
+    }
+
+    header.article-hdr {
+        // @include span-columns( 6 of 12, block );
+        // @include shift( 1 );
+        position: relative;
+        display: block;
+        margin: 1em auto 1em auto;
+        width: 60%;
+    }
+    .article-txt {
+        @include span-columns( 7 of 12, block );
+        @include shift( 1 );
+        position: relative;
+        // margin: 1em auto 1em 5em;
+        max-width: 900px;
+        line-height: 1.7em;
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    .article-hdr h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 4em;
+        font-weight: 700;
+        padding-top: .2em;
+        letter-spacing: .05em;
+        line-height: .9em;
+        padding-bottom: .4em;
+        color: $brown;
+    }
+    .article-hdr h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: .8em;
+        font-weight: 700;
+        padding-top: 3em;
+        font-family: $pressStart;
+        letter-spacing: 1em;
+        color: $red;
+    }
+    // .dash-divider {
+    //     text-align: center;
+    //     font-size: .8em;
+    //     font-weight: 700;
+    //     font-family: 'Press Start 2P', sans-serif;
+    //     letter-spacing: .3em;
+    //     padding-bottom: .6em;
+    //     color: $red;
+    // }
+
 }
-.article-hdr h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 700;
-    padding-top: .2em;
-    letter-spacing: .05em;
-    line-height: .9em;
-    padding-bottom: .4em;
-    color: #421a12;
-}
-.article-hdr h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: .8em;
-    font-weight: 700;
-    padding-top: 3em;
-    font-family: 'Press Start 2P', sans-serif;
-    letter-spacing: 1em;
-    color: #f24537;
-}
-.dash-divider {
-    text-align: center;
-    font-size: .8em;
-    font-weight: 700;
-    font-family: 'Press Start 2P', sans-serif;
-    letter-spacing: .3em;
-    padding-bottom: .6em;
-    color: #f24537;
-}
-.article-txt {
-    position: relative;
-    margin: 1em auto 1em auto;
-    width: 50%;
-    line-height: 1.7em;
-}
-.article-txt p {
-    margin-bottom: 1em;
-}
+
 /* /////////////////
-/* quotes
+/* body quotes
 /* ///////////////// */
 
 blockquote.quote {
     font-size: 1.1em;
     font-style: italic;
     font-weight: bold;
-    color: #f24537;
+    color: $red;
+
+    &.left-quote {
+        text-align: right;
+        display: block;
+        float: left;
+        width: 55%;
+        margin: 0em 1em 1em -3em;
+        padding: 0 0 0 0;
+    }
+    &.center-quote {
+        text-align: center;
+        display: block;
+        float: left;
+        width: 170%;
+        left: -35%;
+        padding: 0 0 0 0;
+        margin-left: -30%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    &.right-quote {
+        text-align: left;
+        display: block;
+        float: right;
+        width: 50%;
+        margin: 0em -4em 1em 1em;
+        padding: 0 0 0 0;
+    }
 }
-blockquote.left-quote {
-    text-align: right;
-    display: block;
-    float: left;
-    width: 60%;
-    margin: 0em 1em 1em -8em;
-    padding: 0 0 0 0;
-}
-blockquote.center-quote {
-    text-align: center;
-    display: block;
-    float: left;
-    width: 170%;
-    left: -35%;
-    padding: 0 0 0 0;
-    margin-left: -30%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-blockquote.right-quote {
-    text-align: left;
-    display: block;
-    float: right;
-    width: 60%;
-    margin: 0em -8em 1em 1em;
-    padding: 0 0 0 0;
-}
+
 /* /////////////////
 /* margins
 /* ///////////////// */
@@ -202,7 +220,6 @@ img.margin-link-active {
 .margin-note {
     position: absolute;
     top: 100px;
-    /*color: rgba(0, 0, 0, 0);*/
 }
 .margin-txt {
     float: none;
@@ -322,7 +339,7 @@ img.margin-link-active {
     left: 0px;
     bottom: 0px;
     width: 100%;
-    background-color: #f24537;
+    background-color: $red;
     background-color: rgba(242, 69, 55, .95);
     z-index: 1000;
     height: 3.2em;
@@ -381,8 +398,7 @@ img.margin-link-active {
 li.timeline-list-active {
     color: #fff;
 }
-/* ///////////////// */
-
+/* /////////////////
 /* images
 /* ///////////////// */
 
@@ -471,7 +487,7 @@ li.timeline-list-active {
     top: 23em;
     left: 160%;
 }
-.pacman-hdr-spacer {} h1.pacman-hdr {
+.pacman-hdr-spacer, h1.pacman-hdr {
     position: absolute;
     z-index: 101;
     width: 100%;
@@ -484,164 +500,4 @@ span.pacman-span {
 #pacman-article-hdr {
     min-height: 10em;
     margin-top: 2em;
-}
-#defender-up {
-    margin-bottom: 4em;
-    height: 400px;
-}
-.defender.sales {
-    background-image: url(../images/defender/defender-sales.png);
-    height: 100%;
-    background-size: 104% 100%;
-}
-.defender.profits {
-    background-image: url(../images/defender/defender-profits.png);
-    height: 100%;
-    background-size: 104% 100%;
-}
-.chart-index-year {
-    width: 105%;
-    margin-left: -1%;
-    margin-top: 90px;
-    text-align: center;
-    font-family: 'Press Start 2P', sans-serif;
-}
-.button-container {
-    margin: 0 25%;
-    left: 0;
-    width: 50%;
-}
-button.chart {
-    -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
-    box-shadow: inset 0px 1px 0px 0px #f5978e;
-    background-color: #f24537;
-    -webkit-border-top-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    border-top-left-radius: 0px;
-    -webkit-border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    border-top-right-radius: 0px;
-    -webkit-border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px;
-    border-bottom-right-radius: 0px;
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    border-bottom-left-radius: 0px;
-    text-indent: 0;
-    border: 1px solid #d02718;
-    display: inline-block;
-    color: #ffffff;
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: .6em;
-    height: 40px;
-    width: 110px;
-    text-align: center;
-}
-button.chart:hover {
-    background-color: #FF3829;
-    cursor: pointer;
-}
-button.chart:active {
-    position: relative;
-    top: 1px;
-}
-button.button-active {
-    background-color: #c62d1f;
-}
-.defender-sprite {
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-.defender-ship {
-    background: url(../images/defender/ship1.png);
-    background-size: 50px 50px;
-    left: 8%;
-    top: 37%;
-}
-.defender-ship.profits-sprite {
-    left: 25%;
-    top: 50%;
-}
-.defender-hostage {
-    background: url(../images/defender/hostage.png);
-    background-size: 50px 50px;
-}
-.hostage-1.sales-sprite {
-    left: 30%;
-    top: 85%;
-}
-.hostage-2.sales-sprite {
-    left: 70%;
-    top: 60%;
-}
-.hostage-3.sales-sprite {
-    left: 90%;
-    top: 0%;
-}
-.hostage-1.profits-sprite {
-    left: 30%;
-    top: 88%;
-}
-.hostage-2.profits-sprite {
-    left: 62%;
-    top: 77%;
-}
-.hostage-3.profits-sprite {
-    left: 83%;
-    top: 60%;
-}
-.defender-alien {
-    background: url(../images/defender/alien1.png);
-    background-size: 50px 50px;
-}
-.alien-1.sales-sprite {
-    left: 37%;
-    top: -17%;
-}
-.alien-2.sales-sprite {
-    left: 60%;
-    top: -15%;
-}
-.alien-3.sales-sprite {
-    left: 80%;
-    top: -65%;
-}
-.alien-1.profits-sprite {
-    left: 48%;
-    top: -5%;
-}
-.alien-2.profits-sprite {
-    left: 60%;
-    top: -52%;
-}
-.alien-3.profits-sprite {
-    left: 90%;
-    top: -58%;
-}
-.defender-txt {
-    opacity: 0;
-    font-family: 'Press Start 2P', sans-serif;
-    font-size: .8em;
-    vertical-align: middle;
-    color: #651e14;
-    position: relative;
-    top: -40px;
-    left: -70px;
-    z-index: 1000;
-    text-align: center;
-    width: 250px;
-}
-.defender-sprite:hover > .defender-txt {
-    transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    opacity: 1;
-}
-.sales-sprite {
-    display: block;
-}
-.profits-sprite {
-    display: none
 }

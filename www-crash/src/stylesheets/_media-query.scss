@@ -1,5 +1,4 @@
 $phone: new-breakpoint(max-width 480px 12);
-$pad: new-breakpoint(min-width 481px max-width 767px 12);
-$desktop: new-breakpoint(min-width 768px max-width 1024px 12);
-$xl-desktop: new-breakpoint(min-width 1025px 12);
+$pad: new-breakpoint(min-width 481px max-width 1023px 12);
+$xl-desktop: new-breakpoint(min-width 1024px 12);
 
