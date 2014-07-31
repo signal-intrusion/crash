@@ -8,5 +8,7 @@
  */
 
 return array(
-    'devMode' => true
+    'devMode' => true,
+    // 'usePathInfo' => true,
+    // 'omitScriptNameInUrls' => true
 );

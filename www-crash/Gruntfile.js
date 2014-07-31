@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           lineNumbers: true
         },
         files: {
-          'public/stylesheets/main.css': 'src/stylesheets/styles.scss'
+          'stylesheets/main.css': 'src/stylesheets/styles.scss'
         }
       }
     },
