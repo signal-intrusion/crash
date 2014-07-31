@@ -183,15 +183,23 @@ The Family Computer
 
 When Fusajiro Yamauchi founded his playing card company in 1889 he chose the kanji characters nin-ten-do. No one knows what they mean. "They could be understood as 'Leave luck to heaven,' or 'Deep in the mind we have to do whatever we have to do.' The most common reading of it was 'Work hard, but in the end it is in heaven's hands.'" (Sheff 14).
 
-Hard work and luck.
+Hard work and luck made Nintendo.
 
-Or maybe "Nintendo" just means "the temple of free hanafuda [cards]" or "the company that is allowed to make (or sell) hanafuda" (Kotaku Sept 10, 2010).
+Or maybe "Nintendo" just means "the temple of free hanafuda [cards]" or "the company that is allowed to make (or sell) hanafuda" (Kotaku Sept 10, 2010). Not as romantic.
 
-In 1977, while the Pong market was collapsing in America, Nintendo released it's first home Pong console. Hiroshi Yamauchi who seemed he could sense the coming and goings of the tides, knew he had to push the company forward and create the next big thing in Japanese gaming or watch his company shrivel, and that was unacceptable. Yamauchi wanted to own the Japanese toy business. Nintendo would work hard and leave little in heaven's hands. R&D became the most important division of Nintendo for Yamauchi. Yamauchi split the division into four competing teams who worked day and night to earn his praise and avoid his scorn.
+In 1977, while the Pong market was collapsing in America, Nintendo released it's first home Pong console in Japan where home video gaming was just starting. Hiroshi Yamauchi could sense the coming and goings of the tides, and knew he had to push the company forward. They had to create the next big thing in Japanese gaming or go back to selling playing cards.
 
-Masayuki Uemura who had engineered the solar cells used in Nintendo's shooting gallery games was given control of Nintendo R&D #2 which focused on hardware. "[Uemura] was thrilled to join Nintendo and return to what he had done for fun as a child: make toys. 'There was something different about Nintendo,'' Uemura found. "Here were these very serious men thinking about the content of play. Other companies were importing ideas from America and adapting them to the Japanese market, only making them cheaper and smaller. But Nintendo was interested in original ideas."
+Yamauchi pushed his R&D teams to create something new for him.
 
-Yamauchi tasked Uemura's team with creating Nintendo's next home video game product. He figured once Nintendo this new product they had about a year before it was surpassed by everyone else. It had to be so much better than anything the competition was offering. It had to beat the Atari, Magnavox, Fairchild, and Mattel systems that were shipping from America to homes across the world. It also had to be cheap 9800 yen or $75 (Sheff 29).
+Masayuki Uemura who had engineered the solar cells used in Nintendo's shooting gallery games was given control of Nintendo's "R&D #2."
+
+<blockquote>
+
+"[Uemura] was thrilled to join Nintendo and return to what he had done for fun as a child: make toys. 'There was something different about Nintendo,' Uemura found. 'Here were these very serious men thinking about the content of play. Other companies were importing ideas from America and adapting them to the Japanese market, only making them cheaper and smaller. But Nintendo was interested in original ideas.'" (Sheff 24)
+
+</blockquote>
+
+Yamauchi tasked Uemura's team with creating Nintendo's next home video game product. It had to be so much better than anything the competition was offering. It had to beat the Atari, Magnavox, Fairchild, and Mattel systems that were shipping from America to homes across the world. It also had to be cheaper: 9800 yen ($75) (Sheff 29).
 
 Uemura's team went to work in 1980 on the new machine sqeezing every ounce of value from the components they could find. The central processor of this console would be the same as the one in the Atari 2600, but it got it's superior graphical abilities from an independent GPU. This allowed them to make the first programmable game console that matched the arcade experience graphically on a tight budget. The flickering that became a signature (or curse) of Nintendo's new console was consequence of using 1976-era Atari's CPU.
 
