@@ -7,45 +7,27 @@
  * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
  */
 
-/*
-supermario
-craftcheese45!!!
-plumcakes
-Manchego45!!!
-*/
-
 return array(
 
-	// // The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
-	// 'server' => 'localhost',
+	'*' => array(
+	    // Config overrides for all of our environments
+	),
 
-	// // The database username to connect with.
-	// 'user' => 'root',
+	'local' => array(
 
-	// // The database password to connect with.
-	// 'password' => 'root',
+		'server' => 'localhost',
+		'user' => 'root',
+		'password' => 'root',
+		'database' => 'crashcraft',
+		'tablePrefix' => 'craft'
+	),
 
-	// // The name of the database to select.
-	// 'database' => 'crashcraft',
-
-	// // The prefix to use when naming tables. This can be no more than 5 characters.
-	// 'tablePrefix' => 'craft',
-
-
-	/*----- remote -----*/
-	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
-	'server' => 'crashcraft.db.9299105.hostedresource.com',
-
-	// The database username to connect with.
-	'user' => 'crashcraft',
-
-	// The database password to connect with.
-	'password' => 'Manchego45!!!',
-
-	// The name of the database to select.
-	'database' => 'crashcraft',
-
-	// The prefix to use when naming tables. This can be no more than 5 characters.
-	'tablePrefix' => 'craft',
+	'live' => array(
+		'server' => 'crashcraft.db.9299105.hostedresource.com',
+		'user' => 'crashcraft',
+		'password' => 'Manchego45!!!',
+		'database' => 'crashcraft',
+		'tablePrefix' => 'craft'
+	)
 
 );

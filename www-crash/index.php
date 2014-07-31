@@ -16,10 +16,6 @@ require_once $path;
 switch ($_SERVER['SERVER_NAME'])
 
 {
-    // If the SERVER_NAME variable matches our case,
-    // assign the CRAFT_ENVIRONMENT variable a keyword
-    // that identifies this environment that we can
-    // use in our multi-environment config
 
     case 'signalintrusion.com' :
         define('CRAFT_ENVIRONMENT', 'live');
