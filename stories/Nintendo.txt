@@ -47,7 +47,11 @@ The landlord's name was Mario. He frequently bothered Arakawa for rent for Ninte
 
 Yoko Arakawa was Nintendo of America's first employee. She and Minoru, set their minds to learning everything about the game business by watching gamers. This was something Atari executives had failed to do. Daniel Sheff describes their trips to arcades:
 
+<blockquote>
+
 "They looked over players' shoulders until it made the young kids nervous. "What the fuck's your problem, mister?" one kid in a Kiss T-shirt barked at Minoru. Arakawa asked him, "Would you like a job?" He watched kids stand in front of the machines, transfixed, their hands melded to controllers, their bony arms like umbilical cords joining human and machine. He asked the kids questions about what made a game good. Arakawa realized that the most successful games had something the players couldn't articulate. The words used to describe them were those usually reserved to describe forms of intimacy between people. It was as if the players and the game itself somehow merged. The other phenomena that made successful games were more obvious. They had to have immediate impact and exciting noise and graphics; a player had to be captivated within the first thirty seconds. There could be no letup in the intensity for two minutes, the time that one quarter lasted. If the players weren't engrossed by then, they left the machine for good. If the game snared them, the string of quarters to follow could have bought dinner for a family of four." (Sheff 95)
+
+</blockquote>
 
 Howard Lincoln described Arakawa's dilligence in learning the business: "You know that the amazing thing is Mister Arakawa first came to this country he had no idea of video games US market or any of that. He had to learn all of it from scratch. He was the kind of guy when he got into something he just continued to work and work and work at it until he had mastered it." (BBC)
 
@@ -66,47 +70,61 @@ In 1981 there was no shortage of games like Radar Scope and players were more in
 Level 3
 Kong vs. Kong
 
-Hiroshi Yamauchi was the alpha and omega of Nintendo. His word was final. He handpicked his designers. He handpicked their games. Daniel Sheff describes his business philosophies practices in detail:
+Hiroshi Yamauchi was the alpha and omega of Nintendo. His word was final. He handpicked his designers. He handpicked their games. And he was almost always right.
 
-*--->
+<blockquote>
 
-"Yamauchi has never played a video game in his life and he had little interest in them. Still, he alone was the judge and jury when it came to deciding which games Nintendo would release. It was audacious, and he was either remarkably intuitive or terrifically lucky. Yamauchi was criticized for being ruthless when it came to many of his business practices— manipulating the market, terror izing employees—but no one questioned his genius when it came to choosing Famicom games. A Nintendo manager criticized Yamauchi for his obstinacy but praised his instinct: "It's like a sense for the fashion business, knowing what will become hot and popular next season. He can read a few years in advance. He is so certain that he is right that he listens to no one." (Sheff 39)
+"Yamauchi has never played a video game in his life and he had little interest in them. Still, he alone was the judge and jury when it came to deciding which games Nintendo would release. It was audacious, and he was either remarkably intuitive or terrifically lucky. Yamauchi was criticized for being ruthless when it came to many of his business practices— manipulating the market, terrorizing employees—but no one questioned his genius when it came to choosing Famicom games. A Nintendo manager criticized Yamauchi for his obstinacy but praised his instinct: "It's like a sense for the fashion business, knowing what will become hot and popular next season. He can read a few years in advance. He is so certain that he is right that he listens to no one." (Sheff 39)
 
 "Nintendo would, Yamauchi decided, become a haven for videogame artists, for it was artists, not technicians, who made great games. "An ordinary man," Yamauchi said, "cannot develop good games no matter how hard he tries. A handful of people in this world can develop games that everybody wants. Those are the people we want at Nintendo." He was interested only in the one genius, as he put it, who would drive Nintendo. He wanted to turn Nintendo into the single place the hottest game designers wanted to be associated with... Yamauchi wanted to create a place where his geniuses would be encouraged and inspired. But how? He was used to badgering and cajoling, or simply demanding—and that was certainly not the same thing as inspiring people, nurturing them. His reputation for aloofness and cockiness had grown with Nintendo. He luxuriated in his position as the merciless Goliath of his industry. He was already infamous for squashing people—or companies—that crossed him. He made up his own rules as he went along and he refused to play politics (which enraged government officials, who were used to being catered to). But could he inspire! "Research and development is the most difficult department to control," he observed. "It is difficult to control artists because they do not want to compromise." (Sheff 38)
 
-<---*
+</blockquote>
 
-Lack of taste, lack of faith and appreciation for good designers and engineers, lack of a creative environment, lack of innovation were all things that had doomed Atari. Yamauchi was different, even though, like Warner's Atari executives, he never played a video game in his life.
+He was everything that Ray Kassar, Steve Ross, and the rest of the Atari/Warner management weren't. Lack of taste, lack of appreciation for good designers and engineers, lack of creativity, lack of innovation were all things that had doomed Atari. Yamauchi was different, even though he never played video games.
 
-Yamauchi had a knack for spotting good designers as well as good games. A young artist, Shigero Miyamoto, was reccomended for a job by a family friend. Shigero, with his wild hair and a banjo playing habit, met the stern, three-piec-suit-wearing Yamauchi for an interview. Yamauchi auditioned him with a challenge to design a toy. A week later Miyatomo came back with half-a-dozen designs. Yamauchi was impressed by his imagination and hired him as Nintendo's first staff artist. Miyamoto desigining artwork for their game cabinets. A year later, in 1981 Yamauchi gave Miyamoto his first test: make a game NOA could use to convert NOA's unsold Radar Scope cabinets.
+Yamauchi had a knack for spotting talent. In 1980 He hired a young artist, Shigero Miyamoto, on a hunch that the young man, with his wild hair and crazy imagination, might one day prove to be valuable. Yamauchi had never had a staff artist at Nintendo, but found work for Miyamoto designing artwork for their arcade games. When Arakawa called a year later looking for a solution to the Radar Scope failure in America Yamauchi gave Miyamoto the assignment to convert Radar Scope into something that would sell. Miyamoto had never designed a video game, but he was about to create a classic.
 
-Miyamoto began with a design for a Popeye game, but the license fell through. He had to rely on his own imagination. He dreamed up a story about a carpenter who had a pet gorilla. One day the gorilla escapes the cage and kidnaps the man's girlfriend, not as an act of malice against her, just to teach the carpenter a lesson about keeping him locked up. It was a zany and colorful idea, and some suggest it was the first arcade video game with a story. "Miyamoto wanted the main character to be goofy and awkward. He chose an ordinary carpenter, neither handsome nor heroic. He wanted him to be Walter Mittyesque, someone anyone could relate to. On a large sketch pad he drew a nose. "Having a nose or not having a nose is completely different," he says. "Noses say a great deal." The nose Miyamoto created was a distinctive bulbous orb made even more noticeable because of the exaggerated bushy mustache beneath it. From one of his old notebooks filled with characters, he chose a pair of large, pathetic eyes." (Sheff 48) When the carpenter needed a name, years later, Arakawa would suggest "Mario" his landlord. Miyamoto pulled the name of the game from a Japanese-English dictionary: "Donkey" meant "stubborn" and "Kong" meant "gorilla." Yamauchi sent his plans to save NOA with "Donkey Kong" Arakawa.
+Miyamoto dreamed up a beauty and the beast variation: a story about a carpenter, his paramour, and his a pet gorilla. One day the gorilla escapes his cage and kidnaps the carpenter's girlfriend, not as an act of malice against her, just to teach the carpenter a lesson about keeping him locked up. It was a zany and colorful idea, and some suggest it was the first arcade video game with a story.
 
-Howard Lincoln remembers first meeting Miyamoto "He was a young guy, really young. I remember that he came into Yamauchi's office where there's a big and very formal conference room... The door opened and there was a disheveled-I wouldn't call it disheveled-but he was a little bit disheveled and his hair went in ten different directions. And it was this guy, Miyamoto. At that time, I don't think I really knew what it was that he had accomplished in creating Donkey Kong." (Kent 216)
+<blockquote>
 
-Minoru Arakawa enthusiastically presented "Donkey Kong" to Ron Judy and Al Stone, who were unenthusiastic and on the verge of financial ruin (Kent 159).
+"Miyamoto wanted the main character to be goofy and awkward. He chose an ordinary carpenter, neither handsome nor heroic. He wanted him to be Walter Mittyesque, someone anyone could relate to. On a large sketch pad he drew a nose. "Having a nose or not having a nose is completely different," he says. "Noses say a great deal." The nose Miyamoto created was a distinctive bulbous orb made even more noticeable because of the exaggerated bushy mustache beneath it. From one of his old notebooks filled with characters, he chose a pair of large, pathetic eyes." (Sheff 48)
+
+</blockquote>
+
+Miyamoto pulled the name of the game from a Japanese-English dictionary: "Donkey" meant "stubborn" and "Kong" meant "gorilla." Cute that the dictionary had named all gorillas after King Kong. Yamauchi sent his plans to save NOA with "Donkey Kong" Arakawa. Howard Lincoln remembers first meeting Miyamoto "He was a young guy, really young. I remember that he came into Yamauchi's office where there's a big and very formal conference room... The door opened and there was a disheveled-I wouldn't call it disheveled-but he was a little bit disheveled and his hair went in ten different directions. And it was this guy, Miyamoto. At that time, I don't think I really knew what it was that he had accomplished in creating Donkey Kong." (Kent 216) Minoru Arakawa enthusiastically presented "Donkey Kong" to Ron Judy and Al Stone, who were unenthusiastic and on the verge of financial ruin (Kent 159).
+
+<blockquote>
 
 "Poor Ron." Howard Lincoln recalls. "I can still see him sitting there when Mr. Arakawa said, "We have this new game and we need to get it trademarked. The name of the game is Donkey Kong."
 And I said, "Pardon me. what was that? Donkey Kong? How do you spell that?"
 I remember Ron saying, "Yeah. Can you believe that? Donkey Kong!" It was at a point in time when Ron was thinking, "What have I gotten myself into? None of these games have been great. I didn't earn any money, and now the final blow is a game called Donkey Kong, which even my lawyer can't understand." (Kent 159).
 
-They stuck with him, anyways. Arakawa had a way of creating loyalty with his endless optimism and perseverence. A year later Ron Stone and Al Judy would be millionaires. Donkey Kong was the third Japanese blockbuster in America. Merchandise alone was making NOA a fortune. Yamauchi must have been relieved that his son-in-law pulled through. Nintendo was on top of the American video game bubble. Then Nintendo of America made the same move every Japanese company made when they had a hit in the States namely to license the game for a home console.
+</blockquote>
 
-Atari with it's 80% market share would have been the natural choice in 1981. But Nintendo approached Coleco, a company that had success in the handheld game market and was gearing up to start producing games for Atari and Mattel as well as launch their own system, Colecovision. Obviously the business models of video games in 1981 hadn't been refined. Imagine Sony making games for the Wii and xBox while designing the Playstation 3! Yamauchi might have wanted to give the license to the company that was the "hungriest" (Sheff 112) and Coleco was the underdog. But according to Al Kahn of Coleco, "There were basically two strategies at work. We would take these licenses and use them not only in the major systems, but also put them into the handheld category. That was very appealing to Nintendo at the time. That's why we got Donkey Kong from Nintendo, because they saw that we could maximize their potential revenue stream by putting this product across a number of formats that existed at that point in time." (Kent 205). Coleco would use Donkey Kong as the pack-in for ColecoVision driving sales of the system.
+They stuck with him, anyways. Arakawa had a way of creating loyalty with his endless optimism and perseverence. A year later Ron Stone and Al Judy would be millionaires. The game was a hit. It was so popular its hero, the "jumpman," needed a name. Arakawa suggested "Mario" after his landlord, who was finally getting timely payments. Nintendo was on top of the American video game bubble. Yamauchi must have been relieved that his son-in-law pulled through.
 
-Arakawa had Stone's and Judy's lawyer, Howard Lincoln, draw up a contract. Arakawa specified that Lincoln clear Nintendo for any liability that Coleco might face. It was not standard practice, but Arakawa said "Never give anything away that you don't have to." Lincoln thought, "What the hell, might as well be bold." (Sheff 112). When Coleco histated on the contract Yamauchi himself told them, "Sign the damn thing. You guys are getting ready to ship the product. If you want a license, sign now." (Kent 209).
+When Nintendo decided to license the game for a home console, Atari would have been the natural choice in 1981. But Nintendo approached Coleco, a company that had success in the handheld game market and was gearing up to start producing games for Atari and Mattel as well as launch their own system, Colecovision. Coleco was the underdag and Yamauchi might have wanted to give the license to the company that was the "hungriest" (Sheff 112). But according to Al Kahn of Coleco, "There were basically two strategies at work. We would take these licenses and use them not only in the major systems, but also put them into the handheld category. That was very appealing to Nintendo at the time. That's why we got Donkey Kong from Nintendo, because they saw that we could maximize their potential revenue stream by putting this product across a number of formats that existed at that point in time." (Kent 205). Coleco would use Donkey Kong as the pack-in for ColecoVision to drive sales of the system and then, later, release versions for the Atari 2600 and Intellevision.
 
-By May 1983 Coleco sold a million ColecoVisions damaging Atari's 5200 push. Atari missed their shot at the Donkey Kong license, a mistake they wouldn't repeat again. Atari and Coleco engaged in bidding wars over licenses with Coleco driving up prices just to try punish Atari. Eventually Coleco would release Donkey Kong on Atari's 2600 and Matell's Intellivision too.
+Arakawa had Stone's and Judy's lawyer, Howard Lincoln, draw up a contract. Arakawa asked Lincoln to clear Nintendo of any liability for Coleco's port. It was not standard practice, but Arakawa believed "Never give anything away that you don't have to." Lincoln thought, "What the hell, might as well be bold." (Sheff 112). When Coleco hesitated on signing the contract with the unconventional liability clause, Yamauchi himself told them, "Sign the damn thing. You guys are getting ready to ship the product. If you want a license, sign now." (Kent 209). Coleco had to sign or else they didn't have a launch title. Who could argue with Yamauchi?
 
-"When I found out that we did not take the consumer license to Donkey Kong, and that coleco got it, I asked how could that happen," said Manny Gerrard. "They said, 'Well, it was two dollars a cartridge, and you don't understand. It would have fucked up our cost structure.' I remember I looked at them and I said, 'Guys, you got an 88 percent gross margin on cartridges. Don't you understand that a year from now you will walk on shards of broken glass to get a two-dollar cartridge deal?' Now that decision basically put Coleco in the business because without Donkey Kong, they couldn't have gotten anywhere." (Kent 205). Gerrard attempted to rectify the situation by securing the home computer license for Donkey Kong.
+By May 1983 Coleco sold a million ColecoVisions which damaged Atari's 5200 efforts.
 
-Everything at Nintendo of America seemed to be going well just as everything at Atari was beginning to unravel. Nintendo hired Howard Lincoln to represent their intellectual property interests and hunt down Donkey Kong counterfieters and copycats. But in April 1982 Yamauchi recieved a telex from Sidney Sheinberg President and COO of MCA/Universal. He called his son-in-law. The telex demanded that Nintendo turn over all profits from the game in 48 hours and destroy all unsold copies of the game. It infrinnged upon their copyright for King Kong. Once again Arakawa's Nintendo of America was struggling in the eyes of Yamauchi.
+<blockquote>
 
-Coleco got the telex too, they settled quickly, not wanting the litigation to prevent the release of the ColecoVision. MCA/Universal wanted to be a player in the video game industry and was using this lawsuit as their way in. MCA must have been watching rival Warner Communications make a billion dollars from Atari wondering how they could get in on the action. They offered to settle with Coleco for an exchange of stock and a promise of investment in the company. By the time the dust cleared on the lawsuits, the video game industry was dead, and Coleco never got that investment.
+"When I found out that we did not take the consumer license to Donkey Kong, and that Coleco got it, I asked how could that happen," said Manny Gerrard. "They said, 'Well, it was two dollars a cartridge, and you don't understand. It would have fucked up our cost structure.' I remember I looked at them and I said, 'Guys, you got an 88 percent gross margin on cartridges. Don't you understand that a year from now you will walk on shards of broken glass to get a two-dollar cartridge deal?' Now that decision basically put Coleco in the business because without Donkey Kong, they couldn't have gotten anywhere." (Kent 205).
 
-Nintendo was in no hurry to settle. Daniel Sheff describes the first meeting between MCA, Coleco, and Nintendo:
+</blockquote>
 
-*--->
+Atari missed their shot at the Donkey Kong license, a mistake they wouldn't repeat. Gerrard attempted to rectify the situation by securing the home computer license for Donkey Kong. In the future, Atari and Coleco engaged in bidding wars over licenses. Coleco who often had no intention of actually licensing the games often drove up prices just to punish Atari.
+
+In April 1982 Yamauchi recieved a telex from Sidney Sheinberg President and COO of MCA/Universal. He called his son-in-law waking him up in the middle of the night. The telex demanded that Nintendo turn over all profits from the game in 48 hours and destroy all unsold copies of the game. They said it infringed upon their copyright for King Kong. Coleco got the telex too, and they settled quickly. They didn't want the litigation to slow the release of the ColecoVision.
+
+MCA/Universal wanted to be a player in the video game industry. MCA must have been watching rival Warner Communications make a billion dollars from Atari wondering how they could get in on the action. This lawsuit wasn't just a foot in the door, it was a battering ram. They offered to settle with Coleco for an exchange of stock and a promise of investment in the company. By the time the lawsuits were over, the video game industry was dead, and Coleco never got that investment.
+
+Even tough-skinned Hiroshi Yamauchi was wondering if they should settle. MCA/Universal was a major motion picture studio and communications company with endless funds for litigation. Arakawa insisted that they support Howard Lincoln. Daniel Sheff describes the first meeting between MCA, Coleco, and Nintendo:
+
+<blockquote>
 
 "[Lincoln and Arakawa] pair arrived in L.A. and headed for Universal's main office building, known as the "black tower" (appropriately forbidding, the two felt), in Universal City. Bob Hadl, an MCA attorney, escorted the men into an elaborate office crowded with antiques and expensive artwork. There was a sweeping view of the smog.
 
@@ -119,22 +137,26 @@ MCA's lawyer waited for a response. Lincoln spoke first. "If you own King Kong a
 There was lawyerly huffing and puffing and large bodies fidget ing in uncomfortable chairs until the MCA outside counsel spoke. "Of course we own it," the lawyer said. He was back on the offensive, listing everything that MCA was
 going to go after: royalties, inventory, damages. ... He suggested that the Nintendo and Coleco representatives discuss their course of action in privacy. Before the others adjourned to a pri vate conference room, MCA's attorney told Lincoln that the only way to avoid a lawsuit was a settlement. "You don't have a chance in court," he said."
 
-<----*
+</blockquote>
 
 Coleco urged Nintendo to settle. They thought that if Nintendo would settle, they would be indemnified. Lincoln informed them they were wrong – Atari had been cleared of any liablity for Coleco's Donkey Kong in their contract.
 
-Even tough-skinned Hiroshi Yamauchi was wondering if they should settle. MCA/Universal was a major motion picture studio and communications company with endless funds for litigation. Arakawa insisted that they support Howard Lincoln.
+Lincoln had done his homework. He knew that the case for infringment was weak. Donkey Kong was an original idea and Miyamoto would testify to that in court. Furthermore, he know that MCA's claim to King Kong was tenuous at best. He demanded that MCA prove chain of copyright custody, but they refused (Kent 214).
 
-Lincoln had done his homework. He knew that the case for infringment was weak. Donkey Kong was an original idea and Miyamoto would testify to that in court. What's more, he know that MCA's claim to King Kong was tenous at best. He demanded that MCA prove chain of copyright custody, but they refused (Kent 214). They did not. Sid Sheinberg countered by suing everyone who had purchased any license for Donkey Kong and threatened to sue anyone else who worked with them. He even threatened his rival Steve Ross at Warner:
+Sid Sheinberg's next move was to sue everyone who had purchased any merchandise license for Donkey Kong and threatened to sue anyone else who worked with Nintendo. Sheinberg was salting the earth, but Nintendo and their partners didn't budge. Sheinberg even threatened his rival Steve Ross at Warner:
+
+<blockquote>
 
 "By then Atari was selling a "Donkey Kong" computer game, and MCA was also pressuring Atari's parent company, Warner Communications. Sheinberg personally threatened Warner CEO Steve Ross. "I told him ... I didn't want to be in the position of suing him," Sheinberg says. Ralston Purina, which had licensed the "Donkey Kong" character for a breakfast cereal, responded to Sheinberg's threat by offering a $5,000 settlement. This incensed Sheinberg. "It's the most stupid
 thing I ever heard of," he said. "Throw them out of the building." Thereafter Ralston Purina refused to settle, as did Milton Bradley, which had a "Donkey Kong" board game." (Sheff 119).
 
-Sheinberg was salting the earth, but Nintendo didn't budge. Meanwhile MCA/Universal ordered Tiger Electronics, who had actually licensed King Kong to manufacture a handheld clone of Donkey Kong giving the gorilla a fireman's hat and having him lob bombs, not barrels. Nintendo sued Tiger and a judge ordered them to stop manufacturing the game. Lincoln and Arakawa flew out to Hollywood to meet with Sheinberg:
+</blockquote>
 
-*--->
+Meanwhile MCA/Universal ordered Tiger Electronics, who had actually licensed King Kong to manufacture a handheld clone of Donkey Kong using King Kong as a character replacing Donkey Kong's barrels with bombs. Nintendo fired back by sueing Tiger and won an injunction. Lincoln and Arakawa flew out to Hollywood to battle Sheinberg:
 
-On that June day when Arakawa and Lincoln followed Hadl out of the black tower, they walked through the Universal lot, past actors in costumes and palm trees traveling by on a trailer. When they reached a long warehouse-like building, Hadl announced, "The executive dining room," as he grandly opened a side door. Inside was one massive table, tr^at could have seated dozens, set for four. They sat down and waited. Arakawa's fever worsened. Sidney Sheinberg, tall and lanky, wearing large horn-rimmed glasses, arrived and settled into his chair. Arakawa was feeling so ill that he felt he might pass out when, after a round of introductions, an elaborate lunch was served. There was interminable small talk, and by the time Sheinberg announced how pleased he was that Nintendo had agreed to settle the case, Arakawa was ready to keel over.
+<blockquote>
+
+On that June day when Arakawa and Lincoln followed Hadl out of the black tower, they walked through the Universal lot, past actors in costumes and palm trees traveling by on a trailer. When they reached a long warehouse-like building, Hadl announced, "The executive dining room," as he grandly opened a side door. Inside was one massive table, that could have seated dozens, set for four. They sat down and waited. Arakawa's fever worsened. Sidney Sheinberg, tall and lanky, wearing large horn-rimmed glasses, arrived and settled into his chair. Arakawa was feeling so ill that he felt he might pass out when, after a round of introductions, an elaborate lunch was served. There was interminable small talk, and by the time Sheinberg announced how pleased he was that Nintendo had agreed to settle the case, Arakawa was ready to keel over.
 
 He looked at Howard Lincoln, who had been charming Sheinberg and Hadl with stories of video games and fishing, and watched the attorney transform. "It's real simple," he said, eyeballing the MCA chief. "We have done a lot of research on this thing, looked at it from top to bottom, and we feel that there is no infringement." Firmly, coldly, he said, "We have no intention of settling." Arakawa had never seen Lincoln this icy, and he was shaken. He had no idea how Sheinberg would react.
 
@@ -144,14 +166,13 @@ He looked toward Hadl, who went white. Hadl threw a pleading glance at Lincoln, 
 
 Rising from his chair, Sheinberg said, "I've heard enough. You'll hear from our legal department." He glared at Lincoln. "You are making a major mistake," he fumed. "I view litigation as a profit center."
 
-The three men rose, too, and walked behind him to the elevator. Hadl followed Sheinberg in as Arakawa and Lincoln hung back, watching. Before the doors closed, Lincoln called out—"Mr. Sheinberg?"
-Sheinberg looked at him and grunted. "Have a nice day," Lincoln said. (Sheff 121-122).
+The three men rose, too, and walked behind him to the elevator. Hadl followed Sheinberg in as Arakawa and Lincoln hung back, watching. Before the doors closed, Lincoln called out—"Mr. Sheinberg?" Sheinberg looked at him and grunted. "Have a nice day," Lincoln said. (Sheff 121-122).
 
-<---*
+</blockquote>
 
-What Lincoln knew that Sheinberg didn't or had refused to admit, was that MCA/Universal didn't own the rights to King Kong at all. In fact, MCA had argued in court in 1972 that King Kong was in the public domain. Arakawa thanked Howard Lincoln by offering him a position as an executive vice president.
+What Lincoln knew, that Sheinberg refused to admit, was that MCA/Universal didn't own the rights to King Kong. In fact, MCA had argued in court in 1972 that King Kong was in the public domain.Nintendo counter sued claiming that Sid Sheinberg was running litigation as a profit center to bully and extort rivals. MCA/Universal would lose their one-hundred-million dollar lawsuit in 1984. Arakawa thanked Howard Lincoln for his successful defense by offering him a job as an executive vice president.
 
-Sheinberg did not back down and fought them for two more years. Nintendo counter sued claiming that Sid Sheinberg was running litigation as a profit center to bully and extort rivals. MCA/Universal would lose their one-hundred-million dollar lawsuit in 1984. Nintendo won their tiny one million dollar countersuit in 1985. By then it didn't matter. The video game party was over and there was no more money for Sheinberg to squeeze out of the industry.
+Nintendo won their tiny one million dollar countersuit in 1985. By then it didn't matter. The video game party was over and there was no more money for Sheinberg to squeeze out of the industry.
 
 
 ***********
@@ -160,7 +181,11 @@ Sheinberg did not back down and fought them for two more years. Nintendo counter
 Level 4
 The Family Computer
 
-When Fusajiro Yamauchi founded his playing card company in 1889 he chose the kanji characters nin-ten-do. "They could be understood as 'Leave luck to heaven,' or 'Deep in the mind we have to do whatever we have to do.' The most common reading of it was 'Work hard, but in the end it is in heaven's hands.'"(Sheff 14). OR maybe it jsut means "the temple of free hanafuda" or "the company that is allowed to make (or sell) hanafuda" (Kotaku Sept 10, 2010).
+When Fusajiro Yamauchi founded his playing card company in 1889 he chose the kanji characters nin-ten-do. No one knows what they mean. "They could be understood as 'Leave luck to heaven,' or 'Deep in the mind we have to do whatever we have to do.' The most common reading of it was 'Work hard, but in the end it is in heaven's hands.'" (Sheff 14).
+
+Hard work and luck.
+
+Or maybe "Nintendo" just means "the temple of free hanafuda [cards]" or "the company that is allowed to make (or sell) hanafuda" (Kotaku Sept 10, 2010).
 
 In 1977, while the Pong market was collapsing in America, Nintendo released it's first home Pong console. Hiroshi Yamauchi who seemed he could sense the coming and goings of the tides, knew he had to push the company forward and create the next big thing in Japanese gaming or watch his company shrivel, and that was unacceptable. Yamauchi wanted to own the Japanese toy business. Nintendo would work hard and leave little in heaven's hands. R&D became the most important division of Nintendo for Yamauchi. Yamauchi split the division into four competing teams who worked day and night to earn his praise and avoid his scorn.
 
@@ -203,7 +228,7 @@ Imagine a world where Atari sold the most popular, iconic, and beloved video gam
 
 Hiroshi Yamauchi contacted Minoru Arakawa. It was time to release the Nintendo Famicom in America. Howard Lincoln must contact Ray Kassar at Atari. They would be Nintendo of America's partner helping distribute Famicom across America. Lincoln and Arakawa prepared to fly to California and meet Kassar and the rest of the Warner/Atari team.
 
-*--->
+<blockquote>
 
 A meeting was set up and Kassar told Arakawa he would send the Warner Communications corporate jet, a Gulf Stream, to col lect him and Howard Lincoln. En route to the airport, Arakawa asked Lincoln if he expected lunch to be served on the plane. Lincoln said there would probably be no food on the short hop between Seattle and Sunnyvale. Arakawa was starved, so the two headed to a restaurant before meeting the jet at a private airport.
 
@@ -217,7 +242,7 @@ Questions came from Gerard and Kassar, at the far end of the conference table, b
 
  Back at the airport, where they boarded the smaller jet Ross had arranged for them, they were trying to relax and sort out the meeting when the copilot came back to tell them, "Mr. Ross left you some wine." An atten dant served them bottles of a rare Bordeaux. "I don't know how we got home," Lincoln recalls. "We still had a buzz the next day."
 
-<---*
+</blockquote>
 
 Lincoln and Arakawa had just witnessed the bureaucracy and glottony of Warner and Atari. They were stunned by the waste and inefficiency. Howard Lincoln said, "We got down there and, god, what a cast of thousands: Ray Kassar, Manny Gerard, Steve Ross, Skip Paul. ... And we were just getting hammered with one question after another." It was a far cry from their lean, mean, and creative company. Atari was an empty suit or a few dozen empty suits.
 
@@ -237,7 +262,7 @@ Donkey Kong. Coleco. Again.
 
 Nintendo had not betrayed Atari. Coleco had ported the game without authorization or a license. Coleco stock shot up 20 points. (Sheff 153) Yamauchi was furious. Lincoln scheduled an emergency meeting with Coleco at the show. It would be another great Yamuchi show. Daniel Sheff describes the meeting:
 
-*--->
+<blockquote>
 
 Present when the meeting began were Minoru and Yoko Arakawa, Ron Judy, Howard Lincoln, and, representing Coleco, Greenberg and several of his colleagues. There was also a translator. Everyone sat around a table. Arakawa whispered to Lincoln, "Don't say anything. Mr. Yamauchi will do this."
 
@@ -260,7 +285,7 @@ Greenberg and his colleagues retreated from the suite, shaken. Afterward, at din
 
 (Sheff 154-155)
 
-<---*
+</blockquote>
 
 Coleco relented. They cesased production of Donkey Kong for ADAM. It was a hollow victory. In a few weeks Kassar was fired. Atari burned. The deal went up in the smoke. Could the Famicom have saved Atari? Or would Atari have brought Nintendo down with it? Did they even see the potential? Clearly Atari had not idea what they were doing in 1983, and the death of the deal would, in the end, but the best thing for America's video game industry, but it would take three more years to be realized.
 
@@ -311,7 +336,7 @@ Arakawa started small, with the Game & Watch. In Japan Game & Watch handhelds we
 
 The first lesson was that toy stores didn't pay their bills until December 10.
 
-*---->
+<blockquote>
 
 When [Bruce Lowry, of NOA's consumer division] explained the way billing was done in the toy business, the Nintendo executives balked. Lowry said that toy companies expected all invoices to be dated December 10. But Nintendo sold coin-operated video games on net-thirty terms—all bills were due in thirty days. Simple. Lowry explained that in the toy business, orders came in in, say, January or February for a product that was to be shipped in the summer. The toy stores had the winter season to sell it. Then, finally, they began to pay their bills on December 10, once much of the Christmas business was over.
 
@@ -325,7 +350,7 @@ The man said, "You may have learned a lot of things in law school, but we're in 
 
 (Sheff 127-128)
 
-<----*
+</blockquote>
 
 The practice of offering mark-down money to retailers had been one of the causes of Atari's demise. When retailers shipped games back to Atari or threw them in the bargain bin at a discount, Atari had to cover those losses. Nintendo had always operated under the assumption that the retailers assumed the risk. At the very least they tried to avoid the traps that sank Atari, but this was one business practice they couldn't work around.
 
@@ -343,7 +368,7 @@ Editable games? 500,000 units sold in a year? Talk about over promising. Arakawa
 
 Those that were there described it for Steven Kent:
 
-*---->
+<blockquote>
 
 We kind of all looked at it and chuckled as we walked through the show because we all knew that video games were dead. This was the age of the floppy disk, the commodore 64, the Apple Ilc, the IBM PC, and the little one, what did they call it? ... it was PC Junior. Everybody was talking about the Amiga and the Atari ST. That was where everybody thought the business was, really. Nobody thought that Nintendo had much of a chance, and they kind of all laughed at what [Nintendo was] doing.
 -Greg Fischbach, founder, Acclaim Entertainment
@@ -356,7 +381,7 @@ In January 1985 we introduced the Advance Video System with the music keyboard a
 -Minoru Arakawa
 Kent 287
 
-<----*
+</blockquote>
 
 Everyone agreed the games were the best the had seen on a home console. No one agreed the AVS would sell. Disguising the console as a home computer didn't fool anyone either. Yamauchi blamed Arakawa for poor salesmanship. Arakawa tried to explain to his father-in-law that the industry in America was uninterested in video game consoles, but Yamauchi wouldn't hear it – he was sitting on 90% market share in Japan. Arakawa was to start again, again.
 
@@ -367,7 +392,7 @@ Arakawa redesigned the system to be pure gaming console, with two controls and a
 
 Consumers still needed reassurance that this wasn't going to be another Atari with its copycat, buggy, bargain-bin, smutty games. Atari had try to stop third parties with lawsuits, but failed. At first the third party games were real draws for the 2600, but then there were so many producing such cheap games that consumers lost faith in the system.
 
-*--->
+<blockquote>
 
 "The key video game manufacturers always thought the requirement for success was third-party software," said Judy. "Interestingly enough it was the key to their demise. But this type of thinking was true among retailers also. They told us that if we didn't have third-party software our system would never be successful. But I think we're making headway in showing them why we're going in the direction we are. It's taking a lot of effort."
 
@@ -375,7 +400,7 @@ Arakawa said that while there have been between 15 and 20 third-party software v
 
 "In the United States," he said, "we have no third-party vendors of software and have not decided yet whether to license any. We don't want to lose control." As a result, there is no possibility that the market will be flooded by software that can be used on Nintendo machines. The widespread disaffection that occurred in video games because of poor performance and poor quality of third-party material will not be allowed to affect Nintendo's business. (HFD Nov 1985)
 
-<---*
+</blockquote>
 
 Arakawa included a lock-out chip in the NES that prevented third parties from making games without a license. There would be no Custer's Revenge on the NES. All games would get an official "Nintendo Seal of Approval" the reassured coonsumers the game met Nintendo's standards. Nintendo turned their licensing system into a marketting gimmick. Ask the Angry Video Game Nerd how much the "Nintendo Seal of Approval" mattered. Or just look at the LJN catalog of games to see if it worked(LJN was Sid Sheinberg's video game company).
 
@@ -436,7 +461,7 @@ Howard Phillips had a rather unexhilarating experience late one night while sett
 
 At the end of the christmas season they had sold half of their NES stock 50,000 total. Not a blowout success, but enough to move the operation to other cities. Arakawa hired Worlds of Wonder, the company that had created Teddy Ruxpin and Lazer Tag, to help them market and sell the NES. Jeff whims recalls telling his employees about the job:
 
-*---->
+<blockquote>
 
 I will always remember the first sales meeting we had where we introduced the Nintendo a-bit to the sales force. Arakawa came down, and we had the Nintendo people presenting the product, and we said, "This is a product we're going to be supporting on a nationwide basis."
 
@@ -449,7 +474,7 @@ The obvious answer was, "Well, listen, I'm glad you feel that way, but I have to
 -Jim Whims
 (Kent 302-3)
 
-<----*
+</blockquote>
 
 Tom Zito, founder of Digital Pictures remmembers it being a bigger hit than it was: "It's a home run . . . a hit! It's a sell-out. So I'm saying, "Who's gonna be interested in this?" And I said, "Well, I'll bet the toy companies are gonna be very interested in something like this because ... Nintendo is gonna clean your clock next year. I mean, Nintendo is going to launch nationally and they're gonna be represented by Worlds of Wonder."
 
