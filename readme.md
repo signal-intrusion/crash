@@ -55,14 +55,14 @@ A `story` is the complete narrative of a company, event, or concept. It's the ve
 |\*| chapter
 | |
 
-In the Craft CMS a story is represented by a `category`. ex. `nintendo` or `moral panic`. Chapters will be called `levels` and be arranged in order by the chapter number to form the `story`. Stories also have one `timeline` entry that renders the timeline in the browser.
+In the Craft CMS a story is represented by a `category`. ex. `nintendo` or `moral panic`. Chapters will be called `levels` and be arranged in order by the chapter number to form the `story`. Stories also have one `storyTimeline` entry that renders the timeline in the browser.
 
 Aside-categories
 ----------------
 
 `aside-category` will be a category model describing the kind of `aside`. It will be used for layout options:
 
-- `bio`, `company`, `event`, `source` asides that have short descriptions of people, events, etc and allow the reader to acces other chapters and stories.
+- `bio`, `company`, `event`, `source`, `excerpt` asides that have short descriptions of people, events, etc and allow the reader to acces other chapters and stories.
 
 Entries
 ========================
@@ -97,6 +97,7 @@ An `aside` is an entry that refers to and is referenced by one or more chapters.
 - `links` Links/references to other entries for further reading. these links can be bookmarked
 - `sprite` if this aside earns the reader a sprite. reference to `sprite` entry
 - `tags` Craft CMS tag field for semantics
+– `citation` generally for excerpt asides
 
 Media
 --------
@@ -108,6 +109,7 @@ A `media` entry will be a video or image gallery. Media entries will be listed i
 - `video` a link to a video [req]
 - `body` short description of the media entry. [req]
 - `tags` Craft CMS tag field for semantics
+– `citation`
 
 Citation
 --------
@@ -136,18 +138,9 @@ A `sprite` is an entry that serves a few functions: bookmark, reminder, achievem
 Timeline
 --------
 
-`timeline` entries  will be used for timeline data for a `story` category. Timelines will use text field for each year in the story from 1977-1985. Each timeline will have a `story` category that will tell craft which story to append the timeline.
+`timeline` entries  will be used for timeline data for a `story` category. Timelines will use text field for each year in the story from 1977-1985.
 
-- `story` the story category of this timeline. one per story. [req]
-- `1977` text
-- `1978` field
-- `1979` for
-- `1980` summary
-- `1981` of
-- `1982` the
-- `1983` year's
-- `1984` events
-- `1985`
+`years` Matrix field. Divided into `year` blocks with `year` and `description` fields. The last entry of `years` should be a `today` field. Max: 10 blocks
 
 Short-Codes
 ========================
