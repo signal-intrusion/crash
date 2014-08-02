@@ -4,13 +4,13 @@
     <ul class="timeline-list">
         {% for block in category.storyTimeline.first().years %}
             {% if block.type == 'year' %}
-            <a href="#year-{{ block.date }}"><li class="timeline-list-item timeline-list-active year-{{ block.date }}">
-                <div class="timeline-txt timeline-active" id="timeline-first">{{ block.description }}</div>
+            <a href="#year-{{ block.date }}"><li class="timeline-list-item {% if loop.first %}timeline-list-active{% endif %} year-{{ block.date }}">
+                <div class="timeline-txt {% if loop.first %}timeline-active{% endif %}" {% if loop.first %}id="timeline-first"{% endif %}>{{ block.description }}</div>
                 {{ block.date }}
             </li></a>
             {% else %}
-                <a href="#year-today"><li class="timeline-list-item timeline-list-active year-today">
-                <div class="timeline-txt timeline-active" id="timeline-first">{{ block.description }}</div>
+                <a href="#year-today"><li class="timeline-list-item year-today">
+                <div class="timeline-txt">{{ block.description }}</div>
                 Today
             </li></a>
             {% endif %}

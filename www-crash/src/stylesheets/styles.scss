@@ -85,10 +85,10 @@ a {
 
 body {
     font-family: $georgia;
-    font-size: 18px;
+    font-size: 17px;
     color: $dark;
     @include media($pad) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 div.bottom-spacer {
@@ -114,7 +114,7 @@ article.story {
         width: 60%;
     }
     .article-txt {
-        @include span-columns( 7 of 12, block );
+        @include span-columns( 6.5 of 12, block );
         @include shift( 1 );
         position: relative;
         // margin: 1em auto 1em 5em;
@@ -193,6 +193,102 @@ blockquote.quote {
         width: 50%;
         margin: 0em -4em 1em 1em;
         padding: 0 0 0 0;
+    }
+}
+
+/* /////////////////
+/* asides
+/* ///////////////// */
+
+div.aside-container {
+    position: relative;
+    @include span-columns( 3 of 12, block );
+    @include clearfix;
+    // @include shift( 5.5 );
+    margin-left: $column+$gutter;
+    margin-right: 0;
+    float: left;
+    // display: inline-block;
+    height: 500px;
+    overflow-y: auto;
+}
+
+aside.margin-aside {
+    @include transition ( opacity 400ms ease-in-out );
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    opacity: 0;
+    color: $grey;
+    font-family: $roboto;
+    font-size: .7em;
+
+    h1 {
+        font-size: 1.4em;
+        margin-bottom: .5em;
+        text-transform: uppercase;
+    }
+
+    blockquote {
+        color: $green;
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center center;
+        max-width: 100%;
+    }
+
+    div.cropper {
+        height: auto;
+        width: 100%;
+        max-height: 180px;
+        max-width: 100%;
+        margin: 0 auto 1em auto;
+        overflow: hidden;
+
+        @include media($pad){
+            height: auto;
+            width: auto;
+            max-height: 250px;
+            max-width: 100%;
+            margin: 0 auto 1em auto;
+        }
+    }
+}
+
+input.aside-input[type='radio']:checked + aside {
+    opacity: 1
+}
+
+input.aside-input {
+    display: none;
+}
+
+label:checked {
+    color: $green;
+}
+
+ul.aside-list{
+    @include span-columns( 3 of 12, block );
+    @include clearfix;
+    margin-left: $column+$gutter;
+    position: relative;
+    float: left;
+
+    label {
+
+        &:hover, &.active {
+            color: $red;
+        }
     }
 }
 
@@ -288,7 +384,7 @@ img.margin-link-active {
     display: inline;
     float: left;
     overflow: hidden;
-    padding: 2em 0% 2em 0%;
+    padding: 1.5em 0% 1.5em 0%;
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;
     text-transform: uppercase;
@@ -342,7 +438,7 @@ img.margin-link-active {
     background-color: $red;
     background-color: rgba(242, 69, 55, .95);
     z-index: 1000;
-    height: 3.2em;
+    height: 3em;
 }
 .timeline-list {
     font-family: 'Press Start 2P', sans-serif;
@@ -374,7 +470,7 @@ img.margin-link-active {
 }
 .timeline-txt {
     position: absolute;
-    top: -1.9em;
+    top: -1.7em;
     font-family: 'Georgia', serif;
     font-style: italic;
     font-size: 1.3em;

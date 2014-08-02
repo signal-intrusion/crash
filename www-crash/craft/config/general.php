@@ -21,6 +21,8 @@ return array(
 
     'local' => array(
       'devMode' => true,
+      'usePathInfo' => true,
+      'omitScriptNameInUrls' => true
     ),
 
 );

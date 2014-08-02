@@ -12,11 +12,11 @@
 
 {% block content %}
 
- <pre>
-{#     {% for year in category.storyTimeline.first().years %}
+{#  <pre>
+    {% for entry in category.storyTimeline.first().years %}
         {{ dump(year.description) }}
-    {% endfor %} #}
- </pre>
+    {% endfor %}
+ </pre> #}
 
 <article class="story">
 
@@ -31,7 +31,6 @@
     </header>
 
     <div class="article-txt">
-
 
         {% for block in entry.chapterBody %}
 
@@ -59,6 +58,34 @@
         {% endfor %}
         </div>
         {# end article-txt #}
+        <div class="aside-container">
+        {% for aside in entry.sidenotes %}
+
+            {% if aside.type == 'aside' %}
+                <input type="radio" class="aside-input" name="aside-input-{{ entry.slug }}" id="aside-{{loop.index}}" {% if loop.first %}checked{% endif %}>
+                <aside class="margin-aside">
+                    <h1>{{ aside.title }}</h1>
+                    {% if aside.asideImage | length %}
+                        <div class="cropper">
+                        <img src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
+                        </div>
+                    {% endif %}
+                    <blockquote>{{ aside.quote }}</blockquote>
+                    <p>{{ aside.body }}</p>
+
+                    {% if aside.asideCitation | length %}
+                    <small>citation goes here</small>
+                    {% endif %}
+                </aside>
+
+                {% endif %}
+            {% endfor %}
+        </div>
+        <ul class="aside-list">
+            {% for aside in entry.sidenotes %}
+            <label for="aside-{{loop.index}}" class="{% if loop.first %}active{% endif %}"><li><h2>{{ aside.title }}</h2></li></label>
+            {% endfor %}
+        </ul>
     </section>
     {# end section article-item #}
 {% endfor %}

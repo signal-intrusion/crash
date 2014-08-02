@@ -44,6 +44,14 @@ module.exports = function(grunt) {
             spawn: false,
             lineNumbers: true
         }
+      },
+      html: {
+        files:['craft/templates/*'],
+        tasks: ['sass'],
+        options: {
+            spawn: false,
+            lineNumbers: true
+        }
       }
     },
     sass: {
