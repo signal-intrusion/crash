@@ -204,17 +204,15 @@ div.aside-container {
     position: relative;
     @include span-columns( 3 of 12, block );
     @include clearfix;
-    // @include shift( 5.5 );
     margin-left: $column+$gutter;
     margin-right: 0;
     float: left;
-    // display: inline-block;
-    height: 500px;
+    height: 450px;
     overflow-y: auto;
 }
 
 aside.margin-aside {
-    @include transition ( opacity 400ms ease-in-out );
+    @include transition ( opacity 300ms ease-in-out );
     position: absolute;
     top: 0px;
     left: 0px;
@@ -225,13 +223,19 @@ aside.margin-aside {
     font-size: .7em;
 
     h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        font-weight: bold;
         margin-bottom: .5em;
         text-transform: uppercase;
     }
 
+    h2 {
+        @extend h1;
+        font-size: 1em
+    }
+
     blockquote {
-        color: $green;
+        color: $darkGreen;
         margin-bottom: 1em;
     }
 
@@ -263,6 +267,37 @@ aside.margin-aside {
             margin: 0 auto 1em auto;
         }
     }
+
+    ul.aside-links {
+        a {
+            font-size: 1.2em;
+            color: $green;
+
+            &:visited {
+                color: $green;
+            }
+            &:active {
+                color: $red;
+            }
+            &:hover {
+                color: $red;
+            }
+            &:before {
+                content: "\00BB  ";
+            }
+
+        }
+    }
+
+    button.aside-link-button {
+        background-image: url("../images/ui/bookmark.png");
+        background-size: contain;
+        background-color: transparent;
+        height: 15px;
+        width: 15px;
+        border: none;
+        margin-left: 1em;
+    }
 }
 
 input.aside-input[type='radio']:checked + aside {
@@ -283,9 +318,29 @@ ul.aside-list{
     margin-left: $column+$gutter;
     position: relative;
     float: left;
+    font-family: $roboto;
+    color: $grey;
+    margin-top: 1em;
+
+    h2 {
+        font-size: .7em;
+        font-weight: 800;
+        margin-bottom: .3em;
+        text-transform: uppercase;
+    }
+
+    li {
+        border-bottom: 1px dashed #a2a09c;
+        padding: .3em 0;
+    }
+
+    label:first-of-type li {
+        border-top: 1px dashed #a2a09c;
+    }
 
     label {
-
+        color: $green;
+        font-size: .7em;
         &:hover, &.active {
             color: $red;
         }
@@ -384,7 +439,7 @@ img.margin-link-active {
     display: inline;
     float: left;
     overflow: hidden;
-    padding: 1.5em 0% 1.5em 0%;
+    padding: 1.4em 0% 1.4em 0%;
     text-align: center;
     font-family: 'Press Start 2P', sans-serif;
     text-transform: uppercase;
@@ -413,7 +468,7 @@ img.margin-link-active {
     line-height: 1.3em;
     text-align: center;
 }
-.nav-list-item {} .empty-mod {
+.nav-list-item, .empty-mod {
     height: 4em;
 }
 
@@ -438,7 +493,7 @@ img.margin-link-active {
     background-color: $red;
     background-color: rgba(242, 69, 55, .95);
     z-index: 1000;
-    height: 3em;
+    height: 2.5em;
 }
 .timeline-list {
     font-family: 'Press Start 2P', sans-serif;
@@ -470,10 +525,10 @@ img.margin-link-active {
 }
 .timeline-txt {
     position: absolute;
-    top: -1.7em;
+    top: -1.5em;
     font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #fff;
     display: inline-block;
     opacity: 0;

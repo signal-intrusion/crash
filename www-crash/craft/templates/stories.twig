@@ -64,26 +64,35 @@
             {% if aside.type == 'aside' %}
                 <input type="radio" class="aside-input" name="aside-input-{{ entry.slug }}" id="aside-{{loop.index}}" {% if loop.first %}checked{% endif %}>
                 <aside class="margin-aside">
-                    <h1>{{ aside.title }}</h1>
                     {% if aside.asideImage | length %}
                         <div class="cropper">
                         <img src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
                         </div>
                     {% endif %}
+                    <h1>{{ aside.title }}</h1>
                     <blockquote>{{ aside.quote }}</blockquote>
                     <p>{{ aside.body }}</p>
 
                     {% if aside.asideCitation | length %}
-                    <small>citation goes here</small>
+                        <small>citation goes here</small>
                     {% endif %}
+                    {% if aside.chapters | length %}
+                        <ul class="aside-links">
+                        <h2>Read more about this:</h2>
+                        {% for chapter in aside.chapters %}
+                            <a href="{{ chapter.getUrl() }}">{{ chapter.title }}</a><button class="aside-link-button"></button>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <hr>
                 </aside>
-
                 {% endif %}
             {% endfor %}
         </div>
         <ul class="aside-list">
+            <h2>Notes:</h2>
             {% for aside in entry.sidenotes %}
-            <label for="aside-{{loop.index}}" class="{% if loop.first %}active{% endif %}"><li><h2>{{ aside.title }}</h2></li></label>
+            <label for="aside-{{loop.index}}" class="{% if loop.first %}active{% endif %}"><li>{{ aside.title }}</li></label>
             {% endfor %}
         </ul>
     </section>
