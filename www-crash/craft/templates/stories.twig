@@ -38,7 +38,7 @@
 
                 {% case 'text' %}
 
-                    {{ block.text }}
+                    {{ block.text | shortcodes }}
 
                 {% case 'quote' %}
                     <blockquote class="quote {{ block.align }}-quote">
@@ -59,42 +59,9 @@
         </div>
         {# end article-txt #}
         <div class="aside-container">
-        {% for aside in entry.sidenotes %}
-
-            {% if aside.type == 'aside' %}
-                <input type="radio" class="aside-input" name="aside-input-{{ entry.slug }}" id="aside-{{loop.index}}" {% if loop.first %}checked{% endif %}>
-                <aside class="margin-aside">
-                    {% if aside.asideImage | length %}
-                        <div class="cropper">
-                        <img src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
-                        </div>
-                    {% endif %}
-                    <h1>{{ aside.heading }}</h1>
-                    <blockquote>{{ aside.quote }}</blockquote>
-                    <p>{{ aside.body }}</p>
-
-                    {% if aside.asideCitation | length %}
-                        <small>citation goes here</small>
-                    {% endif %}
-                    {% if aside.chapters | length %}
-                        <ul class="aside-links">
-                        <h2>Read more about this:</h2>
-                        {% for chapter in aside.chapters %}
-                            <a href="{{ chapter.getUrl() }}">{{ chapter.heading }}</a><button class="aside-link-button"></button>
-                        {% endfor %}
-                        </ul>
-                    {% endif %}
-                    <hr>
-                </aside>
-                {% endif %}
-            {% endfor %}
+            {% include 'asides.twig' %}
         </div>
-        <ul class="aside-list">
-            <h2>Notes:</h2>
-            {% for aside in entry.sidenotes %}
-            <label for="aside-{{loop.index}}" class="{% if loop.first %}active{% endif %}"><li>{{ aside.title }}</li></label>
-            {% endfor %}
-        </ul>
+        {% include 'aside-list.twig' %}
     </section>
     {# end section article-item #}
 {% endfor %}

@@ -1,0 +1,12 @@
+{% switch citation.sourceType %}
+
+    {% case book %}
+    {% case video %}
+    {% case webpage %}
+    {% case article-in-periodical %}
+
+    {{ citation.sourceAuthor }}, {{ citation.sourceName }},
+
+    {% case image %}
+
+{% endswitch %}

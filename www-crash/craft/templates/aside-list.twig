@@ -1,0 +1,6 @@
+<ul class="aside-list">
+    <h2>Notes:</h2>
+    {% for aside in entry.sidenotes %}
+    <label for="aside-{{loop.index}}" class="{% if loop.first %}active{% endif %}"><li>{{ aside.title }}</li></label>
+    {% endfor %}
+</ul>
