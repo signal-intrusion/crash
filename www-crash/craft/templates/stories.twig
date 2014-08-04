@@ -26,7 +26,7 @@
     <header class="article-hdr">
 
         <h2>LEVEL {{ entry.chapterLevel }}</h2>
-        <h1>{{ entry.title }}</h1>
+        <h1>{{ entry.heading }}</h1>
 
     </header>
 
@@ -69,7 +69,7 @@
                         <img src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
                         </div>
                     {% endif %}
-                    <h1>{{ aside.title }}</h1>
+                    <h1>{{ aside.heading }}</h1>
                     <blockquote>{{ aside.quote }}</blockquote>
                     <p>{{ aside.body }}</p>
 
@@ -80,7 +80,7 @@
                         <ul class="aside-links">
                         <h2>Read more about this:</h2>
                         {% for chapter in aside.chapters %}
-                            <a href="{{ chapter.getUrl() }}">{{ chapter.title }}</a><button class="aside-link-button"></button>
+                            <a href="{{ chapter.getUrl() }}">{{ chapter.heading }}</a><button class="aside-link-button"></button>
                         {% endfor %}
                         </ul>
                     {% endif %}

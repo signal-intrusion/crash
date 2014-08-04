@@ -521,7 +521,7 @@ article.story .article-hdr h1, article.story .article-hdr aside.margin-aside h2,
 article.story .article-hdr h2 {
   text-transform: uppercase;
   text-align: center;
-  font-size: .8em;
+  font-size: .9em;
   font-weight: 700;
   padding-top: 3em;
   font-family: "Press Start 2P", sans-serif;
@@ -878,7 +878,7 @@ img.margin-link-active {
   text-align: center;
   font-family: 'Press Start 2P', sans-serif;
   text-transform: uppercase;
-  font-size: .5em;
+  font-size: .6em;
   letter-spacing: .1em;
   font-weight: 700;
   color: #fdf9ec;
@@ -937,10 +937,9 @@ img.margin-link-active {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  background-color: #f24537;
-  background-color: rgba(242, 69, 55, 0.95);
+  background-color: #421a12;
   z-index: 1000;
-  height: 2.5em;
+  height: 2.6em;
 }
 
 /* line 498, ../src/stylesheets/styles.scss */
