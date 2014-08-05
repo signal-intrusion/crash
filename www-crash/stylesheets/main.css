@@ -583,7 +583,7 @@ div.aside-container {
   margin-left: 5.8538em;
   margin-right: 0;
   float: left;
-  height: 450px;
+  height: 480px;
   overflow-y: auto;
 }
 /* line 38, ../src/stylesheets/neat/grid/_span-columns.scss */
@@ -843,13 +843,6 @@ img.margin-link-active {
   content: "..";
 }
 
-/* line 415, ../src/stylesheets/styles.scss */
-.citation:before {
-  content: "";
-  display: block;
-  margin-top: 1em;
-}
-
 /* /////////////////
 /* Nav Bar
 /* ///////////////// */
@@ -1055,22 +1048,60 @@ li.timeline-list-active {
 /* /////////////////
 /* citations
 /* ///////////////// */
-/* line 588, ../src/stylesheets/styles.scss */
-.citation span.source-name {
+/* line 591, ../src/stylesheets/styles.scss */
+span.source-name {
   font-style: italic;
+}
+
+/* line 597, ../src/stylesheets/styles.scss */
+.in-line-note.active, .in-line-footnote.active {
+  background-color: #f24537;
+}
+/* line 601, ../src/stylesheets/styles.scss */
+.in-line-note img, .in-line-footnote img {
+  width: auto;
+  height: 1em;
+}
+
+/* line 607, ../src/stylesheets/styles.scss */
+footer.story-footnotes {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 53.08608%;
+  margin-left: 8.5298%;
+  position: relative;
+  max-width: 900px;
+  line-height: 1.7em;
+  margin-bottom: 4em;
+}
+/* line 38, ../src/stylesheets/neat/grid/_span-columns.scss */
+footer.story-footnotes:last-child {
+  margin-right: 0;
+}
+/* line 616, ../src/stylesheets/styles.scss */
+footer.story-footnotes h2 {
+  font-family: "Press Start 2P", sans-serif;
+  color: #f24537;
+  font-size: .9em;
+}
+/* line 622, ../src/stylesheets/styles.scss */
+footer.story-footnotes p {
+  font-family: "Roboto", sans-serif;
+  font-size: .8em;
 }
 
 /* /////////////////
 /* animations
 /* ///////////////// */
-/* line 597, ../src/stylesheets/styles.scss */
+/* line 633, ../src/stylesheets/styles.scss */
 .sprite {
   display: block;
   position: absolute;
   z-index: 100;
 }
 
-/* line 602, ../src/stylesheets/styles.scss */
+/* line 638, ../src/stylesheets/styles.scss */
 .pacman {
   content: url(../images/sprites/pacman-arcade.png);
   top: -16em;
@@ -1078,7 +1109,7 @@ li.timeline-list-active {
   width: 100px;
 }
 
-/* line 608, ../src/stylesheets/styles.scss */
+/* line 644, ../src/stylesheets/styles.scss */
 .ghost {
   top: -16em;
   left: -100%;
@@ -1086,27 +1117,27 @@ li.timeline-list-active {
   height: 100px;
 }
 
-/* line 614, ../src/stylesheets/styles.scss */
+/* line 650, ../src/stylesheets/styles.scss */
 .ghost.console {
   content: url(../images/sprites/ghost.png);
 }
 
-/* line 617, ../src/stylesheets/styles.scss */
+/* line 653, ../src/stylesheets/styles.scss */
 .ghost.arcade {
   content: url(../images/sprites/ghost-arcade.png);
 }
 
-/* line 620, ../src/stylesheets/styles.scss */
+/* line 656, ../src/stylesheets/styles.scss */
 .ghost.arcade.run {
   content: url(../images/sprites/ghost-arcade-run.png);
 }
 
-/* line 623, ../src/stylesheets/styles.scss */
+/* line 659, ../src/stylesheets/styles.scss */
 .ghost.console.run {
   content: url(../images/sprites/ghost-run.png);
 }
 
-/* line 626, ../src/stylesheets/styles.scss */
+/* line 662, ../src/stylesheets/styles.scss */
 .waypoint {
   position: absolute;
   width: 10px;
@@ -1115,37 +1146,37 @@ li.timeline-list-active {
   opacity: 0;
 }
 
-/* line 633, ../src/stylesheets/styles.scss */
+/* line 669, ../src/stylesheets/styles.scss */
 #pacman-waypoint-1 {
   top: -16em;
   left: -20%;
 }
 
-/* line 637, ../src/stylesheets/styles.scss */
+/* line 673, ../src/stylesheets/styles.scss */
 #pacman-waypoint-2 {
   top: 1em;
   left: -20%;
 }
 
-/* line 641, ../src/stylesheets/styles.scss */
+/* line 677, ../src/stylesheets/styles.scss */
 #pacman-waypoint-3 {
   top: 1em;
   left: 110%;
 }
 
-/* line 645, ../src/stylesheets/styles.scss */
+/* line 681, ../src/stylesheets/styles.scss */
 #pacman-waypoint-4 {
   top: 23em;
   left: 110%;
 }
 
-/* line 649, ../src/stylesheets/styles.scss */
+/* line 685, ../src/stylesheets/styles.scss */
 #pacman-waypoint-5 {
   top: 23em;
   left: 160%;
 }
 
-/* line 653, ../src/stylesheets/styles.scss */
+/* line 689, ../src/stylesheets/styles.scss */
 .pacman-hdr-spacer, h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   position: absolute;
   z-index: 101;
@@ -1153,13 +1184,13 @@ li.timeline-list-active {
   left: 0;
 }
 
-/* line 659, ../src/stylesheets/styles.scss */
+/* line 695, ../src/stylesheets/styles.scss */
 span.pacman-span {
   /*background-color: #fffcf4;*/
   padding: 1.1em .5em;
 }
 
-/* line 663, ../src/stylesheets/styles.scss */
+/* line 699, ../src/stylesheets/styles.scss */
 #pacman-article-hdr {
   min-height: 10em;
   margin-top: 2em;

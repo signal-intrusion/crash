@@ -27,7 +27,8 @@ class MyshortcodesPlugin extends BasePlugin
 	{
 		return array(
 			array($this, 'citation'),
-			array($this, 'note')
+			array($this, 'note'),
+			array($this, 'footnote')
 		);
 	}
 
@@ -69,7 +70,29 @@ class MyshortcodesPlugin extends BasePlugin
 			$imgSrc = "excerpt.png";
 		}
 
-		return '<span><img src="images/ui/' . $imgSrc . '" alt="' . $entries[0]->heading . '">' . $entries[0]->sourceName . '</span>';
+		return '<span class="in-line-note note-' . $entries[0]->slug . '" id=""><img src="images/ui/' . $imgSrc . '" title="More about: ' . $entries[0]->heading . '">' . $entries[0]->sourceName . '</span>';
+	}
+
+	public function footnote($attributes, $content, $tag) {
+
+		$criteria = craft()->elements->getCriteria(ElementType::Entry);
+		$criteria->slug = $attributes['cite'];
+		if ( $entries = $criteria->find() ) {
+
+			$footnoteSource = $entries[0]->sourceName;
+			$footnoteAuthor = $entries[0]->sourceAuthors;
+			$footnoteYear = $entries[0]->sourceYear;
+
+		} else {
+			$footnoteSource = 'missing';
+			$footnoteAuthor = 'missing';
+			$footnoteYear = 'missing';
+			$entries[0]->slug = 'missing';
+		}
+
+		$footnotePage = $attributes['page'];
+
+		return '<span class="in-line-footnote ' . $entries[0]->slug . '"><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>';
 	}
 
 }

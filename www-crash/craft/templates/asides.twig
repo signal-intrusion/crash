@@ -13,7 +13,7 @@
             <p>{{ aside.body }}</p>
 
             {% if aside.asideCitation | length %}
-                <small class="citation">{% include 'full-citation.twig' with { 'citation': aside.asideCitation.first() } only %}</small>
+                <small class="citation">{% include 'full-citation.twig' with { 'citations': aside.asideCitation } only %}</small>
             {% endif %}
             {% if aside.chapters | length %}
                 <ul class="aside-links">

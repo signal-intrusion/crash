@@ -66,6 +66,13 @@
     {# end section article-item #}
 {% endfor %}
 
+<footer class="story-footnotes">
+    <h2> Sources:</h2>
+    {% for entry in entries %}
+        <p>{% include 'full-citation.twig' with {'citations': entry.citations }%}</p>
+    {% endfor %}
+</footer>
+
 </article>
 
 
