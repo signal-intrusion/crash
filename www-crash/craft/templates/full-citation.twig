@@ -1,12 +1,16 @@
-{% switch citation.sourceType %}
+{% switch citation.sourceType.first() %}
 
-    {% case book %}
-    {% case video %}
-    {% case webpage %}
-    {% case article-in-periodical %}
+    {% case 'book' %}
+            {{ citation.sourceAuthors }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceYear }}).
 
-    {{ citation.sourceAuthor }}, {{ citation.sourceName }},
+    {% case 'video' %}
 
-    {% case image %}
+    {% case 'webpage' %}
+        {{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a>
+
+    {% case 'article in periodical' %}
+        {{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).
+
+    {% case 'image' %}
 
 {% endswitch %}
