@@ -1,0 +1,13 @@
+<script id="bookmark-template" type="text/template">
+<table class="drawer-bookmarks">
+    <tr><th><h1>Bookmarks</h1></th></tr>
+    <% for (var i = 0; i < data.bookmarkArray.length; i++) { %>
+        <tr>
+            <td><a href="{{ siteUrl }}<%= data.bookmarkArray[i].link %>"><%= data.bookmarkArray[i].title %></a></td>
+        </tr>
+    <% } %>
+
+</table>
+
+</script>
+

@@ -5,12 +5,19 @@
         controller = new ScrollMagic(),
         asideChangers = [];
 
+    $body.addClass('script');
+
     $(window).load(function(){
 
+        // console.log(asideChangers[1].scene.state());
 
-        $('.aside-container').first().addClass('active');
-        $body.addClass('script');
-        console.log(supports_html5_storage());
+        if (asideChangers[1].scene.state() === "BEFORE"){
+
+            $('.aside-container').first().addClass('active');
+        }
+
+        loadBookmarks();
+        // console.log(supports_html5_storage());
         // $('.aside-list').first().addClass('active');
     });
 
@@ -86,7 +93,8 @@
                             }
                         })
                         .addTo(controller);
-        this.scene.addIndicators();
+        // this.scene.addIndicators();
+
         return true;
     };
 
@@ -125,7 +133,7 @@
         } else {
             localMarks = {
                 bookmarkArray: []
-            }
+            };
         }
 
         console.log(localMarks);
@@ -146,6 +154,39 @@
         console.log(localStorage.getItem('bookmarks'));
 
     });
+
+    function renderTemplate(target, template, data) {
+
+        var tmplMarkup = $(template).html(),
+            compiledTmpl = _.template(tmplMarkup, { data: data }),
+            $target = $(target);
+
+        $target.html(compiledTmpl);
+
+    };
+
+    function loadBookmarks() {
+
+        var localMarks;
+
+        if (localStorage.getItem('bookmarks') !== null && localStorage.getItem('bookmarks') !== undefined){
+
+            localMarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+        } else {
+            localMarks = {
+                bookmarkArray: [
+                    {'title': 'test', 'link': 'linktest'},
+                    {'title': 'test2', 'link': 'linktest2'}
+                ]
+            };
+        }
+
+        renderTemplate('#bookmark-drawer-target', '#bookmark-template', localMarks);
+
+        return true;
+
+    }
 
 
 

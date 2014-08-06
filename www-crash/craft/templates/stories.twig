@@ -10,6 +10,13 @@
 
 {% extends '_layout' %}
 
+{% block drawer %}
+
+{% include 'drawer.twig' %}
+
+{% endblock %}
+
+
 {% block content %}
 
 {#  <pre>
@@ -83,6 +90,10 @@
 
     {% include 'timeline.twig' %}
 
+{% endblock %}
+
+{% block scripts %}
+    {% include 'bookmark-drawer.twig' %}
 {% endblock %}
 
 

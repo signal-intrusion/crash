@@ -107,7 +107,7 @@ article.story {
 
     header.article-hdr {
         @include span-columns( 6.5 of 12, block );
-        @include shift( 1 );
+        @include shift( 1.5 );
         position: relative;
         display: block;
         // margin: 1em auto 1em auto;
@@ -117,7 +117,7 @@ article.story {
     }
     .article-txt {
         @include span-columns( 6 of 12, block );
-        @include shift( 1 );
+        @include shift( 1.5 );
         position: relative;
         // margin: 1em auto 1em 5em;
         max-width: 900px;
@@ -211,7 +211,7 @@ div.aside-container {
     margin-right: 0;
     float: left;
     display: table;
-    height: 80%;
+    height: 800px;
     // overflow-y: auto;
 }
 
@@ -330,7 +330,7 @@ aside.margin-aside {
             z-index: 100;
             left: 50%;
             top: 0;
-            margin-left: -50%;
+            margin-left: -2em;
             pointer-events: none;
         }
         &:hover:after {
@@ -343,10 +343,11 @@ aside.margin-aside {
     position: fixed;
     z-index: 0;
     top: 10%;
-    @include shift(8.3);
+    @include shift(8.5);
     // display: none;
     opacity: 0;
     pointer-events: none;
+    height: 80%;
 
     &.active {
         display: block !important;
@@ -417,6 +418,51 @@ ul.aside-list{
         }
     }
 }
+
+/* /////////////////
+/* drawers
+/* ///////////////// */
+
+div.drawer-container {
+
+    @include span-columns( 1.4 of 12 );
+    background-color: $brown;
+    font-size: .8em;
+    color: $beige;
+    font-family: $roboto;
+    padding: 1em;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    margin-left: 1em;
+
+    h1 {
+        font-family: $pressStart;
+        color: $red;
+        margin-bottom: 1em;
+        font-size: .7em;
+
+    }
+    h2 {
+
+    }
+
+    a {
+        color: $beige;
+    }
+
+
+
+}
+
+div.drawer-nav {
+
+}
+
+table.drawer-sprites, table.drawer-bookmarks {
+    margin-bottom: 1em;
+}
+
 
 /* /////////////////
 /* margins

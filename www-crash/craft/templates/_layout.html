@@ -28,6 +28,7 @@
 
 <body>
 	{% include 'nav-mod.twig' %}
+    {% block drawer %}{% endblock %}
 	{% block content %}{% endblock %}
     {# {% block footnotes %}{% endblock %} #}
     {% block timeline %}{% endblock %}
