@@ -70,7 +70,7 @@ class MyshortcodesPlugin extends BasePlugin
 			$imgSrc = "excerpt.png";
 		}
 
-		return '<span class="in-line-note note-' . $entries[0]->slug . '" id=""><img src="images/ui/' . $imgSrc . '" title="More about: ' . $entries[0]->heading . '">' . $entries[0]->sourceName . '</span>';
+		return '<span class="in-line-note note-' . $entries[0]->slug . '" id="" title="'. $entries[0]->heading .'"><img src="images/ui/' . $imgSrc . '" title="More about: ' . $entries[0]->heading . '">' . $entries[0]->sourceName . '</span>';
 	}
 
 	public function footnote($attributes, $content, $tag) {
@@ -92,7 +92,7 @@ class MyshortcodesPlugin extends BasePlugin
 
 		$footnotePage = $attributes['page'];
 
-		return '<span class="in-line-footnote ' . $entries[0]->slug . '"><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>';
+		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>';
 	}
 
 }

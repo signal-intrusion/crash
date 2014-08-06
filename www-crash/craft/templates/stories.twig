@@ -21,7 +21,8 @@
 <article class="story">
 
 {% for entry in entries %}
-    <section class="article-item">
+    <div id="level-{{ entry.chapterLevel }}" class="aside-trigger"></div>
+    <section class="article-item" id="{{ entry.slug }}">
 
     <header class="article-hdr">
 
@@ -58,7 +59,7 @@
         {% endfor %}
         </div>
         {# end article-txt #}
-        <div class="aside-container">
+        <div class="aside-container level-{{ entry.chapterLevel }}">
             {% include 'asides.twig' %}
         </div>
         {% include 'aside-list.twig' %}

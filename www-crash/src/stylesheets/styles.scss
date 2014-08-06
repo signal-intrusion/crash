@@ -249,6 +249,8 @@ aside.margin-aside {
         display: block;
         background-position: center center;
         max-width: 100%;
+        max-height: 140%;
+        margin: 0 auto;
     }
 
     div.cropper {
@@ -297,6 +299,34 @@ aside.margin-aside {
         width: 15px;
         border: none;
         margin-left: 1em;
+    }
+}
+
+.script .aside-container {
+    position: fixed;
+    z-index: 0;
+    top: 10%;
+    @include shift(8.3);
+    // display: none;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1 !important;
+    }
+}
+
+.script ul.aside-list {
+    position: fixed;
+    z-index: 0;
+    top: 10%;
+    @include shift(8.3);
+    // display: none;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1 !important;
     }
 }
 
@@ -593,6 +623,9 @@ span.source-name {
 }
 
 .in-line-note, .in-line-footnote {
+    cursor: pointer;
+    position: absolute;
+    margin-left: .5em;
 
     &.active {
         background-color: $red;
@@ -601,6 +634,38 @@ span.source-name {
     img {
         width: auto;
         height: 1em;
+    }
+
+    &:after {
+        opacity: 0;
+        font-family: $roboto;
+        font-size: .7em;
+        color: $beige;
+        content: attr(title);
+        position: absolute;
+        display: table-cell;
+        text-align: center;
+        background-color: $brown;
+        vertical-align: middle;
+        width: 16em;
+        padding: .2em .5em;
+        z-index: 100;
+        left: -8em;
+        top: -100%;
+        pointer-events: none;
+    }
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+.in-line-note {
+
+}
+
+.in-line-footnote {
+    &:after {
+        top: -200%;
     }
 }
 
