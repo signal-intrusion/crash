@@ -22,7 +22,7 @@ return array(
 		'tablePrefix' => 'craft'
 	),
 
-	'live' => array(
+	'.com' => array(
 		'server' => 'crashcraft.db.9299105.hostedresource.com',
 		'user' => 'crashcraft',
 		'password' => 'Manchego45!!!',

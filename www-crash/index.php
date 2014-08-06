@@ -12,16 +12,3 @@ if (!is_file($path))
 }
 
 require_once $path;
-
-switch ($_SERVER['SERVER_NAME'])
-
-{
-
-    case 'signalintrusion.com' :
-        define('CRAFT_ENVIRONMENT', 'live');
-        break;
-
-    default :
-        define('CRAFT_ENVIRONMENT', 'local');
-        break;
-}
