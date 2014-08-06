@@ -10,9 +10,22 @@
 
         $('.aside-container').first().addClass('active');
         $body.addClass('script');
+        console.log(supports_html5_storage());
         // $('.aside-list').first().addClass('active');
-
     });
+
+    function supports_html5_storage() {
+      try {
+        return 'localStorage' in window && window.localStorage !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    String.prototype.indexOfEnd = function(string) {
+        var io = this.indexOf(string);
+        return io == -1 ? -1 : io + string.length;
+    };
 
     $('.aside-list-label').on('click', function(){
 
@@ -38,21 +51,16 @@
 
     });
 
+    ///////////////////
+    // aside changing
+    ///////////////////
 
     function AsideChanger(_element) {
 
         this.tween;
         this.scene;
         this.chapter = $(_element).attr('id');
-
-        console.log(this.chapter);
-
     }
-
-    String.prototype.indexOfEnd = function(string) {
-        var io = this.indexOf(string);
-        return io == -1 ? -1 : io + string.length;
-    };
 
     AsideChanger.prototype.scrollAnimate = function () {
 
@@ -79,6 +87,7 @@
                         })
                         .addTo(controller);
         this.scene.addIndicators();
+        return true;
     };
 
     $.each($('.aside-trigger'), function() {
@@ -91,6 +100,53 @@
 
 
     });
+
+
+    ///////////////////
+    // bookmarks
+    ///////////////////
+
+    var bookmarks = {
+        bookmarkArray: []
+    }
+
+    $('.aside-link-button').on('click', function(){
+
+        var mark,
+            title,
+            link,
+            $this = $(this),
+            localMarks;
+
+        if (localStorage.getItem('bookmarks') !== null && localStorage.getItem('bookmarks') !== undefined){
+
+            localMarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+        } else {
+            localMarks = {
+                bookmarkArray: []
+            }
+        }
+
+        console.log(localMarks);
+
+        title = $this.attr('name');
+        link = $this.attr('href');
+
+        mark = {
+            'title': title,
+            'link': link
+        };
+
+        localMarks.bookmarkArray.push(mark);
+        console.log(localMarks);
+
+        localStorage.setItem('bookmarks', JSON.stringify(localMarks));
+
+        console.log(localStorage.getItem('bookmarks'));
+
+    });
+
 
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

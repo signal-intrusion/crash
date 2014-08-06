@@ -284,6 +284,7 @@ aside.margin-aside {
 
     ul.aside-links {
         a {
+            cursor: pointer;
             font-size: 1.2em;
             color: $green;
 
@@ -311,6 +312,30 @@ aside.margin-aside {
         width: 15px;
         border: none;
         margin-left: 1em;
+        cursor: pointer;
+
+        &:after {
+            opacity: 0;
+            font-family: $roboto;
+            font-size: 1em;
+            color: $beige;
+            content: attr(title);
+            position: absolute;
+            display: table-cell;
+            text-align: center;
+            background-color: $brown;
+            vertical-align: middle;
+            width: 8em;
+            padding: .2em .5em;
+            z-index: 100;
+            left: 50%;
+            top: 0;
+            margin-left: -50%;
+            pointer-events: none;
+        }
+        &:hover:after {
+            opacity: 1;
+        }
     }
 }
 
@@ -327,6 +352,12 @@ aside.margin-aside {
         display: block !important;
         opacity: 1 !important;
         pointer-events: auto;
+        z-index: 10;
+
+        ul.aside-links {
+            z-index: 100;
+            position: relative;
+        }
     }
 }
 

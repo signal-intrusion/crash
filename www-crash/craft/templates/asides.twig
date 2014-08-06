@@ -20,7 +20,7 @@
                 <ul class="aside-links">
                 <h2>Read more about this:</h2>
                 {% for chapter in aside.chapters %}
-                    <a href="{{ chapter.getUrl() }}">{{ chapter.heading }}</a><button class="aside-link-button"></button>
+                    <a href="{{ category.url() }}#level-{{ chapter.chapterLevel }}">{{ chapter.heading }}</a><button class="aside-link-button" href="{{ category.url() }}#{{ chapter.chapterLevel }}" title="read this later" name="{{ chapter.heading }}"></button>
                 {% endfor %}
                 </ul>
             {% endif %}
