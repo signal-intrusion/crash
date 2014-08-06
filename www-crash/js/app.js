@@ -7,7 +7,10 @@
 
     $(window).load(function(){
 
+
+        $('.aside-container').first().addClass('active');
         $body.addClass('script');
+        // $('.aside-list').first().addClass('active');
 
     });
 
@@ -46,39 +49,36 @@
 
     }
 
+    String.prototype.indexOfEnd = function(string) {
+        var io = this.indexOf(string);
+        return io == -1 ? -1 : io + string.length;
+    };
+
     AsideChanger.prototype.scrollAnimate = function () {
 
-        // this.tween = TweenMax.to(".dot-"+this.chartType, 0.5, {left: -150}, {left: 0, ease: Back.easeOut}, 0.04);
         var _this = this;
-        console.log("hello: " + _this.chapter);
 
-
-
-        this.scene = new ScrollScene({triggerElement: '#' + _this.chapter, offset: 0})
+        this.scene = new ScrollScene({triggerElement: '#' + _this.chapter, offset: 100 })
                         .on('start', function(e){
-                            var _target = this.triggerElement().slice(1);
-                            var direction = e.target.parent().info("scrollDirection");
-                            console.log(direction);
+
+                            var _target,
+                                direction = e.target.parent().info('scrollDirection');
 
                             $('.aside-container').removeClass('active');
 
-                            if (direction === "FORWARD"){
+                            if (direction === 'FORWARD'){
+                                _target = this.triggerElement().slice(1);
                                 $('.' + _target).addClass('active');
                             } else {
-                                var number = parseInt(_target.slice(_target.length - 1))-1;
-                                _target = "level-" + number;
-                                console.log(_target);
+                                _target = this.triggerElement();
+                                var index = _target.indexOfEnd('level-');
+                                var number = parseInt(_target.slice(index))-1;
+                                _target = 'level-' + number;
                                 $('.' + _target).addClass('active');
                             }
-
                         })
-                        // .on('leave', function(){
-                        //     var _target = this.triggerElement().slice(1);
-                        //     console.log('leave ' + _target);
-
-                        //     $('.' + _target).removeClass('active');
-                        // })
                         .addTo(controller);
+        this.scene.addIndicators();
     };
 
     $.each($('.aside-trigger'), function() {
@@ -91,53 +91,6 @@
 
 
     });
-
-
-
-    // SkillChart Class will be used to store and display skill tables
-    // function SkillChart(_skills, _contentBox, _chartType) {
-
-    //     this.skills =  _skills;
-    //     this.$contentBox = $(_contentBox);
-    //     this.chartType = _chartType;
-    //     this.tween;
-    //     this.scene;
-
-    //     this.getSkills = function(){
-
-    //         return this.skills;
-    //     };
-
-    //     this.getSkill = function(passedSkill) {
-
-    //         for (var index in this.skills) {
-    //             if ( this.skills[index] === passedSkill) {
-    //                 return this.skills[index];
-    //             }
-    //         }
-    //     };
-    // }
-
-    // scene.addIndicators();
-
-//     SkillChart.prototype.scrollAnimate = function(){
-
-    //     this.tween = TweenMax.staggerFromTo(".dot-"+this.chartType, 0.5, {left: -150}, {left: 0, ease: Back.easeOut}, 0.04);
-
-    //     // build scene
-    //     this.scene = new ScrollScene({triggerElement: "#"+this.$contentBox.attr("id"), offset: -200})
-    //                     .setTween(this.tween)
-    //                     .addTo(controller);
-    // };
-
-    // var devSkillsObj = new SkillChart(devSkills, "#dev-target", "dev");
-    // var uxSkillsObj = new SkillChart(uxSkills, "#ux-target", "ux");
-
-    // devSkillsObj.skillDisplay("#skills-template");
-    // uxSkillsObj.skillDisplay("#skills-template");
-
-    // devSkillsObj.scrollAnimate();
-    // uxSkillsObj.scrollAnimate();
 
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

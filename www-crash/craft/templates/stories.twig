@@ -60,9 +60,9 @@
         </div>
         {# end article-txt #}
         <div class="aside-container level-{{ entry.chapterLevel }}">
+            {% include 'aside-list.twig' %}
             {% include 'asides.twig' %}
         </div>
-        {% include 'aside-list.twig' %}
     </section>
     {# end section article-item #}
 {% endfor %}

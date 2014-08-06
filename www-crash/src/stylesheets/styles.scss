@@ -106,15 +106,17 @@ article.story {
     }
 
     header.article-hdr {
-        // @include span-columns( 6 of 12, block );
-        // @include shift( 1 );
+        @include span-columns( 6.5 of 12, block );
+        @include shift( 1 );
         position: relative;
         display: block;
-        margin: 1em auto 1em auto;
-        width: 60%;
+        // margin: 1em auto 1em auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        // width: 60%;
     }
     .article-txt {
-        @include span-columns( 6.5 of 12, block );
+        @include span-columns( 6 of 12, block );
         @include shift( 1 );
         position: relative;
         // margin: 1em auto 1em 5em;
@@ -127,7 +129,7 @@ article.story {
     .article-hdr h1 {
         text-transform: uppercase;
         text-align: center;
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 700;
         padding-top: .2em;
         letter-spacing: .05em;
@@ -138,7 +140,7 @@ article.story {
     .article-hdr h2 {
         text-transform: uppercase;
         text-align: center;
-        font-size: .9em;
+        font-size: .8em;
         font-weight: 700;
         padding-top: 3em;
         font-family: $pressStart;
@@ -202,20 +204,30 @@ blockquote.quote {
 
 div.aside-container {
     position: relative;
-    @include span-columns( 3 of 12, block );
+    @include span-columns( 3 of 12 );
     @include clearfix;
+    @include transition ( opacity 300ms ease-in-out );
     margin-left: $column+$gutter;
     margin-right: 0;
     float: left;
-    height: 480px;
+    display: table;
+    height: 80%;
+    // overflow-y: auto;
+}
+
+div.aside-wrapper {
+    float: left;
+    width: 100%;
+    display: block;
+    height: 90%;
     overflow-y: auto;
+    position: relative;
 }
 
 aside.margin-aside {
     @include transition ( opacity 300ms ease-in-out );
+    @include clearfix;
     position: absolute;
-    top: 0px;
-    left: 0px;
     display: block;
     opacity: 0;
     color: $grey;
@@ -312,22 +324,18 @@ aside.margin-aside {
     pointer-events: none;
 
     &.active {
+        display: block !important;
         opacity: 1 !important;
+        pointer-events: auto;
     }
 }
 
 .script ul.aside-list {
-    position: fixed;
-    z-index: 0;
-    top: 10%;
-    @include shift(8.3);
-    // display: none;
-    opacity: 0;
-    pointer-events: none;
 
-    &.active {
-        opacity: 1 !important;
-    }
+}
+
+.script ul.aside-list {
+
 }
 
 input.aside-input[type='radio']:checked + aside {
@@ -343,14 +351,15 @@ label:checked {
 }
 
 ul.aside-list{
-    @include span-columns( 3 of 12, block );
+    // @include span-columns( 3 of 12, block );
     @include clearfix;
-    margin-left: $column+$gutter;
-    position: relative;
+    // margin-left: $column+$gutter;
+    width: 100%;
+    // position: relative;
     float: left;
     font-family: $roboto;
     color: $grey;
-    margin-top: 1em;
+    margin-bottom: 1em;
 
     h2 {
         font-size: .7em;
@@ -369,6 +378,7 @@ ul.aside-list{
     }
 
     label {
+        cursor: pointer;
         color: $green;
         font-size: .7em;
         &:hover, &.active {
@@ -381,47 +391,47 @@ ul.aside-list{
 /* margins
 /* ///////////////// */
 
-img.margin-link {
-    content: url(../images/quote-bubble1.png);
-    width: 1em;
-    height: 1em;
-}
-img.margin-link-active {
-    content: url(../images/quote-bubble1-active.png);
-}
-.margin-notes {
-    z-index: 1000;
-    position: absolute;
-    margin: 1em;
-    width: 22%;
-}
-.right-margin p.margin-txt {
-    float: right;
-}
-.margin-note {
-    position: absolute;
-    top: 100px;
-}
-.margin-txt {
-    float: none;
-    padding: .5%;
-    font-family: 'Roboto', sans-serif;
-    font-size: .75em;
-    font-weight: 400;
-    padding: 20px;
-    line-height: 1.7em;
-    background-color: #fffcf4;
-    /*text-align: justify;*/
-}
-.abridged {
-    color: rgba(0, 0, 0, 0);
-}
-.abridged .margin-txt {
-    background-color: rgba(0, 0, 0, 0);
-}
-.unabridged {
-    color: rgba(140, 138, 141, 1);
-}
+// img.margin-link {
+//     content: url(../images/quote-bubble1.png);
+//     width: 1em;
+//     height: 1em;
+// }
+// img.margin-link-active {
+//     content: url(../images/quote-bubble1-active.png);
+// }
+// .margin-notes {
+//     z-index: 1000;
+//     position: absolute;
+//     margin: 1em;
+//     width: 22%;
+// }
+// .right-margin p.margin-txt {
+//     float: right;
+// }
+// .margin-note {
+//     position: absolute;
+//     top: 100px;
+// }
+// .margin-txt {
+//     float: none;
+//     padding: .5%;
+//     font-family: 'Roboto', sans-serif;
+//     font-size: .75em;
+//     font-weight: 400;
+//     padding: 20px;
+//     line-height: 1.7em;
+//     background-color: #fffcf4;
+//     /*text-align: justify;*/
+// }
+// .abridged {
+//     color: rgba(0, 0, 0, 0);
+// }
+// .abridged .margin-txt {
+//     background-color: rgba(0, 0, 0, 0);
+// }
+// .unabridged {
+//     color: rgba(140, 138, 141, 1);
+// }
 .pull-qt {
     display: block;
     color: rgba(0, 0, 0, 1);
@@ -635,6 +645,9 @@ span.source-name {
         width: auto;
         height: 1em;
     }
+}
+
+.in-line-footnote{
 
     &:after {
         opacity: 0;

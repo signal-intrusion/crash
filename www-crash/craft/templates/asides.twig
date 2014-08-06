@@ -1,3 +1,4 @@
+<div class="aside-wrapper">
 {% for aside in entry.sidenotes %}
 
     {% if aside.type == 'aside' %}
@@ -23,7 +24,8 @@
                 {% endfor %}
                 </ul>
             {% endif %}
-            <hr>
+            {# <hr> #}
         </aside>
     {% endif %}
 {% endfor %}
+</div>
