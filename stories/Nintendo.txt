@@ -187,11 +187,9 @@ Hard work and luck made Nintendo.
 
 Or maybe "Nintendo" just means "the temple of free hanafuda [cards]" or "the company that is allowed to make (or sell) hanafuda" (Kotaku Sept 10, 2010). Not as romantic.
 
-In 1977, while the Pong market was collapsing in America, Nintendo released it's first home Pong console in Japan where home video gaming was just starting. Hiroshi Yamauchi could sense the coming and goings of the tides, and knew he had to push the company forward. They had to create the next big thing in Japanese gaming or go back to selling playing cards.
+In 1977, while the Pong market was collapsing in America, Nintendo released it's first home Pong console in Japan where home video gaming was just starting. Nintendo's home pong console was successful, but Hiroshi Yamauchi who seemed like he could sense the coming and goings of the tides, knew consumers would get bored of such simple games. Yamauchi pushed his R&D teams to create something new that would put Nintendo in the lead technologically for at least a year. It had to be a major hit or they were going to go back to selling playing cards.
 
-Yamauchi pushed his R&D teams to create something new for him.
-
-Masayuki Uemura who had engineered the solar cells used in Nintendo's shooting gallery games was given control of Nintendo's "R&D #2."
+Masayuki Uemura who had engineered the solar cells used in Nintendo's shooting gallery games was given control of Nintendo's "R&D #2." Yamauchi tasked Uemura's team with creating Nintendo's next home video game product. It had to beat the Atari, Magnavox, Fairchild, and Mattel systems that were shipping from America. It also had to be cheaper: 9800 yen ($75) (Sheff 29).
 
 <blockquote>
 
@@ -199,29 +197,25 @@ Masayuki Uemura who had engineered the solar cells used in Nintendo's shooting g
 
 </blockquote>
 
-Yamauchi tasked Uemura's team with creating Nintendo's next home video game product. It had to be so much better than anything the competition was offering. It had to beat the Atari, Magnavox, Fairchild, and Mattel systems that were shipping from America to homes across the world. It also had to be cheaper: 9800 yen ($75) (Sheff 29).
+Uemura's team sqeezed every ounce of value from the components they could find. The central processor of this console would be the same as the one in the Atari 2600, but an independent GPU gave the system superior graphical abilities. It would be a programmable game console that closely matched the arcade graphics experience on a tight budget. The 1970's era CPU gave the system a signature flicker, which looking back, adds to its charm and nostalgia.
 
-Uemura's team went to work in 1980 on the new machine sqeezing every ounce of value from the components they could find. The central processor of this console would be the same as the one in the Atari 2600, but it got it's superior graphical abilities from an independent GPU. This allowed them to make the first programmable game console that matched the arcade experience graphically on a tight budget. The flickering that became a signature (or curse) of Nintendo's new console was consequence of using 1976-era Atari's CPU.
+Yamauchi poured over every detail of design: the controls, the case, the colors. He insisted on perfection. When the system hit the shelves of Japanese electronics outlets and department stores in 1983, an expensive bug was discovered. His managers advised only repairing units that were returned. Yamauchi disagreed. Every system had to be recalled before consumers lost faith in Nintendo's products. He spent a small fortune recalling and repairing every one of the first 500,000 consoles.
 
-Yamauchi poured over every detail of design: the controls, the case, the colors. He insisted on perfection. When the system hit the shelves of Japanese electronics outlets and department stores in 1983, an expensive bug was discovered. Against his managers advice to repair units as they were returned, he spent a small fortune recalling and repairing every one of the 500,000 consoles.
-
-Yamauchi had one more request for the engineers that proved to be one of his greatest business decisions. He asked them to sneak an expansion port in the system that would allow them to add components later. Neither Yamauchi nor his engineers knew exactly what the port would do in the end, but it was cheap enough that it was an opportunity they couldn't pass up. Later, when the console was fitted with a keyboard and disk drive and became Japan's most popular home computer, they would brag: "Yamauchi's Trojan Horse: It slipped into living rooms with nothing but a pair of controllers, innocently toylike, yet it included the capability to do far more than play games... 'In the initial stages of [the system's] development, we foresaw these possibilities,' reads a 1989 corporate report. 'As such, we built a data communications function into the system and provided it with a connection terminal for an adaptor.' Uemura modestly says that the plan worked so well because 'we were lucky.' But GenyoTakeda, a friend of Uemura, says, 'He was so much an amateur that when Yamauchi told him to make this thing, he didn't know that it could not be done." (Sheff 34)
+Yamauchi asked his engineers to sneak an expansion port in the system that would allow them to add components later. This was one of his smartest business and design decisions. Neither Yamauchi nor his engineers knew exactly what the port would do in the end, but it was cheap enough to add. Later, the console was fitted with a keyboard and disk drive through this port. When it became Japan's most popular home computer, they would brag: "Yamauchi's Trojan Horse: It slipped into living rooms with nothing but a pair of controllers, innocently toylike, yet it included the capability to do far more than play games... 'In the initial stages of [the system's] development, we foresaw these possibilities,' reads a 1989 corporate report. 'As such, we built a data communications function into the system and provided it with a connection terminal for an adaptor.' Uemura modestly says that the plan worked so well because 'we were lucky.' But GenyoTakeda, a friend of Uemura, says, 'He was so much an amateur that when Yamauchi told him to make this thing, he didn't know that it could not be done." (Sheff 34)
 
 The console's name reveals its intentions: Famicom – Family Computer. The Famicom was released in Japan in 1983 and became an instant smash hit selling seven million consoles in two years. When those keyboards and disk drives started shipping It took on the Japanese computer industry like Commodore took on Atari, IBM, Texas Instruments, Apple and others in America.
 
-In 1986 The Wall Street Journal reported on its success, albeit years after the release of the Famicom: "Youngsters line up at shops to buy its computers. Stock analysts tout its shares. Televesion commentators debate its impct on Japanese society. The fuss is about Nintendo Co and the computer that has become a national obsession, an innocuous-looking game machine called the Family Computer. Twenty years ago Nintendo was a sleepy provincial company with a line of Walt Disney playing cards. These days the toy maker is looking to take on the Goliaths in the market for home computing." (WSJ Jun 22 1986). By 1985 Nintendo owned 90% of the Japanese video game market.
+In 1986 The Wall Street Journal reported on its success, albeit years after the release: "Youngsters line up at shops to buy its computers. Stock analysts tout its shares. Televesion commentators debate its impct on Japanese society. The fuss is about Nintendo Co and the computer that has become a national obsession, an innocuous-looking game machine called the Family Computer. Twenty years ago Nintendo was a sleepy provincial company with a line of Walt Disney playing cards. These days the toy maker is looking to take on the Goliaths in the market for home computing." (WSJ Jun 22 1986). By 1985 Nintendo owned 90% of the Japanese video game market.
 
-Nintendo had not intended to allow other companies design games for the system, but they were overwhelmed by their own success. In order to keep up with demand for games they had to open the system up to other developers. Nintendo enforced strict restrictions. First the game had to be perfect. Not a single bugand Nintendo had veto power to deny a game a license. Any publisher who tried to get around the restrictions, develop their own system, get around the BIOS lock-out chip, or publish with Nintendo's rivals was threatened with total destruction. In America this would attract anti-trust lawsuits in years to come.
+Nintendo had not intended to allow other companies design games for the system, but they were overwhelmed by their own success. In order to keep up with demand for games they had to open the system up to other developers. Nintendo enforced strict rules. First the game had to be perfect – not a single bug. Nintendo had veto power to deny a game a license for any reason. A publisher who tried to get around the restrictions, develop their own compatible system, bipass the BIOS lock-out chip, or even publish on other consoles was threatened with total destruction. In years to come these practices would spawn anti-trust lawsuits in America. According to Tristan Donovan, Nintendo wasn't just keeping bugs out, they were filtering taboo and adult-themed content, in response to the Japanese industry's history of pornographic video games (Donovan 169).
 
 Alfred Milgrom of Beam Software, a Nintendo Licensee said, 'In terms of game testing they revolutionised the concept. They said zero defects – we will not allow you to release a game that has any bugs in it whatsoever. Now zero defects was an unheard of concept in any other software or on any other gaming platform. Nintendo knew if they were going to sell it in the supermarkets and sell it to mums and dads it had to work off the shelf and had to be flawless. They didn’t want returns. We had to change our programming attitude and the way we developed games, which was brilliant. It was really hard work. If you had a bug in your final version you could miss Christmas because it would take a month for them to go through the testing of the title.'" (Donovan 169-171)
 
-Tristan Donovan also argues that Nintendo wasn't just keeping bugs out, they were filtering taboo and adult-themed content, in response to the Japanese industry's history of pornographic video games (Donovan 169).
-
 Nintendo also had to be the sole manufacturer and Nintendo was going to charge 2000 yen ($15) per cartridge. The minimum order was 10,000 cartridges and the money had to be paid up front (Sheff 60-62). It's often reported that Nintendo's restrictions and fees were meant to keep quality high and avoid the storm of bargain bin third party titles that sank the Atari 2600. While that was the case later on with Nintendo of America, in Japan Yamauchi merely wanted to keep a bigger piece of the pie.
 
-In spite of the restrictions, licensees agreed. They wanted, needed that 90% of the video game market. Milgrom said, "Once we were in the family the reality was different... Nintendo’s a big paternalistic company, it’s a lot like a dictatorship. Nintendo say ‘here you are in our family, but you’re going to have to obey the rules of the family’. It’s quite strict and obviously Japanese." In 1984 there were six licensees. In 1985, seventeen. In 1988, fifty. Nintendo made millions just on licenses with little risk to themselves. "Nintendo had turned the Japanese game industry into a client state," Tristan Donovan declares. "Its licensees were willing slaves to Nintendo's will: told how many games they could release, when they could release them, and required to hand over the a cut of the money they made from every game. Yamauchi's insatiable desire for business expansion and Miyamoto's wide-eyed creations had turned Nintendo into Japan's most powerful video game company."
+In spite of the restrictions, licensees agreed. They wanted, needed Nintendo's audience. Milgrom said, "Once we were in the family the reality was different... Nintendo’s a big paternalistic company, it’s a lot like a dictatorship. Nintendo say ‘here you are in our family, but you’re going to have to obey the rules of the family’. It’s quite strict and obviously Japanese." In 1984 there were six licensees. In 1985, seventeen. In 1988, fifty. Nintendo made millions just on licenses with little risk to themselves. "Nintendo had turned the Japanese game industry into a client state," Tristan Donovan declares. "Its licensees were willing slaves to Nintendo's will: told how many games they could release, when they could release them, and required to hand over the a cut of the money they made from every game. Yamauchi's insatiable desire for business expansion and Miyamoto's wide-eyed creations had turned Nintendo into Japan's most powerful video game company."
 
-Yamauchi made a decision. It was America's turn to play the Famicom. ANd Yamauchi's decisions stuck.
+Yamauchi thought it was America's turn to play the Famicom.
 
 
 
@@ -232,9 +226,15 @@ Yamauchi made a decision. It was America's turn to play the Famicom. ANd Yamauch
 Level 5
 The Prodigal Son
 
-Imagine a world where Atari sold the most popular, iconic, and beloved video game console of the 1980's, where Atari's fall was halted by an imported system from Nintendo. Now imagine a world where the Nintendo Entertainment System was killed in it's crib when it's worldwide distributor, Atari, collapsed in 1983, where Sega ruled America and Nintendo was just a quirky Japanese software company.
+Imagine a world where Atari sold the most popular, iconic, and beloved video game console of the 1980's, where Atari's fall was halted by an imported system from a little Japanese toy company called Nintendo. The industry never crashed and ended up years ahead of where it is now. Atari was still alive and cool.
 
-Hiroshi Yamauchi contacted Minoru Arakawa. It was time to release the Nintendo Famicom in America. Howard Lincoln must contact Ray Kassar at Atari. They would be Nintendo of America's partner helping distribute Famicom across America. Lincoln and Arakawa prepared to fly to California and meet Kassar and the rest of the Warner/Atari team.
+Now imagine a world where the Nintendo Entertainment System was killed in it's crib when it's worldwide distributor, Atari, collapsed in 1983, where Sega ruled America and Nintendo was just a quirky Japanese software company.
+
+In 1983 these alternate realities could have come true.
+
+Nintendo's chairman, Hiroshi Yamauchi, contacted his son-in-law, Minoru Arakawa to issue his newest orders. It was time to release the Nintendo's Famicom in America. Atari would distribute and market the system. VP and legal counsel, Howard Lincoln, must contact Ray Kassar at Atari as soon as possible.
+
+Lincoln and Arakawa were going to get their first taste of Warner corporate culture.
 
 <blockquote>
 
@@ -244,31 +244,31 @@ The jet, fitted with leather couches and gold-plated ashtrays, was empty except 
 
 "Just eat the goddamn food," Lincoln muttered.
 
-When the jet landed in San Jose, two chauffeurs escorted the Nintendo executives down a stairway into a waiting limousine. They drove to Atari's headquarters, where they were led to a con ference room. The entire upper-management staff was assembled, from Warner's Manny Gerard and Kassar to Atari's Skip Paul and numerous lawyers and vice-presidents familiar from the "Donkey Kong" negotiations. In the middle of the meeting, Steve Ross poked his head in to say hello. He wanted to apologize for the fact that he had to use the company's jet to go back to New York; he had, he said, rented another jet to take Arakawa and Lincoln back to Seattle...
+When the jet landed in San Jose, two chauffeurs escorted the Nintendo executives down a stairway into a waiting limousine. They drove to Atari's headquarters, where they were led to a conference room. The entire upper-management staff was assembled, from Warner's Manny Gerard and Kassar to Atari's Skip Paul and numerous lawyers and vice-presidents familiar from the "Donkey Kong" negotiations. In the middle of the meeting, Steve Ross poked his head in to say hello. He wanted to apologize for the fact that he had to use the company's jet to go back to New York; he had, he said, rented another jet to take Arakawa and Lincoln back to Seattle...
 
 Questions came from Gerard and Kassar, at the far end of the conference table, but also from each of the dozen lawyers and executives. Scribbling notes and fielding most of the questions, Lincoln watched Arakawa. "I can always tell when he understands something or doesn't, when he's pissed off or when he's happy," Lincoln says. "This time Arakawa was just amazed by all those people, all that bureaucracy."
 
- Back at the airport, where they boarded the smaller jet Ross had arranged for them, they were trying to relax and sort out the meeting when the copilot came back to tell them, "Mr. Ross left you some wine." An atten dant served them bottles of a rare Bordeaux. "I don't know how we got home," Lincoln recalls. "We still had a buzz the next day."
+Back at the airport, where they boarded the smaller jet Ross had arranged for them, they were trying to relax and sort out the meeting when the copilot came back to tell them, "Mr. Ross left you some wine." An atten dant served them bottles of a rare Bordeaux. "I don't know how we got home," Lincoln recalls. "We still had a buzz the next day."
 
 </blockquote>
 
-Lincoln and Arakawa had just witnessed the bureaucracy and glottony of Warner and Atari. They were stunned by the waste and inefficiency. Howard Lincoln said, "We got down there and, god, what a cast of thousands: Ray Kassar, Manny Gerard, Steve Ross, Skip Paul. ... And we were just getting hammered with one question after another." It was a far cry from their lean, mean, and creative company. Atari was an empty suit or a few dozen empty suits.
+Lincoln and Arakawa had just witnessed the bureaucracy and glottony of Warner and Atari. They were stunned by the waste and inefficiency. Howard Lincoln said, "We got down there and, god, what a cast of thousands: Ray Kassar, Manny Gerard, Steve Ross, Skip Paul. ... And we were just getting hammered with one question after another." (Kent 282) It was a far cry from their lean, mean, and creative company. Atari was an empty suit or a few dozen empty suits.
 
-By 1983 Atari was getting desperate. Management knew they needed something new, but they could barely afford anything. They had assigned General Computer Corporation, the same company they had sued then hired to make arcade conversion kits, to build the successor to the stilborn 5200. The Atari 7800 Pro system was a next generation system that rivalled the Famicom, but it wasn't finished yet. With both the Famicom and the 7800 in their pocket they could secure their future by releasing one, or both. Atari might have just been interested purchasing in the Famicom just to sink a potential rival.
+By 1983 Atari was getting desperate. Management had finally come to the conclusion that they needed something new. They had assigned General Computer Corporation, the same company they had sued and then paid to leave the business, to build the successor to the stilborn 5200. The Atari 7800 Pro system was a next generation system that rivalled the Famicom, but it wasn't finished yet. If Atari had both the Famicom and the 7800 in their pocket they could secure their future by releasing one or both. Perhaps Atari just saw the Famicom as a threat and wanted to purchase it just to twart a potential rival.
 
 At the next meeting Skip Paul and other Atari managers travelled to Kyoto to see the Famicom for themselves. Yamauchi was there too (Sheff 153). He wandered in and out of the meetings. Howard Lincoln told the Atari managers that Mister Yamauchi was a very busy man. It was just an act. They negotiated the deal for days. Yamauchi got everything he wanted, but continued to act distracted. Finally Howard Lincoln told Atari that Mister Yamauchi was growing impatient and that Atari didn't want to see Yamauchi annoyed. The had better sign the deal today or forget it.
 
 "At the eleventh hour, the Atari negotiators retreated to a private office to telephone Ray Kassar in California, who was in touch with Manny Gerard in New York. Yamauchi came back into the room with Arakawa and Lincoln. Lincoln said, 'Mr. Yamauchi, you shouldn't be in here. If the Atari people come back in and you're here, they'll take it as a sign that you are overanxious.'"
 
-The chairman gave Lincoln a look that instantly humbled the cocky attorney. Yamauchi had his own negotiating tactics; he didn't need an arrogant young lawyer from America to tell him what to do. He remained in the room as the Atari team returned. Paul said that the deal was as good as done and asked Lincoln to write up the contracts. They would all meet again in a month at the June Consumer Electronics Show in Chicago to sign the papers. Yamauchi rose and left the meeting. Handshakes and backslapping signaled that the negotiations had been a success."
+The chairman gave Lincoln a look that instantly humbled the cocky attorney. Yamauchi had his own negotiating tactics; he didn't need an arrogant young lawyer from America to tell him what to do. He remained in the room as the Atari team returned. Paul said that the deal was as good as done and asked Lincoln to write up the contracts. They would all meet again in a month at the June Consumer Electronics Show in Chicago to sign the papers. Yamauchi rose and left the meeting. Handshakes and backslapping signaled that the negotiations had been a success." (Sheff 154)
 
-Yamauchi travelled to the Consumer Electronics show in Chicago, in the summer of 1983. Kassar sent a message to Yamauchi through his delegation. He was going to cancel the deal and he was going to sue Nintendo. Kassar was furious that Coleco had demonstrated Donkey Kong on their new home computer system, ADAM. Atari had the home computer rights to Donkey Kong. Kassar thought Nintendo had been lying to them.
+Yamauchi travelled to the Consumer Electronics show in Chicago, in the summer of 1983. Kassar sent a message through his delegation to Yamauchi. He was going to cancel the deal and he was going to sue Nintendo! Why was Kassar so furious? Coleco had demonstrated Donkey Kong on their new home computer system, ADAM, but Atari had the exclusive home computer rights to Donkey Kong. Kassar thought he had been double crossed.
 
 Donkey Kong. Coleco. Again.
 
-"You have to understand that Donkey Kongwas the main reason anyone would be interested in working with Nintendo," said Howard Philips "Mario Bros. and our other games were good B-titles, Super Mario Brothers had not come out yet, and the only game that did better than Donkey Kong was Pac-Man. If Coleco had Donkey Kong, Atari had no reason to work with us." (Kent 285)
+"You have to understand that Donkey Kong was the main reason anyone would be interested in working with Nintendo," said Howard Philips. "Mario Bros. and our other games were good B-titles, Super Mario Brothers had not come out yet, and the only game that did better than Donkey Kong was Pac-Man. If Coleco had Donkey Kong, Atari had no reason to work with us." (Kent 285)
 
-Nintendo had not betrayed Atari. Coleco had ported the game without authorization or a license. Coleco stock shot up 20 points. (Sheff 153) Yamauchi was furious. Lincoln scheduled an emergency meeting with Coleco at the show. It would be another great Yamuchi show. Daniel Sheff describes the meeting:
+Nintendo had not betrayed Atari. Coleco had ported the game without authorization or a license. Coleco stock shot up 20 points the next day. (Sheff 153) Yamauchi was furious, so Lincoln scheduled an emergency meeting with Coleco. It would be another Yamauchi show:
 
 <blockquote>
 
@@ -281,7 +281,7 @@ He began with a breathy, high-pitched tirade in a Marlon Brando monotone and qui
 
 Yamauchi's diatribe, all in Japanese, completely stunned every one in the room, with the possible exception of the Arakawas. Howard Lincoln says, "It scared the hell out of me."
 
-The Coleco people weren't aware that they had messed up Nin tendo's lucrative Atari deal—millions of dollars were in the bal ance—but they could see that they had somehow incurred Yamauchi's unfathomable wrath. When Greenberg turned to Arakawa for help, he was met with a cold stare. By the time Yamauchi wound down, no one in the room said a word.
+The Coleco people weren't aware that they had messed up Nintendo's lucrative Atari deal—millions of dollars were in the balance, but they could see that they had somehow incurred Yamauchi's unfathomable wrath. When Greenberg turned to Arakawa for help, he was met with a cold stare. By the time Yamauchi wound down, no one in the room said a word.
 
 The translator finally began to speak. "Mr. Yamauchi is very upset," the man said.
 
@@ -295,11 +295,13 @@ Greenberg and his colleagues retreated from the suite, shaken. Afterward, at din
 
 </blockquote>
 
-Coleco relented. They cesased production of Donkey Kong for ADAM. It was a hollow victory. In a few weeks Kassar was fired. Atari burned. The deal went up in the smoke. Could the Famicom have saved Atari? Or would Atari have brought Nintendo down with it? Did they even see the potential? Clearly Atari had not idea what they were doing in 1983, and the death of the deal would, in the end, but the best thing for America's video game industry, but it would take three more years to be realized.
+Coleco ceased production of Donkey Kong for ADAM immediately, but it was a hollow victory for Yamauchi. In a few weeks Kassar was fired. Atari burned and the Famicom deal went up in the smoke.
 
 Yamauchi found no pleasure in the victory. He was annoyed that once again Nintendo of America had dragged him into an intellectual property battle over Donkey Kong. He blamed his son-in-law. Had NOA been better managed they deal with Atari wouldn't have been poisoned by Coleco's meddling. It was just clumsy.
 
 By 1984 there was no one left in America to help Nintendo sell their Famicom in America. Nintendo was going to have to bring the Famicom to America themselves.
+
+Could the Famicom have saved Atari? Or would Atari have brought Nintendo down with it? Did they even see the potential? The death of the deal turned out to be the best thing for America's video game industry, but it would take three more years to be realized.
 
 
 
@@ -322,27 +324,25 @@ The Video-Game Shakeout (Business)
 The Worst Is Over Say Battered Video Game Software Suppliers (Consumer Electronics)
 Atari Refuses to Let The Video Game Fad Die (Business Week)
 The Video Game Business, It's Esay To Lose (Changing Times)
+Will Nintendo's new game play? (Home Furnishings Digest)
 
 Then in 1986:
 
-Will Nintendo's new game play? (Home Furnishings Digest)
-Atari, Sega, Nintendo plan comeback for video games (Home Furnishings Digest)
-New home videogames poised for comeback (Advertising Age)
-Nintendo isn't just Playing Games (Wall Street Journal)
-Video Games Never Looked so Good (Boy's Life)
-Video games make a Christmas comeback (Fortune)
 Video games: they're back - and almost as big as ever (LA Times)
-Nintendo named top toy of 1987 (PLaythings)
+Nintendo isn't just Playing Games (Wall Street Journal)
+Video games make a Christmas comeback (Fortune)
+Atari, Sega, Nintendo plan comeback for video games (Home Furnishings Digest)
+Video Games Never Looked so Good (Boy's Life)
+New home videogames poised for comeback (Advertising Age)
+Nintendo named top toy of 1987 (Playthings)
 
-It would not be an understatement to say that one company is responsible for the comeback: Nintendo. The comeback was no easy accomplishment, and anyone with less loyalty and perseverence that Minoru Arakawa would have given up.
+One company is responsible for the comeback: Nintendo. Anyone with less loyalty and perseverence that Minoru Arakawa would have given up. And he did it with the help of his robot friend.
 
-And he did it with the help of his robot friend.
+In 1983 Nintendo of America had no idea how the retail toy market worked in America. They were used to working through distibutors who placed orders for cabinets, paid on delivery, sold or rented to consumers, and assumed all the risk of failure. The margins were narrow. The product life cycle was short. When Arakawa found out how the American toy industry really worked, he was shocked. His whole business philosophy of "Don't give away anything you don't have to" was not going to work here.
 
-in 1983 Nintendo of America had no idea how the retail toy market worked. They were used to working through distibutors who placed orders for cabinets, paid on delivery, sold or rented to consumers, and assumed all the risk of failure. The margins were narrow. The product life cycle was short. Arakawa thought that America's toy industry couldn't be that much different than it was in Japan. When he found out how things really worked, he was apalled. His whole business philosophy "Don't give away anything you don't have to" was not going to work here.
+Arakawa started small, with the Game & Watch. In Japan Game & Watch handhelds were a huge hit in 1980 selling 40 million in the first three years, but their popularity faded quickly. There wasn't much game to be found in their clamshell cases – they were too simplistic. Still Yamauchi and Arakawa thought they would be good for the American market. American handheld games made by Tiger and Coleco had already experienced a boom and bust, so there wasn't interest by the time Arakawa imported the little devices in 1983. They just didn't sell.
 
-Arakawa started small, with the Game & Watch. In Japan Game & Watch handhelds were a huge hit in 1980 selling 40 million in the first three years, but their popularity faded quickly. There wasn't much game to be found in their clamshell cases – they were too simplistic. Still Yamauchi and Arakawa thought they would be good for the American market. At the same time American handheld games made by Tiger and Coleco had experienced a similar boom and bust, and there wesn't much interest by the time Arakawa imported the little devices in 1983. They just didn't sell.
-
-The first lesson was that toy stores didn't pay their bills until December 10.
+The first business lesson was that toy stores didn't pay their bills until December 10.
 
 <blockquote>
 
@@ -360,21 +360,19 @@ The man said, "You may have learned a lot of things in law school, but we're in 
 
 </blockquote>
 
-The practice of offering mark-down money to retailers had been one of the causes of Atari's demise. When retailers shipped games back to Atari or threw them in the bargain bin at a discount, Atari had to cover those losses. Nintendo had always operated under the assumption that the retailers assumed the risk. At the very least they tried to avoid the traps that sank Atari, but this was one business practice they couldn't work around.
+The practice of offering mark-down money to retailers had been one of the causes of Atari's demise. When retailers shipped games back to Atari or threw them in the bargain bin at a discount, Atari had to cover those losses. Nintendo had always operated under the assumption that the retailers assumed the risk. They tried to avoid the traps that sank Atari, but there was no way around this.
 
 "We spent a great deal of time figuring out what Atari had done wrong." Howard Lincoln said, "Walking through the Atari parking lot, Minoru Arakawa and I were aghast at all the BMWs and Mercedes -- and these 30- year-old guys making gobs of money. We were convinced that we had to be very controlling in the way we handled expansion, compensation, and all those issues. We looked at Atari's distribution practices and its dealings with retailers across the board." (N-Sider 2003)
 
-When the time came to bring the Famicom to America, Nintendo would have to risk everything.
+In America, Nintendo was going to have to assume the risk.
 
-Arakawa read the headlines, he attended CES. He knew that Nintendo of America couldn't release another console, no matter how much better the graphics and gameplay were than the competition. Consumers just weren't buying consoles. They wanted computers that could also play games like the ones Commodore, Coleco, Amiga, Atari, Apple and others were playing. So Arakawa tried to give them what they wanted by designing a computer/video game hybrid: the Avanced Video System. It had a keyboard, and a light pistol, wireless controls, a disk drive, and looked like a Bang and Olufson stereo.
+Arakawa read the headlines, he attended CES. He knew that consumers just weren't buying consoles, no matter how much better the graphics and gameplay were than the competition. They wanted computers that could also play games like the ones for Commodore, Coleco, Amiga, Atari, Apple. So Arakawa tried to give them what they wanted by designing a computer/video game hybrid: the Avanced Video System. It had a keyboard, and a light pistol, wireless controls, a disk drive, and looked like a Bang and Olufson stereo.
 
-Television digest reported before the event:
+Television Digest reported before the event:
 
 "Japan's Nintendo is aware that high end home videogame business ois in a state of depression, but feels it can be successful with a sophisticated compononent-type system... The company has already gotten signs of acceptance from some key retailers [and] has eye on sales of up to 500,000 games consoles in 1985... One advanced feature is edit capability on some cartridges, which allows user to modify the game by adding, deleteing or moving some abstacles around to make the game harder or easier to play... [Nintendo] awknowledged the company faces a job getting today's consumers in a mood to make sizable cash outlays for games..." (Television Digest, 1984).
 
-Editable games? 500,000 units sold in a year? Talk about over promising. Arakawa brought the machine to the Winter 1985 CES alone. Steven Kent says he looked kind of lost (Kent 287).
-
-Those that were there described it for Steven Kent:
+Editable games? 500,000 units sold in a year? Talk about over promising. Arakawa brought the machine to the Winter 1985 CES alone. He looked kind of lost (Kent 287).
 
 <blockquote>
 
@@ -391,14 +389,17 @@ Kent 287
 
 </blockquote>
 
-Everyone agreed the games were the best the had seen on a home console. No one agreed the AVS would sell. Disguising the console as a home computer didn't fool anyone either. Yamauchi blamed Arakawa for poor salesmanship. Arakawa tried to explain to his father-in-law that the industry in America was uninterested in video game consoles, but Yamauchi wouldn't hear it – he was sitting on 90% market share in Japan. Arakawa was to start again, again.
+Everyone agreed the games were the best they had seen on a home console. No one agreed to buy it. Disguising the console as a home computer didn't fool anyone – it was a game console. Yamauchi blamed Arakawa for poor salesmanship. Arakawa tried to explain to his father-in-law that the industry in America was uninterested in video game consoles, but Yamauchi wouldn't hear it – he was sitting on 90% market share in Japan. Arakawa was to start again, again.
 
-Arakawa decided to strip down the AVS, get the system true to its core as a gaming console. Kids still wanted to play video games. The games themselves were the sales leader for home computers. Flipping through the computer magazines and newsletters from 1985 one sees articles about and ads for games outnumbering productivity software four-to-one. "It seemed like all the print media wanted to keep writing about was the death of video games. I mean, they just loved to write that story," Herb Weisbaum said. "'Video game sales are dead, video games are gone, video games are history.'
-Then I'd go to CES [the Consumer Electronics Show] and see all this stuff, and think, 'Where are these people coming from? It isn't dead.' It was very interesting." (Kent 280) Nintendo's Vs. Arcade cabinets, which were little more than upright famicom games, were quite successful in American Arcades (Vending Times August 1985). Nintendo just had to convince consumers that they could bring that experience home.
+Arakawa decided to strip down the AVS, get the system true to its core as a gaming console. Kids still wanted to play video games. Games were the sales leader for home computers, not spreadsheets and word processors. Flipping through the computer magazines and newsletters from 1985 one sees articles about and ads for games outnumbering productivity software four-to-one.
 
-Arakawa redesigned the system to be pure gaming console, with two controls and a light gun and a robot sidekick, ROB. No keyboard or disk drive. He redubbed the new console the Nintendo Entertainment System, NES for short.
+"It seemed like all the print media wanted to keep writing about was the death of video games. I mean, they just loved to write that story," Herb Weisbaum said. "'Video game sales are dead, video games are gone, video games are history.' Then I'd go to CES [the Consumer Electronics Show] and see all this stuff, and think, 'Where are these people coming from? It isn't dead.' It was very interesting." (Kent 280)
 
-Consumers still needed reassurance that this wasn't going to be another Atari with its copycat, buggy, bargain-bin, smutty games. Atari had try to stop third parties with lawsuits, but failed. At first the third party games were real draws for the 2600, but then there were so many producing such cheap games that consumers lost faith in the system.
+Nintendo's "Vs." arcade cabinets, which were little more than upright Famicom games, were quite successful in American arcades (Vending Times August 1985). Nintendo just had to convince consumers that they could bring those games home in a little box.
+
+Arakawa redesigned the system to be a pure gaming console, with two controls and a light gun and a robot sidekick, ROB. No keyboard or disk drive. He redubbed the new console the Nintendo Entertainment System, NES for short.
+
+Consumers still needed reassurance that this wasn't going to be another Atari with its copycat, buggy, bargain-bin, even smutty games.
 
 <blockquote>
 
@@ -410,15 +411,15 @@ Arakawa said that while there have been between 15 and 20 third-party software v
 
 </blockquote>
 
-Arakawa included a lock-out chip in the NES that prevented third parties from making games without a license. There would be no Custer's Revenge on the NES. All games would get an official "Nintendo Seal of Approval" the reassured coonsumers the game met Nintendo's standards. Nintendo turned their licensing system into a marketting gimmick. Ask the Angry Video Game Nerd how much the "Nintendo Seal of Approval" mattered. Or just look at the LJN catalog of games to see if it worked(LJN was Sid Sheinberg's video game company).
+Arakawa included a lock-out chip in the NES that prevented third parties from making games without a license. There would be no Custer's Revenge on the NES. All games would get an official "Nintendo Seal of Approval" that reassured coonsumers the game met Nintendo's standards. Nintendo turned their licensing system into a marketting gimmick. Ask the Angry Video Game Nerd how much the "Nintendo Seal of Approval" mattered. Just look at the LJN catalog to see if the seal worked (LJN was Sid Sheinberg's video game company).
 
-At Summer CES Arakawa showed off his NES. Again, retailers weren't interested. Arakawa hired a focus group to test the system on kids. "Arakawa observed sessions as they took place. From behind a one-way mirror, he watched a random sampling of young boys play the NES and heard them say how much they hated it. Typical was the comment ofan eight-year- old who said, 'This is shit!'" (Kent 289). He suggested to his father-in-law that they give up. Yamauchi wouldn't hear it. "No," he said. Nintendo was going to have to sell this thing themselves. The picked New York City for their test market. If you can make it there, you can make it anywhere, they thought.
+At Summer CES Arakawa showed off his NES. Again, retailers weren't interested. Arakawa hired a focus group to test the system on kids. "Arakawa observed sessions as they took place. From behind a one-way mirror, he watched a random sampling of young boys play the NES and heard them say how much they hated it. Typical was the comment ofan eight-year- old who said, 'This is shit!'" (Kent 289). He suggested to his father-in-law that they give up. Yamauchi wouldn't hear it. Nintendo was going to have to sell this thing themselves. The picked New York City for their test market. If you can make it there, you can make it anywhere, they thought.
 
-Arakawa made the cross country trip again. He brought his Nintendo family across the country: Ron Judy, Howard Philips, Bruce Lowry, and thirty other Nintendo employees. They rented their own delivery trucks and went door-to-door to retailers. FAO Swartz, Toy's R' Us, Child's World, Sears, Circuit City, Macy's (Sheff 165). Everyone declined.
+Arakawa made the cross country trip again. He brought his Nintendo family: Ron Judy, Howard Philips, Bruce Lowry, and thirty other Nintendo employees. They rented their own delivery trucks and went door-to-door to retailers. FAO Swartz, Toy's R' Us, Child's World, Sears, Circuit City, Macy's (Sheff 165). Everyone declined.
 
 "Retailers took a tremendous financial beating because of the way the Atari business had fallen apart. I mean, with the demise of the old 2600 business, you wouldn't even try bringing up the words video game with some of these buyers. It was like they were going to pull you out to the parking lot and shoot you if you said the words video game." -Jim Whims, former vice president, Worlds of Wonder (Kent 280)
 
-"I have to sympathize with the retailers who saw a profitable business disappear right before their eyes" Ron Judy told Home Furnishings Digest. "Video games had become so big that even the top management of large chains became aware of it. I've talked to some of them, and they asked me how a multi-million-dollr-a-year category could suddenly turn into something they couldn't get rid of quickly enough."
+"I have to sympathize with the retailers who saw a profitable business disappear right before their eyes" Ron Judy told Home Furnishings Digest. "Video games had become so big that even the top management of large chains became aware of it. I've talked to some of them, and they asked me how a multi-million-dollar-a-year category could suddenly turn into something they couldn't get rid of quickly enough."
 
 "We're years ahead of the competition."
 "No."
@@ -431,7 +432,7 @@ Arakawa made the cross country trip again. He brought his Nintendo family across
 "Once the kids play, they'll be convinced."
 "The only reason I'm sitting in this chair is because the guy before me was fired because of video games."
 
-The sales teams were beaten. They couldn't even get the NES through the doors. Arakawa had a last resort. Give away everything. Assume all the risk. Arakawa offered retailers money back guarantees. Whatever didn't sell, Nintendo would just take back. It was a better deal than they offered for Game & Watch. And the retailers accepted it.
+The sales teams were beaten. They couldn't even get the NES through the doors. Arakawa had a last resort. Give away everything. Assume all the risk. Arakawa offered retailers money back guarantees. Whatever didn't sell, Nintendo would just take back. It was a better deal than they offered for Game & Watch. The retailers accepted it.
 
 Home Furnishings Digest announced: "The fact that Nintendo has demonstrated its willingness to create a market for them, retailers in New York have stepped forward with a substantial investment of their own. Major department stores have allocated windows--and considering the value of floor space--sizable special areas for in-store display and demonstration.
 But probably the thing that has sold the product to retailers is the product itself and the value that it represents. The package consists of a base module, two controllers, a light gun, the robot and two software packages. The robot is the clincher. (HFD)
@@ -459,15 +460,17 @@ A college student stops on his way to the Amiga Computer aisle long enough to wa
 
 "With the intoduction of R.O.B and the Nintendo Entertainment System, we have a totally new concept in video games where the game play is no longeron just the video screen. The action is also out in the real world. This adds a whole new physical dimension to the video game, making it much more lively and exciting."
 
-Howard was good at this. He must have sold 10,000 NES's himself with his show. "Howard Phillips turned out to be one of the team's best spokesmen; he had a knack for communicating his own enthusiasm, punctuating his sentences with words like cool and neat. He grabbed kids, old ladies—anyone—and before his victims realized what had hit them, he had them playing." (Sheff 166) He repeated this scene all over New York City for three months. R.O.B. was NOA's trojan horse. It got the foot in the door, and the games did the rest.
+Howard was good at this. He must have sold 10,000 NES's himself with his show. "Howard Phillips turned out to be one of the team's best spokesmen; he had a knack for communicating his own enthusiasm, punctuating his sentences with words like cool and neat. He grabbed kids, old ladies—anyone—and before his victims realized what had hit them, he had them playing." (Sheff 166) He repeated this scene all over New York City for three months. R.O.B. was Arakawa's trojan horse. It got his foot in the door, and the games did the rest.
 
-"When we first got the robot, it did not look like anything that you could associate with the fun and excitement of our arcade games. When you put the batteries in, he made this horrible grinding sound and his arms slowly closed and slowly opened. It was scary," Howard said. "At the same time, he did this really cool thing. He did this technology thing where he would look at the screen. It was new technology; he could somehow read what was going on on the screen. That allowed the consumer retailers to think about it as a new toy." (Kent 288). "We were selling a robot game, not a video game" Howard Lincoln said (Kent 288).
+"When we first got the robot, it did not look like anything that you could associate with the fun and excitement of our arcade games. When you put the batteries in, he made this horrible grinding sound and his arms slowly closed and slowly opened. It was scary," Howard Philips said. "At the same time, he did this really cool thing. He did this technology thing where he would look at the screen. It was new technology; he could somehow read what was going on on the screen. That allowed the consumer retailers to think about it as a new toy." (Kent 288). Howard lincoln adds, "We were selling a robot game, not a video game." (Kent 288)
 
-Meanwhile Nintendo was soaking the market with explosive, mysterious TV ads featuring the little robot blasting through television, tearing it in two surrounded by smoke and beams of strobe lights. "Now you're playing with power!" "With just one small ad we had a problem with crowd control, people were lined up past the front door and down the street," Bruce Lowry said (HFD). There were even ads in the New Yorker. The team worked around the clock seven days a week setting up displays and selling the NES.
+Meanwhile Nintendo was saturating the market with explosive, mysterious TV ads featuring the little robot blasting through television, surrounded by smoke and beams of strobe lights. "Now you're playing with power!"
+
+"With just one small ad we had a problem with crowd control, people were lined up past the front door and down the street," Bruce Lowry said (HFD). There were even ads in the New Yorker. The team worked around the clock seven days a week setting up displays and selling the NES.
 
 Howard Phillips had a rather unexhilarating experience late one night while setting up a display at a Toys "R" Us in New Jersey. A security guard on the graveyard shift came over and struck up a conversation. When he saw the video-game system, he asked, "Are you from Atari?" Phillips explained that he was from Nintendo with a new and better system. The guard said, "You're working for the Japs? I hope you fall flat on your ass." (Sheff 168-169)
 
-At the end of the christmas season they had sold half of their NES stock 50,000 total. Not a blowout success, but enough to move the operation to other cities. Arakawa hired Worlds of Wonder, the company that had created Teddy Ruxpin and Lazer Tag, to help them market and sell the NES. Jeff whims recalls telling his employees about the job:
+At the end of the christmas season they had sold half of their NES stock 50,000 total. Not a blowout success, but enough to move the operation to other cities. Arakawa hired Worlds of Wonder, the company that had created Teddy Ruxpin and Lazer Tag, to help them market and sell the NES. Jeff Whims recalls telling his employees about the job:
 
 <blockquote>
 
@@ -484,7 +487,7 @@ The obvious answer was, "Well, listen, I'm glad you feel that way, but I have to
 
 </blockquote>
 
-Tom Zito, founder of Digital Pictures remmembers it being a bigger hit than it was: "It's a home run . . . a hit! It's a sell-out. So I'm saying, "Who's gonna be interested in this?" And I said, "Well, I'll bet the toy companies are gonna be very interested in something like this because ... Nintendo is gonna clean your clock next year. I mean, Nintendo is going to launch nationally and they're gonna be represented by Worlds of Wonder."
+Tom Zito, founder of Digital Pictures remmembers it being a bigger hit than it actually was: "It's a home run . . . a hit! It's a sell-out. So I'm saying, "Who's gonna be interested in this?" And I said, "Well, I'll bet the toy companies are gonna be very interested in something like this because ... Nintendo is gonna clean your clock next year. I mean, Nintendo is going to launch nationally and they're gonna be represented by Worlds of Wonder."
 
 The Vindicator newspaper colorfully reported: "When last sighted on these shores the video game monster was drowing in its own wretched excesses, seemingly close to extinction. Like lots of other mythical monsters, however, this creature actually floated off to Japan, where it mutated into a new and mightier species. Video games are rising from the ashes." (Vindicator June 20, 1986. "Video games gain in Japan are due for assault on U.S.")
 
@@ -503,7 +506,7 @@ Arakawa gave his own reason: "I think the game business is very difficult busine
 
 Arakawa invited his father-in-law to Hawaii to visit, but he never went. Arakawa said, "Mr. Yamauchi's life is all business and if it's not business he won't come here… We invited him many times to Hawaii. If it's business he doesn't mind coming here, but if it's not business 'Why should I come?' He will continue to think about Nintendo until he dies." (BBC)
 
-Yamauchi passed away in 2013.
+Hiroshi Yamauchi passed away in 2013.
 
 
 
