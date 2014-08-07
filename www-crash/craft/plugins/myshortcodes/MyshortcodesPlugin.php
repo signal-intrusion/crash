@@ -90,9 +90,13 @@ class MyshortcodesPlugin extends BasePlugin
 			$entries[0]->slug = 'missing';
 		}
 
-		$footnotePage = $attributes['page'];
+		if (isset($attributes['page'])) {
+			$footnotePage = 'p. '. $attributes['page'];
+		} else {
+			$footnotePage = "";
+		}
 
-		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>';
+		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 	}
 
 }

@@ -6,6 +6,7 @@
                 {{ citation.sourceAuthors }}. ({{ citation.sourceYear }}) <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.
 
         {% case 'video' %}
+            {{ citation.sourceAuthors }}. ({{ citation.sourceDate }}). <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.
 
         {% case 'webpage' %}
             {{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a>

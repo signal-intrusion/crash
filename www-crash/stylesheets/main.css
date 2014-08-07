@@ -1107,7 +1107,6 @@ span.source-name {
 .in-line-note, .in-line-footnote {
   cursor: pointer;
   position: absolute;
-  margin-left: .5em;
 }
 /* line 717, ../src/stylesheets/styles.scss */
 .in-line-note.active, .in-line-footnote.active {
