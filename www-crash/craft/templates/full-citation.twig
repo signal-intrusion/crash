@@ -12,7 +12,8 @@
             {{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a>
 
         {% case 'article in periodical' %}
-            {{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).
+            {% if citation.sourceAuthors | length %}{{ citation.sourceAuthors }}.{% endif %}{{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).
+
         {% case 'image' %}
 
     {% endswitch %}

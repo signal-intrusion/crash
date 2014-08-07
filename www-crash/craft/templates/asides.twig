@@ -5,9 +5,9 @@
         <input type="radio" class="aside-input" name="aside-input-{{ entry.slug }}" id="aside-{{ entry.slug }}-{{loop.index}}" {% if loop.first %}checked{% endif %}>
         <aside class="margin-aside">
             {% if aside.asideImage | length %}
-                <div class="cropper">
-                <img src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
-                </div>
+                {# <div class="cropper"> #}
+                <img class="aside-image" src="{{ aside.asideImage.first().getUrl() }}" {# style="background-image: url({{ aside.asideImage.first().getUrl() }})" #} alt="{{ aside.title }}">
+                {# </div> #}
             {% endif %}
             <h1>{{ aside.heading }}</h1>
             <blockquote>{{ aside.quote }}</blockquote>

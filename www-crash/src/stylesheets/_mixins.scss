@@ -1,3 +1,9 @@
 @mixin header1() {
 
 }
+
+@mixin border1(){
+    @include border-color($brown);
+    @include border-style(solid solid solid solid);
+    @include border-width(1px 1px 1px 1px);
+}
