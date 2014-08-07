@@ -76,11 +76,19 @@ class MyshortcodesPlugin extends BasePlugin
 	public function footnote($attributes, $content, $tag) {
 
 		$criteria = craft()->elements->getCriteria(ElementType::Entry);
-		$criteria->slug = $attributes['cite'];
+		if (isset($attributes['cite'])) {
+			$criteria->slug = $attributes['cite'];
+		} else {
+			$criteria->slug = '';
+		}
 		if ( $entries = $criteria->find() ) {
 
 			$footnoteSource = $entries[0]->sourceName;
-			$footnoteAuthor = $entries[0]->sourceAuthors;
+			if (isset($entries[0]->sourceAuthors) && strlen($entries[0]->sourceAuthors) >= 1) {
+				$footnoteAuthor = $entries[0]->sourceAuthors .', ';
+			} else {
+				$footnoteAuthor = '';
+			}
 			$footnoteYear = $entries[0]->sourceYear;
 
 		} else {
@@ -96,7 +104,7 @@ class MyshortcodesPlugin extends BasePlugin
 			$footnotePage = "";
 		}
 
-		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'. $footnoteAuthor . $footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 	}
 
 }
