@@ -484,7 +484,7 @@ article.story header.article-hdr {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 53.08608%;
+  width: 48.82117%;
   margin-left: 12.79471%;
   position: relative;
   display: block;
@@ -1121,6 +1121,9 @@ span.source-name {
 
 /* line 729, ../src/stylesheets/styles.scss */
 .in-line-footnote:after {
+  -webkit-transition: opacity 150ms ease-in-out;
+  -moz-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
   opacity: 0;
   font-family: "Roboto", sans-serif;
   font-size: .7em;
@@ -1131,24 +1134,19 @@ span.source-name {
   text-align: center;
   background-color: #421a12;
   vertical-align: middle;
-  width: 16em;
+  min-width: 30em;
   padding: .2em .5em;
   z-index: 100;
-  left: -8em;
-  top: -100%;
+  left: -15em;
+  top: -3em;
   pointer-events: none;
 }
-/* line 747, ../src/stylesheets/styles.scss */
+/* line 749, ../src/stylesheets/styles.scss */
 .in-line-footnote:hover:after {
   opacity: 1;
 }
 
-/* line 757, ../src/stylesheets/styles.scss */
-.in-line-footnote:after {
-  top: -200%;
-}
-
-/* line 762, ../src/stylesheets/styles.scss */
+/* line 759, ../src/stylesheets/styles.scss */
 footer.story-footnotes {
   float: left;
   display: block;
@@ -1164,13 +1162,13 @@ footer.story-footnotes {
 footer.story-footnotes:last-child {
   margin-right: 0;
 }
-/* line 771, ../src/stylesheets/styles.scss */
+/* line 768, ../src/stylesheets/styles.scss */
 footer.story-footnotes h2 {
   font-family: "Press Start 2P", sans-serif;
   color: #f24537;
   font-size: .9em;
 }
-/* line 777, ../src/stylesheets/styles.scss */
+/* line 774, ../src/stylesheets/styles.scss */
 footer.story-footnotes p {
   font-family: "Roboto", sans-serif;
   font-size: .8em;
@@ -1179,14 +1177,14 @@ footer.story-footnotes p {
 /* /////////////////
 /* animations
 /* ///////////////// */
-/* line 788, ../src/stylesheets/styles.scss */
+/* line 785, ../src/stylesheets/styles.scss */
 .sprite {
   display: block;
   position: absolute;
   z-index: 100;
 }
 
-/* line 793, ../src/stylesheets/styles.scss */
+/* line 790, ../src/stylesheets/styles.scss */
 .pacman {
   content: url(../images/sprites/pacman-arcade.png);
   top: -16em;
@@ -1194,7 +1192,7 @@ footer.story-footnotes p {
   width: 100px;
 }
 
-/* line 799, ../src/stylesheets/styles.scss */
+/* line 796, ../src/stylesheets/styles.scss */
 .ghost {
   top: -16em;
   left: -100%;
@@ -1202,27 +1200,27 @@ footer.story-footnotes p {
   height: 100px;
 }
 
-/* line 805, ../src/stylesheets/styles.scss */
+/* line 802, ../src/stylesheets/styles.scss */
 .ghost.console {
   content: url(../images/sprites/ghost.png);
 }
 
-/* line 808, ../src/stylesheets/styles.scss */
+/* line 805, ../src/stylesheets/styles.scss */
 .ghost.arcade {
   content: url(../images/sprites/ghost-arcade.png);
 }
 
-/* line 811, ../src/stylesheets/styles.scss */
+/* line 808, ../src/stylesheets/styles.scss */
 .ghost.arcade.run {
   content: url(../images/sprites/ghost-arcade-run.png);
 }
 
-/* line 814, ../src/stylesheets/styles.scss */
+/* line 811, ../src/stylesheets/styles.scss */
 .ghost.console.run {
   content: url(../images/sprites/ghost-run.png);
 }
 
-/* line 817, ../src/stylesheets/styles.scss */
+/* line 814, ../src/stylesheets/styles.scss */
 .waypoint {
   position: absolute;
   width: 10px;
@@ -1231,37 +1229,37 @@ footer.story-footnotes p {
   opacity: 0;
 }
 
-/* line 824, ../src/stylesheets/styles.scss */
+/* line 821, ../src/stylesheets/styles.scss */
 #pacman-waypoint-1 {
   top: -16em;
   left: -20%;
 }
 
-/* line 828, ../src/stylesheets/styles.scss */
+/* line 825, ../src/stylesheets/styles.scss */
 #pacman-waypoint-2 {
   top: 1em;
   left: -20%;
 }
 
-/* line 832, ../src/stylesheets/styles.scss */
+/* line 829, ../src/stylesheets/styles.scss */
 #pacman-waypoint-3 {
   top: 1em;
   left: 110%;
 }
 
-/* line 836, ../src/stylesheets/styles.scss */
+/* line 833, ../src/stylesheets/styles.scss */
 #pacman-waypoint-4 {
   top: 23em;
   left: 110%;
 }
 
-/* line 840, ../src/stylesheets/styles.scss */
+/* line 837, ../src/stylesheets/styles.scss */
 #pacman-waypoint-5 {
   top: 23em;
   left: 160%;
 }
 
-/* line 844, ../src/stylesheets/styles.scss */
+/* line 841, ../src/stylesheets/styles.scss */
 .pacman-hdr-spacer, h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   position: absolute;
   z-index: 101;
@@ -1269,13 +1267,13 @@ footer.story-footnotes p {
   left: 0;
 }
 
-/* line 850, ../src/stylesheets/styles.scss */
+/* line 847, ../src/stylesheets/styles.scss */
 span.pacman-span {
   /*background-color: #fffcf4;*/
   padding: 1.1em .5em;
 }
 
-/* line 854, ../src/stylesheets/styles.scss */
+/* line 851, ../src/stylesheets/styles.scss */
 #pacman-article-hdr {
   min-height: 10em;
   margin-top: 2em;

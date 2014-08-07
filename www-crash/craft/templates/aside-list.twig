@@ -1,6 +1,8 @@
 <ul class="aside-list">
+{% if entry.sidenotes | length %}
     <h2>Notes:</h2>
     {% for aside in entry.sidenotes %}
     <label for="aside-{{ entry.slug }}-{{loop.index}}" class="aside-list-label {{ aside.slug }} {% if loop.first %}active{% endif %}"><li>{{ aside.title }}</li></label>
     {% endfor %}
+{% endif %}
 </ul>

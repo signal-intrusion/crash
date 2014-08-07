@@ -13,7 +13,11 @@
 
         if (asideChangers[1].scene.state() === "BEFORE"){
 
-            $('.aside-container').first().addClass('active');
+
+
+            setTimeout(function () {
+                $('.aside-container').first().addClass('active');
+            }, 100);
         }
 
         loadBookmarks();

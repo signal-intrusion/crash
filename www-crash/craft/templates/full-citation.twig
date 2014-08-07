@@ -3,7 +3,7 @@
     {% switch citation.sourceType.first() %}
 
         {% case 'book' %}
-                {{ citation.sourceAuthors }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceYear }}).
+                {{ citation.sourceAuthors }}. ({{ citation.sourceYear }}) <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.
 
         {% case 'video' %}
 

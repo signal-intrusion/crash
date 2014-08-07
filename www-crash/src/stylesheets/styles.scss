@@ -106,7 +106,7 @@ article.story {
     }
 
     header.article-hdr {
-        @include span-columns( 6.5 of 12, block );
+        @include span-columns( 6 of 12, block );
         @include shift( 1.5 );
         position: relative;
         display: block;
@@ -727,6 +727,7 @@ span.source-name {
 .in-line-footnote{
 
     &:after {
+        @include transition ( opacity 150ms ease-in-out );
         opacity: 0;
         font-family: $roboto;
         font-size: .7em;
@@ -737,11 +738,12 @@ span.source-name {
         text-align: center;
         background-color: $brown;
         vertical-align: middle;
-        width: 16em;
+        // max-width: 24em;
+        min-width: 30em;
         padding: .2em .5em;
         z-index: 100;
-        left: -8em;
-        top: -100%;
+        left: -15em;
+        top: -3em;
         pointer-events: none;
     }
     &:hover:after {
@@ -753,11 +755,6 @@ span.source-name {
 
 }
 
-.in-line-footnote {
-    &:after {
-        top: -200%;
-    }
-}
 
 footer.story-footnotes {
     @include span-columns( 6.5 of 12, block );

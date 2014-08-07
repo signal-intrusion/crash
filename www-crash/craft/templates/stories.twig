@@ -20,14 +20,20 @@
 {% block content %}
 
 {#  <pre>
-    {% for entry in category.storyTimeline.first().years %}
-        {{ dump(year.description) }}
+    {% for entry in entries %}
+        {{ dump(entry.title) }}
     {% endfor %}
+ </pre>
+
+ <pre>
+   {{ dump(category.title) }}
  </pre> #}
+
 
 <article class="story">
 
 {% for entry in entries %}
+    {# {% if category.title == 'nintendo' and entry.slug != 'the-little-crash-of-1977' %} #}
     <div id="level-{{ entry.chapterLevel }}" class="aside-trigger"></div>
     <section class="article-item" id="{{ entry.slug }}">
 
@@ -72,6 +78,7 @@
         </div>
     </section>
     {# end section article-item #}
+    {# {% endif %} #}
 {% endfor %}
 
 <footer class="story-footnotes">
