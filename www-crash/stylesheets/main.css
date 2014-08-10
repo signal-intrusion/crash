@@ -1157,17 +1157,45 @@ span.source-name {
   cursor: pointer;
   position: absolute;
 }
-/* line 780, ../src/stylesheets/styles.scss */
-.in-line-note.active, .in-line-footnote.active {
-  background-color: #f24537;
+
+/* line 781, ../src/stylesheets/styles.scss */
+.footnote-image {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  background: url("../images/ui/boot-sprite.png") no-repeat 0 0;
 }
-/* line 784, ../src/stylesheets/styles.scss */
-.in-line-note img, .in-line-footnote img {
-  width: auto;
-  height: 1em;
+/* line 787, ../src/stylesheets/styles.scss */
+.footnote-image.excerpt {
+  background: url("../images/ui/book-sprite.png") no-repeat 0 0;
+}
+/* line 790, ../src/stylesheets/styles.scss */
+.footnote-image.bio {
+  background: url("../images/ui/bio-sprite.png") no-repeat 0 0;
+}
+/* line 793, ../src/stylesheets/styles.scss */
+.footnote-image.source {
+  background: url("../images/ui/book-sprite.png") no-repeat 0 0;
+}
+/* line 796, ../src/stylesheets/styles.scss */
+.footnote-image.company {
+  background: url("../images/ui/company-sprite.png") no-repeat 0 0;
+}
+/* line 799, ../src/stylesheets/styles.scss */
+.footnote-image.game {
+  background: url("../images/ui/game-sprite.png") no-repeat 0 0;
+}
+/* line 802, ../src/stylesheets/styles.scss */
+.footnote-image:hover {
+  background-position: -16px 0;
+}
+/* line 805, ../src/stylesheets/styles.scss */
+.footnote-image.active {
+  background-position: -16px 0;
 }
 
-/* line 792, ../src/stylesheets/styles.scss */
+/* line 813, ../src/stylesheets/styles.scss */
 .in-line-footnote:after {
   -webkit-transition: opacity 150ms ease-in-out;
   -moz-transition: opacity 150ms ease-in-out;
@@ -1189,18 +1217,18 @@ span.source-name {
   top: -3em;
   pointer-events: none;
 }
-/* line 812, ../src/stylesheets/styles.scss */
+/* line 833, ../src/stylesheets/styles.scss */
 .in-line-footnote:hover:after {
   opacity: 1;
 }
 
-/* line 822, ../src/stylesheets/styles.scss */
+/* line 843, ../src/stylesheets/styles.scss */
 footer.story-footnotes {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 53.08608%;
-  margin-left: 8.5298%;
+  margin-left: 12.79471%;
   position: relative;
   max-width: 900px;
   line-height: 1.7em;
@@ -1210,29 +1238,35 @@ footer.story-footnotes {
 footer.story-footnotes:last-child {
   margin-right: 0;
 }
-/* line 831, ../src/stylesheets/styles.scss */
+/* line 852, ../src/stylesheets/styles.scss */
 footer.story-footnotes h2 {
   font-family: "Press Start 2P", sans-serif;
   color: #f24537;
   font-size: .9em;
 }
-/* line 837, ../src/stylesheets/styles.scss */
-footer.story-footnotes p {
+/* line 858, ../src/stylesheets/styles.scss */
+footer.story-footnotes ul {
+  list-style: square inside;
+}
+/* line 862, ../src/stylesheets/styles.scss */
+footer.story-footnotes li {
   font-family: "Roboto", sans-serif;
   font-size: .8em;
+  margin-bottom: .7em;
+  line-height: 1.4em;
 }
 
 /* /////////////////
 /* animations
 /* ///////////////// */
-/* line 848, ../src/stylesheets/styles.scss */
+/* line 875, ../src/stylesheets/styles.scss */
 .sprite {
   display: block;
   position: absolute;
   z-index: 100;
 }
 
-/* line 853, ../src/stylesheets/styles.scss */
+/* line 880, ../src/stylesheets/styles.scss */
 .pacman {
   content: url(../images/sprites/pacman-arcade.png);
   top: -16em;
@@ -1240,7 +1274,7 @@ footer.story-footnotes p {
   width: 100px;
 }
 
-/* line 859, ../src/stylesheets/styles.scss */
+/* line 886, ../src/stylesheets/styles.scss */
 .ghost {
   top: -16em;
   left: -100%;
@@ -1248,27 +1282,27 @@ footer.story-footnotes p {
   height: 100px;
 }
 
-/* line 865, ../src/stylesheets/styles.scss */
+/* line 892, ../src/stylesheets/styles.scss */
 .ghost.console {
   content: url(../images/sprites/ghost.png);
 }
 
-/* line 868, ../src/stylesheets/styles.scss */
+/* line 895, ../src/stylesheets/styles.scss */
 .ghost.arcade {
   content: url(../images/sprites/ghost-arcade.png);
 }
 
-/* line 871, ../src/stylesheets/styles.scss */
+/* line 898, ../src/stylesheets/styles.scss */
 .ghost.arcade.run {
   content: url(../images/sprites/ghost-arcade-run.png);
 }
 
-/* line 874, ../src/stylesheets/styles.scss */
+/* line 901, ../src/stylesheets/styles.scss */
 .ghost.console.run {
   content: url(../images/sprites/ghost-run.png);
 }
 
-/* line 877, ../src/stylesheets/styles.scss */
+/* line 904, ../src/stylesheets/styles.scss */
 .waypoint {
   position: absolute;
   width: 10px;
@@ -1277,37 +1311,37 @@ footer.story-footnotes p {
   opacity: 0;
 }
 
-/* line 884, ../src/stylesheets/styles.scss */
+/* line 911, ../src/stylesheets/styles.scss */
 #pacman-waypoint-1 {
   top: -16em;
   left: -20%;
 }
 
-/* line 888, ../src/stylesheets/styles.scss */
+/* line 915, ../src/stylesheets/styles.scss */
 #pacman-waypoint-2 {
   top: 1em;
   left: -20%;
 }
 
-/* line 892, ../src/stylesheets/styles.scss */
+/* line 919, ../src/stylesheets/styles.scss */
 #pacman-waypoint-3 {
   top: 1em;
   left: 110%;
 }
 
-/* line 896, ../src/stylesheets/styles.scss */
+/* line 923, ../src/stylesheets/styles.scss */
 #pacman-waypoint-4 {
   top: 23em;
   left: 110%;
 }
 
-/* line 900, ../src/stylesheets/styles.scss */
+/* line 927, ../src/stylesheets/styles.scss */
 #pacman-waypoint-5 {
   top: 23em;
   left: 160%;
 }
 
-/* line 904, ../src/stylesheets/styles.scss */
+/* line 931, ../src/stylesheets/styles.scss */
 .pacman-hdr-spacer, h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   position: absolute;
   z-index: 101;
@@ -1315,13 +1349,13 @@ footer.story-footnotes p {
   left: 0;
 }
 
-/* line 910, ../src/stylesheets/styles.scss */
+/* line 937, ../src/stylesheets/styles.scss */
 span.pacman-span {
   /*background-color: #fffcf4;*/
   padding: 1.1em .5em;
 }
 
-/* line 914, ../src/stylesheets/styles.scss */
+/* line 941, ../src/stylesheets/styles.scss */
 #pacman-article-hdr {
   min-height: 10em;
   margin-top: 2em;

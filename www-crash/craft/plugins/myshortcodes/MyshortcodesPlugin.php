@@ -59,18 +59,20 @@ class MyshortcodesPlugin extends BasePlugin
 		$imgSrc = 'info.png';
 
 		if ($asideCat == 'bio') {
-			$imgSrc = "bio.png";
+			$imgSrc = "bio";
 		} elseif ($asideCat == 'company') {
-			$imgSrc = "company.png";
+			$imgSrc = "company";
 		} elseif ($asideCat == 'event') {
-			$imgSrc = "event.png";
+			$imgSrc = "event";
 		} elseif ($asideCat == 'source') {
-			$imgSrc = "source.png";
+			$imgSrc = "source";
+		} elseif ($asideCat == 'game') {
+			$imgSrc = "game";
 		} elseif ($asideCat == 'excerpt') {
-			$imgSrc = "excerpt.png";
+			$imgSrc = "excerpt";
 		}
 
-		return '<span class="in-line-note note-' . $entries[0]->slug . '" id="" title="'. $entries[0]->heading .'"><img src="images/ui/' . $imgSrc . '" title="More about: ' . $entries[0]->heading . '">' . $entries[0]->sourceName . '</span>';
+		return '<span class="in-line-note note-' . $entries[0]->slug . ' footnote-image ' . $imgSrc . ' " id="" title="'. $entries[0]->heading .'">' . $entries[0]->sourceName . '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 	}
 
 	public function footnote($attributes, $content, $tag) {
@@ -104,7 +106,7 @@ class MyshortcodesPlugin extends BasePlugin
 			$footnotePage = "";
 		}
 
-		return '<span class="in-line-footnote ' . $entries[0]->slug . '" title="'. $footnoteAuthor . $footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."><img src="images/ui/info.png" title="'.$footnoteAuthor.', '.$footnoteSource.'. ('.$footnoteYear.') p. '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+		return '<span class="in-line-footnote footnote-image ' . $entries[0]->slug . '" title="'. $footnoteAuthor . $footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 	}
 
 }

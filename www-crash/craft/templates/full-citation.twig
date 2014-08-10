@@ -3,16 +3,16 @@
     {% switch citation.sourceType.first() %}
 
         {% case 'book' %}
-            <p>{{ citation.sourceAuthors }}. ({{ citation.sourceYear }}) <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</p>
+            <li>{{ citation.sourceAuthors }}. ({{ citation.sourceYear }}) <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</li>
 
         {% case 'video' %}
-            <p>{{ citation.sourceAuthors }}. ({{ citation.sourceDate }}). <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</p>
+            <li>{{ citation.sourceAuthors }}. ({{ citation.sourceDate }}). <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</li>
 
         {% case 'webpage' %}
-            <p>{{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a></p>
+            <li>{{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a></li>
 
         {% case 'article in periodical' %}
-            <p>{% if citation.sourceAuthors | length %}{{ citation.sourceAuthors }}.{% endif %}{{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).</p>
+            <li>{% if citation.sourceAuthors | length %}{{ citation.sourceAuthors }}.{% endif %}{{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).</li>
 
         {% case 'image' %}
 
