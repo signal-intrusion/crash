@@ -275,7 +275,7 @@ div.aside-wrapper {
     float: left;
     width: 100%;
     display: block;
-    height: 90%;
+    height: 75%;
     overflow-y: auto;
     position: relative;
 }
@@ -365,11 +365,12 @@ aside.margin-aside {
     }
 
     button.aside-link-button {
-        background-image: url("../images/ui/bookmark.png");
-        background-size: contain;
+        background-image: url("../images/ui/add-bookmark-sprite.png");
+        // background-size: contain;
         background-color: transparent;
-        height: 15px;
-        width: 15px;
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
         border: none;
         margin-left: 1em;
         cursor: pointer;
@@ -388,13 +389,16 @@ aside.margin-aside {
             width: 8em;
             padding: .2em .5em;
             z-index: 100;
-            left: 50%;
+            // left: 50%;
             top: 0;
-            margin-left: -2em;
+            margin-left: -4em;
             pointer-events: none;
         }
-        &:hover:after {
-            opacity: 1;
+        &:hover {
+            background-position: -16px 0;
+            &:after {
+                opacity: 1;
+            }
         }
     }
 }
@@ -630,20 +634,96 @@ table.drawer-sprites, table.drawer-bookmarks {
     background-color: rgba(126, 187, 169, .95);
     border-right: #629082 solid 1px;
     border-left: #93d9c4 solid 1px;
+    &:hover {
+        -webkit-transition: height 2s, background-color .2s, overflow 2s, -webkit-transform 2s;
+        transition: height 2s, background-color .2s, overflow 2s, transform 2s;
+        background-color: rgba(106, 154, 140, 1);
+        height: 100%;
+        cursor: pointer;
+
+        ul {
+            // height: auto;
+            max-height: 1000px;
+            opacity: 1;
+            li {
+                margin-bottom: 1em;
+                &:first-of-type {
+                    margin-top: 3em;
+                }
+            }
+        }
+    }
 }
 .nav-item h2 {
     margin-bottom: 15px;
 }
 .nav-item ul {
-    margin-left: -1em;
+    @include transition ( opacity 100ms ease-in-out, max-height 100ms ease-in-out );
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+    li {
+        // float: left;
+        line-height: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        @include clearfix;
+        @include transition ( margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out  );
+        &:first-of-type {
+            margin-top: 0em;
+        }
+    }
+    a {
+        display: inline;
+        // float: left;
+        color: $beige;
+
+        &:visited {
+            color: $green;
+        }
+        &:active {
+            color: $red;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
 }
-.nav-item:hover {
-    -webkit-transition: height 2s, background-color .2s, overflow 2s, -webkit-transform 2s;
-    transition: height 2s, background-color .2s, overflow 2s, transform 2s;
-    background-color: rgba(106, 154, 140, 1);
-    height: 100%;
+div.remove-bookmark {
+    float: left;
+    display: inline;
+    margin-right: 1em;
+    background-image: url("../images/ui/remove-bookmark-sprite.png");
+    // background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    border: 0;
     cursor: pointer;
+    &:after {
+        @include transition ( opacity 100ms ease-in-out );
+        @include transition-delay( 100ms );
+        display: block;
+        position: absolute;
+        padding: .2em 1em;
+        content: "remove bookmark";
+        background-color: $brown;
+        color: $beige;
+        font-family: $roboto;
+        font-size: .9em;
+        opacity: 0;
+        margin-left: -6em;
+        margin-top: -2.2em;
+    }
+    &:hover {
+        background-position: -16px 0;
+        &:after {
+            opacity: 1;
+        }
+    }
 }
+.nav-item
 .nav-list {
     line-height: 1.3em;
     text-align: center;
@@ -823,10 +903,10 @@ span.source-name {
         background-color: $brown;
         vertical-align: middle;
         // max-width: 24em;
-        min-width: 30em;
+        min-width: 34em;
         padding: .2em .5em;
         z-index: 100;
-        left: -15em;
+        left: -17em;
         top: -3em;
         pointer-events: none;
     }
@@ -838,7 +918,6 @@ span.source-name {
 .in-line-note {
 
 }
-
 
 footer.story-footnotes {
     @include span-columns( 6.5 of 12, block );
@@ -867,6 +946,111 @@ footer.story-footnotes {
     }
 
 }
+/* /////////////////
+/* table of contents
+/* ///////////////// */
+
+header.page-hdr {
+    margin-top: 4em;
+    width: 100%;
+    text-align: center;
+}
+
+.stories {
+
+    .story-item {
+        @include span-columns( 4 of 12, inline-block );
+        @include shift( 1.5 );
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .story-item-hdr {
+        margin-bottom: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+        font-family: $georgia;
+        color: $brown;
+        text-transform: capitalize;
+    }
+
+    header h2 {
+        font-family: $pressStart;
+    }
+
+    article p {
+        line-height: 1.5em;
+    }
+
+    article {
+        margin-bottom: 1em;
+    }
+
+    ol {
+        font-family: $roboto;
+        list-style: lower-roman;
+
+        li {
+            margin-bottom: .5em;
+        }
+    }
+
+    a {
+        color: $darkGreen;
+
+        &:visited {
+            color: $green;
+        }
+        &:active {
+            color: $darkGreen;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
+
+}
+
+/* /////////////////
+/* homepage
+/* ///////////////// */
+
+.home {
+
+    header.page-hdr {
+        margin-bottom: 4em;
+    }
+    h1 {
+        font-family: $georgia;
+        color: $brown;
+        font-size: 3em;
+        margin-bottom: .2em;
+    }
+
+    h2 {
+        font-family: $pressStart;
+        color: $red;
+    }
+
+    h3 {
+        font-family: $pressStart;
+    }
+
+    section.content-links {
+        text-align: center;
+
+        div {
+            margin-bottom: 1em;
+        }
+
+
+    }
+
+}
+
+
 
 /* /////////////////
 /* animations

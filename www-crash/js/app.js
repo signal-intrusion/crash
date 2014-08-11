@@ -3,7 +3,8 @@
 
     var $body = $('body'),
         controller = new ScrollMagic(),
-        asideChangers = [];
+        asideChangers = [],
+        bookmarks;
 
     $body.addClass('script');
 
@@ -11,7 +12,7 @@
 
         // console.log(asideChangers[1].scene.state());
 
-        if (asideChangers[1].scene.state() === "BEFORE"){
+        if (asideChangers[1] && asideChangers[1].scene.state() === "BEFORE"){
 
 
 
@@ -46,7 +47,7 @@
         $('.in-line-note.active').removeClass('active');
     });
 
-    $('.in-line-note').on ('click mouseover', function(){
+    $('.in-line-note').on('click mouseover', function(){
 
         var target,
             $this = $(this),
@@ -131,9 +132,7 @@
             localMarks;
 
         if (localStorage.getItem('bookmarks') !== null && localStorage.getItem('bookmarks') !== undefined){
-
             localMarks = JSON.parse(localStorage.getItem('bookmarks'));
-
         } else {
             localMarks = {
                 bookmarkArray: []
@@ -151,12 +150,33 @@
         };
 
         localMarks.bookmarkArray.push(mark);
-        console.log(localMarks);
-
+        // console.log(localMarks);
         localStorage.setItem('bookmarks', JSON.stringify(localMarks));
+        // console.log(localStorage.getItem('bookmarks'));
+        bookmarks = localMarks;
 
-        console.log(localStorage.getItem('bookmarks'));
+        loadBookmarks();
 
+        $('#bookmarks').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
+
+    });
+
+    // remove bookmarks
+    $('#bookmark-nav-target').on('click', 'div.remove-bookmark', function(e){
+        console.log('fired' + this);
+        var $this = $(this),
+            mark,
+            localMarks = bookmarks,
+            index;
+
+        mark = $this.attr('name');
+
+        console.log(localMarks);
+        localMarks.bookmarkArray = _.without(localMarks.bookmarkArray, _.findWhere(localMarks.bookmarkArray, { title: mark }));
+        console.log(localMarks);
+        localStorage.setItem('bookmarks', JSON.stringify(localMarks));
+        bookmarks = localMarks;
+        loadBookmarks();
     });
 
     function renderTemplate(target, template, data) {
@@ -186,7 +206,9 @@
             };
         }
 
-        renderTemplate('#bookmark-drawer-target', '#bookmark-template', localMarks);
+        bookmarks = localMarks;
+
+        renderTemplate('#bookmark-nav-target', '#bookmark-template', localMarks);
 
         return true;
 

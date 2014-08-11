@@ -30,7 +30,7 @@
     </noscript>
 </head>
 
-<body>
+<body class="{{ pageClass }}">
 	{% include 'nav-mod.twig' %}
     {% block drawer %}{% endblock %}
 	{% block content %}{% endblock %}
@@ -41,6 +41,7 @@
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
     <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.js"></script>
     <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.debug.js"></script>
+    {% include 'bookmark-sprite-scripts.twig' %}
     <script type="text/javascript" src="{{siteUrl}}js/app.js"></script>
     {% block scripts %}{% endblock %}
 </body>

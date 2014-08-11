@@ -1,0 +1,59 @@
+{% set pageClass = 'stories' %}
+{% set path = craft.request.getUrl() %}
+
+{% extends '_layout' %}
+
+{% block content %}
+
+<header class="page-hdr">
+
+    <h2>{{ entry.heading }}</h2>
+
+</header>
+
+{% for block in entry.activeStories %}
+    {% set activeStory = block.activeStory.first() %}
+    {% set chapters =  craft.entries({
+        type: 'chapter',
+        relatedTo: activeStory,
+        order: 'chapterLevel'
+        })
+    %}
+
+    <section class="story-item">
+
+        <header class="story-item-hdr">
+
+            <a href="{{ activeStory.getUrl }}"><h1>{{ activeStory.title }}</h1></a>
+
+        </header>
+
+        <article>{{ activeStory.storyDescription }}</article>
+
+        <ol class="toc">
+        {% for chapter in chapters %}
+            <li><a href="{{ activeStory.getUrl }}#{{ chapter.slug }}">{{ chapter.heading }}</a></li>
+        {% endfor %}
+        </ol>
+
+    </section>
+
+{% endfor %}
+
+<section class="article-item">
+
+    <div class="article-txt">
+
+    </div>
+
+</section>
+
+
+{% endblock %}
+
+
+{% block scripts %}
+    {% include 'bookmark-drawer.twig' %}
+{% endblock %}
+
+

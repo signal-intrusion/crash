@@ -1,7 +1,15 @@
 <nav class="nav-bar-mod">
-    <a href="index.html"><div class="nav-item" id="home">Home</div></a>
-    <a href="companies.html"><div class="nav-item" id="companies">Timeline</div></a>
-    <a href="people.html"><div class="nav-item" id="people">Stories</div></a>
-    <a><div class="nav-item" id="bookmarks">Bookmarks</div></a>
-    <a><div class="nav-item" id="sprites">Sprites</div></a>
+    <a href="{{ siteUrl }}"><div class="nav-item" id="home">Home</div></a>
+    <a href="{{ url('timeline') }}"><div class="nav-item" id="companies">Timeline</div></a>
+    <a href="{{ url('stories') }}"><div class="nav-item" id="stories">Stories</div></a>
+    <a><div class="nav-item" id="bookmarks">Bookmarks
+        <ul id="bookmark-nav-target">
+            <noscript>Please Enable Javascript</noscript>
+        </ul>
+    </div></a>
+    <a><div class="nav-item" id="sprites">Sprites
+        <ul id="bookmark-nav-target">
+            {# <noscript> #}<li>Please Enable Javascript, you luddite</li>{# </noscript> #}
+        </ul>
+    </div></a>
 </nav>
