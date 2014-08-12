@@ -2,7 +2,7 @@
     <% for (var i = 0; i < data.bookmarkArray.length; i++) { %>
         <li>
             <div name="<%= data.bookmarkArray[i].title %>" class="remove-bookmark"></div>
-            <a href="{{ siteUrl }}<%= data.bookmarkArray[i].link %>"><%= data.bookmarkArray[i].title %></a>
+            <a href="<%= data.bookmarkArray[i].link %>"><%= data.bookmarkArray[i].title %></a>
         </li>
     <% } %>
 </script>

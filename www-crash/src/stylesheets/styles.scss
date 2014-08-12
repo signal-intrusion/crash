@@ -715,6 +715,7 @@ div.remove-bookmark {
         opacity: 0;
         margin-left: -6em;
         margin-top: -2.2em;
+        pointer-events: none;
     }
     &:hover {
         background-position: -16px 0;
