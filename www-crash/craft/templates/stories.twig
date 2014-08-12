@@ -35,7 +35,7 @@
 {% for entry in entries %}
     {# {% if category.title == 'nintendo' and entry.slug != 'the-little-crash-of-1977' %} #}
     <div id="level-{{ entry.chapterLevel }}" class="aside-trigger"></div>
-    <section class="article-item" id="{{ entry.slug }}" data-name="{{ entry.heading }}">
+    <section class="article-item" id="{{ entry.slug }}" data-name="{{ entry.heading }}" data-cat="{{ category.title }}">
 
     <header class="article-hdr">
 

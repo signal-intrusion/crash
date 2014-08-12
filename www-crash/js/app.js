@@ -4,7 +4,8 @@
     var $body = $('body'),
         controller = new ScrollMagic(),
         asideChangers = [],
-        bookmarks;
+        bookmarks,
+        bookmarkManager;
 
     $body.addClass('script');
 
@@ -16,7 +17,19 @@
             }, 100);
         }
 
-        loadBookmarks();
+        if ($body.hasClass('home') && localStorage.getItem('leftoffTitle') !== undefined){
+            var data = {
+                title: localStorage.getItem('leftoffTitle'),
+                link: localStorage.getItem('leftoffLink')
+            };
+
+            renderTemplate('#left-off', '#home-leftoff-template', data);
+        }
+
+        asideInit();
+        bookmarkManager = new BookmarkManager();
+        bookmarkManager.init();
+        bookmarkManager.loadBookmarks();
     });
 
     function supports_html5_storage() {
@@ -70,7 +83,6 @@
                                 leftHref,
                                 leftTitle;
 
-
                             $('.aside-container').removeClass('active');
 
                             if (direction === 'FORWARD'){
@@ -84,39 +96,56 @@
                                 $('.' + _target).addClass('active');
                             }
 
-                            console.log($trigger);
-                            leftHref = $trigger.next().attr('id');
+                            leftHref = $trigger.next().attr('data-cat') + '#' + $trigger.next().attr('id');
                             leftTitle = $trigger.next().attr('data-name');
 
                             saveLeftoff(leftHref, leftTitle);
                         })
                         .addTo(controller);
-
         return true;
     };
+
+    function asideInit() {
+
+        $.each($('.aside-trigger'), function() {
+            var changer = new AsideChanger(this);
+            AsideChanger.prototype.scrollAnimate.call(changer);
+            asideChangers.push(changer);
+        });
+
+        return true;
+    }
+
+    ///////////////////
+    // left-off
+    ///////////////////
 
     function saveLeftoff (leftoffLink, leftoffTitle) {
         localStorage.setItem('leftoffTitle', leftoffTitle);
         localStorage.setItem('leftoffLink', leftoffLink);
     }
 
-    $.each($('.aside-trigger'), function() {
-        var changer = new AsideChanger(this);
-        AsideChanger.prototype.scrollAnimate.call(changer);
-        asideChangers.push(changer);
-    });
-
-    ///////////////////
-    // left-off
-    ///////////////////
-
-
     ///////////////////
     // bookmarks
     ///////////////////
 
-    // add a bookmark
-    $('.aside-link-button').on('click', function(){
+    function BookmarkManager () {
+
+        this.init = function () {
+
+            // add a bookmark
+            $('.aside-link-button').on('click', function () {
+                BookmarkManager.prototype.addBookmark.call(this);
+            });
+
+            // remove bookmarks
+            $('#bookmark-nav-target').on('click', 'div.remove-bookmark', function () {
+                BookmarkManager.prototype.removeBookmark.call(this);
+            });
+        };
+    }
+
+    BookmarkManager.prototype.addBookmark = function () {
 
         var mark,
             title,
@@ -145,14 +174,12 @@
         localStorage.setItem('bookmarks', JSON.stringify(localMarks));
         bookmarks = localMarks;
 
-        loadBookmarks();
+        BookmarkManager.prototype.loadBookmarks.call(this);
 
         $('#bookmarks').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
+    };
 
-    });
-
-    // remove bookmarks
-    $('#bookmark-nav-target').on('click', 'div.remove-bookmark', function(){
+    BookmarkManager.prototype.removeBookmark = function () {
         var $this = $(this),
             mark,
             localMarks = bookmarks;
@@ -161,20 +188,10 @@
         localMarks.bookmarkArray = _.without(localMarks.bookmarkArray, _.findWhere(localMarks.bookmarkArray, { title: mark }));
         localStorage.setItem('bookmarks', JSON.stringify(localMarks));
         bookmarks = localMarks;
-        loadBookmarks();
-    });
+        BookmarkManager.prototype.loadBookmarks.call(this);
+    };
 
-    function renderTemplate(target, template, data) {
-
-        var tmplMarkup = $(template).html(),
-            compiledTmpl = _.template(tmplMarkup, { data: data }),
-            $target = $(target);
-
-        $target.html(compiledTmpl);
-
-    }
-
-    function loadBookmarks() {
+    BookmarkManager.prototype.loadBookmarks = function () {
 
         var localMarks;
 
@@ -188,15 +205,19 @@
                 ]
             };
         }
-
         bookmarks = localMarks;
-
         renderTemplate('#bookmark-nav-target', '#bookmark-template', localMarks);
-
         return true;
+    };
 
+    function renderTemplate(target, template, data) {
+
+        var tmplMarkup = $(template).html(),
+            compiledTmpl = _.template(tmplMarkup, { data: data }),
+            $target = $(target);
+
+        $target.html(compiledTmpl);
     }
-
 
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);
