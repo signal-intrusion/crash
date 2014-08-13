@@ -1577,7 +1577,7 @@ header.page-hdr {
 .home h1, .home aside.margin-aside h2, aside.margin-aside .home h2 {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   color: #421a12;
-  font-size: 3em;
+  font-size: 4em;
   margin-bottom: .2em;
 }
 /* line 1142, ../src/stylesheets/styles.scss */
@@ -1588,12 +1588,35 @@ header.page-hdr {
 /* line 1147, ../src/stylesheets/styles.scss */
 .home h3 {
   font-family: "Press Start 2P", sans-serif;
+  color: #f24537;
+  margin-bottom: 1em;
 }
-/* line 1151, ../src/stylesheets/styles.scss */
+/* line 1152, ../src/stylesheets/styles.scss */
+.home h4 {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2em;
+}
+/* line 1156, ../src/stylesheets/styles.scss */
+.home a {
+  color: #421a12;
+}
+/* line 1159, ../src/stylesheets/styles.scss */
+.home a:active {
+  color: #421a12;
+}
+/* line 1162, ../src/stylesheets/styles.scss */
+.home a:visited {
+  color: #421a12;
+}
+/* line 1165, ../src/stylesheets/styles.scss */
+.home a:hover {
+  color: #89c0af;
+}
+/* line 1170, ../src/stylesheets/styles.scss */
 .home section.content-links {
   text-align: center;
 }
-/* line 1154, ../src/stylesheets/styles.scss */
+/* line 1173, ../src/stylesheets/styles.scss */
 .home section.content-links div {
   margin-bottom: 1em;
 }
@@ -1601,14 +1624,25 @@ header.page-hdr {
 /* /////////////////
 /* animations
 /* ///////////////// */
-/* line 1168, ../src/stylesheets/styles.scss */
+/* line 1187, ../src/stylesheets/styles.scss */
+.flying-sprite {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 65%;
+  z-index: 10;
+}
+
+/* line 1197, ../src/stylesheets/styles.scss */
 .sprite {
   display: block;
   position: absolute;
   z-index: 100;
 }
 
-/* line 1173, ../src/stylesheets/styles.scss */
+/* line 1202, ../src/stylesheets/styles.scss */
 .pacman {
   content: url(../images/sprites/pacman-arcade.png);
   top: -16em;
@@ -1616,7 +1650,7 @@ header.page-hdr {
   width: 100px;
 }
 
-/* line 1179, ../src/stylesheets/styles.scss */
+/* line 1208, ../src/stylesheets/styles.scss */
 .ghost {
   top: -16em;
   left: -100%;
@@ -1624,27 +1658,27 @@ header.page-hdr {
   height: 100px;
 }
 
-/* line 1185, ../src/stylesheets/styles.scss */
+/* line 1214, ../src/stylesheets/styles.scss */
 .ghost.console {
   content: url(../images/sprites/ghost.png);
 }
 
-/* line 1188, ../src/stylesheets/styles.scss */
+/* line 1217, ../src/stylesheets/styles.scss */
 .ghost.arcade {
   content: url(../images/sprites/ghost-arcade.png);
 }
 
-/* line 1191, ../src/stylesheets/styles.scss */
+/* line 1220, ../src/stylesheets/styles.scss */
 .ghost.arcade.run {
   content: url(../images/sprites/ghost-arcade-run.png);
 }
 
-/* line 1194, ../src/stylesheets/styles.scss */
+/* line 1223, ../src/stylesheets/styles.scss */
 .ghost.console.run {
   content: url(../images/sprites/ghost-run.png);
 }
 
-/* line 1197, ../src/stylesheets/styles.scss */
+/* line 1226, ../src/stylesheets/styles.scss */
 .waypoint {
   position: absolute;
   width: 10px;
@@ -1653,37 +1687,37 @@ header.page-hdr {
   opacity: 0;
 }
 
-/* line 1204, ../src/stylesheets/styles.scss */
+/* line 1233, ../src/stylesheets/styles.scss */
 #pacman-waypoint-1 {
   top: -16em;
   left: -20%;
 }
 
-/* line 1208, ../src/stylesheets/styles.scss */
+/* line 1237, ../src/stylesheets/styles.scss */
 #pacman-waypoint-2 {
   top: 1em;
   left: -20%;
 }
 
-/* line 1212, ../src/stylesheets/styles.scss */
+/* line 1241, ../src/stylesheets/styles.scss */
 #pacman-waypoint-3 {
   top: 1em;
   left: 110%;
 }
 
-/* line 1216, ../src/stylesheets/styles.scss */
+/* line 1245, ../src/stylesheets/styles.scss */
 #pacman-waypoint-4 {
   top: 23em;
   left: 110%;
 }
 
-/* line 1220, ../src/stylesheets/styles.scss */
+/* line 1249, ../src/stylesheets/styles.scss */
 #pacman-waypoint-5 {
   top: 23em;
   left: 160%;
 }
 
-/* line 1224, ../src/stylesheets/styles.scss */
+/* line 1253, ../src/stylesheets/styles.scss */
 .pacman-hdr-spacer, h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   position: absolute;
   z-index: 101;
@@ -1691,13 +1725,13 @@ header.page-hdr {
   left: 0;
 }
 
-/* line 1230, ../src/stylesheets/styles.scss */
+/* line 1259, ../src/stylesheets/styles.scss */
 span.pacman-span {
   /*background-color: #fffcf4;*/
   padding: 1.1em .5em;
 }
 
-/* line 1234, ../src/stylesheets/styles.scss */
+/* line 1263, ../src/stylesheets/styles.scss */
 #pacman-article-hdr {
   min-height: 10em;
   margin-top: 2em;

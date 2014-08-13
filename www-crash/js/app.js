@@ -1,13 +1,21 @@
 (function (window, $, _, ScrollMagic, TweenMax){
     'use strict';
 
-    var $body = $('body'),
+    var $body,
         controller = new ScrollMagic(),
         asideChangers = [],
         bookmarks,
-        bookmarkManager;
+        bookmarkManager,
+        preventSprite = true;
 
-    $body.addClass('script');
+        $body = $('body');
+        $body.addClass('script');
+
+    var preventDelay = window.setTimeout(function(){
+
+        preventSprite = false;
+        window.clearTimeout(preventDelay);
+    }, 2000);
 
     $(window).load(function(){
 
@@ -30,6 +38,7 @@
         bookmarkManager = new BookmarkManager();
         bookmarkManager.init();
         bookmarkManager.loadBookmarks();
+        loadSprites();
     });
 
     function supports_html5_storage() {
@@ -106,11 +115,62 @@
                             leftTitle = $trigger.next().attr('data-name');
                             saveLeftoff(leftHref, leftTitle);
 
+                            if (!preventSprite && $body && $trigger.hasClass('scroll-sprite')) {
+
+                                if (!spriteIsSaved($trigger)) {
+                                    console.log(spriteIsSaved($trigger));
+                                    activateSprite($trigger);
+                                }
+                            }
 
                         })
                         .addTo(controller);
         return true;
     };
+
+    function spriteIsSaved (trigger) {
+
+        var $trigger = $(trigger),
+            spriteToFind = $trigger.attr('data-sprite'),
+            localSprite;
+
+        localSprite = localStorage.getItem(spriteToFind);
+
+        if (localSprite) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    function activateSprite (trigger) {
+        var $trigger = $(trigger),
+            spriteToSave,
+            spriteImg,
+            spriteMarkup;
+
+        spriteToSave = $trigger.attr('data-sprite');
+        spriteImg = $trigger.attr('data-spriteImage');
+        spriteMarkup = '<img class="flying-sprite" src="' + spriteImg + '">';
+        $body.append($(spriteMarkup));
+        localStorage.setItem(spriteToSave, true);
+        animateSprite($(spriteMarkup));
+        loadSprites();
+    }
+
+    function animateSprite (sprite) {
+        var $sprite = $(sprite)[0];
+
+        TweenMax.to('.flying-sprite', 1.2, {
+            height: '30px',
+            width: '30px',
+            top: '-30px',
+            onComplete: function(){
+                    $('#sprites').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
+                },
+            ease:Power4.easeIn, delay:0.3 });
+    }
 
     function asideInit() {
 
@@ -233,7 +293,7 @@
     ///////////////////
 
     var years = $('.year-empty');
-    console.log(years);
+    // console.log(years);
 
     function adjustActive(_this){
         var targetID = $(_this) .attr('id');
@@ -251,9 +311,11 @@
         if ($elem.length > 0) {
             e.preventDefault();
             // controller.enabled(false);
+            preventSprite = true;
             TweenMax.to(window, 1, {scrollTo: {y: $elem.offset().top - 50, autoKill: false}, onComplete: function(e){
                     // console.log(id);
                     // controller.enabled(true);
+                    preventSprite = false;
                     _.delay(adjustActive, 2, id);
                 }
             });
@@ -286,11 +348,11 @@
                     var indexOfFind = years.index($find);
                     var yearName = $(years[indexOfFind - 1]).attr('id');
                     $timelineItem  = $('.' + yearName);
-                    console.log($timelineItem);
+                    // console.log($timelineItem);
                 }
                 $($('.timeline-list-item').children()).removeClass('timeline-active');
                 $('.timeline-list-item').removeClass('timeline-list-active');
-                console.log($timelineItem);
+                // console.log($timelineItem);
                 $timelineItem.addClass('timeline-list-active');
 
                 $($timelineItem.children()[0])
@@ -303,38 +365,34 @@
     // sprites
     ///////////////////
 
+    function loadSprites () {
 
-    $.get( "sprite-drawer", function( data ) {
+        $.get( "sprite-drawer", function( data ) {
 
-        console.log(data);
-
-        $('#sprite-nav-target').html(data);
-
-        var spriteArray = $('.sprite-image');
-
-            $.each(spriteArray, function () {
-
-                var $this = $(this),
-                    searchTarget = $this.attr('data-sprite');
-
-                    console.log(searchTarget);
-
-                var test = localStorage.getItem(searchTarget);
-
-                if (!test) {
-
-                    $this.attr({
-                        src:'images/ui/mystery.png',
-                        title: 'find me!'
-                    })
-                    .parent().attr('href', '')
-                    .parent().attr('title', 'find me!');
-
-                }
-
-            });
-
+            $('#sprite-nav-target').html(data);
+            cleanSprites();
         });
+
+
+    }
+
+    function cleanSprites () {
+        var spriteArray = $('.sprite-image');
+        $.each(spriteArray, function () {
+            var $this = $(this),
+                searchTarget = $this.attr('data-sprite'),
+                test = localStorage.getItem(searchTarget);
+
+            if (!test) {
+                $this.attr({
+                    src:'images/ui/mystery.png',
+                    title: 'find me!'
+                })
+                .parent().attr('href', '')
+                .parent().attr('title', 'find me!');
+            }
+        });
+    }
 
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

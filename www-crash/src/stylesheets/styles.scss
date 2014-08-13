@@ -1135,7 +1135,7 @@ header.page-hdr {
     h1 {
         font-family: $georgia;
         color: $brown;
-        font-size: 3em;
+        font-size: 4em;
         margin-bottom: .2em;
     }
 
@@ -1146,6 +1146,25 @@ header.page-hdr {
 
     h3 {
         font-family: $pressStart;
+        color: $red;
+        margin-bottom: 1em;
+    }
+    h4 {
+        font-family: $georgia;
+        font-size: 2em;
+    }
+    a {
+        color: $brown;
+
+        &:active {
+            color: $brown;
+        }
+        &:visited {
+            color: $brown;
+        }
+        &:hover {
+            color: $green;
+        }
     }
 
     section.content-links {
@@ -1164,6 +1183,16 @@ header.page-hdr {
 /* /////////////////
 /* animations
 /* ///////////////// */
+
+.flying-sprite {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    display: block;
+    top: 50%;
+    left: 65%;
+    z-index: 10;
+}
 
 .sprite {
     display: block;
