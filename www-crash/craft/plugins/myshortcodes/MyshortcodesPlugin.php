@@ -28,7 +28,8 @@ class MyshortcodesPlugin extends BasePlugin
 		return array(
 			array($this, 'citation'),
 			array($this, 'note'),
-			array($this, 'footnote')
+			array($this, 'footnote'),
+			array($this, 'year')
 		);
 	}
 
@@ -107,6 +108,15 @@ class MyshortcodesPlugin extends BasePlugin
 		}
 
 		return '<span class="in-line-footnote footnote-image ' . $entries[0]->slug . '" title="'. $footnoteAuthor . $footnoteSource.'. ('.$footnoteYear.') '.$footnotePage.'."></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	}
+
+	public function year($attributes, $content, $tag) {
+
+		// <div class="year-empty" id="year-1977"></div>
+
+		$target = 'year-' . $attributes['year'];
+
+		return '<div class="year-empty" id="' . $target. '"></div>';
 	}
 
 }

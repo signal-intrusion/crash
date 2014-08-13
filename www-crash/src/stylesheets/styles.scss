@@ -293,6 +293,7 @@ aside.margin-aside {
     color: $grey;
     font-family: $roboto;
     font-size: .7em;
+    width: 98%;
 
     h1 {
         font-size: 1.2em;
@@ -605,6 +606,10 @@ table.drawer-sprites, table.drawer-bookmarks {
 /* Nav Bar
 /* ///////////////// */
 
+nav a .nav-item {
+    cursor: pointer;
+}
+
 .nav-bar-mod {
     position: fixed;
     z-index: 9001;
@@ -634,12 +639,14 @@ table.drawer-sprites, table.drawer-bookmarks {
     background-color: rgba(126, 187, 169, .95);
     border-right: #629082 solid 1px;
     border-left: #93d9c4 solid 1px;
+    cursor: default;
     &:hover {
         -webkit-transition: height 2s, background-color .2s, overflow 2s, -webkit-transform 2s;
         transition: height 2s, background-color .2s, overflow 2s, transform 2s;
         background-color: rgba(106, 154, 140, 1);
         height: 100%;
-        cursor: pointer;
+        // cursor: pointer;
+        overflow: initial;
 
         ul {
             // height: auto;
@@ -647,6 +654,17 @@ table.drawer-sprites, table.drawer-bookmarks {
             opacity: 1;
             li {
                 margin-bottom: 1em;
+                &:first-of-type {
+                    margin-top: 3em;
+                }
+            }
+        }
+
+        div.sprite-drawer {
+            max-height: 1000px;
+            opacity: 1;
+
+            .row {
                 &:first-of-type {
                     margin-top: 3em;
                 }
@@ -665,8 +683,9 @@ table.drawer-sprites, table.drawer-bookmarks {
     li {
         // float: left;
         line-height: 1.5em;
-        padding-left: 1em;
+        padding-left: 2em;
         padding-right: 1em;
+        text-align: left;
         @include clearfix;
         @include transition ( margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out  );
         &:first-of-type {
@@ -688,7 +707,84 @@ table.drawer-sprites, table.drawer-bookmarks {
             color: $red;
         }
     }
+    .remove-bookmark {
+        margin-top: 5px;
+    }
 }
+
+/* /////////////////
+/* sprites
+/* ///////////////// */
+
+div.sprite-drawer {
+
+    @include transition ( opacity 100ms ease-in-out, max-height 100ms ease-in-out );
+    opacity: 0;
+    max-height: 0;
+    overflow-y: hidden;
+
+    .row {
+        @include transition ( margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out  );
+        margin-bottom: 1em;
+        text-align: left;
+        padding-left: 2em;
+        @include clearfix;
+        &:first-of-type {
+            margin-top: 0em;
+        }
+    }
+
+    .item {
+        display: inline-block;
+        padding: 5px;
+        float: left;
+        // position: relative;
+
+        &:after {
+            @include transition ( opacity 100ms ease-in-out );
+            @include transition-delay( 100ms );
+            display: block;
+            position: absolute;
+            padding: .3em 1em;
+            content: attr(title);
+            background-color: $brown;
+            color: $beige;
+            font-family: $roboto;
+            font-size: 1em;
+            opacity: 0;
+            // width: 140px;
+            text-align: center;
+            pointer-events: none;
+            white-space: nowrap;
+            margin-left: 5px;
+            margin-top: -50px;
+            pointer-events: none;
+        }
+        &:before {
+            content: " ";
+            @include transition ( opacity 150ms ease-in-out );
+            @include transition-delay( 100ms );
+            @include triangle(1.5em, $brown, down);
+            position: absolute;
+            display: table-cell;
+            margin-top: -0.5em;
+            margin-left: 10px;
+            opacity: 0;
+        }
+        &:hover {
+            background-position: -16px 0;
+            &:after, &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    img.sprite-image {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 div.remove-bookmark {
     float: left;
     display: inline;
@@ -706,12 +802,12 @@ div.remove-bookmark {
         @include transition-delay( 100ms );
         display: block;
         position: absolute;
-        padding: .2em 1em;
+        padding: .4em 1em;
         content: "remove bookmark";
         background-color: $brown;
         color: $beige;
         font-family: $roboto;
-        font-size: .9em;
+        font-size: 1em;
         opacity: 0;
         margin-left: -6em;
         margin-top: -2.2em;
@@ -768,6 +864,8 @@ div.remove-bookmark {
     list-style-type: none;
     width: 9.8%;
     color: #651e14;
+    text-align: center;
+    position: relative;
 }
 .timeline-list-item:hover > .timeline-txt {
     opacity: 1 !important;
@@ -786,19 +884,21 @@ div.remove-bookmark {
 }
 .timeline-txt {
     position: absolute;
-    top: -1.5em;
-    font-family: 'Georgia', serif;
+    top: -1.9em;
+    font-family: $georgia;
     font-style: italic;
     font-size: 1.2em;
     color: #fff;
     display: inline-block;
     opacity: 0;
-    margin-left: -6%;
     text-align: center;
-    height: 1.8em;
+    height: 1.9em;
+    display: table-cell;
+    white-space: nowrap;
 }
 .timeline-list a:last-child > li > div.timeline-txt {
-    margin-left: -3%;
+    margin-left: -5%;
+    text-align: left;
 }
 #timeline-first {
     margin-left: 0px;
@@ -903,15 +1003,24 @@ span.source-name {
         text-align: center;
         background-color: $brown;
         vertical-align: middle;
-        // max-width: 24em;
-        min-width: 34em;
-        padding: .2em .5em;
+        padding: .2em 1em;
         z-index: 100;
-        left: -17em;
-        top: -3em;
+        top: -3.4em;
         pointer-events: none;
+        white-space: nowrap;
+        left: -5px;
     }
-    &:hover:after {
+    &:before {
+        content: " ";
+        @include transition ( opacity 150ms ease-in-out );
+        @include triangle(1.5em, $brown, down);
+        position: absolute;
+        display: table-cell;
+        bottom: 1.2em;
+        opacity: 0;
+        left: -5px;
+    }
+    &:hover:after, &:hover:before {
         opacity: 1;
     }
 }
@@ -1050,7 +1159,6 @@ header.page-hdr {
     }
 
 }
-
 
 
 /* /////////////////

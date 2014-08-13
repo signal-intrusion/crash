@@ -1,7 +1,42 @@
+{# {% header "Content-Type: application/json" %} #}
 
-<script type="text/javascript"></script>
-<table class="drawer-sprites">
+{# {% set title = category.title %} #}
+{% set columns = 3 %}
+{% set categories = craft.categories({
+    group: 'stories',
+    })
+%}
+
+{% set path = craft.request.getUrl() %}
+
+{% for category in categories %}
+
+    {% set sprites = craft.entries({
+        type: 'sprite',
+        relatedTo: category
+        })
+    %}
+
+    <div class="row"><h4>{{ category.title }}</h4></div>
 
 
-
-</table>
+    {% for row in sprites|batch(4) %}
+        <div class="row">
+            {% for sprite in row %}
+                {% if sprite.spriteImage | length %}
+                    <div class="item" title="{{ sprite.heading }}">
+                        {% if sprite.spriteLink.first().type == 'chapter' %}
+                            <a href="{{ category.url() }}#level-{{ sprite.spriteLink.first().chapterLevel }}">
+                                <img class="sprite-image" src="{{ sprite.spriteImage.first().getUrl() }}" alt="image for {{ sprite.heading }}" data-sprite="{{ sprite.slug }}">
+                            </a>
+                        {% else %}
+                            <a href="">
+                                <img class="sprite-image" src="{{ sprite.spriteImage.first().getUrl() }}" alt="image for {{ sprite.heading }}" data-sprite="{{ sprite.slug }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endfor %}
