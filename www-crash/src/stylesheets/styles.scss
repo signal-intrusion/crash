@@ -6,6 +6,17 @@
 @import'_aside';
 @import'_media-query';
 
+@font-face {
+    font-family: 'hyperspaceregular';
+    src: url('hyperspace-webfont.eot');
+    src: url('hyperspace-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hyperspace-webfont.woff') format('woff'),
+         url('hyperspace-webfont.ttf') format('truetype'),
+         url('hyperspace-webfont.svg#hyperspaceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* /////////////////
 /* CSS Reset
 /* ///////////////// */
@@ -1179,7 +1190,6 @@ header.page-hdr {
 
 }
 
-
 /* /////////////////
 /* animations
 /* ///////////////// */
@@ -1263,4 +1273,127 @@ span.pacman-span {
 #pacman-article-hdr {
     min-height: 10em;
     margin-top: 2em;
+}
+
+/* /////////////////
+/* gallery
+/* ///////////////// */
+
+.gallery-wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(20, 20, 20, .9);
+    position: fixed;
+    display: block;
+    z-index: 9001;
+
+    h1 {
+        @include span-columns( 12 of 12, block );
+        font-family: 'hyperspaceregular';
+        color: $red;
+        font-size: 3em;
+        text-align: center;
+        @include clearfix;
+        margin: 0.8em auto 0.5em auto;
+        position: relative;
+    }
+}
+
+.fig-container {
+    position: relative;
+    height: 80%;
+    @include clearfix;
+    @include span-columns( 12 of 12, block );
+}
+
+button.next, button.prev {
+    position: fixed;
+    top: 45 12%;
+    font-family: 'hyperspaceregular';
+    color: $green;
+    background-color: transparent;
+    border: none;
+    font-size: 4em;
+    outline: none;
+    z-index: 9002;
+
+    &:hover {
+        color: $red;
+    }
+
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.esc {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-family: 'hyperspaceregular';
+    color: $green;
+    background-color: transparent;
+    @include border-width(1px);
+    @include border-style(solid);
+    @include border-color($green);
+    font-size: 2em;
+    outline: none;
+    z-index: 9002;
+    text-align: center;
+    padding: 0 0 0 5px;
+
+    &:hover {
+        @include border-color($red);
+        color: $red;
+    }
+}
+
+figure.slide {
+    @include span-columns( 10 of 12, block );
+    @include shift( 1 );
+    @include clearfix;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    height: 90%;
+
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        max-height: 100%;
+        height: auto;
+        margin: 0 auto;
+        top: 40%;
+        left: 50%;
+        position: absolute;
+        @include clearfix;
+        @include transform(translate(-50%, -50%));
+    }
+
+    figcaption {
+        position: absolute;
+        display: block;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: $beige;
+        font-family: $georgia;
+        font-size: 0.9em;
+
+        p {
+
+        }
+
+        cite {
+
+        }
+    }
 }

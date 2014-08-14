@@ -1,0 +1,52 @@
+{# {% set title = category.title %} #}
+{% set entry =  craft.entries.type('aside').slug('aside-avs-gallery').first() %}
+
+{% set pageClass = 'none' %}
+{% set path = craft.request.getUrl() %}
+
+{% extends '_layout' %}
+
+{% block content %}
+
+<pre>
+  {{ dump(entry.heading) }}
+</pre>
+
+<div class="gallery-wrapper">
+
+<h1>{{ entry.heading }}</h1>
+<button class="next">></button>
+<button class="prev"><</button>
+<button class="esc">x</button>
+
+<div class="fig-container">
+{% for block in entry.asideGallery %}
+    <figure class="slide">
+        <img src="{{ block.image.first().getUrl() }}">
+        <figcaption>
+            <p>{{ block.caption }}</p>
+            <cite>{{ block.citation.first() }}</cite>
+        </figcaption>
+    </figure>
+
+{% endfor %}
+</div>
+
+{#
+    <figure class="slide">
+        <img src="">
+        <figcaption>
+            <p></p>
+            <cite></cite>
+        </figcaption>
+    </figure> #}
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+

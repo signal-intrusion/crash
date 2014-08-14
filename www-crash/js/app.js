@@ -6,7 +6,8 @@
         asideChangers = [],
         bookmarks,
         bookmarkManager,
-        preventSprite = true;
+        preventSprite = true,
+        slideshow;
 
         $body = $('body');
         $body.addClass('script');
@@ -34,7 +35,11 @@
             renderTemplate('#left-off', '#home-leftoff-template', data);
         }
 
+        slideshow = new Slideshow();
+        slideshow.init();
+
         asideInit();
+        activateNotes();
         bookmarkManager = new BookmarkManager();
         bookmarkManager.init();
         bookmarkManager.loadBookmarks();
@@ -72,6 +77,35 @@
         $('.in-line-note.active').removeClass('active');
         $this.addClass('active');
     });
+
+    $('.aside-input').on('change', function() {
+
+        var $this = $(this);
+        if (!preventSprite && $body && $this.hasClass('scroll-sprite')) {
+
+            if (!spriteIsSaved($this)) {
+                // console.log(spriteIsSaved($this));
+                activateSprite($this);
+            }
+        }
+        activateNotes();
+    });
+
+    function noteActivate (input) {
+
+        var $target,
+            $input = $(input);
+        $target = $('*[data-note="' + $input.attr('data-pointsTo') + '"]');
+        $target.addClass('active');
+        return true;
+    }
+
+    function activateNotes () {
+
+        $.each($('.aside-input:checked'), function () {
+            noteActivate(this);
+        });
+    }
 
     ///////////////////
     // aside changing
@@ -394,5 +428,51 @@
         });
     }
 
+    ///////////////////
+    // gallery slideshow
+    ///////////////////
+
+    function Slideshow () {
+
+        this.$slides = $('.slide');          //slides
+        this.currentSlide = 0;               //keep track on the current slide
+        this.stayTime = 3;               //time the slide stays
+        this.slideTime = 0.3;                //fade in / fade out time
+
+        this.init = function () {
+            TweenMax.set(this.$slides.filter(':gt(0)'), {opacity:0}); //we hide all images after the first one
+            Slideshow.prototype.nextSlide.call(this);             //start the slideshow
+        };
+    }
+
+    Slideshow.prototype.nextSlide = function () {
+
+        console.log(this);
+
+
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:0} );     //fade out the old slide
+        this.currentSlide = ++this.currentSlide % this.$slides.length;                         //find out which is the next slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:1} );     //fade in the next slide
+    };
+
+    Slideshow.prototype.prevSlide = function () {
+
+        console.log(this);
+
+
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:0} );     //fade out the old slide
+        this.currentSlide = --this.currentSlide % this.$slides.length;                         //find out which is the next slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:1} );     //fade in the next slide
+    };
+
+    $('.next').on('click', function(){
+
+        slideshow.nextSlide();
+    });
+
+    $('.prev').on('click', function(){
+
+        slideshow.prevSlide();
+    });
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

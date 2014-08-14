@@ -77,7 +77,7 @@ class MyshortcodesPlugin extends BasePlugin
 			$imgSrc = "video";
 		}
 
-		return '<span class="in-line-note note-' . $entries[0]->slug . ' footnote-image ' . $imgSrc . ' " id="" title="'. $entries[0]->heading .'">' . $entries[0]->sourceName . '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+		return '<span data-note="'.$entries[0]->slug.'" class="in-line-note note-' . $entries[0]->slug . ' footnote-image ' . $imgSrc . ' " id="" title="'. $entries[0]->heading .'">' . $entries[0]->sourceName . '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 	}
 
 	public function footnote($attributes, $content, $tag) {

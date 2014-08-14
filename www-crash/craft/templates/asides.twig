@@ -2,7 +2,7 @@
 {% for aside in entry.sidenotes %}
 
     {% if aside.type == 'aside' %}
-        <input type="radio" class="aside-input" name="aside-input-{{ entry.slug }}" id="aside-{{ entry.slug }}-{{loop.index}}" {% if loop.first %}checked{% endif %}>
+        <input type="radio" class="aside-input {% if aside.sprite | length %}scroll-sprite {% endif %}" name="aside-input-{{ entry.slug }}" id="aside-{{ entry.slug }}-{{loop.index}}" {% if loop.first %}checked{% endif %} {% if aside.sprite | length %} data-sprite="{{ aside.sprite.first().slug }}" data-spriteImage="{{ aside.sprite.first().spriteImage.first().getUrl() }}" {% endif %}  data-pointsTo="{{ aside.slug }}">
         <aside class="margin-aside">
             {% if aside.asideImage | length %}
                 {# <div class="cropper"> #}
