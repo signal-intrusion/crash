@@ -440,8 +440,27 @@
         this.slideTime = 0.3;                //fade in / fade out time
 
         this.init = function () {
-            TweenMax.set(this.$slides.filter(':gt(0)'), {opacity:0}); //we hide all images after the first one
-            Slideshow.prototype.nextSlide.call(this);             //start the slideshow
+            TweenMax.set(this.$slides.filter(':gt(0)'), {
+                opacity:0,
+                onComplete:function(){
+                    $(this.target).css('pointer-events', 'none');
+                }
+            }); //we hide all images after the first one
+
+            $.each($('.slide-image-container'), function(){
+                $(this).zoom({
+                    magnify: 1.7,
+                    on:'click',
+                    touch: true,
+                    onZoomIn: function(){
+                        $(this).toggleClass('zoomed');
+                        console.log($(this));
+                    },
+                    onZoomOut: function(){
+                        $(this).toggleClass('zoomed');
+                    },
+                });
+            });
         };
     }
 
@@ -449,20 +468,50 @@
 
         console.log(this);
 
+        //fade out the old slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
+            opacity:0,
+            onComplete:function(){
+                // (this.target).remove();
+                $(this.target).css('pointer-events', 'none');
+            }
+        });
 
-        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:0} );     //fade out the old slide
-        this.currentSlide = ++this.currentSlide % this.$slides.length;                         //find out which is the next slide
-        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:1} );     //fade in the next slide
+        //find out which is the next slide
+        this.currentSlide = ++this.currentSlide % this.$slides.length;
+
+        //fade in the next slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
+            opacity:1,
+            onComplete:function(){
+                $(this.target).css('pointer-events', 'auto');
+            }
+        });
     };
 
     Slideshow.prototype.prevSlide = function () {
 
         console.log(this);
 
+        //fade out the old slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
+            opacity:0,
+            onComplete:function(){
+                // (this.target).remove();
+                $(this.target).css('pointer-events', 'none');
+            }
+        });
 
-        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:0} );     //fade out the old slide
-        this.currentSlide = --this.currentSlide % this.$slides.length;                         //find out which is the next slide
-        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {opacity:1} );     //fade in the next slide
+        //find out which is the next slide
+        this.currentSlide = --this.currentSlide % this.$slides.length;
+
+        //fade in the next slide
+        TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
+            opacity:1,
+            onComplete:function(){
+                $(this.target).css('pointer-events', 'auto');
+            }
+        });
     };
 
     $('.next').on('click', function(){

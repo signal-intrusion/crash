@@ -1284,33 +1284,108 @@ span.pacman-span {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(20, 20, 20, .9);
+    background-color: rgba(10, 10, 10, .9);
     position: fixed;
     display: block;
     z-index: 9001;
 
     h1 {
-        @include span-columns( 12 of 12, block );
+        @include span-columns( 10 of 12, block );
+        @include shift( 1 );
         font-family: 'hyperspaceregular';
         color: $red;
         font-size: 3em;
         text-align: center;
         @include clearfix;
-        margin: 0.8em auto 0.5em auto;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
         position: relative;
     }
 }
 
 .fig-container {
     position: relative;
-    height: 80%;
-    @include clearfix;
-    @include span-columns( 12 of 12, block );
+    height: 75%;
+    top: 7em;
+    margin: 0 8%;
+}
+
+figure.slide {
+    opacity: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    .another {
+        display: table;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0; bottom: 0; right: 0;
+        margin: auto;
+    }
+
+    div.slide-image-container {
+        @include clearfix;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        position: relative !important;
+
+    }
+
+    img.gallery-image {
+        display: table;
+        width: auto;
+        max-height: 100%;
+        height: auto;
+        max-width: 100%;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        position: absolute;
+        padding: 5px;
+        // @include border-width(1px);
+        // @include border-style(solid);
+        // @include border-color($red);
+        @include clearfix;
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+        cursor: zoom-in;
+
+        &.zoomed{
+            cursor: -webkit-zoom-out;
+            cursor: -moz-zoom-out;
+            cursor: zoom-out;
+        }
+    }
+
+    figcaption {
+        position: absolute;
+        display: block;
+        text-align: center;
+        padding-left: 5px;
+        bottom: -2em;
+        width: 100%;
+        color: $beige;
+        font-family: $georgia;
+        font-size: 0.9em;
+
+        p {
+
+        }
+
+        cite {
+
+        }
+    }
 }
 
 button.next, button.prev {
     position: fixed;
-    top: 45 12%;
+    top: 42%;
     font-family: 'hyperspaceregular';
     color: $green;
     background-color: transparent;
@@ -1322,7 +1397,6 @@ button.next, button.prev {
     &:hover {
         color: $red;
     }
-
 }
 
 button.next {
@@ -1335,65 +1409,25 @@ button.prev {
 
 button.esc {
     position: fixed;
+    display: table-cell;
     top: 15px;
-    left: 15px;
+    right: 15px;
+    width: 1.5em;
+    height: 1.5em;
     font-family: 'hyperspaceregular';
     color: $green;
     background-color: transparent;
     @include border-width(1px);
     @include border-style(solid);
     @include border-color($green);
-    font-size: 2em;
+    font-size: 1.5em;
     outline: none;
     z-index: 9002;
     text-align: center;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 3px;
 
     &:hover {
         @include border-color($red);
         color: $red;
-    }
-}
-
-figure.slide {
-    @include span-columns( 10 of 12, block );
-    @include shift( 1 );
-    @include clearfix;
-    opacity: 1;
-    position: absolute;
-    top: 50px;
-    height: 90%;
-
-    img {
-        display: block;
-        max-width: 100%;
-        width: auto;
-        max-height: 100%;
-        height: auto;
-        margin: 0 auto;
-        top: 40%;
-        left: 50%;
-        position: absolute;
-        @include clearfix;
-        @include transform(translate(-50%, -50%));
-    }
-
-    figcaption {
-        position: absolute;
-        display: block;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-        color: $beige;
-        font-family: $georgia;
-        font-size: 0.9em;
-
-        p {
-
-        }
-
-        cite {
-
-        }
     }
 }

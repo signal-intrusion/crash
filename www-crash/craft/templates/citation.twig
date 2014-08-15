@@ -1,1 +1,21 @@
-{{ citation.sourceName }}
+{% for citation in citations %}
+
+    {% switch citation.sourceType.first() %}
+
+        {% case 'book' %}
+            <li><cite>{{ citation.sourceAuthors }}. ({{ citation.sourceYear }}) <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</cite></li>
+
+        {% case 'video' %}
+            <li><cite>{{ citation.sourceAuthors }}. ({{ citation.sourceDate }}). <span class="source-name">{{ citation.sourceName }},</span>. {{ citation.sourceLocation }}: {{ citation.sourcePublisher }}.</cite></li>
+
+        {% case 'webpage' %}
+            <li><cite>{{ citation.sourceAuthors }}. {{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}). Retrieved from <a href="{{ citation.sourceAddress }}" target="blank">{{ citation.sourceAddress }}</a></cite></li>
+
+        {% case 'article in periodical' %}
+            <li><cite>{% if citation.sourceAuthors | length %}{{ citation.sourceAuthors }}.{% endif %}{{ citation.sourceTitle }}. <span class="source-name">{{ citation.sourceName }},</span> ({{ citation.sourceDate }}).</cite></li>
+
+        {% case 'image' %}
+
+    {% endswitch %}
+
+{% endfor %}

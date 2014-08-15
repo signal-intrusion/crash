@@ -1753,7 +1753,7 @@ span.pacman-span {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: rgba(10, 10, 10, 0.9);
   position: fixed;
   display: block;
   z-index: 9001;
@@ -1763,12 +1763,14 @@ span.pacman-span {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
   font-family: 'hyperspaceregular';
   color: #f24537;
   font-size: 3em;
   text-align: center;
-  margin: 0.8em auto 0.5em auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   position: relative;
 }
 /* line 38, ../src/stylesheets/neat/grid/_span-columns.scss */
@@ -1782,30 +1784,96 @@ span.pacman-span {
   clear: both;
 }
 
-/* line 1304, ../src/stylesheets/styles.scss */
+/* line 1306, ../src/stylesheets/styles.scss */
 .fig-container {
   position: relative;
-  height: 80%;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
+  height: 75%;
+  top: 7em;
+  margin: 0 8%;
+}
+
+/* line 1313, ../src/stylesheets/styles.scss */
+figure.slide {
+  opacity: 1;
+  position: absolute;
+  height: 100%;
   width: 100%;
+  display: block;
+  margin: auto;
+}
+/* line 1321, ../src/stylesheets/styles.scss */
+figure.slide .another {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+/* line 1330, ../src/stylesheets/styles.scss */
+figure.slide div.slide-image-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative !important;
 }
 /* line 15, ../src/stylesheets/bourbon/addons/_clearfix.scss */
-.fig-container:after {
+figure.slide div.slide-image-container:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 38, ../src/stylesheets/neat/grid/_span-columns.scss */
-.fig-container:last-child {
-  margin-right: 0;
+/* line 1340, ../src/stylesheets/styles.scss */
+figure.slide img.gallery-image {
+  display: table;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 5px;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+/* line 15, ../src/stylesheets/bourbon/addons/_clearfix.scss */
+figure.slide img.gallery-image:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1358, ../src/stylesheets/styles.scss */
+figure.slide img.gallery-image.zoomed {
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: zoom-out;
+}
+/* line 1365, ../src/stylesheets/styles.scss */
+figure.slide figcaption {
+  position: absolute;
+  display: block;
+  text-align: center;
+  padding-left: 5px;
+  bottom: -2em;
+  width: 100%;
+  color: #fffcf4;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 0.9em;
 }
 
-/* line 1311, ../src/stylesheets/styles.scss */
+/* line 1386, ../src/stylesheets/styles.scss */
 button.next, button.prev {
   position: fixed;
-  top: 45 12%;
+  top: 42%;
   font-family: 'hyperspaceregular';
   color: #89c0af;
   background-color: transparent;
@@ -1814,97 +1882,43 @@ button.next, button.prev {
   outline: none;
   z-index: 9002;
 }
-/* line 1322, ../src/stylesheets/styles.scss */
+/* line 1397, ../src/stylesheets/styles.scss */
 button.next:hover, button.prev:hover {
   color: #f24537;
 }
 
-/* line 1328, ../src/stylesheets/styles.scss */
+/* line 1402, ../src/stylesheets/styles.scss */
 button.next {
   right: 10px;
 }
 
-/* line 1332, ../src/stylesheets/styles.scss */
+/* line 1406, ../src/stylesheets/styles.scss */
 button.prev {
   left: 10px;
 }
 
-/* line 1336, ../src/stylesheets/styles.scss */
+/* line 1410, ../src/stylesheets/styles.scss */
 button.esc {
   position: fixed;
+  display: table-cell;
   top: 15px;
-  left: 15px;
+  right: 15px;
+  width: 1.5em;
+  height: 1.5em;
   font-family: 'hyperspaceregular';
   color: #89c0af;
   background-color: transparent;
   border-width: 1px;
   border-style: solid;
   border-color: #89c0af;
-  font-size: 2em;
+  font-size: 1.5em;
   outline: none;
   z-index: 9002;
   text-align: center;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 3px;
 }
-/* line 1352, ../src/stylesheets/styles.scss */
+/* line 1429, ../src/stylesheets/styles.scss */
 button.esc:hover {
   border-color: #f24537;
   color: #f24537;
-}
-
-/* line 1358, ../src/stylesheets/styles.scss */
-figure.slide {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
-  opacity: 1;
-  position: absolute;
-  top: 50px;
-  height: 90%;
-}
-/* line 38, ../src/stylesheets/neat/grid/_span-columns.scss */
-figure.slide:last-child {
-  margin-right: 0;
-}
-/* line 15, ../src/stylesheets/bourbon/addons/_clearfix.scss */
-figure.slide:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 1367, ../src/stylesheets/styles.scss */
-figure.slide img {
-  display: block;
-  max-width: 100%;
-  width: auto;
-  max-height: 100%;
-  height: auto;
-  margin: 0 auto;
-  top: 40%;
-  left: 50%;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-/* line 15, ../src/stylesheets/bourbon/addons/_clearfix.scss */
-figure.slide img:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 1381, ../src/stylesheets/styles.scss */
-figure.slide figcaption {
-  position: absolute;
-  display: block;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  color: #fffcf4;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 0.9em;
 }

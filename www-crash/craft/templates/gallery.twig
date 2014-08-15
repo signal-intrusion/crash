@@ -22,7 +22,7 @@
 <div class="fig-container">
 {% for block in entry.asideGallery %}
     <figure class="slide">
-        <img src="{{ block.image.first().getUrl() }}">
+        <div class="another"><div class="slide-image-container"><img class="gallery-image" src="{{ block.image.first().getUrl() }}"></div></div>
         <figcaption>
             <p>{{ block.caption }}</p>
             <cite>{{ block.citation.first() }}</cite>
