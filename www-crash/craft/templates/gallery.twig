@@ -8,9 +8,9 @@
 
 {% block content %}
 
-<pre>
+{# <pre>
   {{ dump(entry.heading) }}
-</pre>
+</pre> #}
 
 <div class="gallery-wrapper">
 
@@ -21,13 +21,35 @@
 
 <div class="fig-container">
 {% for block in entry.asideGallery %}
-    <figure class="slide">
-        <div class="another"><div class="slide-image-container"><img class="gallery-image" src="{{ block.image.first().getUrl() }}"></div></div>
-        <figcaption>
-            <p>{{ block.caption }}</p>
-            <cite>{{ block.citation.first() }}</cite>
-        </figcaption>
-    </figure>
+
+    {% switch block.type %}
+
+        {% case 'imageBlock' %}
+
+        <figure class="slide">
+            <div class="another"><div class="slide-image-container"><img class="gallery-image" src="{{ block.image.first().getUrl() }}"></div></div>
+            <figcaption>
+                <p>{{ block.caption }}</p>
+                <cite>{{ block.citation.first() }}</cite>
+            </figcaption>
+        </figure>
+
+        {% case 'videoBlock' %}
+
+        {% set video = craft.embedder.url(block.embed) %}
+
+        <figure class="slide">
+            <div class="another"><div class="slide-image-container">
+                <div class="video-container">{{ video.embed_code }}</div>
+            </div></div>
+            <figcaption>
+                <p>{{ block.caption }}</p>
+                <cite>{{ block.citation.first() }}</cite>
+            </figcaption>
+        </figure>
+
+        {% endswitch %}
+
 
 {% endfor %}
 </div>

@@ -1790,9 +1790,17 @@ span.pacman-span {
   height: 75%;
   top: 7em;
   margin: 0 8%;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease-in-out;
+  -moz-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+/* line 1314, ../src/stylesheets/styles.scss */
+.fig-container.active {
+  opacity: 1;
 }
 
-/* line 1313, ../src/stylesheets/styles.scss */
+/* line 1319, ../src/stylesheets/styles.scss */
 figure.slide {
   opacity: 1;
   position: absolute;
@@ -1801,7 +1809,7 @@ figure.slide {
   display: block;
   margin: auto;
 }
-/* line 1321, ../src/stylesheets/styles.scss */
+/* line 1327, ../src/stylesheets/styles.scss */
 figure.slide .another {
   display: table;
   position: absolute;
@@ -1813,7 +1821,7 @@ figure.slide .another {
   right: 0;
   margin: auto;
 }
-/* line 1330, ../src/stylesheets/styles.scss */
+/* line 1336, ../src/stylesheets/styles.scss */
 figure.slide div.slide-image-container {
   display: block;
   width: 100%;
@@ -1827,7 +1835,23 @@ figure.slide div.slide-image-container:after {
   display: table;
   clear: both;
 }
-/* line 1340, ../src/stylesheets/styles.scss */
+/* line 1345, ../src/stylesheets/styles.scss */
+figure.slide div.video-container {
+  display: table;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+/* line 1352, ../src/stylesheets/styles.scss */
+figure.slide div.video-container iframe {
+  margin: auto;
+  display: table-cell;
+}
+/* line 1360, ../src/stylesheets/styles.scss */
 figure.slide img.gallery-image {
   display: table;
   width: auto;
@@ -1841,6 +1865,7 @@ figure.slide img.gallery-image {
   right: 0;
   position: absolute;
   padding: 5px;
+  cursor: crosshair;
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
   cursor: zoom-in;
@@ -1851,13 +1876,13 @@ figure.slide img.gallery-image:after {
   display: table;
   clear: both;
 }
-/* line 1358, ../src/stylesheets/styles.scss */
+/* line 1379, ../src/stylesheets/styles.scss */
 figure.slide img.gallery-image.zoomed {
   cursor: -webkit-zoom-out;
   cursor: -moz-zoom-out;
   cursor: zoom-out;
 }
-/* line 1365, ../src/stylesheets/styles.scss */
+/* line 1386, ../src/stylesheets/styles.scss */
 figure.slide figcaption {
   position: absolute;
   display: block;
@@ -1870,7 +1895,7 @@ figure.slide figcaption {
   font-size: 0.9em;
 }
 
-/* line 1386, ../src/stylesheets/styles.scss */
+/* line 1407, ../src/stylesheets/styles.scss */
 button.next, button.prev {
   position: fixed;
   top: 42%;
@@ -1882,22 +1907,22 @@ button.next, button.prev {
   outline: none;
   z-index: 9002;
 }
-/* line 1397, ../src/stylesheets/styles.scss */
+/* line 1418, ../src/stylesheets/styles.scss */
 button.next:hover, button.prev:hover {
   color: #f24537;
 }
 
-/* line 1402, ../src/stylesheets/styles.scss */
+/* line 1423, ../src/stylesheets/styles.scss */
 button.next {
   right: 10px;
 }
 
-/* line 1406, ../src/stylesheets/styles.scss */
+/* line 1427, ../src/stylesheets/styles.scss */
 button.prev {
   left: 10px;
 }
 
-/* line 1410, ../src/stylesheets/styles.scss */
+/* line 1431, ../src/stylesheets/styles.scss */
 button.esc {
   position: fixed;
   display: table-cell;
@@ -1917,7 +1942,7 @@ button.esc {
   text-align: center;
   padding: 0 0 0 3px;
 }
-/* line 1429, ../src/stylesheets/styles.scss */
+/* line 1450, ../src/stylesheets/styles.scss */
 button.esc:hover {
   border-color: #f24537;
   color: #f24537;

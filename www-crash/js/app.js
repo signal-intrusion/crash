@@ -44,6 +44,7 @@
         bookmarkManager.init();
         bookmarkManager.loadBookmarks();
         loadSprites();
+        $('.fig-container').addClass('active');
     });
 
     function supports_html5_storage() {

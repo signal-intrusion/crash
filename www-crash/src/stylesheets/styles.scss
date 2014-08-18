@@ -1308,6 +1308,12 @@ span.pacman-span {
     height: 75%;
     top: 7em;
     margin: 0 8%;
+    opacity: 0;
+    @include transition ( opacity 200ms ease-in-out );
+
+    &.active {
+        opacity: 1;
+    }
 }
 
 figure.slide {
@@ -1334,7 +1340,21 @@ figure.slide {
         height: 100%;
         margin: auto;
         position: relative !important;
+    }
 
+    div.video-container {
+        display: table;
+        width: 100%;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        position: absolute;
+
+        iframe {
+            margin: auto;
+            // width: 100%;
+            // height: 100%;
+            display: table-cell;
+        }
     }
 
     img.gallery-image {
@@ -1351,6 +1371,7 @@ figure.slide {
         // @include border-style(solid);
         // @include border-color($red);
         @include clearfix;
+        cursor: crosshair;
         cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
         cursor: zoom-in;
