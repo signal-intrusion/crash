@@ -1279,6 +1279,17 @@ span.pacman-span {
 /* gallery
 /* ///////////////// */
 
+#gallery-container {
+    opacity: 0;
+    position: absolute;
+    z-index: 9002;
+    @include transition ( opacity 200ms ease-in-out );
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 .gallery-wrapper {
     top: 0;
     bottom: 0;
@@ -1371,7 +1382,7 @@ figure.slide {
         // @include border-style(solid);
         // @include border-color($red);
         @include clearfix;
-        cursor: crosshair;
+        // cursor: crosshair;
         cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
         cursor: zoom-in;

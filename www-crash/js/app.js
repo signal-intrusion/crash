@@ -44,15 +44,14 @@
         bookmarkManager.init();
         bookmarkManager.loadBookmarks();
         loadSprites();
-        $('.fig-container').addClass('active');
     });
 
     function supports_html5_storage() {
-      try {
-        return 'localStorage' in window && window.localStorage !== null;
-      } catch (e) {
-        return false;
-      }
+        try {
+            return 'localStorage' in window && window.localStorage !== null;
+        } catch (e) {
+            return false;
+        }
     }
 
     String.prototype.indexOfEnd = function(string) {
@@ -85,7 +84,6 @@
         if (!preventSprite && $body && $this.hasClass('scroll-sprite')) {
 
             if (!spriteIsSaved($this)) {
-                // console.log(spriteIsSaved($this));
                 activateSprite($this);
             }
         }
@@ -176,7 +174,6 @@
         } else {
             return false;
         }
-
     }
 
     function activateSprite (trigger) {
@@ -275,9 +272,7 @@
         localMarks.bookmarkArray.push(mark);
         localStorage.setItem('bookmarks', JSON.stringify(localMarks));
         bookmarks = localMarks;
-
         BookmarkManager.prototype.loadBookmarks.call(this);
-
         $('#bookmarks').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
     };
 
@@ -317,7 +312,6 @@
         var tmplMarkup = $(template).html(),
             compiledTmpl = _.template(tmplMarkup, { data: data }),
             $target = $(target);
-
         $target.html(compiledTmpl);
     }
 
@@ -368,7 +362,7 @@
             triggerElement: years[i]
         })
             .addTo(controller)
-            .on("enter", function(e) {
+            .on('enter', function(e) {
 
                 var direction = e.target.parent().info('scrollDirection'),
                     _$this = $(this.triggerElement()),
@@ -393,7 +387,6 @@
                 $($timelineItem.children()[0])
                     .toggleClass('timeline-active');
             });
-        // scenes.push(scene);
     }
 
     ///////////////////
@@ -403,12 +396,9 @@
     function loadSprites () {
 
         $.get( "sprite-drawer", function( data ) {
-
             $('#sprite-nav-target').html(data);
             cleanSprites();
         });
-
-
     }
 
     function cleanSprites () {
@@ -448,6 +438,7 @@
                 }
             }); //we hide all images after the first one
 
+            // add .zoom() to all images in gallery
             $.each($('.slide-image-container'), function(){
                 $(this).zoom({
                     magnify: 1.7,
@@ -462,12 +453,16 @@
                     },
                 });
             });
+
+            // listenors for slideshow events
+            $('#gallery-container').on('click', '.next', Slideshow.prototype.nextSlide.bind(this));
+            $('#gallery-container').on('click', '.prev', Slideshow.prototype.prevSlide.bind(this));
+            $('#gallery-container').on('click', '.esc', Slideshow.prototype.destroy.bind(this));
+            $('.fig-container, #gallery-container').addClass('active');
         };
     }
 
     Slideshow.prototype.nextSlide = function () {
-
-        console.log(this);
 
         //fade out the old slide
         TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
@@ -492,8 +487,6 @@
 
     Slideshow.prototype.prevSlide = function () {
 
-        console.log(this);
-
         //fade out the old slide
         TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
             opacity:0,
@@ -515,14 +508,26 @@
         });
     };
 
-    $('.next').on('click', function(){
+    // remove listeners and functions associated with the slideshow and set it to null
+    Slideshow.prototype.destroy = function () {
 
-        slideshow.nextSlide();
-    });
+        $('.slide-image-container').trigger('zoom.destroy');
+        $('#gallery-container').removeClass('active').html('');
+        slideshow = null;
+    };
 
-    $('.prev').on('click', function(){
+    // hijack the click event on gollery links to make gallery ajax call
+    $('.gallery-link').on('click', function(e){
 
-        slideshow.prevSlide();
+        var $this = $(this);
+        e.preventDefault();
+
+        // make a ajax call to /gallery?name=foo, append data to gallery-container
+        $.get( $this.attr('href'), function( data ) {
+            $('#gallery-container').html(data);
+                slideshow = new Slideshow();
+                slideshow.init();
+        });
     });
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

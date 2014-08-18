@@ -1,19 +1,15 @@
-{# {% set title = category.title %} #}
-{% set entry =  craft.entries.type('aside').slug('aside-avs-gallery').first() %}
-
+{% set targetGallery = craft.request.getQuery('name', 'aside-avs-gallery') %}
+{% set entry =  craft.entries.type('aside').slug(targetGallery).first() %}
 {% set pageClass = 'none' %}
 {% set path = craft.request.getUrl() %}
 
-{% extends '_layout' %}
+{% extends craft.request.isAjax ? "_ajax" : "_layout" %}
 
 {% block content %}
 
-{# <pre>
-  {{ dump(entry.heading) }}
-</pre> #}
-
 <div class="gallery-wrapper">
 
+{% if entry | length %}
 <h1>{{ entry.heading }}</h1>
 <button class="next">></button>
 <button class="prev"><</button>
@@ -54,16 +50,9 @@
 {% endfor %}
 </div>
 
-{#
-    <figure class="slide">
-        <img src="">
-        <figcaption>
-            <p></p>
-            <cite></cite>
-        </figcaption>
-    </figure> #}
-
+{% endif %}
 </div>
+{# end gallery wrapper #}
 
 
 {% endblock %}
