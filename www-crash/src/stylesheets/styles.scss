@@ -202,16 +202,6 @@ article.story {
         letter-spacing: 1em;
         color: $red;
     }
-    // .dash-divider {
-    //     text-align: center;
-    //     font-size: .8em;
-    //     font-weight: 700;
-    //     font-family: 'Press Start 2P', sans-serif;
-    //     letter-spacing: .3em;
-    //     padding-bottom: .6em;
-    //     color: $red;
-    // }
-
 }
 
 /* /////////////////
@@ -569,9 +559,6 @@ div.drawer-container {
     a {
         color: $beige;
     }
-
-
-
 }
 
 div.drawer-nav {
@@ -582,62 +569,12 @@ table.drawer-sprites, table.drawer-bookmarks {
     margin-bottom: 1em;
 }
 
-
-/* /////////////////
-/* margins
-/* ///////////////// */
-
-// img.margin-link {
-//     content: url(../images/quote-bubble1.png);
-//     width: 1em;
-//     height: 1em;
-// }
-// img.margin-link-active {
-//     content: url(../images/quote-bubble1-active.png);
-// }
-// .margin-notes {
-//     z-index: 1000;
-//     position: absolute;
-//     margin: 1em;
-//     width: 22%;
-// }
-// .right-margin p.margin-txt {
-//     float: right;
-// }
-// .margin-note {
-//     position: absolute;
-//     top: 100px;
-// }
-// .margin-txt {
-//     float: none;
-//     padding: .5%;
-//     font-family: 'Roboto', sans-serif;
-//     font-size: .75em;
-//     font-weight: 400;
-//     padding: 20px;
-//     line-height: 1.7em;
-//     background-color: #fffcf4;
-//     /*text-align: justify;*/
-// }
-// .abridged {
-//     color: rgba(0, 0, 0, 0);
-// }
-// .abridged .margin-txt {
-//     background-color: rgba(0, 0, 0, 0);
-// }
-// .unabridged {
-//     color: rgba(140, 138, 141, 1);
-// }
 .pull-qt {
     display: block;
     color: rgba(0, 0, 0, 1);
     font-weight: 400;
     padding: 10px;
 }
-/*.pull-qt:hover{
-    color: rgba(250, 0, 0, 1);
-    background-color: rgba(0, 0, 0, .9);
-}*/
 
 .unabridged .pull-qt {
     color: rgba(0, 0, 0, 1);
@@ -997,7 +934,6 @@ li.timeline-list-active {
 
 .citation {
 
-
 }
 
 span.source-name {
@@ -1007,7 +943,6 @@ span.source-name {
 .in-line-note, .in-line-footnote {
     cursor: pointer;
     position: absolute;
-    // margin-left: .5em;
 }
 
 .footnote-image {
