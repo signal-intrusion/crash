@@ -29,7 +29,8 @@ class MyshortcodesPlugin extends BasePlugin
 			array($this, 'citation'),
 			array($this, 'note'),
 			array($this, 'footnote'),
-			array($this, 'year')
+			array($this, 'year'),
+			array($this, 'animation')
 		);
 	}
 
@@ -116,11 +117,19 @@ class MyshortcodesPlugin extends BasePlugin
 
 	public function year($attributes, $content, $tag) {
 
-		// <div class="year-empty" id="year-1977"></div>
-
 		$target = 'year-' . $attributes['year'];
 
 		return '<div class="year-empty" id="' . $target. '"></div>';
+	}
+
+	public function animation($attributes, $content, $tag) {
+
+		if (isset($attributes['id'])) {
+			$animationId = $attributes['id'] . '-animation';
+		} else {
+			$animationID = 'test';
+		}
+		return '<div class="animation-placeholder" id="' . $animationId . '"></div>';
 	}
 
 }

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'hyperspaceregular';
+    src: url('hyperspace-webfont.eot');
+    src: url('hyperspace-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hyperspace-webfont.woff') format('woff'),
+         url('hyperspace-webfont.ttf') format('truetype'),
+         url('hyperspace-webfont.svg#hyperspaceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // $visual-grid: true;
 $max-width: em(100%);
 $grid-columns: 12;
@@ -6,6 +17,7 @@ $pressStart: 'Press Start 2P', sans-serif;
 $robotoSlab: 'Roboto Slab', serif;
 $roboto: 'Roboto', sans-serif;
 $georgia: 'Georgia', serif;
+$hyperspace: 'hyperspaceregular';
 
 $black: #000;
 $dark: #111;
