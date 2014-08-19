@@ -2,7 +2,17 @@
 {% if entry.sidenotes | length %}
     <h2>Notes:</h2>
     {% for aside in entry.sidenotes %}
-    <label for="aside-{{ entry.slug }}-{{loop.index}}" class="aside-list-label {{ aside.slug }} {% if loop.first %}active{% endif %}"><li>{{ aside.heading }}</li></label>
+    {% if aside.asideCategory.first() != 'gallery' %}
+        {% set asideType = aside.asideCategory.first() %}
+    {% else %}
+        {% if aside.asideGallery.first().type == 'videoBlock' %}
+            {% set asideType = 'video' %}
+        {% else %}
+            {% set asideType = 'gallery' %}
+        {% endif %}
+    {% endif %}
+
+    <label for="aside-{{ entry.slug }}-{{loop.index}}" class="aside-list-label {{ aside.slug }} {% if loop.first %}active{% endif %}"><li><span class="aside-header-image {{ asideType }}"> </span>{{ aside.heading }}</li></label>
     {% endfor %}
 {% endif %}
 </ul>

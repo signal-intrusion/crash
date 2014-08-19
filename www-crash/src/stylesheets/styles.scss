@@ -5,6 +5,7 @@
 @import'_defender';
 @import'_aside';
 @import'_media-query';
+@import'_scrollbar';
 
 @font-face {
     font-family: 'hyperspaceregular';
@@ -287,7 +288,7 @@ div.aside-wrapper {
     width: 100%;
     display: block;
     height: 75%;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: relative;
 }
 
@@ -304,13 +305,14 @@ aside.margin-aside {
     color: $grey;
     font-family: $roboto;
     font-size: .7em;
-    width: 98%;
+    width: 100%;
 
     h1 {
         font-size: 1.2em;
         font-weight: bold;
         margin-bottom: .5em;
         text-transform: uppercase;
+        padding-right: 1em;
     }
 
     h2 {
@@ -321,10 +323,12 @@ aside.margin-aside {
     blockquote {
         color: $darkGreen;
         margin-bottom: 1em;
+        padding-right: 1em;
     }
 
     p {
         margin-bottom: 1em;
+        padding-right: 1em;
     }
 
     img {
@@ -415,6 +419,38 @@ aside.margin-aside {
     }
 }
 
+.aside-header-image {
+
+    display: inline-block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: .5em;
+    @include transform(scale(0.85));
+
+    &.excerpt {
+        background: url('../images/ui/book-sprite.png') no-repeat 0 0;
+    }
+    &.bio {
+        background: url('../images/ui/bio-sprite.png') no-repeat 0 0;
+    }
+    &.source {
+        background: url('../images/ui/book-sprite.png') no-repeat 0 0;
+    }
+    &.company {
+        background: url('../images/ui/companies-sprite.png') no-repeat 0 0;
+    }
+    &.game {
+        background: url('../images/ui/game-sprite.png') no-repeat 0 0;
+    }
+    &.gallery {
+        background: url('../images/ui/image-sprite.png') no-repeat 0 0;
+    }
+    &.video {
+        background: url('../images/ui/video-sprite.png') no-repeat 0 0;
+    }
+}
+
 .script .aside-container {
     position: fixed;
     z-index: 0;
@@ -490,9 +526,13 @@ ul.aside-list{
     label {
         cursor: pointer;
         color: $green;
-        font-size: .7em;
+        font-size: .8em;
         &:hover, &.active {
             color: $red;
+
+            span.aside-header-image {
+                background-position: -16px 0;
+            }
         }
     }
 }
@@ -986,10 +1026,16 @@ span.source-name {
         background: url('../images/ui/book-sprite.png') no-repeat 0 0;
     }
     &.company {
-        background: url('../images/ui/company-sprite.png') no-repeat 0 0;
+        background: url('../images/ui/companies-sprite.png') no-repeat 0 0;
     }
     &.game {
         background: url('../images/ui/game-sprite.png') no-repeat 0 0;
+    }
+    &.gallery {
+        background: url('../images/ui/image-sprite.png') no-repeat 0 0;
+    }
+    &.video {
+        background: url('../images/ui/video-sprite.png') no-repeat 0 0;
     }
     &:hover {
         background-position: -16px 0;
@@ -997,10 +1043,9 @@ span.source-name {
     &.active {
         background-position: -16px 0;
     }
-
 }
 
-.in-line-footnote{
+.in-line-footnote {
 
     &:after {
         @include transition ( opacity 150ms ease-in-out );
@@ -1016,7 +1061,7 @@ span.source-name {
         vertical-align: middle;
         padding: .2em 1em;
         z-index: 100;
-        top: -3.4em;
+        top: -40px;
         pointer-events: none;
         white-space: nowrap;
         left: -5px;
@@ -1027,12 +1072,21 @@ span.source-name {
         @include triangle(1.5em, $brown, down);
         position: absolute;
         display: table-cell;
-        bottom: 1.2em;
+        bottom: 20px;
         opacity: 0;
         left: -5px;
     }
     &:hover:after, &:hover:before {
         opacity: 1;
+    }
+}
+
+blockquote .in-line-footnote {
+    &:after {
+        top: -30px;
+    }
+    &:before{
+        bottom: 18px;
     }
 }
 
