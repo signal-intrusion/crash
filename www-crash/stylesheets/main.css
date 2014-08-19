@@ -358,7 +358,7 @@ img.bio-link.active {
   /* there must be 'bottom' for ps-scrollbar-x-rail */
   height: 8px;
   opacity: 0.6;
-  background-color: #8c8a8d;
+  background-color: #c8c6c9;
   filter: alpha(opacity=0);
 }
 
@@ -372,14 +372,14 @@ img.bio-link.active {
 /* line 16, ../src/stylesheets/_scrollbar.scss */
 .ps-container .ps-scrollbar-x-rail:hover,
 .ps-container .ps-scrollbar-x-rail.hover {
-  background-color: #8c8a8d;
+  background-color: #c8c6c9;
   opacity: 0.8;
   filter: alpha(opacity=90);
 }
 
 /* line 23, ../src/stylesheets/_scrollbar.scss */
 .ps-container .ps-scrollbar-x-rail.in-scrolling {
-  background-color: #8c8a8d;
+  background-color: #c8c6c9;
   opacity: 0.8;
   filter: alpha(opacity=90);
 }
@@ -420,7 +420,7 @@ img.bio-link.active {
   /* there must be 'right' for ps-scrollbar-y-rail */
   width: 5px;
   opacity: 0.6;
-  background-color: #8c8a8d;
+  background-color: #c8c6c9;
   filter: alpha(opacity=0);
   -webkit-transition: background-color 150ms ease-in-out, opacity 200ms ease-in-out;
   -moz-transition: background-color 150ms ease-in-out, opacity 200ms ease-in-out;
@@ -437,7 +437,7 @@ img.bio-link.active {
 /* line 63, ../src/stylesheets/_scrollbar.scss */
 .ps-container .ps-scrollbar-y-rail:hover,
 .ps-container .ps-scrollbar-y-rail.hover {
-  background-color: #8c8a8d;
+  background-color: #c8c6c9;
   opacity: 0.8;
   filter: alpha(opacity=90);
   -webkit-transition: background-color 150ms ease-in-out, opacity 200ms ease-in-out;
