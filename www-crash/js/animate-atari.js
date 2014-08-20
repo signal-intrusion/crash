@@ -11,28 +11,16 @@
         });
     }
 
-    function renderTemplate(target, template, data) {
+    preload([
+            'images/anim-sprites/ghost.png',
+            'images/anim-sprites/ghost-run.png',
+            'images/anim-sprites/ghost-arcade.png',
+            'images/anim-sprites/ghost-arcade-run.png',
+            'images/anim-sprites/pacman.png',
+            'images/anim-sprites/pacman-arcade.png',
+        ]);
 
-        var tmplMarkup = $(template).html(),
-            compiledTmpl = _.template(tmplMarkup, { data: data }),
-            $target = $(target);
-        $target.html(compiledTmpl);
-    }
-
-    // preload([
-    //         'images/anim-sprites/ghost.png',
-    //         'images/anim-sprites/ghost-run.png',
-    //         'images/anim-sprites/ghost-arcade.png',
-    //         'images/anim-sprites/ghost-arcade-run.png',
-    //         'images/anim-sprites/pacman.png',
-    //         'images/anim-sprites/pacman-arcade.png',
-    //     ]);
-
-    var $lastNoteByID,
-        $lastMarginLink,
-        scenes = [],
-        // years = $('.year-empty'),
-        controller = new ScrollMagic(),
+    var controller = new ScrollMagic(),
         wp1pos,
         wp2pos,
         wp3pos,
@@ -54,10 +42,10 @@
 
     $('#pacman-animation').html($(pacmanElements));
 
-    wp1pos = $('#pacman-waypoint-1').position(),
-    wp2pos = $('#pacman-waypoint-2').position(),
-    wp3pos = $('#pacman-waypoint-3').position(),
-    wp4pos = $('#pacman-waypoint-4').position(),
+    wp1pos = $('#pacman-waypoint-1').position();
+    wp2pos = $('#pacman-waypoint-2').position();
+    wp3pos = $('#pacman-waypoint-3').position();
+    wp4pos = $('#pacman-waypoint-4').position();
     wp5pos = $('#pacman-waypoint-5').position();
 
     TweenMax.set('#pacman-sprite');
@@ -84,15 +72,11 @@
             ease: Linear.easeNone,
             onStart: function() {
                 $('#pacman-sprite').css('content', 'url(images/anim-sprites/pacman.png)');
-
             },
             onReverseComplete: function() {
                 $('#pacman-sprite').css('content', 'url(images/anim-sprites/pacman-arcade.png)');
-
             }
         }))
-
-
         .add(TweenMax.to('#pacman-sprite', 2, {
             top: wp4pos.top,
             left: wp4pos.left,
@@ -121,7 +105,7 @@
         .setTween(pacmanTween)
         .addTo(controller);
 
-    // pacmanScene.addIndicators();
+    pacmanScene.addIndicators();
 
     TweenMax.set('#ghost-sprite');
 
@@ -150,10 +134,8 @@
             },
             onReverseComplete: function() {
                 $('#ghost-sprite').addClass('arcade').removeClass('console');
-
             }
         }))
-
         .add(TweenMax.to('#ghost-sprite', 2, {
             top: wp4pos.top,
             left: wp4pos.left,
@@ -175,7 +157,6 @@
             if (dir === 'REVERSE') {
                 $('#ghost-sprite').css('-webkit-transform', 'scale(-1, 1)').addClass('run');
             } else if (dir === 'FORWARD') {
-                // console.log('hit');
                 $('#ghost-sprite').css('-webkit-transform', '').removeClass('run');
             }
         })
@@ -183,6 +164,5 @@
         .addTo(controller);
 
     ghostScene.addIndicators();
-
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax, window.TimelineMax);
