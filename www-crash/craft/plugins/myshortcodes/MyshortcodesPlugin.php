@@ -76,6 +76,8 @@ class MyshortcodesPlugin extends BasePlugin
 			$imgSrc = "image";
 		} elseif ($asideCat == 'video') {
 			$imgSrc = "video";
+		} elseif ($asideCat == 'crash') {
+			$imgSrc = "crash";
 		}
 
 		return '<span data-note="'.$entries[0]->slug.'" class="in-line-note note-' . $entries[0]->slug . ' footnote-image ' . $imgSrc . ' " id="" title="'. $entries[0]->heading .'">' . $entries[0]->sourceName . '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';

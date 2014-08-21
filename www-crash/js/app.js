@@ -72,7 +72,9 @@
         $this.parent().children().removeClass('active');
         $this.addClass('active');
         $('.in-line-note.active').removeClass('active');
-        $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
+        _.delay(function() {
+            $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
+        }, 300);
         // $('.ps-scrollbar-y-rail').css('display', 'inherit');
     });
 
@@ -128,50 +130,54 @@
 
     AsideChanger.prototype.scrollAnimate = function () {
 
-        this.scene = new ScrollScene({triggerElement: '#' + this.chapter, offset: 100 })
-                        .on('start', function(e){
-
-                            var _target,
-                                direction = e.target.parent().info('scrollDirection'),
-                                $trigger = $(this.triggerElement()),
-                                leftHref,
-                                leftTitle;
-
-                            $('.aside-container').removeClass('active');
-
-                            // check direction of scroll
-                            if (direction === 'FORWARD'){
-
-                                // if forward get the trigger id and query element with class =  trigger id
-                                _target = this.triggerElement().slice(1);
-                                $('.' + _target).addClass('active');
-                            } else {
-
-                                // if backward subtract 1 from trigger id and query element with that class
-                                _target = this.triggerElement();
-                                var index = _target.indexOfEnd('level-');
-                                var number = parseInt(_target.slice(index))-1;
-                                _target = 'level-' + number;
-                                $('.' + _target).addClass('active');
-                            }
-
-                            // get the chapter id and save to leftoff
-                            leftHref = $trigger.next().attr('data-cat') + '#' + $trigger.next().attr('id');
-                            leftTitle = $trigger.next().attr('data-name');
-                            saveLeftoff(leftHref, leftTitle);
-
-                            if (!preventSprite && $body && $trigger.hasClass('scroll-sprite')) {
-
-                                if (!spriteIsSaved($trigger)) {
-                                    console.log(spriteIsSaved($trigger));
-                                    activateSprite($trigger);
-                                }
-                            }
-
-                        })
+        this.scene = new ScrollScene({triggerElement: '#' + this.chapter, offset: 200, duration: 210 })
+                        .on('start', this.changeAsides)
                         .addTo(controller);
+
+            // this.scene.addIndicators();
         return true;
     };
+
+    AsideChanger.prototype.changeAsides = function (e) {
+
+        var _target,
+            direction = e.target.parent().info('scrollDirection'),
+            $trigger = $(this.triggerElement()),
+            leftHref,
+            leftTitle;
+
+        $('.aside-container').removeClass('active');
+
+        // check direction of scroll
+        if (direction === 'FORWARD' || direction === 'PAUSED'){
+
+            // if forward get the trigger id and query element with class =  trigger id
+            _target = this.triggerElement().slice(1);
+            $('.' + _target).addClass('active');
+        } else {
+
+            // if backward subtract 1 from trigger id and query element with that class
+            _target = this.triggerElement();
+            var index = _target.indexOfEnd('level-');
+            var number = parseInt(_target.slice(index))-1;
+            _target = 'level-' + number;
+            $('.' + _target).addClass('active');
+        }
+
+        // get the chapter id and save to leftoff
+        leftHref = $trigger.next().attr('data-cat') + '#' + $trigger.next().attr('id');
+        leftTitle = $trigger.next().attr('data-name');
+        saveLeftoff(leftHref, leftTitle);
+
+        // check for sprites to unlock on scroll
+        if (!preventSprite && $body && $trigger.hasClass('scroll-sprite')) {
+
+            if (!spriteIsSaved($trigger)) {
+                console.log(spriteIsSaved($trigger));
+                activateSprite($trigger);
+            }
+        }
+    }
 
     function spriteIsSaved (trigger) {
 
@@ -206,14 +212,15 @@
     function animateSprite (sprite) {
         var $sprite = $(sprite)[0];
 
-        TweenMax.to('.flying-sprite', 1.2, {
+        TweenMax.to('.flying-sprite', 2, {
             height: '30px',
             width: '30px',
             top: '-30px',
+            // left: '80%',
             onComplete: function(){
                     $('#sprites').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
                 },
-            ease:Power4.easeIn, delay:0.3 });
+            ease:Elastic.easeIn, delay:0.2 });
     }
 
     function asideInit() {
@@ -453,7 +460,7 @@
             // add .zoom() to all images in gallery
             $.each($('.slide-image-container'), function(){
                 $(this).zoom({
-                    magnify: 1.7,
+                    magnify: 1.1,
                     on:'click',
                     touch: true,
                     onZoomIn: function(){

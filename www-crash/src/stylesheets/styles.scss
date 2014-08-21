@@ -238,9 +238,11 @@ figure.body-image {
     }
 
     figcaption {
-        font-size: .6em;
+        font-size: 0.8em;
         font-family: $roboto;
-        line-height: 1.5em;
+        line-height: 1.6em;
+        font-style: italic;
+        padding-top: 10px;
     }
 }
 
@@ -267,8 +269,9 @@ div.aside-wrapper {
     float: left;
     width: 100%;
     display: block;
-    height: 75%;
+    height: 76%;
     overflow-y: hidden;
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -288,11 +291,16 @@ aside.margin-aside {
     width: 100%;
 
     h1 {
+        font-family: $georgia;
+        color: $brown;
         font-size: 1.2em;
         font-weight: bold;
+        font-style: italic;
         margin-bottom: .5em;
-        text-transform: uppercase;
+        text-transform: capitalize;
         padding-right: 1em;
+        line-height: 1.4em;
+        padding-top: .8em;
     }
 
     h2 {
@@ -301,14 +309,19 @@ aside.margin-aside {
     }
 
     blockquote {
-        color: $darkGreen;
+        color: $red;
+        font-style: italic;
         margin-bottom: 1em;
         padding-right: 1em;
+        line-height: 1.6em;
     }
 
     p {
+        // margin-bottom: 1em;
+        // padding-right: 1em;
         margin-bottom: 1em;
-        padding-right: 1em;
+        padding-right: 2em;
+        line-height: 1.6em;
     }
 
     img {
@@ -316,8 +329,8 @@ aside.margin-aside {
         background-repeat: no-repeat;
         display: block;
         background-position: center center;
-        max-width: 100%;
-        max-height: 250px;
+        max-width: 90%;
+        max-height: 200px;
         margin: 0 auto 1em auto;
     }
 
@@ -339,10 +352,13 @@ aside.margin-aside {
     }
 
     ul.aside-links {
+        font-family: $georgia;
+        // line-height: 1.5em;
         a {
             cursor: pointer;
             font-size: 1.2em;
             color: $green;
+            margin-bottom: 0.2em;
 
             &:visited {
                 color: $green;
@@ -406,7 +422,8 @@ aside.margin-aside {
     width: 16px;
     height: 16px;
     margin-right: .5em;
-    @include transform(scale(0.85));
+    margin-left: .5em;
+    // @include transform(scale(0.85));
 
     &.excerpt {
         background: url('../images/ui/book-sprite.png') no-repeat 0 0;
@@ -428,6 +445,9 @@ aside.margin-aside {
     }
     &.video {
         background: url('../images/ui/video-sprite.png') no-repeat 0 0;
+    }
+    &.crash {
+        background: url('../images/ui/crash-sprite.png') no-repeat 0 0;
     }
 }
 
@@ -483,7 +503,7 @@ ul.aside-list{
     width: 100%;
     // position: relative;
     float: left;
-    font-family: $roboto;
+    font-family: $georgia;
     color: $grey;
     margin-bottom: 1em;
 
@@ -735,7 +755,7 @@ div.sprite-drawer {
             pointer-events: none;
             white-space: nowrap;
             margin-left: 5px;
-            margin-top: -50px;
+            margin-top: -55px;
             pointer-events: none;
         }
         &:before {
@@ -826,12 +846,11 @@ div.remove-bookmark {
     bottom: 0px;
     width: 100%;
     background-color: $brown;
-    // background-color: rgba(242, 69, 55, .95);
     z-index: 1000;
     height: 2.6em;
 }
 .timeline-list {
-    font-family: 'Press Start 2P', sans-serif;
+    font-family: $pressStart, sans-serif;
     font-size: .6em;
     vertical-align: middle;
     color: #651e14;
@@ -956,11 +975,14 @@ span.source-name {
     &.game {
         background: url('../images/ui/game-sprite.png') no-repeat 0 0;
     }
-    &.gallery {
+    &.image {
         background: url('../images/ui/image-sprite.png') no-repeat 0 0;
     }
     &.video {
         background: url('../images/ui/video-sprite.png') no-repeat 0 0;
+    }
+    &.crash {
+        background: url('../images/ui/crash-sprite.png') no-repeat 0 0;
     }
     &:hover {
         background-position: -16px 0;
@@ -986,7 +1008,7 @@ span.source-name {
         vertical-align: middle;
         padding: .2em 1em;
         z-index: 100;
-        top: -40px;
+        top: -45px;
         pointer-events: none;
         white-space: nowrap;
         left: -5px;
@@ -1208,8 +1230,10 @@ header.page-hdr {
 .fig-container {
     position: relative;
     height: 75%;
-    top: 7em;
+    // top: 7em;
     margin: 0 8%;
+    float: left;
+    width: 84%;
     opacity: 0;
     @include transition ( opacity 200ms ease-in-out );
 
@@ -1353,4 +1377,12 @@ button.esc {
         @include border-color($red);
         color: $red;
     }
+}
+img.flying-sprite {
+    display: block;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 70%;
 }
