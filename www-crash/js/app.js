@@ -39,7 +39,6 @@
                 title: localStorage.getItem('leftoffTitle'),
                 link: localStorage.getItem('leftoffLink')
             };
-
             renderTemplate('#left-off', '#home-leftoff-template', data);
         }
 
