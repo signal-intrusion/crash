@@ -27,9 +27,11 @@
 }
 .ghost.arcade.run {
     content: url(../images/anim-sprites/ghost-arcade-run.png);
+    @include transform( scale(-1, 1) );
 }
 .ghost.console.run {
     content: url(../images/anim-sprites/ghost-run.png);
+    @include transform( scale(-1, 1) );
 }
 .waypoint {
     position: absolute;
@@ -39,24 +41,28 @@
     opacity: 0;
 }
 #pacman-waypoint-1 {
-    top: -16em;
+    top: -24em;
     left: -20%;
 }
 #pacman-waypoint-2 {
-    top: 1em;
+    top: -6em;
     left: -20%;
 }
 #pacman-waypoint-3 {
-    top: 1em;
+    top: -6em;
     left: 110%;
 }
 #pacman-waypoint-4 {
-    top: 23em;
+    top: 14em;
     left: 110%;
 }
 #pacman-waypoint-5 {
-    top: 23em;
-    left: 160%;
+    top: 14em;
+    left: 200%;
+}
+#pacman-waypoint-6 {
+    top: 14em;
+    left: 210%;
 }
 .pacman-hdr-spacer {
 }

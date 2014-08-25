@@ -533,14 +533,24 @@ img.bio-link.active {
 /* line 28, ../src/stylesheets/atari.scss */
 .ghost.arcade.run {
   content: url(../images/anim-sprites/ghost-arcade-run.png);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
-/* line 31, ../src/stylesheets/atari.scss */
+/* line 32, ../src/stylesheets/atari.scss */
 .ghost.console.run {
   content: url(../images/anim-sprites/ghost-run.png);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
-/* line 34, ../src/stylesheets/atari.scss */
+/* line 36, ../src/stylesheets/atari.scss */
 .waypoint {
   position: absolute;
   width: 10px;
@@ -549,37 +559,43 @@ img.bio-link.active {
   opacity: 0;
 }
 
-/* line 41, ../src/stylesheets/atari.scss */
+/* line 43, ../src/stylesheets/atari.scss */
 #pacman-waypoint-1 {
-  top: -16em;
+  top: -24em;
   left: -20%;
 }
 
-/* line 45, ../src/stylesheets/atari.scss */
+/* line 47, ../src/stylesheets/atari.scss */
 #pacman-waypoint-2 {
-  top: 1em;
+  top: -6em;
   left: -20%;
 }
 
-/* line 49, ../src/stylesheets/atari.scss */
+/* line 51, ../src/stylesheets/atari.scss */
 #pacman-waypoint-3 {
-  top: 1em;
+  top: -6em;
   left: 110%;
 }
 
-/* line 53, ../src/stylesheets/atari.scss */
+/* line 55, ../src/stylesheets/atari.scss */
 #pacman-waypoint-4 {
-  top: 23em;
+  top: 14em;
   left: 110%;
 }
 
-/* line 57, ../src/stylesheets/atari.scss */
+/* line 59, ../src/stylesheets/atari.scss */
 #pacman-waypoint-5 {
-  top: 23em;
-  left: 160%;
+  top: 14em;
+  left: 200%;
 }
 
 /* line 63, ../src/stylesheets/atari.scss */
+#pacman-waypoint-6 {
+  top: 14em;
+  left: 210%;
+}
+
+/* line 69, ../src/stylesheets/atari.scss */
 h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   position: absolute;
   z-index: 101;
@@ -587,7 +603,7 @@ h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
   left: 0;
 }
 
-/* line 69, ../src/stylesheets/atari.scss */
+/* line 75, ../src/stylesheets/atari.scss */
 span.pacman-span {
   /*background-color: #fffcf4;*/
   padding: 1.1em .5em;
@@ -607,7 +623,7 @@ html {
 }
 
 /* line 26, ../src/stylesheets/styles.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, aside.margin-aside h2, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, aside.margin-aside h2, h2, h3, h4, h5, h6, pre, code, form, field, legend, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0;
 }
