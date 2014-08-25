@@ -1074,57 +1074,58 @@ footer.story-footnotes {
 /* ///////////////// */
 
 header.page-hdr {
-    margin-top: 4em;
+    background-color: #232d2a;
+    padding: 6em 4em 4em 4em;
+   /* margin-top: 4em; */
+ 
     width: 100%;
     text-align: center;
 }
 
-.stories {
+.stories, .home {
 
-    .story-item {
-        @include span-columns( 4 of 12, inline-block );
-        @include shift( 1.5 );
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-
-    .story-item-hdr {
-        margin-bottom: 1em;
-    }
-
-    header h1 {
-        font-size: 2em;
+    h1 {
         font-family: $georgia;
         color: $brown;
         text-transform: capitalize;
+        font-size: 2em;
+        margin-bottom: 0.2em;
     }
 
-    header h2 {
+    h2 {
+        font-family: $hyperspace;
+        color: $green;
+        font-size: 4em;
+    }
+    h3 {
         font-family: $pressStart;
+        color: $red;
+        margin-bottom: 1em;
     }
-
+    h4 {
+        font-family: $georgia;
+        font-size: 1.8em;
+    }
     article p {
         line-height: 1.5em;
     }
-
     article {
         margin-bottom: 1em;
     }
-
     ol {
-        font-family: $roboto;
+        font-family: $georgia;
         list-style: lower-roman;
-
         li {
-            margin-bottom: .5em;
+            border-bottom: 1px dashed #a2a09c;
+            margin-left: 1em;     
+            padding: .3em 0; 
         }
     }
-
-    a {
-        color: $darkGreen;
+    a h1 {
+        color: $brown;
 
         &:visited {
-            color: $green;
+            color: $brown;
         }
         &:active {
             color: $darkGreen;
@@ -1134,6 +1135,30 @@ header.page-hdr {
         }
     }
 
+    a {
+        color: $brown;
+
+        &:visited {
+            color: $darkGreen;
+        }
+        &:active {
+            color: $darkGreen;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
+}
+.stories {
+    .story-item {
+        @include span-columns( 4 of 12, inline-block );
+        @include shift( 1.5 );
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .story-item-hdr {
+        margin-bottom: 1em;
+    }
 }
 
 /* /////////////////
@@ -1141,48 +1166,9 @@ header.page-hdr {
 /* ///////////////// */
 
 .home {
-
-    header.page-hdr {
-        margin-bottom: 4em;
-    }
-    h1 {
-        font-family: $georgia;
-        color: $brown;
-        font-size: 4em;
-        margin-bottom: .2em;
-    }
-
-    h2 {
-        font-family: $pressStart;
-        color: $red;
-    }
-
-    h3 {
-        font-family: $pressStart;
-        color: $red;
-        margin-bottom: 1em;
-    }
-    h4 {
-        font-family: $georgia;
-        font-size: 2em;
-    }
-    a {
-        color: $brown;
-
-        &:active {
-            color: $brown;
-        }
-        &:visited {
-            color: $brown;
-        }
-        &:hover {
-            color: $green;
-        }
-    }
-
-    section.content-links {
-        text-align: center;
-
+        section.content-links {
+            text-align: center;
+            margin-top: 1em;
         div {
             margin-bottom: 1em;
         }
