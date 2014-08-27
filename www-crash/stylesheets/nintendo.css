@@ -535,7 +535,7 @@ img.bio-link.active {
 /* line 23, ../src/stylesheets/_nintendo.scss */
 #mario-waypoint-1 {
   left: -60px;
-  top: -110px;
+  top: -120px;
 }
 
 /* line 32, ../src/stylesheets/_nintendo.scss */
@@ -544,7 +544,7 @@ img.bio-link.active {
   width: 100px;
   height: 120px;
   left: -400px;
-  top: -110px;
+  top: -120px;
   overflow: hidden;
   display: none;
   -webkit-animation: marioHammer 0.3s steps(2) infinite;
@@ -659,13 +659,13 @@ img.bio-link.active {
 /* line 89, ../src/stylesheets/_nintendo.scss */
 #barrel-waypoint-1 {
   left: 100%;
-  top: -40px;
+  top: -50px;
 }
 
 /* line 94, ../src/stylesheets/_nintendo.scss */
 #barrel-waypoint-2 {
   left: -10px;
-  top: -40px;
+  top: -50px;
 }
 
 @-webkit-keyframes barrel {
@@ -749,7 +749,7 @@ img.bio-link.active {
 /* line 127, ../src/stylesheets/_nintendo.scss */
 #fire-waypoint-2 {
   left: -80px;
-  top: -20px;
+  top: -30px;
 }
 
 @-webkit-keyframes fire {
@@ -2631,7 +2631,7 @@ img.bio-link.active {
 /* line 23, ../src/stylesheets/_nintendo.scss */
 #mario-waypoint-1 {
   left: -60px;
-  top: -110px;
+  top: -120px;
 }
 
 /* line 32, ../src/stylesheets/_nintendo.scss */
@@ -2640,7 +2640,7 @@ img.bio-link.active {
   width: 100px;
   height: 120px;
   left: -400px;
-  top: -110px;
+  top: -120px;
   overflow: hidden;
   display: none;
   -webkit-animation: marioHammer 0.3s steps(2) infinite;
@@ -2755,13 +2755,13 @@ img.bio-link.active {
 /* line 89, ../src/stylesheets/_nintendo.scss */
 #barrel-waypoint-1 {
   left: 100%;
-  top: -40px;
+  top: -50px;
 }
 
 /* line 94, ../src/stylesheets/_nintendo.scss */
 #barrel-waypoint-2 {
   left: -10px;
-  top: -40px;
+  top: -50px;
 }
 
 @-webkit-keyframes barrel {
@@ -2845,7 +2845,7 @@ img.bio-link.active {
 /* line 127, ../src/stylesheets/_nintendo.scss */
 #fire-waypoint-2 {
   left: -80px;
-  top: -20px;
+  top: -30px;
 }
 
 @-webkit-keyframes fire {

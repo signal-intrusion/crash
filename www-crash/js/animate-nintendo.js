@@ -14,7 +14,7 @@
         fwp2pos;
 
     $(window).ready(function() {
-
+        $($('#donkey-animation').prev('p')).css('margin-bottom', '4em');
     });
 
     var donkeyElements = '<div class="anim-sprite mario run" id="mario-sprite"></div>';
@@ -102,6 +102,11 @@
             onComplete: function() {
                 $(this.target).css('opacity', 0);
                 $('#mario-sprite').addClass('dead');
+                _.delay(function() {
+                    marioScene.remove();
+                    barrelScene.remove();
+                    fireScene.remove();
+                }, 2000);
             },
             onStart: function() {
             }
@@ -109,7 +114,7 @@
 
     var marioScene = new ScrollScene({
             triggerElement: '#donkey-animation',
-            offset: -100
+            offset: -200
         })
         .on('start', function() {
             this.enabled(false);
@@ -119,7 +124,7 @@
 
     var barrelScene = new ScrollScene({
             triggerElement: '#donkey-animation',
-            offset: -100
+            offset: -200
         })
         .on('start', function() {
             this.enabled(false);
@@ -129,7 +134,7 @@
 
     var fireScene = new ScrollScene({
             triggerElement: '#donkey-animation',
-            offset: -100
+            offset: -200
         })
         .on('start', function() {
             this.enabled(false);
@@ -137,6 +142,6 @@
         .setTween(fireTween)
         .addTo(controller);
 
-    marioScene.addIndicators();
+    // marioScene.addIndicators();
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax, window.TimelineMax);
