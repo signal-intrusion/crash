@@ -57,6 +57,30 @@
         sprites = new Sprites();
         sprites.loadSprites();
 
+            // Responsive image loader
+            rsp = new Respeto({
+                retina: true,
+                imagePath: 'img/min/'
+            });
+
+            if (width <= 600) {
+                rsp.load('small', {
+                    imagePath: 'img/min/'
+                }); // loads images with _small suffix
+            }
+
+            if (width > 600 && width <= 1024) {
+                rsp.load('medium', {
+                    imagePath: 'img/min/'
+                }); // loads images with _medium suffix
+            }
+
+            if (width > 1024) {
+                rsp.load('large', {
+                    imagePath: 'img/min/'
+                }); // sets image sources with _large suffix
+            }
+
         preload([
             "images/close.png",
             "images/info.png",
@@ -567,29 +591,5 @@
                 slideshow.init();
         });
     });
-
-    // Responsive image loader
-    rsp = new Respeto({
-        retina: true,
-        imagePath: 'img/min/'
-    });
-
-    if (width <= 600) {
-        rsp.load('small', {
-            imagePath: 'img/min/'
-        }); // loads images with _small suffix
-    }
-
-    if (width > 600 && width <= 1024) {
-        rsp.load('medium', {
-            imagePath: 'img/min/'
-        }); // loads images with _medium suffix
-    }
-
-    if (width > 1024) {
-        rsp.load('large', {
-            imagePath: 'img/min/'
-        }); // sets image sources with _large suffix
-    }
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

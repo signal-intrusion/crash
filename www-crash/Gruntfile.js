@@ -81,36 +81,36 @@ module.exports = function(grunt) {
           separator: '-',
           sizes: [{
             name: 'small',
-            width: '500px',
-            quality: 90,
+            width: '300px',
+            quality: 80,
             upscale: false
           },{
             name: 'small',
-            width: '1000px',
+            width: '600px',
             suffix: '_x2',
-            quality: 65,
+            quality: 75,
             upscale: false
           },{
             name: 'medium',
+            width: '450px',
+            quality: 80,
+            upscale: false
+          },{
+            name: 'medium',
+            width: '900',
+            suffix: '_x2',
+            quality: 75,
+            upscale: false
+          },{
+            name: 'large',
             width: '800px',
-            quality: 90,
-            upscale: false
-          },{
-            name: 'medium',
-            width: '1600',
-            suffix: '_x2',
-            quality: 65,
+            quality: 80,
             upscale: false
           },{
             name: 'large',
-            width: '1200px',
-            quality: 90,
-            upscale: false
-          },{
-            name: 'large',
-            width: '2400px',
+            width: '1600px',
             suffix: '_x2',
-            quality: 65,
+            quality: 75,
             upscale: false
           }]
         },

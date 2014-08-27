@@ -6,13 +6,16 @@
         <aside class="margin-aside">
             {% if aside.asideImage | length %}
                 {# <div class="cropper"> #}
-                <img class="aside-image" src="{{ aside.asideImage.first().getUrl() }}" alt="{{ aside.title }}">
+                {% set image = aside.asideImage.first() %}
+                <img class="aside-image" src="{{ image.getUrl() }}" alt="{{ aside.title }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
                 {# </div> #}
             {% elseif aside.asideGallery | length %}
                 {% set block = aside.asideGallery.first() %}
                 <a href="{{ siteUrl() }}gallery?name={{ aside.slug }}" class="gallery-link">
                     {% if block.type == 'imageBlock' %}
-                        <img class="aside-image" src="{{ block.image.first().getUrl() }}" alt="{{ block.caption }}">
+                    {% set image = block.image.first() %}
+                        <img class="aside-image" src="{{ image.getUrl('asideSmall') }}" alt="{{ block.caption }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
+                    }
                     {% else %}
 
                     {% endif %}
