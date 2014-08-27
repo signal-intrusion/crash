@@ -2606,3 +2606,182 @@ img.bio-link.active {
 .ps-container.ie.hover .ps-scrollbar-y {
   visibility: visible;
 }
+
+/* line 5, ../src/stylesheets/_crash.scss */
+.anim-sprite {
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+/* line 11, ../src/stylesheets/_crash.scss */
+.waypoint {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: blue;
+  opacity: 0;
+}
+
+/* line 19, ../src/stylesheets/_crash.scss */
+#mario-waypoint-1 {
+  left: -60px;
+  top: -110px;
+}
+
+/* line 28, ../src/stylesheets/_crash.scss */
+#mario-sprite {
+  background-image: url(../images/anim-sprites/mario-hammer.png);
+  width: 100px;
+  height: 120px;
+  left: -400px;
+  top: -110px;
+  overflow: hidden;
+  display: none;
+  -webkit-animation: marioHammer 0.3s steps(2) infinite;
+  -moz-animation: marioHammer 0.3s steps(2) infinite;
+  animation: marioHammer 0.3s steps(2) infinite;
+}
+/* line 39, ../src/stylesheets/_crash.scss */
+#mario-sprite.run {
+  width: 120px;
+  background-image: url(../images/anim-sprites/mario-run.png);
+  -webkit-animation: marioRun 0.4s steps(6) infinite;
+  -moz-animation: marioRun 0.4s steps(6) infinite;
+  animation: marioRun 0.4s steps(6) infinite;
+}
+
+@-webkit-keyframes marioHammer {
+  /* line 51, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-moz-keyframes marioHammer {
+  /* line 51, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@keyframes marioHammer {
+  /* line 51, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-webkit-keyframes marioRun {
+  /* line 55, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+@-moz-keyframes marioRun {
+  /* line 55, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+@keyframes marioRun {
+  /* line 55, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+/* line 58, ../src/stylesheets/_crash.scss */
+.barrel {
+  background-image: url(../images/anim-sprites/barrel-side.png);
+  -webkit-animation: barrel 0.4s steps(4) infinite;
+  -moz-animation: barrel 0.4s steps(4) infinite;
+  animation: barrel 0.4s steps(4) infinite;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 100px;
+  height: 60px;
+  left: 100%;
+  top: -600px;
+  opacity: 0;
+}
+/* line 69, ../src/stylesheets/_crash.scss */
+.barrel.down {
+  background-image: url(../images/anim-sprites/barrel-top.png);
+  -webkit-animation: barrelDown 0.2s steps(2) infinite;
+  -moz-animation: barrelDown 0.2s steps(2) infinite;
+  animation: barrelDown 0.2s steps(2) infinite;
+}
+/* line 74, ../src/stylesheets/_crash.scss */
+.barrel.done {
+  background-image: url(../images/anim-sprites/barrel-done.png);
+  -webkit-animation: barrelDone 1.5s steps(7);
+  -moz-animation: barrelDone 1.5s steps(7);
+  animation: barrelDone 1.5s steps(7);
+}
+
+/* line 80, ../src/stylesheets/_crash.scss */
+#barrel-waypoint-1 {
+  left: 100%;
+  top: -40px;
+}
+
+/* line 85, ../src/stylesheets/_crash.scss */
+#barrel-waypoint-2 {
+  left: -10px;
+  top: -40px;
+}
+
+@-webkit-keyframes barrel {
+  /* line 91, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@-moz-keyframes barrel {
+  /* line 91, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@keyframes barrel {
+  /* line 91, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@-webkit-keyframes barrelDown {
+  /* line 95, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-moz-keyframes barrelDown {
+  /* line 95, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@keyframes barrelDown {
+  /* line 95, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-webkit-keyframes barrelDone {
+  /* line 98, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -700px;
+  }
+}
+@-moz-keyframes barrelDone {
+  /* line 98, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -700px;
+  }
+}
+@keyframes barrelDone {
+  /* line 98, ../src/stylesheets/_crash.scss */
+  100% {
+    background-position: -700px;
+  }
+}

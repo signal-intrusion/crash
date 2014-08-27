@@ -2342,6 +2342,226 @@ img.flying-sprite {
   left: 70%;
 }
 
+/* line 1, ../src/stylesheets/_defender.scss */
+#defender-up {
+  margin-bottom: 4em;
+  height: 400px;
+}
+
+/* line 5, ../src/stylesheets/_defender.scss */
+.defender.sales {
+  background-image: url(../images/defender/defender-sales.png);
+  height: 100%;
+  background-size: 104% 100%;
+}
+
+/* line 10, ../src/stylesheets/_defender.scss */
+.defender.profits {
+  background-image: url(../images/defender/defender-profits.png);
+  height: 100%;
+  background-size: 104% 100%;
+}
+
+/* line 15, ../src/stylesheets/_defender.scss */
+.chart-index-year {
+  width: 105%;
+  margin-left: -1%;
+  margin-top: 90px;
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+/* line 22, ../src/stylesheets/_defender.scss */
+.button-container {
+  margin: 0 25%;
+  left: 0;
+  width: 50%;
+}
+
+/* line 27, ../src/stylesheets/_defender.scss */
+button.chart {
+  -moz-box-shadow: inset 0px 1px 0px 0px #f5978e;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #f5978e;
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background-color: #f24537;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-bottom-left-radius: 0px;
+  text-indent: 0;
+  border: 1px solid #d02718;
+  display: inline-block;
+  color: #ffffff;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: .6em;
+  height: 40px;
+  width: 110px;
+  text-align: center;
+}
+
+/* line 54, ../src/stylesheets/_defender.scss */
+button.chart:hover {
+  background-color: #FF3829;
+  cursor: pointer;
+}
+
+/* line 58, ../src/stylesheets/_defender.scss */
+button.chart:active {
+  position: relative;
+  top: 1px;
+}
+
+/* line 62, ../src/stylesheets/_defender.scss */
+button.button-active {
+  background-color: #c62d1f;
+}
+
+/* line 66, ../src/stylesheets/_defender.scss */
+.defender-sprite {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+/* line 71, ../src/stylesheets/_defender.scss */
+.defender-ship {
+  background: url(../images/defender/ship1.png);
+  background-size: 50px 50px;
+  left: 8%;
+  top: 37%;
+}
+
+/* line 77, ../src/stylesheets/_defender.scss */
+.defender-ship.profits-sprite {
+  left: 25%;
+  top: 50%;
+}
+
+/* line 81, ../src/stylesheets/_defender.scss */
+.defender-hostage {
+  background: url(../images/defender/hostage.png);
+  background-size: 50px 50px;
+}
+
+/* line 85, ../src/stylesheets/_defender.scss */
+.hostage-1.sales-sprite {
+  left: 30%;
+  top: 85%;
+}
+
+/* line 89, ../src/stylesheets/_defender.scss */
+.hostage-2.sales-sprite {
+  left: 70%;
+  top: 60%;
+}
+
+/* line 93, ../src/stylesheets/_defender.scss */
+.hostage-3.sales-sprite {
+  left: 90%;
+  top: 0%;
+}
+
+/* line 97, ../src/stylesheets/_defender.scss */
+.hostage-1.profits-sprite {
+  left: 30%;
+  top: 88%;
+}
+
+/* line 101, ../src/stylesheets/_defender.scss */
+.hostage-2.profits-sprite {
+  left: 62%;
+  top: 77%;
+}
+
+/* line 105, ../src/stylesheets/_defender.scss */
+.hostage-3.profits-sprite {
+  left: 83%;
+  top: 60%;
+}
+
+/* line 109, ../src/stylesheets/_defender.scss */
+.defender-alien {
+  background: url(../images/defender/alien1.png);
+  background-size: 50px 50px;
+}
+
+/* line 113, ../src/stylesheets/_defender.scss */
+.alien-1.sales-sprite {
+  left: 37%;
+  top: -17%;
+}
+
+/* line 117, ../src/stylesheets/_defender.scss */
+.alien-2.sales-sprite {
+  left: 60%;
+  top: -15%;
+}
+
+/* line 121, ../src/stylesheets/_defender.scss */
+.alien-3.sales-sprite {
+  left: 80%;
+  top: -65%;
+}
+
+/* line 125, ../src/stylesheets/_defender.scss */
+.alien-1.profits-sprite {
+  left: 48%;
+  top: -5%;
+}
+
+/* line 129, ../src/stylesheets/_defender.scss */
+.alien-2.profits-sprite {
+  left: 60%;
+  top: -52%;
+}
+
+/* line 133, ../src/stylesheets/_defender.scss */
+.alien-3.profits-sprite {
+  left: 90%;
+  top: -58%;
+}
+
+/* line 137, ../src/stylesheets/_defender.scss */
+.defender-txt {
+  opacity: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: .8em;
+  vertical-align: middle;
+  color: #651e14;
+  position: relative;
+  top: -40px;
+  left: -70px;
+  z-index: 1000;
+  text-align: center;
+  width: 250px;
+}
+
+/* line 150, ../src/stylesheets/_defender.scss */
+.defender-sprite:hover > .defender-txt {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  opacity: 1;
+}
+
+/* line 156, ../src/stylesheets/_defender.scss */
+.sales-sprite {
+  display: block;
+}
+
+/* line 159, ../src/stylesheets/_defender.scss */
+.profits-sprite {
+  display: none;
+}
+
 /* line 1, ../src/stylesheets/_aside.scss */
 aside.biography {
   z-index: 9050;
@@ -2605,4 +2825,116 @@ img.bio-link.active {
 .ps-container.ie.hover .ps-scrollbar-x,
 .ps-container.ie.hover .ps-scrollbar-y {
   visibility: visible;
+}
+
+/* line 5, ../src/stylesheets/_atari.scss */
+.anim-sprite {
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+/* line 10, ../src/stylesheets/_atari.scss */
+.pacman {
+  content: url(../images/anim-sprites/pacman-arcade.png);
+  top: -16em;
+  left: -100%;
+  width: 100px;
+}
+
+/* line 16, ../src/stylesheets/_atari.scss */
+.ghost {
+  top: -16em;
+  left: -100%;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 22, ../src/stylesheets/_atari.scss */
+.ghost.console {
+  content: url(../images/anim-sprites/ghost.png);
+}
+
+/* line 25, ../src/stylesheets/_atari.scss */
+.ghost.arcade {
+  content: url(../images/anim-sprites/ghost-arcade.png);
+}
+
+/* line 28, ../src/stylesheets/_atari.scss */
+.ghost.arcade.run {
+  content: url(../images/anim-sprites/ghost-arcade-run.png);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 32, ../src/stylesheets/_atari.scss */
+.ghost.console.run {
+  content: url(../images/anim-sprites/ghost-run.png);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 36, ../src/stylesheets/_atari.scss */
+.waypoint {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  opacity: 0;
+}
+
+/* line 43, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-1 {
+  top: -24em;
+  left: -20%;
+}
+
+/* line 47, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-2 {
+  top: -6em;
+  left: -20%;
+}
+
+/* line 51, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-3 {
+  top: -6em;
+  left: 110%;
+}
+
+/* line 55, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-4 {
+  top: 14em;
+  left: 110%;
+}
+
+/* line 59, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-5 {
+  top: 14em;
+  left: 200%;
+}
+
+/* line 63, ../src/stylesheets/_atari.scss */
+#pacman-waypoint-6 {
+  top: 14em;
+  left: 210%;
+}
+
+/* line 69, ../src/stylesheets/_atari.scss */
+h1.pacman-hdr, aside.margin-aside h2.pacman-hdr {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  left: 0;
+}
+
+/* line 75, ../src/stylesheets/_atari.scss */
+span.pacman-span {
+  /*background-color: #fffcf4;*/
+  padding: 1.1em .5em;
 }

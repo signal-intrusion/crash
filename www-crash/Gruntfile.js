@@ -61,7 +61,13 @@ module.exports = function(grunt) {
           lineNumbers: true
         },
         files: {
-          'stylesheets/main.css': 'src/stylesheets/styles.scss'
+          'stylesheets/main.css': 'src/stylesheets/main.scss',
+          'stylesheets/nintendo.css': 'src/stylesheets/nintendo.scss',
+          'stylesheets/atari.css': 'src/stylesheets/atari.scss',
+          'stylesheets/crash.css': 'src/stylesheets/crash.scss',
+          // 'stylesheets/home.css': 'src/stylesheets/home.scss',
+          // 'stylesheets/warp.css': 'src/stylesheets/warp.scss',
+          // 'stylesheets/stories.css': 'src/stylesheets/stories.scss'
         }
       }
     },

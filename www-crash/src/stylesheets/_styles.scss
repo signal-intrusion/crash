@@ -7,7 +7,8 @@
 @import'_media-query';
 @import'_scrollbar';
 @import'_warpzone';
-@import 'atari';
+// @import 'atari';
+@import '_nintendo';
 
 /* /////////////////
 /* CSS Reset
@@ -394,7 +395,7 @@ aside.margin-aside {
             font-size: 1em;
             color: $beige;
             content: attr(title);
-            position: absolute;
+            position: relative;
             display: table-cell;
             text-align: center;
             background-color: $brown;
@@ -402,10 +403,11 @@ aside.margin-aside {
             width: 8em;
             padding: .2em .5em;
             z-index: 100;
-            // left: 50%;
-            top: 0;
-            margin-left: -4em;
+            left: -50%;
+            top: -20px;
+            // margin-left: -4em;
             pointer-events: none;
+            white-space: nowrap;
         }
         &:hover {
             background-position: -16px 0;
@@ -1077,7 +1079,7 @@ header.page-hdr {
     background-color: #232d2a;
     padding: 6em 4em 4em 4em;
    /* margin-top: 4em; */
- 
+
     width: 100%;
     text-align: center;
 }
@@ -1117,8 +1119,8 @@ header.page-hdr {
         list-style: lower-roman;
         li {
             border-bottom: 1px dashed #a2a09c;
-            margin-left: 1em;     
-            padding: .3em 0; 
+            margin-left: 1em;
+            padding: .3em 0;
         }
     }
     a h1 {

@@ -2606,3 +2606,263 @@ img.bio-link.active {
 .ps-container.ie.hover .ps-scrollbar-y {
   visibility: visible;
 }
+
+/* line 5, ../src/stylesheets/_nintendo.scss */
+.animation-placeholder {
+  position: relative;
+}
+
+/* line 9, ../src/stylesheets/_nintendo.scss */
+.anim-sprite {
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+/* line 15, ../src/stylesheets/_nintendo.scss */
+.waypoint {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: blue;
+  opacity: 0;
+}
+
+/* line 23, ../src/stylesheets/_nintendo.scss */
+#mario-waypoint-1 {
+  left: -60px;
+  top: -110px;
+}
+
+/* line 32, ../src/stylesheets/_nintendo.scss */
+#mario-sprite {
+  background-image: url(../images/anim-sprites/mario-hammer.png);
+  width: 100px;
+  height: 120px;
+  left: -400px;
+  top: -110px;
+  overflow: hidden;
+  display: none;
+  -webkit-animation: marioHammer 0.3s steps(2) infinite;
+  -moz-animation: marioHammer 0.3s steps(2) infinite;
+  animation: marioHammer 0.3s steps(2) infinite;
+}
+/* line 43, ../src/stylesheets/_nintendo.scss */
+#mario-sprite.run {
+  background-image: url(../images/anim-sprites/mario-run.png);
+  -webkit-animation: marioRun 0.4s steps(6) infinite;
+  -moz-animation: marioRun 0.4s steps(6) infinite;
+  animation: marioRun 0.4s steps(6) infinite;
+}
+/* line 49, ../src/stylesheets/_nintendo.scss */
+#mario-sprite.dead {
+  background-image: url(../images/anim-sprites/mario-dead.png);
+  -webkit-animation: marioDead 1s steps(10) forwards;
+  -moz-animation: marioDead 1s steps(10) forwards;
+  animation: marioDead 1s steps(10) forwards;
+  -webkit-animation-iteration-count: 0.85;
+  -moz-animation-iteration-count: 0.85;
+  animation-iteration-count: 0.85;
+  width: 59px;
+}
+
+@-webkit-keyframes marioHammer {
+  /* line 58, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-moz-keyframes marioHammer {
+  /* line 58, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@keyframes marioHammer {
+  /* line 58, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-webkit-keyframes marioRun {
+  /* line 61, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+@-moz-keyframes marioRun {
+  /* line 61, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+@keyframes marioRun {
+  /* line 61, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -720px;
+  }
+}
+@-webkit-keyframes marioDead {
+  /* line 64, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -600px;
+  }
+}
+@-moz-keyframes marioDead {
+  /* line 64, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -600px;
+  }
+}
+@keyframes marioDead {
+  /* line 64, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -600px;
+  }
+}
+/* line 67, ../src/stylesheets/_nintendo.scss */
+.barrel {
+  background-image: url(../images/anim-sprites/barrel-side.png);
+  -webkit-animation: barrel 0.4s steps(4) infinite;
+  -moz-animation: barrel 0.4s steps(4) infinite;
+  animation: barrel 0.4s steps(4) infinite;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 100px;
+  height: 60px;
+  left: 100%;
+  top: -600px;
+  opacity: 0;
+}
+/* line 78, ../src/stylesheets/_nintendo.scss */
+.barrel.down {
+  background-image: url(../images/anim-sprites/barrel-top.png);
+  -webkit-animation: barrelDown 0.2s steps(2) infinite;
+  -moz-animation: barrelDown 0.2s steps(2) infinite;
+  animation: barrelDown 0.2s steps(2) infinite;
+}
+/* line 83, ../src/stylesheets/_nintendo.scss */
+.barrel.done {
+  background-image: url(../images/anim-sprites/barrel-done.png);
+  -webkit-animation: barrelDone 1.5s steps(7);
+  -moz-animation: barrelDone 1.5s steps(7);
+  animation: barrelDone 1.5s steps(7);
+}
+
+/* line 89, ../src/stylesheets/_nintendo.scss */
+#barrel-waypoint-1 {
+  left: 100%;
+  top: -40px;
+}
+
+/* line 94, ../src/stylesheets/_nintendo.scss */
+#barrel-waypoint-2 {
+  left: -10px;
+  top: -40px;
+}
+
+@-webkit-keyframes barrel {
+  /* line 100, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@-moz-keyframes barrel {
+  /* line 100, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@keyframes barrel {
+  /* line 100, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -400px;
+  }
+}
+@-webkit-keyframes barrelDown {
+  /* line 104, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-moz-keyframes barrelDown {
+  /* line 104, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@keyframes barrelDown {
+  /* line 104, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -200px;
+  }
+}
+@-webkit-keyframes barrelDone {
+  /* line 107, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -700px;
+  }
+}
+@-moz-keyframes barrelDone {
+  /* line 107, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -700px;
+  }
+}
+@keyframes barrelDone {
+  /* line 107, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -700px;
+  }
+}
+/* line 110, ../src/stylesheets/_nintendo.scss */
+.fire {
+  background-image: url(../images/anim-sprites/fire.png);
+  -webkit-animation: fire 0.2s steps(2) infinite;
+  -moz-animation: fire 0.2s steps(2) infinite;
+  animation: fire 0.2s steps(2) infinite;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+  transform: scale(0.7);
+  width: 60px;
+  height: 60px;
+  left: -100%;
+  top: 200px;
+  opacity: 1;
+}
+
+/* line 122, ../src/stylesheets/_nintendo.scss */
+#fire-waypoint-1 {
+  left: -80px;
+  top: 200px;
+}
+
+/* line 127, ../src/stylesheets/_nintendo.scss */
+#fire-waypoint-2 {
+  left: -80px;
+  top: -20px;
+}
+
+@-webkit-keyframes fire {
+  /* line 133, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -120px;
+  }
+}
+@-moz-keyframes fire {
+  /* line 133, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -120px;
+  }
+}
+@keyframes fire {
+  /* line 133, ../src/stylesheets/_nintendo.scss */
+  100% {
+    background-position: -120px;
+  }
+}

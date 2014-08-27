@@ -1,0 +1,135 @@
+/////////////////
+// nintendo animations
+/////////////////
+
+.animation-placeholder {
+    position: relative;
+}
+
+.anim-sprite {
+    display: block;
+    position: absolute;
+    z-index: 100;
+}
+
+.waypoint {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: blue;
+    opacity: 0;
+}
+
+#mario-waypoint-1 {
+    left: -60px;
+    top: -110px;
+}
+
+#mario-waypoint-2 {
+
+}
+
+#mario-sprite {
+
+    background-image: url(../images/anim-sprites/mario-hammer.png);
+    width: 100px;
+    height: 120px;
+    left: -400px;
+    top: -110px;
+    overflow: hidden;
+    display: none;
+    @include animation(marioHammer 0.3s steps(2) infinite);
+
+    &.run {
+        // width: 120px;
+        background-image: url(../images/anim-sprites/mario-run.png);
+        @include animation(marioRun 0.4s steps(6) infinite);
+    }
+
+    &.dead {
+        background-image: url(../images/anim-sprites/mario-dead.png);
+        @include animation(marioDead 1s steps(10) forwards);
+        @include animation-iteration-count( 0.85 );
+        width: 59px;
+    }
+}
+
+@include keyframes(marioHammer) {
+    100% { background-position: -200px; }
+}
+@include keyframes(marioRun) {
+    100% { background-position: -720px; }
+}
+@include keyframes(marioDead) {
+    100% { background-position: -600px; }
+}
+
+.barrel {
+
+    background-image: url(../images/anim-sprites/barrel-side.png);
+    @include animation( barrel 0.4s steps(4) infinite );
+    @include transform( scale(0.5) );
+    width: 100px;
+    height: 60px;
+    left: 100%;
+    top:  -600px;
+    opacity: 0;
+
+    &.down {
+        background-image: url(../images/anim-sprites/barrel-top.png);
+        @include animation( barrelDown 0.2s steps(2) infinite );
+    }
+
+    &.done {
+        background-image: url(../images/anim-sprites/barrel-done.png);
+        @include animation( barrelDone 1.5s steps(7) );
+    }
+}
+
+#barrel-waypoint-1 {
+    left: 100%;
+    top: -40px;
+}
+
+#barrel-waypoint-2 {
+    left: -10px;
+    top: -40px;
+}
+
+@include keyframes(barrel) {
+    100% { background-position: -400px; }
+}
+
+@include keyframes(barrelDown) {
+    100% { background-position: -200px; }
+}
+@include keyframes(barrelDone) {
+    100% { background-position: -700px; }
+}
+
+.fire {
+
+    background-image: url(../images/anim-sprites/fire.png);
+    @include animation( fire 0.2s steps(2) infinite );
+    @include transform( scale(0.7) );
+    width: 60px;
+    height: 60px;
+    left: -100%;
+    top:  200px;
+    opacity: 1;
+}
+
+#fire-waypoint-1 {
+    left: -80px;
+    top: 200px;
+}
+
+#fire-waypoint-2 {
+    left: -80px;
+    top: -20px;
+}
+
+@include keyframes(fire) {
+    100% { background-position: -120px; }
+}
+
