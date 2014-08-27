@@ -62,7 +62,8 @@
                 {% case 'image' %}
                     {% set image = block.image.first() %}
                     <figure class="body-image {{ block.align }}-image">
-                        <img src="{{ image.getUrl() }}" alt="{{ image.title }}">
+                        {# <noscript><img src="{{ image.getUrl() }}" alt="{{ image.title }}"></noscript> #}
+                        <img src="{{ image.getUrl('mainSmall') }}" alt="{{ image.title }}" data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}">
                         <figcaption>{{ block.caption }}</figcaption>
                     </figure>
                 {% case 'video' %}

@@ -13,7 +13,7 @@ return array(
     ),
 
     '.com' => array(
-        'devMode' => true,
+        'devMode' => false,
         // 'usePathInfo' => true,
         'omitScriptNameInUrls' => true
     ),

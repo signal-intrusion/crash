@@ -452,6 +452,9 @@ aside.margin-aside {
     &.crash {
         background: url('../images/ui/crash-sprite.png') no-repeat 0 0;
     }
+    &.event {
+        background: url('../images/ui/event-sprite.png') no-repeat 0 0;
+    }
 }
 
 .script .aside-container {
@@ -768,7 +771,7 @@ div.sprite-drawer {
             @include triangle(1.5em, $brown, down);
             position: absolute;
             display: table-cell;
-            margin-top: -0.5em;
+            margin-top: -10px;
             margin-left: 10px;
             opacity: 0;
         }
@@ -986,6 +989,9 @@ span.source-name {
     }
     &.crash {
         background: url('../images/ui/crash-sprite.png') no-repeat 0 0;
+    }
+    &.event {
+        background: url('../images/ui/event-sprite.png') no-repeat 0 0;
     }
     &:hover {
         background-position: -16px 0;
@@ -1373,5 +1379,5 @@ img.flying-sprite {
     height: 50px;
     width: 50px;
     top: 50%;
-    left: 70%;
+    left: 65%;
 }

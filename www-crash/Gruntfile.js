@@ -3,36 +3,40 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // concat: {
+    concat: {
       // dist: {
       //   src: [
       //       'src/scripts/*.js' // All JS in the libs folder
       //   ],
       //   dest: 'dist/scripts/app.js'
       // },
-    //   vendor: {
-    //     src: [
-    //       'bower_components/jquery/dist/jquery.min.js',
-    //       'bower_components/underscore/underscore.js',
-    //       'bower_components/respeto/dist/respeto.min.js',
-    //       'bower_components/unslider/src/unslider.js'
-    //     ],
-    //     dest: 'src/scripts/vendor.js'
-    //   },
-    //   scroll: {
-    //     src: [
-    //       'bower_components/gsap/src/minified/TweenMax.min.js',
-    //       'bower_components/ScrollMagic/js/jquery.scrollmagic.min.js'
-    //     ],
-    //     dest: 'src/scripts/scroll.js'
-    //   }
-    // },
-    // uglify: {
-    //   build: {
-    //     src: 'src/scripts/vendor.js',
-    //     dest: 'src/scripts/vendor.min.js'
-    //   }
-    // },
+      vendor: {
+        src: [
+          'bower_components/jQuery/dist/jquery.js',
+          'bower_components/gsap/src/uncompressed/TweenMax.js',
+          'bower_components/underscore/underscore.js',
+          'bower_components/perfect-scrollbar/min/perfect-scrollbar.with-mousewheel.min.js',
+          'bower_components/jquery-zoom/jquery.zoom.js',
+          'bower_components/ScrollMagic/js/jquery.scrollmagic.js',
+          'bower_components/ScrollMagic/js/jquery.scrollmagic.debug.js',
+          'bower_components/ScrollMagic/js/_dependent/greensock/plugins/ScrollToPlugin.min.js'
+        ],
+        dest: 'js/vendor.js'
+      },
+      // scroll: {
+      //   src: [
+      //     'bower_components/gsap/src/minified/TweenMax.min.js',
+      //     'bower_components/ScrollMagic/js/jquery.scrollmagic.min.js'
+      //   ],
+      //   dest: 'src/scripts/scroll.js'
+      // }
+    },
+    uglify: {
+      build: {
+        src: 'js/vendor.js',
+        dest: 'js/vendor.min.js'
+      }
+    },
     watch: {
       options: {
         livereload: true,
@@ -71,61 +75,61 @@ module.exports = function(grunt) {
         }
       }
     },
-    // responsive_images: {
-    //   build: {
-    //     options: {
-    //       separator: '-',
-    //       sizes: [{
-    //         name: 'small',
-    //         width: '500px',
-    //         quality: 90,
-    //         upscale: false
-    //       },{
-    //         name: 'small',
-    //         width: '1000px',
-    //         suffix: '_x2',
-    //         quality: 65,
-    //         upscale: false
-    //       },{
-    //         name: 'medium',
-    //         width: '800px',
-    //         quality: 90,
-    //         upscale: false
-    //       },{
-    //         name: 'medium',
-    //         width: '1600',
-    //         suffix: '_x2',
-    //         quality: 65,
-    //         upscale: false
-    //       },{
-    //         name: 'large',
-    //         width: '1200px',
-    //         quality: 90,
-    //         upscale: false
-    //       },{
-    //         name: 'large',
-    //         width: '2400px',
-    //         suffix: '_x2',
-    //         quality: 65,
-    //         upscale: false
-    //       }]
-    //     },
+    responsive_images: {
+      build: {
+        options: {
+          separator: '-',
+          sizes: [{
+            name: 'small',
+            width: '500px',
+            quality: 90,
+            upscale: false
+          },{
+            name: 'small',
+            width: '1000px',
+            suffix: '_x2',
+            quality: 65,
+            upscale: false
+          },{
+            name: 'medium',
+            width: '800px',
+            quality: 90,
+            upscale: false
+          },{
+            name: 'medium',
+            width: '1600',
+            suffix: '_x2',
+            quality: 65,
+            upscale: false
+          },{
+            name: 'large',
+            width: '1200px',
+            quality: 90,
+            upscale: false
+          },{
+            name: 'large',
+            width: '2400px',
+            suffix: '_x2',
+            quality: 65,
+            upscale: false
+          }]
+        },
 
-    //     files: [{
-    //       expand: true,
-    //       src: ['*.jpg'],
-    //       cwd: 'src/images',
-    //       dest: 'src/images/resp'
-    //     }]
-    //   }
-    // },
+        files: [{
+          expand: true,
+          src: ['*.jpg'],
+          cwd: 'images/uploads',
+          dest: 'img/resp'
+        }]
+      }
+    },
 
-    // smushit: {
-    //   mygroup: {
-    //     src: ['src/images/**/*.png','src/images/resp/*.jpg'],
-    //     dest: 'src/img/min'
-    //   }
-    // },
+    smushit: {
+      mygroup: {
+        src: ['img/resp/*.jpg'],
+        dest: 'img/min'
+      }
+    },
 
     copy: {
       main: {

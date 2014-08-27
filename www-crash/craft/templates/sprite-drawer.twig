@@ -20,7 +20,7 @@
     <div class="row"><h4>{{ category.title }}</h4></div>
 
 
-    {% for row in sprites|batch(4) %}
+    {% for row in sprites|batch(5) %}
         <div class="row">
             {% for sprite in row %}
                 {% if sprite.spriteImage | length %}

@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P|Roboto:100,100italic,300,300italic,700,700italic,100,100italic' rel='stylesheet' type='text/css'>
     <!-- <link rel="stylesheet" type="text/css" media="all" href="css/bio.css" /> -->
-    {% if category.javascript | length %}
+    {% if category is defined and category | length and category.javascript | length %}
         <link rel="stylesheet" type="text/css" media="all" href="{{ siteUrl }}stylesheets/{{ category.javascript }}.css" />
     {% else %}
         <link rel="stylesheet" type="text/css" media="all" href="{{ siteUrl }}stylesheets/main.css" />
@@ -40,16 +40,16 @@
     {# {% block footnotes %}{% endblock %} #}
     <div id="gallery-container"></div>
     {% block timeline %}{% endblock %}
-    <script type="text/javascript" src="bower_components/jQuery/dist/jquery.js"></script>
+    {#<script type="text/javascript" src="bower_components/jQuery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-    {# <script type="text/javascript" src="bower_components/perfect-scrollbar/min/perfect-scrollbar.with-mousewheel.min.js"></script> #}
-    <script type="text/javascript" src="bower_components/perfect-scrollbar/src/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="bower_components/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+    <script type="text/javascript" src="bower_components/perfect-scrollbar/min/perfect-scrollbar.with-mousewheel.min.js"></script>
     <script type="text/javascript" src="bower_components/jquery-zoom/jquery.zoom.js"></script>
     <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.js"></script>
     <script type="text/javascript" src="bower_components/ScrollMagic/js/jquery.scrollmagic.debug.js"></script>
-    <script type="text/javascript" src="bower_components/ScrollMagic/js/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="bower_components/ScrollMagic/js/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>#}
+    <script type="text/javascript" src="{{siteUrl}}js/vendor.min.js"></script>
+    <script type="text/javascript" src="bower_components/respeto/dist/respeto.min.js"></script>
     {% include 'bookmark-sprite-scripts.twig' %}
     <script type="text/javascript" src="{{siteUrl}}js/app.js"></script>
     {% block scripts %}{% endblock %}

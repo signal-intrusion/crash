@@ -7,7 +7,10 @@
         bookmarks,
         bookmarkManager,
         preventSprite = true,
-        slideshow;
+        slideshow,
+        rsp,
+        sprites,
+        width = $(window).width();
 
         $body = $('body');
         $body.addClass('script');
@@ -42,16 +45,30 @@
             renderTemplate('#left-off', '#home-leftoff-template', data);
         }
 
-        slideshow = new Slideshow();
-        slideshow.init();
-
+        // initiolize the asides
         asideInit();
         activateNotes();
+
+        // initialize the bookmarks and sprites
         bookmarkManager = new BookmarkManager();
         bookmarkManager.init();
         bookmarkManager.loadBookmarks();
-        loadSprites();
+
+        sprites = new Sprites();
+        sprites.loadSprites();
+
+        preload([
+            "images/close.png",
+            "images/info.png",
+            "images/quote-bubble1-active.png",
+        ]);
     });
+
+    function preload(arrayOfImages) {
+            $(arrayOfImages).each(function () {
+                $('<img/>')[0].src = this;
+            });
+        }
 
     function supports_html5_storage() {
         try {
@@ -96,8 +113,8 @@
         var $this = $(this);
         if (!preventSprite && $body && $this.hasClass('scroll-sprite')) {
 
-            if (!spriteIsSaved($this)) {
-                activateSprite($this);
+            if (!sprites.spriteIsSaved($this)) {
+                sprites.activateSprite($this);
             }
         }
         activateNotes();
@@ -132,8 +149,6 @@
         this.scene = new ScrollScene({triggerElement: '#' + this.chapter, offset: 200, duration: 210 })
                         .on('start', this.changeAsides)
                         .addTo(controller);
-
-            // this.scene.addIndicators();
         return true;
     };
 
@@ -171,55 +186,11 @@
         // check for sprites to unlock on scroll
         if (!preventSprite && $body && $trigger.hasClass('scroll-sprite')) {
 
-            if (!spriteIsSaved($trigger)) {
-                console.log(spriteIsSaved($trigger));
-                activateSprite($trigger);
+            if (!sprites.spriteIsSaved($trigger)) {
+                console.log(sprites.spriteIsSaved($trigger));
+                sprites.activateSprite($trigger);
             }
         }
-    }
-
-    function spriteIsSaved (trigger) {
-
-        var $trigger = $(trigger),
-            spriteToFind = $trigger.attr('data-sprite'),
-            localSprite;
-
-        localSprite = localStorage.getItem(spriteToFind);
-
-        if (localSprite) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function activateSprite (trigger) {
-        var $trigger = $(trigger),
-            spriteToSave,
-            spriteImg,
-            spriteMarkup;
-
-        spriteToSave = $trigger.attr('data-sprite');
-        spriteImg = $trigger.attr('data-spriteImage');
-        spriteMarkup = '<img class="flying-sprite" src="' + spriteImg + '">';
-        $body.append($(spriteMarkup));
-        localStorage.setItem(spriteToSave, true);
-        animateSprite($(spriteMarkup));
-        loadSprites();
-    }
-
-    function animateSprite (sprite) {
-        var $sprite = $(sprite)[0];
-
-        TweenMax.to('.flying-sprite', 2, {
-            height: '30px',
-            width: '30px',
-            top: '-30px',
-            // left: '80%',
-            onComplete: function(){
-                    $('#sprites').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
-                },
-            ease:Elastic.easeIn, delay:0.2 });
     }
 
     function asideInit() {
@@ -411,17 +382,21 @@
     // sprites
     ///////////////////
 
-    function loadSprites () {
-
-        $.get( "sprite-drawer", function( data ) {
-            $('#sprite-nav-target').html(data);
-            cleanSprites();
-        });
+    function Sprites () {
+        this.spriteArray;
     }
 
-    function cleanSprites () {
-        var spriteArray = $('.sprite-image');
-        $.each(spriteArray, function () {
+    Sprites.prototype.loadSprites = function () {
+
+        $.get( 'sprite-drawer', function( data ) {
+            $('#sprite-nav-target').html(data);
+            Sprites.prototype.cleanSprites.call(this);
+        });
+    };
+
+    Sprites.prototype.cleanSprites = function () {
+        this.spriteArray = $('.sprite-image');
+        $.each(this.spriteArray, function () {
             var $this = $(this),
                 searchTarget = $this.attr('data-sprite'),
                 test = localStorage.getItem(searchTarget);
@@ -435,7 +410,52 @@
                 .parent().attr('title', 'find me!');
             }
         });
-    }
+    };
+
+
+    Sprites.prototype.spriteIsSaved = function (trigger) {
+
+        var $trigger = $(trigger),
+            spriteToFind = $trigger.attr('data-sprite'),
+            localSprite;
+
+        localSprite = localStorage.getItem(spriteToFind);
+
+        if (localSprite) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    Sprites.prototype.activateSprite = function (trigger) {
+        var $trigger = $(trigger),
+            spriteToSave,
+            spriteImg,
+            spriteMarkup;
+
+        spriteToSave = $trigger.attr('data-sprite');
+        spriteImg = $trigger.attr('data-spriteImage');
+        spriteMarkup = '<img class="flying-sprite" src="' + spriteImg + '">';
+        $body.append($(spriteMarkup));
+        localStorage.setItem(spriteToSave, true);
+        this.animateSprite();
+        this.loadSprites();
+    };
+
+    Sprites.prototype.animateSprite = function () {
+
+        TweenMax.to('.flying-sprite', 2, {
+            height: '30px',
+            width: '30px',
+            top: '-30px',
+            // left: '80%',
+            onComplete: function(){
+                    $('#sprites').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
+                },
+            ease:Elastic.easeIn,
+            delay: 0.5 });
+    };
 
     ///////////////////
     // gallery slideshow
@@ -547,5 +567,29 @@
                 slideshow.init();
         });
     });
+
+    // Responsive image loader
+    rsp = new Respeto({
+        retina: true,
+        imagePath: 'img/min/'
+    });
+
+    if (width <= 600) {
+        rsp.load('small', {
+            imagePath: 'img/min/'
+        }); // loads images with _small suffix
+    }
+
+    if (width > 600 && width <= 1024) {
+        rsp.load('medium', {
+            imagePath: 'img/min/'
+        }); // loads images with _medium suffix
+    }
+
+    if (width > 1024) {
+        rsp.load('large', {
+            imagePath: 'img/min/'
+        }); // sets image sources with _large suffix
+    }
 
 })(window, window.jQuery, window._, window.ScrollMagic, window.TweenMax);

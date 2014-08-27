@@ -3,23 +3,6 @@
 (function(window, $, _, ScrollMagic, TweenMax, TimelineMax) {
     'use strict';
 
-    console.log('hey atari');
-
-    function preload(arrayOfImages) {
-        $(arrayOfImages).each(function() {
-            $('<img/>')[0].src = this;
-        });
-    }
-
-    preload([
-        'images/anim-sprites/ghost.png',
-        'images/anim-sprites/ghost-run.png',
-        'images/anim-sprites/ghost-arcade.png',
-        'images/anim-sprites/ghost-arcade-run.png',
-        'images/anim-sprites/pacman.png',
-        'images/anim-sprites/pacman-arcade.png',
-    ]);
-
     var controller = new ScrollMagic(),
         wp1pos,
         wp2pos,
