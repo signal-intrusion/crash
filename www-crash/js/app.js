@@ -583,7 +583,7 @@
     };
 
     // hijack the click event on gollery links to make gallery ajax call
-    $('.gallery-link').on('click', function(e){
+    $('.gallery-link, .gallery-image-link').on('click', function(e){
 
         var $this = $(this);
         e.preventDefault();

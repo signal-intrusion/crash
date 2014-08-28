@@ -32,17 +32,31 @@
 
         {% case 'videoBlock' %}
 
-        {% set video = craft.embedder.url(block.embed) %}
+        {% set video = craft.embedder.url(block.embed, {max_width: 100, max_height: 100, width: 500, height: 500, youtube_rel: 0}) %}
 
         <figure class="slide">
+            {# <div class="another"> #}
+                {# <div class="slide-image-container"> #}
+                    <div class="video-container">{{ video.embed_code }}</div>
+                {# </div> #}
+            {# </div> #}
+            {# <figcaption>
+            <li>title : {{ video.video_title }}</li>
+                <p>{{ block.caption }}</p>
+                <cite>{{ block.citation.first() }}</cite>
+            </figcaption> #}
+        </figure>
+
+{#         <figure class="slide">
             <div class="another"><div class="slide-image-container">
                 <div class="video-container">{{ video.embed_code }}</div>
             </div></div>
             <figcaption>
+            <li>title : {{ video.video_title }}</li>
                 <p>{{ block.caption }}</p>
                 <cite>{{ block.citation.first() }}</cite>
             </figcaption>
-        </figure>
+        </figure> #}
 
         {% endswitch %}
 

@@ -2278,7 +2278,9 @@ figure.slide div.slide-image-container:after {
 /* line 1195, ../src/stylesheets/_styles.scss */
 figure.slide div.video-container {
   display: table;
-  width: 100%;
+  width: 800px;
+  height: 600px;
+  max-width: 90%;
   margin: auto;
   top: 0;
   left: 0;
@@ -2286,12 +2288,15 @@ figure.slide div.video-container {
   right: 0;
   position: absolute;
 }
-/* line 1204, ../src/stylesheets/_styles.scss */
+/* line 1207, ../src/stylesheets/_styles.scss */
 figure.slide div.video-container iframe {
   margin: auto;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
   display: table-cell;
 }
-/* line 1211, ../src/stylesheets/_styles.scss */
+/* line 1215, ../src/stylesheets/_styles.scss */
 figure.slide img.gallery-image {
   display: table;
   width: auto;
@@ -2315,13 +2320,13 @@ figure.slide img.gallery-image:after {
   display: table;
   clear: both;
 }
-/* line 1232, ../src/stylesheets/_styles.scss */
+/* line 1236, ../src/stylesheets/_styles.scss */
 figure.slide img.gallery-image.zoomed {
   cursor: -webkit-zoom-out;
   cursor: -moz-zoom-out;
   cursor: zoom-out;
 }
-/* line 1238, ../src/stylesheets/_styles.scss */
+/* line 1242, ../src/stylesheets/_styles.scss */
 figure.slide figcaption {
   position: absolute;
   display: block;
@@ -2334,7 +2339,7 @@ figure.slide figcaption {
   font-size: 0.9em;
 }
 
-/* line 1251, ../src/stylesheets/_styles.scss */
+/* line 1255, ../src/stylesheets/_styles.scss */
 button.next, button.prev {
   position: fixed;
   top: 42%;
@@ -2346,22 +2351,22 @@ button.next, button.prev {
   outline: none;
   z-index: 9002;
 }
-/* line 1261, ../src/stylesheets/_styles.scss */
+/* line 1265, ../src/stylesheets/_styles.scss */
 button.next:hover, button.prev:hover {
   color: #f24537;
 }
 
-/* line 1265, ../src/stylesheets/_styles.scss */
+/* line 1269, ../src/stylesheets/_styles.scss */
 button.next {
   right: 10px;
 }
 
-/* line 1268, ../src/stylesheets/_styles.scss */
+/* line 1272, ../src/stylesheets/_styles.scss */
 button.prev {
   left: 10px;
 }
 
-/* line 1271, ../src/stylesheets/_styles.scss */
+/* line 1275, ../src/stylesheets/_styles.scss */
 button.esc {
   position: fixed;
   display: table-cell;
@@ -2381,13 +2386,13 @@ button.esc {
   text-align: center;
   padding: 0 0 0 3px;
 }
-/* line 1289, ../src/stylesheets/_styles.scss */
+/* line 1293, ../src/stylesheets/_styles.scss */
 button.esc:hover {
   border-color: #f24537;
   color: #f24537;
 }
 
-/* line 1294, ../src/stylesheets/_styles.scss */
+/* line 1298, ../src/stylesheets/_styles.scss */
 img.flying-sprite {
   display: block;
   position: fixed;

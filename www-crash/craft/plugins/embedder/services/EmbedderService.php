@@ -49,7 +49,7 @@ class EmbedderService extends BaseApplicationComponent
         $vimeo_autoplay = (isset($params['vimeo_autoplay']) && $params['vimeo_autoplay'] == "true") ? "&autoplay=true" : "";
         $vimeo_portrait = (isset($params['vimeo_portrait']) && $params['vimeo_portrait'] == "false") ? "&portrait=0" : "";
         $vimeo_api      = (isset($params['vimeo_api']) && $params['vimeo_api'] == "true") ? "&api=1" : "";
-      
+
         $vimeo_color = (isset($params['vimeo_color'])) ? "&color=" . $params['vimeo_color'] : "";
         $vimeo_player_id = (isset($params['vimeo_player_id'])) ? $params['vimeo_player_id'] : "";
         $vimeo_player_id_str = (isset($params['vimeo_player_id'])) ? "&player_id=" . $params['vimeo_player_id'] : "";
@@ -99,7 +99,7 @@ class EmbedderService extends BaseApplicationComponent
 
         // decode the cURL data
         $video_info = simplexml_load_string($video_info);
-            
+
         // inject wmode transparent if required
         if ($wmode === 'transparent' || $wmode === 'opaque' || $wmode === 'window' ) {
             $param_str = '<param name="wmode" value="' . $wmode .'"></param>';
@@ -128,7 +128,7 @@ class EmbedderService extends BaseApplicationComponent
             preg_match('/.*?src="(.*?)".*?/', $video_info->html, $matches);
             if (!empty($matches[1])) $video_info->html = str_replace($matches[1], $matches[1] . '&rel=' . $youtube_rel, $video_info->html);
         }
-      
+
         // add vimeo player id to iframe if set
         if ($vimeo_player_id!=="") {
             $video_info->html = preg_replace('/<iframe/i', '<iframe id="' . $vimeo_player_id . '"', $video_info->html);
@@ -161,14 +161,14 @@ class EmbedderService extends BaseApplicationComponent
             $video_info->medres_url = $video_info->thumbnail_url;
             $video_info->thumbnail_url = str_replace('thumbnail_2','thumbnail_1',$video_info->thumbnail_url);
             }
-        
+
         // handle a simple output
         if ($output == "simple")
         {
             return $twig_html;
         }
 
-        // handle full output   
+        // handle full output
         foreach ($plugin_vars as $key => $var)
         {
             if (isset($video_info->$key))
@@ -185,10 +185,10 @@ class EmbedderService extends BaseApplicationComponent
 
         // replace the embed code with the Twig object
         $tagdata['embed_code'] = $twig_html;
-        
+
         return $tagdata;
 
-    }   
+    }
 
     public function curl($vid_url) {
         // do we have curl?

@@ -1194,7 +1194,10 @@ figure.slide {
     }
     div.video-container {
         display: table;
-        width: 100%;
+        width: 800px;
+        height: 600px;
+        // max-width: 90%;
+        // max-height: 500px;
         margin: auto;
         top: 0;
         left: 0;
@@ -1203,8 +1206,9 @@ figure.slide {
         position: absolute;
         iframe {
             margin: auto;
-            // width: 100%;
-            // height: 100%;
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
             display: table-cell;
         }
     }
