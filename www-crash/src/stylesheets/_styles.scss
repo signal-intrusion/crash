@@ -342,10 +342,11 @@ aside.margin-aside {
     a.gallery-image-link:after {
         @include transition (opacity 200ms ease-in-out);
         content: 'View  Gallery';
-        top: 100px;
-        left: 0;
-        width: 100%;
+        top: 80px;
+        left: 10%;
+        width: 80%;
         opacity: 0;
+        // margin: 0 auto;
         position: absolute;
         display: block;
         text-align: center;
@@ -1225,14 +1226,10 @@ figure.slide {
         right: 0;
         position: absolute;
         padding: 5px;
-        // @include border-width(1px);
-        // @include border-style(solid);
-        // @include border-color($red);
         @include clearfix;
-        // cursor: crosshair;
-        cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
         cursor: zoom-in;
+        cursor: -webkit-zoom-in;
         &.zoomed {
             cursor: -webkit-zoom-out;
             cursor: -moz-zoom-out;

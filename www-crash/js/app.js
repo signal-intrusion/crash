@@ -440,7 +440,6 @@
         });
     };
 
-
     Sprites.prototype.spriteIsSaved = function (trigger) {
 
         var $trigger = $(trigger),
@@ -457,6 +456,7 @@
     };
 
     Sprites.prototype.activateSprite = function (trigger) {
+
         var $trigger = $(trigger),
             spriteToSave,
             spriteImg,
@@ -477,11 +477,10 @@
             height: '30px',
             width: '30px',
             top: '-30px',
-            // left: '80%',
             onComplete: function(){
                     $('#sprites').animate({opacity: 0.5}, 100).animate({opacity: 1}, 100).animate({opacity: 0.5}, 100).animate({opacity: 1}, 100);
                 },
-            ease:Elastic.easeIn,
+            ease: Elastic.easeIn,
             delay: 0.5 });
     };
 
@@ -530,6 +529,13 @@
 
     Slideshow.prototype.nextSlide = function () {
 
+        //pause video
+        var iframe = document.getElementsByTagName('iframe');
+        for (var i = 0; i < iframe.length; i += 1 ) {
+            var func = 'pauseVideo';
+            iframe[i].contentWindow.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+        }
+
         //fade out the old slide
         TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
             opacity:0,
@@ -552,6 +558,13 @@
     };
 
     Slideshow.prototype.prevSlide = function () {
+
+        //pause video
+        var iframe = document.getElementsByTagName('iframe');
+        for (var i = 0; i < iframe.length; i += 1 ) {
+            var func = 'pauseVideo';
+            iframe[i].contentWindow.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+        }
 
         //fade out the old slide
         TweenMax.to( this.$slides.eq(this.currentSlide), this.slideTime, {
@@ -576,7 +589,6 @@
 
     // remove listeners and functions associated with the slideshow and set it to null
     Slideshow.prototype.destroy = function () {
-
         $('.slide-image-container').trigger('zoom.destroy');
         $('#gallery-container').removeClass('active').html('');
         slideshow = null;

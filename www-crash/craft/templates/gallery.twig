@@ -11,8 +11,10 @@
 
 {% if entry | length %}
 <h1>{{ entry.heading }}</h1>
+{% if entry.asideGallery | length > 1 %}
 <button class="next">></button>
 <button class="prev"><</button>
+{% endif %}
 <button class="esc">x</button>
 
 <div class="fig-container">

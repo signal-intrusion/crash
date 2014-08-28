@@ -66,7 +66,7 @@ class EmbedderService extends BaseApplicationComponent
 
         // uf it's not YouTube, Vimeo, Wistia, or Viddler bail
         if (strpos($video_url, "youtube.com/") !== FALSE OR strpos($video_url, "youtu.be/") !== FALSE) {
-            $url = "http://www.youtube.com/oembed?format=xml&iframe=1" . ($is_https ? '&scheme=https' : '') . "&url=";
+            $url = "http://www.youtube.com/oembed?format=xml&iframe=1&enablejsapi=1" . ($is_https ? '&scheme=https' : '') . "&url=";
         } else if (strpos($video_url, "vimeo.com/") !== FALSE) {
             $url = "http" . ($is_https ? 's' : '') . "://vimeo.com/api/oembed.xml?url=";
         } else if (strpos($video_url, "wistia.com/") !== FALSE) {
@@ -118,7 +118,7 @@ class EmbedderService extends BaseApplicationComponent
                 preg_match('/<iframe.*?src="(.*?)".*?<\/iframe>/i', $video_info->html, $matches);
                 $append_query_marker = (strpos($matches[1], '?') !== false ? '' : '?');
 
-                $video_info->html = preg_replace('/<iframe(.*?)src="(.*?)"(.*?)<\/iframe>/i', '<iframe$1src="$2' . $append_query_marker . '&wmode=' . $wmode . '"$3</iframe>', $video_info->html);
+                $video_info->html = preg_replace('/<iframe(.*?)src="(.*?)"(.*?)<\/iframe>/i', '<iframe$1src="$2' . $append_query_marker . '&wmode=' . $wmode . "&enablejsapi=1" . '"$3</iframe>', $video_info->html);
             }
         }
 
@@ -126,7 +126,7 @@ class EmbedderService extends BaseApplicationComponent
         if (!is_null($youtube_rel) && (strpos($video_url, "youtube.com/") !== FALSE OR strpos($video_url, "youtu.be/") !== FALSE))
         {
             preg_match('/.*?src="(.*?)".*?/', $video_info->html, $matches);
-            if (!empty($matches[1])) $video_info->html = str_replace($matches[1], $matches[1] . '&rel=' . $youtube_rel, $video_info->html);
+            if (!empty($matches[1])) $video_info->html = str_replace($matches[1], $matches[1] . '&rel=' . $youtube_rel . "&enablejsapi=1", $video_info->html);
         }
 
         // add vimeo player id to iframe if set
