@@ -7,15 +7,21 @@
             {% if aside.asideImage | length %}
                 {# <div class="cropper"> #}
                 {% set image = aside.asideImage.first() %}
-                <img class="aside-image" src="{{ image.getUrl() }}" alt="{{ aside.title }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
+                {% if aside.asideGallery | length %}
+                    <a class="gallery-image-link" href="{{ siteUrl() }}gallery?name={{ aside.slug }}" class="gallery-link">
+                        <img class="aside-image" src="{{ image.getUrl() }}" alt="{{ aside.title }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
+                    </a>
+                {% else %}
+                    <img class="aside-image" src="{{ image.getUrl() }}" alt="{{ aside.title }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
+                {% endif %}
                 {# </div> #}
             {% elseif aside.asideGallery | length %}
                 {% set block = aside.asideGallery.first() %}
-                <a href="{{ siteUrl() }}gallery?name={{ aside.slug }}" class="gallery-link">
+                <a class="gallery-image-link" href="{{ siteUrl() }}gallery?name={{ aside.slug }}" class="gallery-link">
                     {% if block.type == 'imageBlock' %}
                     {% set image = block.image.first() %}
                         <img class="aside-image" src="{{ image.getUrl('asideSmall') }}" alt="{{ block.caption }}" {% if image.extension == "jpg" %}data-rsp-img="{{ image.filename | replace({'% %': '_',}) }}"{% endif %}>
-                    }
+                        {# <div class='gallery-overlay'>View Gallery</div> #}
                     {% else %}
 
                     {% endif %}

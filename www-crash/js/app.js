@@ -307,16 +307,20 @@
 
         if (localStorage.getItem('bookmarks') !== null && localStorage.getItem('bookmarks') !== undefined){
             localMarks = JSON.parse(localStorage.getItem('bookmarks'));
+            renderTemplate('#bookmark-nav-target', '#bookmark-template', localMarks);
+            bookmarks = localMarks;
         } else {
-            localMarks = {
+            //$insert = $('You can bookmark stories and chapters to read later.');
+            $('#bookmark-nav-target').html('<li>You can bookmark stories and chapters to read later.</li>');
+            /*localMarks = {
                 bookmarkArray: [
                     {'title': 'test', 'link': 'linktest'},
                     {'title': 'test2', 'link': 'linktest2'}
                 ]
-            };
+            };*/
         }
-        bookmarks = localMarks;
-        renderTemplate('#bookmark-nav-target', '#bookmark-template', localMarks);
+        //bookmarks = localMarks;
+        //renderTemplate('#bookmark-nav-target', '#bookmark-template', localMarks);
         return true;
     };
 

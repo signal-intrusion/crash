@@ -1,12 +1,19 @@
 @import'_variables';
+
 @import'_mixins';
+
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import'_defender';
+
 @import'_aside';
+
 @import'_media-query';
+
 @import'_scrollbar';
+
 @import'_warpzone';
+
 // @import 'atari';
 @import '_nintendo';
 
@@ -82,7 +89,6 @@ legend {
 a {
     text-decoration: none;
 }
-
 /* /////////////////
 /* Content
 /* ///////////////// */
@@ -104,24 +110,23 @@ div.bottom-spacer {
 /* ///////////////// */
 
 article.story {
-
     section {
         @include clearfix;
     }
-
     header.article-hdr {
-        @include span-columns( 6 of 12, block );
-        @include shift( 1.5 );
+        @include span-columns(6 of 12, block);
+        @include shift(1.5);
         position: relative;
         display: block;
         // margin: 1em auto 1em auto;
         margin-top: 2em;
         margin-bottom: 1em;
         // width: 60%;
+
     }
     .article-txt {
-        @include span-columns( 6 of 12, block );
-        @include shift( 1.5 );
+        @include span-columns(6 of 12, block);
+        @include shift(1.5);
         position: relative;
         // margin: 1em auto 1em 5em;
         max-width: 900px;
@@ -129,7 +134,6 @@ article.story {
         p {
             margin-bottom: 1em;
         }
-
         blockquote {
             font-size: .9em;
             color: $grey;
@@ -143,7 +147,6 @@ article.story {
             font-style: italic;
             font-weight: bold;
             color: $red;
-
             &.left-quote {
                 text-align: right;
                 display: block;
@@ -195,50 +198,38 @@ article.story {
         color: $red;
     }
 }
-
 /* /////////////////
 /* body quotes
 /* ///////////////// */
-
 
 /* /////////////////
 /* body images
 /* ///////////////// */
 
 figure.body-image {
-
     display: block;
     width: 55%;
     overflow: hidden;
     // padding: .2em;
     // @include border1;
     // background-color: $greenTrans;
-
     img {
         width: 100%;
         height: auto;
     }
-
     &.left-image {
-
         float: left;
         margin: 0em 1em 1em -4em;
-
     }
-
     &.right-image {
         float: right;
         // width: 50%;
         margin: 0em -5em 1em 1em;
     }
-
     &.center-image {
-
         width: 100%;
         margin: 1em auto;
-
     }
-
     figcaption {
         font-size: 0.8em;
         font-family: $roboto;
@@ -247,16 +238,15 @@ figure.body-image {
         padding-top: 10px;
     }
 }
-
 /* /////////////////
 /* asides
 /* ///////////////// */
 
 div.aside-container {
     position: relative;
-    @include span-columns( 3 of 12 );
+    @include span-columns(3 of 12);
     @include clearfix;
-    @include transition ( opacity 200ms ease-in-out );
+    @include transition (opacity 200ms ease-in-out);
     // @include transition-delay( 10ms );
     margin-left: $column+$gutter;
     margin-right: 0;
@@ -265,8 +255,8 @@ div.aside-container {
     height: 800px;
     opacity: 0;
     // overflow-y: auto;
-}
 
+}
 div.aside-wrapper {
     float: left;
     width: 100%;
@@ -276,9 +266,8 @@ div.aside-wrapper {
     overflow-x: hidden;
     position: relative;
 }
-
 aside.margin-aside {
-    @include transition ( opacity 300ms ease-in-out );
+    @include transition (opacity 300ms ease-in-out);
     // @include transition-delay(0.3s);
     @include clearfix;
     overflow-y: auto;
@@ -291,7 +280,6 @@ aside.margin-aside {
     font-family: $roboto;
     font-size: .7em;
     width: 100%;
-
     h1 {
         font-family: $georgia;
         color: $brown;
@@ -302,14 +290,13 @@ aside.margin-aside {
         text-transform: capitalize;
         padding-right: 1em;
         line-height: 1.4em;
+        margin-top: 1em;
         padding-top: .8em;
     }
-
     h2 {
         @extend h1;
         font-size: 1em
     }
-
     blockquote {
         color: $red;
         font-style: italic;
@@ -317,7 +304,6 @@ aside.margin-aside {
         padding-right: 1em;
         line-height: 1.6em;
     }
-
     p {
         // margin-bottom: 1em;
         // padding-right: 1em;
@@ -325,17 +311,16 @@ aside.margin-aside {
         padding-right: 2em;
         line-height: 1.6em;
     }
-
     img {
+        @include transition (opacity 200ms ease-in-out);
         background-size: contain;
         background-repeat: no-repeat;
         display: block;
         background-position: center center;
         max-width: 90%;
         max-height: 200px;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 0 auto;
     }
-
     div.cropper {
         height: auto;
         width: 100%;
@@ -343,8 +328,7 @@ aside.margin-aside {
         max-width: 100%;
         margin: 0 auto 1em auto;
         overflow: hidden;
-
-        @include media($pad){
+        @include media($pad) {
             height: auto;
             width: auto;
             max-height: 250px;
@@ -352,7 +336,37 @@ aside.margin-aside {
             margin: 0 auto 1em auto;
         }
     }
-
+    a.gallery-image-link {
+        @include transition (background-color 200ms ease-in-out);
+    }
+    a.gallery-image-link:after {
+        @include transition (opacity 200ms ease-in-out);
+        content: 'View  Gallery';
+        top: 100px;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        position: absolute;
+        display: block;
+        text-align: center;
+        font-family: $pressStart;
+        font-size: 1.8em;
+        color: $red;
+        text-shadow: -1px -1px 0 rgba($beige, 0.3), 1px -1px 0 rgba($beige, 0.3), -1px 1px 0 rgba($beige, 0.3), 1px 1px 0 rgba($beige, 0.3);
+    }
+    a.gallery-image-link:hover {
+        width: 100%;
+        height: 100%;
+        display: block;
+        //opacity: 0.4;
+        background-color: rgba($green, 0.5);
+        &:after {
+            opacity: 1;
+        }
+        img {
+            opacity: 0.5;
+        }
+    }
     ul.aside-links {
         font-family: $georgia;
         // line-height: 1.5em;
@@ -361,7 +375,6 @@ aside.margin-aside {
             font-size: 1.2em;
             color: $green;
             margin-bottom: 0.2em;
-
             &:visited {
                 color: $green;
             }
@@ -374,10 +387,8 @@ aside.margin-aside {
             &:before {
                 content: "\00BB  ";
             }
-
         }
     }
-
     button.aside-link-button {
         background-image: url("../images/ui/add-bookmark-sprite.png");
         // background-size: contain;
@@ -388,7 +399,6 @@ aside.margin-aside {
         border: none;
         margin-left: 1em;
         cursor: pointer;
-
         &:after {
             opacity: 0;
             font-family: $roboto;
@@ -417,9 +427,7 @@ aside.margin-aside {
         }
     }
 }
-
 .aside-header-image {
-
     display: inline-block;
     float: right;
     width: 16px;
@@ -427,7 +435,6 @@ aside.margin-aside {
     margin-right: .5em;
     margin-left: .5em;
     // @include transform(scale(0.85));
-
     &.excerpt {
         background: url('../images/ui/book-sprite.png') no-repeat 0 0;
     }
@@ -456,7 +463,6 @@ aside.margin-aside {
         background: url('../images/ui/event-sprite.png') no-repeat 0 0;
     }
 }
-
 .script .aside-container {
     position: fixed;
     z-index: 0;
@@ -466,43 +472,29 @@ aside.margin-aside {
     opacity: 0;
     pointer-events: none;
     height: 75%;
-
     &.active {
         display: block !important;
         opacity: 1 !important;
         pointer-events: auto;
         z-index: 10;
-
         ul.aside-links {
             z-index: 100;
             position: relative;
         }
     }
 }
-
-.script ul.aside-list {
-
-}
-
-.script ul.aside-list {
-
-}
-
-input.aside-input[type='radio']:checked + aside {
+.script ul.aside-list {} .script ul.aside-list {} input.aside-input[type='radio']:checked + aside {
     height: auto;
     // display: block !important;
     opacity: 1
 }
-
 input.aside-input {
     display: none;
 }
-
 label:checked {
     color: $green;
 }
-
-ul.aside-list{
+ul.aside-list {
     // @include span-columns( 3 of 12, block );
     @include clearfix;
     // margin-left: $column+$gutter;
@@ -512,44 +504,37 @@ ul.aside-list{
     font-family: $georgia;
     color: $grey;
     margin-bottom: 1em;
-
     h2 {
         font-size: .7em;
         font-weight: 800;
         margin-bottom: .3em;
         text-transform: uppercase;
     }
-
     li {
         border-bottom: 1px dashed #a2a09c;
         padding: .3em 0;
     }
-
     label:first-of-type li {
         border-top: 1px dashed #a2a09c;
     }
-
     label {
         cursor: pointer;
         color: $green;
         font-size: .8em;
         &:hover, &.active {
             color: $red;
-
             span.aside-header-image {
                 background-position: -16px 0;
             }
         }
     }
 }
-
 /* /////////////////
 /* drawers
 /* ///////////////// */
 
 div.drawer-container {
-
-    @include span-columns( 1.4 of 12 );
+    @include span-columns(1.4 of 12);
     display: none;
     background-color: $brown;
     font-size: .8em;
@@ -560,38 +545,25 @@ div.drawer-container {
     top: 10%;
     left: 0;
     margin-left: 1em;
-
     h1 {
         font-family: $pressStart;
         color: $red;
         margin-bottom: 1em;
         font-size: .7em;
-
     }
-    h2 {
-
-    }
-
-    a {
+    h2 {} a {
         color: $beige;
     }
 }
-
-div.drawer-nav {
-
-}
-
-table.drawer-sprites, table.drawer-bookmarks {
+div.drawer-nav {} table.drawer-sprites, table.drawer-bookmarks {
     margin-bottom: 1em;
 }
-
 .pull-qt {
     display: block;
     color: rgba(0, 0, 0, 1);
     font-weight: 400;
     padding: 10px;
 }
-
 .unabridged .pull-qt {
     color: rgba(0, 0, 0, 1);
 }
@@ -606,6 +578,7 @@ table.drawer-sprites, table.drawer-bookmarks {
 //     display: block;
 //     margin-top: 1em;
 // }
+
 /* /////////////////
 /* Nav Bar
 /* ///////////////// */
@@ -613,7 +586,6 @@ table.drawer-sprites, table.drawer-bookmarks {
 nav a .nav-item {
     cursor: pointer;
 }
-
 .nav-bar-mod {
     position: fixed;
     z-index: 9001;
@@ -651,7 +623,6 @@ nav a .nav-item {
         height: 100%;
         // cursor: pointer;
         overflow: initial;
-
         ul {
             // height: auto;
             max-height: 1000px;
@@ -663,11 +634,9 @@ nav a .nav-item {
                 }
             }
         }
-
         div.sprite-drawer {
             max-height: 1000px;
             opacity: 1;
-
             .row {
                 &:first-of-type {
                     margin-top: 3em;
@@ -680,7 +649,7 @@ nav a .nav-item {
     margin-bottom: 15px;
 }
 .nav-item ul {
-    @include transition ( opacity 100ms ease-in-out, max-height 100ms ease-in-out );
+    @include transition (opacity 100ms ease-in-out, max-height 100ms ease-in-out);
     opacity: 0;
     max-height: 0;
     overflow-y: hidden;
@@ -691,7 +660,7 @@ nav a .nav-item {
         padding-right: 1em;
         text-align: left;
         @include clearfix;
-        @include transition ( margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out  );
+        @include transition (margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out);
         &:first-of-type {
             margin-top: 0em;
         }
@@ -700,7 +669,6 @@ nav a .nav-item {
         display: inline;
         // float: left;
         color: $beige;
-
         &:visited {
             color: $green;
         }
@@ -715,38 +683,37 @@ nav a .nav-item {
         margin-top: 5px;
     }
 }
-
 /* /////////////////
 /* sprites
 /* ///////////////// */
 
 div.sprite-drawer {
-
-    @include transition ( opacity 100ms ease-in-out, max-height 100ms ease-in-out );
+    @include transition (opacity 100ms ease-in-out, max-height 100ms ease-in-out);
     opacity: 0;
     max-height: 0;
     overflow-y: hidden;
-
     .row {
-        @include transition ( margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out  );
+        @include transition (margin-top 100ms ease-in-out, margin-bottom 100ms ease-in-out);
         margin-bottom: 1em;
         text-align: left;
         padding-left: 2em;
         @include clearfix;
+        h4 {
+            font-family: $pressStart;
+            font-size: 10px;
+        }
         &:first-of-type {
             margin-top: 0em;
         }
     }
-
     .item {
         display: inline-block;
         padding: 5px;
         float: left;
         // position: relative;
-
         &:after {
-            @include transition ( opacity 100ms ease-in-out );
-            @include transition-delay( 100ms );
+            @include transition (opacity 100ms ease-in-out);
+            @include transition-delay(100ms);
             display: block;
             position: absolute;
             padding: .3em 1em;
@@ -766,8 +733,8 @@ div.sprite-drawer {
         }
         &:before {
             content: " ";
-            @include transition ( opacity 150ms ease-in-out );
-            @include transition-delay( 100ms );
+            @include transition (opacity 150ms ease-in-out);
+            @include transition-delay(100ms);
             @include triangle(1.5em, $brown, down);
             position: absolute;
             display: table-cell;
@@ -782,13 +749,11 @@ div.sprite-drawer {
             }
         }
     }
-
     img.sprite-image {
         width: 30px;
         height: 30px;
     }
 }
-
 div.remove-bookmark {
     float: left;
     display: inline;
@@ -802,8 +767,8 @@ div.remove-bookmark {
     border: 0;
     cursor: pointer;
     &:after {
-        @include transition ( opacity 100ms ease-in-out );
-        @include transition-delay( 100ms );
+        @include transition (opacity 100ms ease-in-out);
+        @include transition-delay(100ms);
         display: block;
         position: absolute;
         padding: .4em 1em;
@@ -824,15 +789,13 @@ div.remove-bookmark {
         }
     }
 }
-.nav-item
-.nav-list {
+.nav-item .nav-list {
     line-height: 1.3em;
     text-align: center;
 }
 .nav-list-item, .empty-mod {
     height: 4em;
 }
-
 /* /////////////////
 /* Timeline
 /* ///////////////// */
@@ -942,24 +905,17 @@ li.timeline-list-active {
     -webkit-box-shadow: inset 0 8px 12px -8px #333, inset 0 -8px 12px -8px #333;
     box-shadow: inset 0 8px 12px -8px #333, inset 0 -8px 12px -8px #333;
 }
-
 /* /////////////////
 /* citations
 /* ///////////////// */
 
-.citation {
-
-}
-
-span.source-name {
+.citation {} span.source-name {
     font-style: italic;
 }
-
 .in-line-note, .in-line-footnote {
     cursor: pointer;
     position: absolute;
 }
-
 .footnote-image {
     display: inline-block;
     width: 16px;
@@ -1000,11 +956,9 @@ span.source-name {
         background-position: -16px 0;
     }
 }
-
 .in-line-footnote {
-
     &:after {
-        @include transition ( opacity 150ms ease-in-out );
+        @include transition (opacity 150ms ease-in-out);
         opacity: 0;
         font-family: $roboto;
         font-size: .7em;
@@ -1024,7 +978,7 @@ span.source-name {
     }
     &:before {
         content: " ";
-        @include transition ( opacity 150ms ease-in-out );
+        @include transition (opacity 150ms ease-in-out);
         @include triangle(1.5em, $brown, down);
         position: absolute;
         display: table-cell;
@@ -1036,46 +990,36 @@ span.source-name {
         opacity: 1;
     }
 }
-
 blockquote .in-line-footnote {
     &:after {
         top: -30px;
     }
-    &:before{
+    &:before {
         bottom: 18px;
     }
 }
-
-.in-line-note {
-
-}
-
-footer.story-footnotes {
-    @include span-columns( 6.5 of 12, block );
-    @include shift( 1.5 );
+.in-line-note {} footer.story-footnotes {
+    @include span-columns(6.5 of 12, block);
+    @include shift(1.5);
     position: relative;
     // margin: 1em auto 1em 5em;
     max-width: 900px;
     line-height: 1.7em;
     margin-bottom: 4em;
-
     h2 {
         font-family: $pressStart;
         color: $red;
         font-size: .9em;
     }
-
     ul {
         list-style: square inside;
     }
-
     li {
         font-family: $roboto;
         font-size: .8em;
         margin-bottom: .7em;
         line-height: 1.4em;
     }
-
 }
 /* /////////////////
 /* table of contents
@@ -1084,14 +1028,11 @@ footer.story-footnotes {
 header.page-hdr {
     background-color: #232d2a;
     padding: 6em 4em 4em 4em;
-   /* margin-top: 4em; */
-
+    /* margin-top: 4em; */
     width: 100%;
     text-align: center;
 }
-
 .stories, .home {
-
     h1 {
         font-family: $georgia;
         color: $brown;
@@ -1099,7 +1040,6 @@ header.page-hdr {
         font-size: 2em;
         margin-bottom: 0.2em;
     }
-
     h2 {
         font-family: $hyperspace;
         color: $green;
@@ -1131,7 +1071,6 @@ header.page-hdr {
     }
     a h1 {
         color: $brown;
-
         &:visited {
             color: $brown;
         }
@@ -1142,10 +1081,8 @@ header.page-hdr {
             color: $red;
         }
     }
-
     a {
         color: $brown;
-
         &:visited {
             color: $darkGreen;
         }
@@ -1159,8 +1096,8 @@ header.page-hdr {
 }
 .stories {
     .story-item {
-        @include span-columns( 4 of 12, inline-block );
-        @include shift( 1.5 );
+        @include span-columns(4 of 12, inline-block);
+        @include shift(1.5);
         margin-top: 2em;
         margin-bottom: 2em;
     }
@@ -1168,21 +1105,19 @@ header.page-hdr {
         margin-bottom: 1em;
     }
 }
-
 /* /////////////////
 /* homepage
 /* ///////////////// */
 
 .home {
-        section.content-links {
-            text-align: center;
-            margin-top: 1em;
+    section.content-links {
+        text-align: center;
+        margin-top: 1em;
         div {
             margin-bottom: 1em;
         }
     }
 }
-
 /* /////////////////
 /* gallery
 /* ///////////////// */
@@ -1191,13 +1126,11 @@ header.page-hdr {
     opacity: 0;
     position: absolute;
     z-index: 9002;
-    @include transition ( opacity 200ms ease-in-out );
-
+    @include transition (opacity 200ms ease-in-out);
     &.active {
         opacity: 1;
     }
 }
-
 .gallery-wrapper {
     top: 0;
     bottom: 0;
@@ -1207,10 +1140,9 @@ header.page-hdr {
     position: fixed;
     display: block;
     z-index: 9001;
-
     h1 {
-        @include span-columns( 10 of 12, block );
-        @include shift( 1 );
+        @include span-columns(10 of 12, block);
+        @include shift(1);
         font-family: $hyperspace;
         color: $red;
         font-size: 3em;
@@ -1221,7 +1153,6 @@ header.page-hdr {
         position: relative;
     }
 }
-
 .fig-container {
     position: relative;
     height: 75%;
@@ -1230,13 +1161,11 @@ header.page-hdr {
     float: left;
     width: 84%;
     opacity: 0;
-    @include transition ( opacity 200ms ease-in-out );
-
+    @include transition (opacity 200ms ease-in-out);
     &.active {
         opacity: 1;
     }
 }
-
 figure.slide {
     opacity: 1;
     position: absolute;
@@ -1244,16 +1173,17 @@ figure.slide {
     width: 100%;
     display: block;
     margin: auto;
-
     .another {
         display: table;
         position: absolute;
         width: 100%;
         height: 100%;
-        top: 0; left: 0; bottom: 0; right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         margin: auto;
     }
-
     div.slide-image-container {
         @include clearfix;
         display: block;
@@ -1262,14 +1192,15 @@ figure.slide {
         margin: auto;
         position: relative !important;
     }
-
     div.video-container {
         display: table;
         width: 100%;
         margin: auto;
-        top: 0; left: 0; bottom: 0; right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         position: absolute;
-
         iframe {
             margin: auto;
             // width: 100%;
@@ -1277,7 +1208,6 @@ figure.slide {
             display: table-cell;
         }
     }
-
     img.gallery-image {
         display: table;
         width: auto;
@@ -1285,7 +1215,10 @@ figure.slide {
         height: auto;
         max-width: 100%;
         margin: auto;
-        top: 0; left: 0; bottom: 0; right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         position: absolute;
         padding: 5px;
         // @include border-width(1px);
@@ -1296,14 +1229,12 @@ figure.slide {
         cursor: -webkit-zoom-in;
         cursor: -moz-zoom-in;
         cursor: zoom-in;
-
-        &.zoomed{
+        &.zoomed {
             cursor: -webkit-zoom-out;
             cursor: -moz-zoom-out;
             cursor: zoom-out;
         }
     }
-
     figcaption {
         position: absolute;
         display: block;
@@ -1314,17 +1245,9 @@ figure.slide {
         color: $beige;
         font-family: $georgia;
         font-size: 0.9em;
-
-        p {
-
-        }
-
-        cite {
-
-        }
+        p {} cite {}
     }
 }
-
 button.next, button.prev {
     position: fixed;
     top: 42%;
@@ -1335,20 +1258,16 @@ button.next, button.prev {
     font-size: 4em;
     outline: none;
     z-index: 9002;
-
     &:hover {
         color: $red;
     }
 }
-
 button.next {
     right: 10px;
 }
-
 button.prev {
     left: 10px;
 }
-
 button.esc {
     position: fixed;
     display: table-cell;
@@ -1367,7 +1286,6 @@ button.esc {
     z-index: 9002;
     text-align: center;
     padding: 0 0 0 3px;
-
     &:hover {
         @include border-color($red);
         color: $red;
