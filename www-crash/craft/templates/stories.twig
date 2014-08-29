@@ -52,6 +52,7 @@
 
                 {% case 'text' %}
 
+                    <h5>{{ block.subheading | striptags }}</h5>
                     {{ block.text | shortcodes }}
 
                 {% case 'quote' %}
