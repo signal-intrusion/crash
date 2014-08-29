@@ -115,21 +115,6 @@ h5 {
     margin-top: 1em;
 }
 
-// $black: #000;
-// $dark: #111;
-// $darkGreen: #232d2a;
-// $grey: rgba(140, 138, 141, 1);
-// $lightGrey: #E6E5E0;
-// $white: #FFF;
-// $beige: #fffcf4;
-// $red: #f24537;
-// $redTrans: rgba(242, 69, 55, 0.95);
-// $green: #89c0af;
-// $greenTrans: rgba(126, 187, 169, 0.95);
-// $lightGreen: #93d9c4;
-// // $darkGreen: #629082;
-// $brown: #421a12;
-
 /* /////////////////
 /* Articles
 /* ///////////////// */
@@ -1122,7 +1107,7 @@ header.page-hdr {
 }
 .stories {
     .story-item {
-        @include span-columns(4 of 12, inline-block);
+        @include span-columns(6 of 12, inline-block);
         @include shift(1.5);
         margin-top: 2em;
         margin-bottom: 2em;
