@@ -24,20 +24,6 @@
 
     $(window).load(function(){
 
-        if (asideChangers[1] && asideChangers[1].scene.state() === 'BEFORE'){
-            setTimeout(function () {
-                $('.aside-container').first().addClass('active');
-            }, 100);
-        }
-
-        $.each($('.aside-wrapper'), function(){
-            $(this).children('.margin-aside').addClass('ps-content');
-            $(this).perfectScrollbar({
-                wheelPropagation: true,
-                maxScrollbarLength: 250
-            });
-        });
-
         if ($body.hasClass('home') && localStorage.getItem('leftoffTitle') !== undefined){
             var data = {
                 title: localStorage.getItem('leftoffTitle'),
@@ -107,43 +93,6 @@
         var io = this.indexOf(string);
         return io === -1 ? -1 : io + string.length;
     };
-
-    $('.aside-list').on('click', 'label', function(){
-        var $this = $(this);
-        $this.parent().children().removeClass('active');
-        $this.addClass('active');
-        $('.in-line-note.active').removeClass('active');
-        _.delay(function() {
-            $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
-        }, 300);
-        // $('.ps-scrollbar-y-rail').css('display', 'inherit');
-    });
-
-    $('.in-line-note').on('click mouseover', function(){
-        var target,
-            $this = $(this),
-            get = $.grep(this.className.split(' '), function(v){
-                return v.indexOf('note-') === 0;
-            }).join();
-        target = get.slice(5);
-        $('.' + target).click();
-        $('.in-line-note.active').removeClass('active');
-        $this.addClass('active');
-        $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
-        // $('.ps-scrollbar-y-rail').css('display', 'inherit');
-    });
-
-    $('.aside-input').on('change', function() {
-
-        var $this = $(this);
-        if (!preventSprite && $body && $this.hasClass('scroll-sprite')) {
-
-            if (!sprites.spriteIsSaved($this)) {
-                sprites.activateSprite($this);
-            }
-        }
-        activateNotes();
-    });
 
     function noteActivate (input) {
 
@@ -220,15 +169,30 @@
 
     function asideInit () {
 
-        $.each($('.aside-trigger'), function () {
-            var changer = new AsideChanger(this);
-            AsideChanger.prototype.scrollAnimate.call(changer);
-            asideChangers.push(changer);
+        var $asideContainers = $('.aside-container'),
+            asideCount = 0,
+            requests = [],
+            asideTotal = $asideContainers.length;
+
+            console.log(asideTotal);
+
+
+
+        // start by ajaxing all the asides
+        $.each($asideContainers, function () {
+
+            requests.push( loadAside(this) );
+            // $.when(loadAside(this));
+            // asideCount += 1;
+            // console.log(asideTotal);
+
+            // if (asideCount === asideTotal) {
+                // finishAside($asideContainer);
+            // }
         });
-
-        $.each($('.aside-container'), function () {
-
-            loadAside(this);
+        $.when.apply(undefined, requests).then(function(){
+            finishAside($asideContainers);
+            console.log('when done');
         });
 
         return true;
@@ -240,20 +204,72 @@
         var $asideContainer = $(asideContainer),
             slug = $asideContainer.attr('data-entry-slug');
 
-        $.get('ajax-aside?entrySlug=' + slug, function (data) {
+        return $.get('ajax-aside?entrySlug=' + slug, function (data) {
+                    $asideContainer.html(data);
+                    console.log('suc');
+                }).fail(function (data) {
+                    console.log(data);
+                });
+    }
 
-            $asideContainer.html(data);
-            // renderAside(asideContainer, data);
+    function finishAside ($asideContainers) {
 
-        }).fail(function (data) {
-            console.log(data);
+        $.each($('.aside-trigger'), function () {
+            var changer = new AsideChanger(this);
+            AsideChanger.prototype.scrollAnimate.call(changer);
+            asideChangers.push(changer);
         });
 
-        // $('#gallery-container').html(data);
-        //         slideshow = new Slideshow();
-        //         slideshow.init();
-        // });
+        if (asideChangers[1] && asideChangers[1].scene.state() === 'BEFORE'){
+            setTimeout(function () {
+                $asideContainers.first().addClass('active');
+            }, 100);
+        }
 
+        $.each($('.aside-wrapper'), function(){
+            $(this).children('.margin-aside').addClass('ps-content');
+            $(this).perfectScrollbar({
+                wheelPropagation: true,
+                maxScrollbarLength: 250
+            });
+        });
+
+        $('.aside-list').on('click', 'label', function(){
+            var $this = $(this);
+            $this.parent().children().removeClass('active');
+            $this.addClass('active');
+            $('.in-line-note.active').removeClass('active');
+            _.delay(function() {
+                $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
+            }, 300);
+            // $('.ps-scrollbar-y-rail').css('display', 'inherit');
+        });
+
+        $('.in-line-note').on('click mouseover', function(){
+            var target,
+                $this = $(this),
+                get = $.grep(this.className.split(' '), function(v){
+                    return v.indexOf('note-') === 0;
+                }).join();
+            target = get.slice(5);
+            $('.' + target).click();
+            $('.in-line-note.active').removeClass('active');
+            $this.addClass('active');
+            $('.aside-wrapper').scrollTop(0).perfectScrollbar('update');
+            // $('.ps-scrollbar-y-rail').css('display', 'inherit');
+        });
+
+        $('.aside-input').on('change', function() {
+
+            var $this = $(this);
+            if (!preventSprite && $body && $this.hasClass('scroll-sprite')) {
+
+                if (!sprites.spriteIsSaved($this)) {
+                    sprites.activateSprite($this);
+                }
+            }
+            activateNotes();
+        });
     }
 
     ///////////////////
