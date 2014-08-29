@@ -10,6 +10,7 @@
         slideshow,
         rsp,
         sprites,
+        activeAside = 1,
         width = $(window).width();
 
         $body = $('body');
@@ -82,9 +83,9 @@
             }
 
         preload([
-            "images/close.png",
-            "images/info.png",
-            "images/quote-bubble1-active.png",
+            // "images/close.png",
+            // "images/info.png",
+            // "images/quote-bubble1-active.png",
         ]);
     });
 
@@ -189,7 +190,7 @@
         // check direction of scroll
         if (direction === 'FORWARD' || direction === 'PAUSED'){
 
-            // if forward get the trigger id and query element with class =  trigger id
+            // if forward get the trigger id and query element with class = trigger id
             _target = this.triggerElement().slice(1);
             $('.' + _target).addClass('active');
         } else {
@@ -215,17 +216,44 @@
                 sprites.activateSprite($trigger);
             }
         }
-    }
+    };
 
-    function asideInit() {
+    function asideInit () {
 
-        $.each($('.aside-trigger'), function() {
+        $.each($('.aside-trigger'), function () {
             var changer = new AsideChanger(this);
             AsideChanger.prototype.scrollAnimate.call(changer);
             asideChangers.push(changer);
         });
 
+        $.each($('.aside-container'), function () {
+
+            loadAside(this);
+        });
+
         return true;
+    }
+
+    function loadAside (asideContainer) {
+
+        // var url = 0;
+        var $asideContainer = $(asideContainer),
+            slug = $asideContainer.attr('data-entry-slug');
+
+        $.get('ajax-aside?entrySlug=' + slug, function (data) {
+
+            $asideContainer.html(data);
+            // renderAside(asideContainer, data);
+
+        }).fail(function (data) {
+            console.log(data);
+        });
+
+        // $('#gallery-container').html(data);
+        //         slideshow = new Slideshow();
+        //         slideshow.init();
+        // });
+
     }
 
     ///////////////////

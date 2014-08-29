@@ -39,6 +39,7 @@
                 <ul class="aside-links">
                 <h2>Read more about this:</h2>
                 {% for chapter in aside.chapters %}
+                    {% set category = chapter.story.first() %}
                     <li><a href="{{ category.url() }}#level-{{ chapter.chapterLevel }}">{{ chapter.heading }}</a><button class="aside-link-button" href="{{ category.url() }}#{{ chapter.slug }}" title="read this later" name="{{ chapter.heading }}"></button></li>
                 {% endfor %}
                 </ul>

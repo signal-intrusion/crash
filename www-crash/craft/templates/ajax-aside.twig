@@ -1,0 +1,20 @@
+{% set targetChapter = craft.request.getQuery('entrySlug', 'nintendo-level-2') %}
+{% set entry =  craft.entries.type('chapter').slug(targetChapter).first() %}
+{% set pageClass = 'none' %}
+{% set path = craft.request.getUrl() %}
+
+{% extends craft.request.isAjax ? "_ajax" : "_layout" %}
+
+{% block content %}
+
+{# {{ entry.slug }} #}
+
+{# <pre>
+  {{ dump(entry.slug) }}
+</pre>
+ #}
+
+    {% include 'aside-list.twig' %}
+    {% include 'asides.twig' %}
+
+{% endblock %}

@@ -73,9 +73,9 @@
         {% endfor %}
         </div>
         {# end article-txt #}
-        <div class="aside-container level-{{ entry.chapterLevel }}">
-            {% include 'aside-list.twig' %}
-            {% include 'asides.twig' %}
+        <div class="aside-container level-{{ entry.chapterLevel }}" data-entry-slug="{{ entry.slug }}">
+            {# {% include 'aside-list.twig' %} #}
+            {# {% include 'asides.twig' %} #}
         </div>
     </section>
     {# end section article-item #}
