@@ -38,10 +38,8 @@
 
         // initialize the bookmarks and sprites
         bookmarkManager = new BookmarkManager();
-        bookmarkManager.init();
-        bookmarkManager.loadBookmarks();
-
-        sprites = new Sprites();
+        
+	sprites = new Sprites();
         sprites.loadSprites();
 
             // Responsive image loader
@@ -173,29 +171,17 @@
             asideCount = 0,
             requests = [],
             asideTotal = $asideContainers.length;
-
-            console.log(asideTotal);
-
-
-
-        // start by ajaxing all the asides
-        $.each($asideContainers, function () {
-
+        
+	$.each($asideContainers, function () {
             requests.push( loadAside(this) );
-            // $.when(loadAside(this));
-            // asideCount += 1;
-            // console.log(asideTotal);
-
-            // if (asideCount === asideTotal) {
-                // finishAside($asideContainer);
-            // }
         });
         $.when.apply(undefined, requests).then(function(){
             finishAside($asideContainers);
-            console.log('when done');
+            bookmarkManager.init();
+            bookmarkManager.loadBookmarks();
         });
-
-        return true;
+        
+	return true;
     }
 
     function loadAside (asideContainer) {
